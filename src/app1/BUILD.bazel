@@ -1,0 +1,31 @@
+load("@npm//http-server:index.bzl", "http_server")
+load("@npm//@babel/cli:index.bzl", "babel")
+
+
+babel(
+  name = "compile",
+  output_dir = True,
+  args = [
+    "$(execpath src)",
+    "--out-dir",
+    "$(@D)",
+    "--copy-files",
+    "--root-mode",
+    "upward"
+  ],
+  data = [
+    ":src",
+    ":package.json",
+    "//:package.json",
+    "//:babel.config.js",
+    "@npm//@adeira/babel-preset-adeira"
+  ],
+)
+
+http_server(
+    name = "server",
+    data = [
+        ":compile"
+    ],
+    args = ["src/app1/compile/","-o"],
+)

@@ -1,7 +1,6 @@
-// @flow
+// @flow strict
 
 /*::
- 
 type ApiType = {|
   +assertVersion: number => void,
   +cache: {|
@@ -9,47 +8,35 @@ type ApiType = {|
   |},
   +caller: (Caller => boolean) => boolean,
 |};
-
 type Caller = {|
   +name: string,
 |};
- 
+type BabelConfig = {|
+  +presets: $ReadOnlyArray<string | [string, { ... }]>,
+  +babelrcRoots: $ReadOnlyArray<string>,
+|};
 */
 
 function isWebpack(caller) /*: boolean %checks */ {
   // https://github.com/babel/babel-loader
-  return !!(caller && caller.name === 'babel-loader');
+  return !!(caller && caller.name === "babel-loader");
 }
 
-function getTarget() {
-  // console.log('hola', process.argv)
-  const fileExtensionIndex = process.argv.findIndex(i => i === '--out-file-extension');
-  if (fileExtensionIndex >= 0) {
-    const fileExtension = process.argv[fileExtensionIndex + 1];
-    switch (fileExtension) {
-      case '.mjs':
-        return 'js-esm';
-      case '.js.flow':
-        return 'flow';
-      case '.js':
-        return 'js'
-      default:
-        return null;
-    }
-  }
-}
-
-module.exports = function (api /*: ApiType */) /* :Object */ {
+module.exports = function (api /*: ApiType */) /*: BabelConfig */ {
   api.assertVersion(7);
-  api.cache(false);
-  let target = getTarget();
-  console.log('target', getTarget(), target)
-  const presets = [
-    ['@adeira/babel-preset-adeira', { target }],
-  ];
 
   return {
-    presets,
-    babelrcRoots: ['.', './theme'],
+    presets: [
+      [
+        "@adeira/babel-preset-adeira",
+        {
+          target: api.caller(isWebpack) ? "js-esm" : "js",
+        },
+      ],
+    ],
+    babelrcRoots: [
+      ".", // keep the root as a root
+      "./src/*", // also consider all packages and load their .babelrc files.
+    ],
   };
 };

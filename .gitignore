@@ -1,4 +1,7 @@
+.vscode/
+node_modules/
 
-dist
-bazel-out
-node_modules
+
+/bazel-*
+
+.DS_Store	
