@@ -1,0 +1,6 @@
+{
+  "name": "@tbergq/test",
+  "dependencies": {
+    "@tbergq/theme": "0.0.1"
+  }
+}
