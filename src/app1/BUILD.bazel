@@ -1,25 +1,51 @@
 load("@npm//http-server:index.bzl", "http_server")
 load("@npm//@babel/cli:index.bzl", "babel")
+load("@npm//webpack-cli:index.bzl", "webpack_cli")
 
 
-babel(
-  name = "compile",
-  output_dir = True,
-  args = [
-    "$(execpath src)",
-    "--out-dir",
-    "$(@D)",
-    "--copy-files",
-    "--root-mode",
-    "upward"
-  ],
-  data = [
-    ":src",
-    ":package.json",
-    "//:package.json",
-    "//:babel.config.js",
-    "@npm//@adeira/babel-preset-adeira"
-  ],
+# babel(
+#   name = "compile",
+#   output_dir = True,
+#   args = [
+#     "$(execpath src)",
+#     "--out-dir",
+#     "$(@D)",
+#     "--copy-files",
+#     "--root-mode",
+#     "upward"
+#   ],
+#   data = [
+#     ":src",
+#     ":package.json",
+#     "//:package.json",
+#     "//:babel.config.js",
+#     "@npm//@adeira/babel-preset-adeira"
+#   ],
+# )
+
+webpack_cli(
+    name = "compile",
+    output_dir = True,
+    args = [
+        "$(execpath src/index.js)",
+        "--config",
+        "$(execpath webpack.config.js)",
+        "--output-path",
+        "$(@D)",
+        "--mode",
+        "development"
+    ],
+    data = [
+        ":src/index.js",
+        ":webpack.config.js",
+        "//:babel.config.js",
+        "@npm//html-webpack-plugin",
+        "@npm//clean-webpack-plugin",
+        "@npm//babel-loader",
+        "@npm//@adeira/babel-preset-adeira",
+        "@npm//react",
+        "@npm//react-dom",
+    ],
 )
 
 http_server(

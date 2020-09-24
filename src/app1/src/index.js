@@ -1,6 +1,10 @@
-document.querySelector("#root").textContent = "test";
+import * as React from "react";
+import { render } from "react-dom";
 
-const log = (...args) => {
-  console.log(...args)
+function App() {
+  return <div>My pretty app to come</div>;
 }
-log("hey you");
+
+const rootDiv = document.querySelector("#root");
+
+render(<App />, rootDiv);
