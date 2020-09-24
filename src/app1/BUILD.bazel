@@ -1,27 +1,5 @@
 load("@npm//http-server:index.bzl", "http_server")
-load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
-
-
-# babel(
-#   name = "compile",
-#   output_dir = True,
-#   args = [
-#     "$(execpath src)",
-#     "--out-dir",
-#     "$(@D)",
-#     "--copy-files",
-#     "--root-mode",
-#     "upward"
-#   ],
-#   data = [
-#     ":src",
-#     ":package.json",
-#     "//:package.json",
-#     "//:babel.config.js",
-#     "@npm//@adeira/babel-preset-adeira"
-#   ],
-# )
 
 webpack_cli(
     name = "compile",
@@ -45,6 +23,14 @@ webpack_cli(
         "@npm//@adeira/babel-preset-adeira",
         "@npm//react",
         "@npm//react-dom",
+        "@npm//style-loader",
+        "@npm//css-loader",
+        "@npm//@svgr/webpack",
+        "@npm//@adeira/sx",
+        "@npm//@babel/runtime",
+        "@npm//shortid",
+        "@npm//recoil",
+        "//src/components:components",
     ],
 )
 

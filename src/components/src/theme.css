@@ -1,0 +1,28 @@
+@import './spinner/spinner.css';
+
+:root {
+  --border-radius-normal: 3px;
+
+  --ming: #006d77ff;
+  --middle-blue-green: #83c5beff;
+  --alice-blue: #edf6f9ff;
+  --unbleached-silk: #ffddd2ff;
+  --dark-salmon: #e29578ff;
+  --color-gray-light: #dddada;
+  --color-primary: var(--ming);
+  --color-secondary: var(--dark-salmon);
+  --color-text-black: #1f1c1c;
+  --color-white: #fff;
+  --color-primary-focus: rgba(0, 109, 119, 0.5);
+  --color-error: #d62828;
+
+  --space-x-small: 4px;
+  --space-small: 8px;
+  --space-normal: 12px;
+  --space-large: 16px;
+
+  --text-size-normal: 1rem;
+  --text-size-small: 0.875rem;
+
+  --z-index-on-top: 900;
+}
