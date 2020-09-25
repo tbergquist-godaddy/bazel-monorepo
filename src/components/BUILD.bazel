@@ -1,13 +1,11 @@
 load("@npm//@babel/cli:index.bzl", "babel")
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
 
-# package(default_visibility = ["//visibility:public"])
-
 babel(
-  name = "compile",
+  name = "dist",
   output_dir = True,
   args = [
-    "./src/components",
+    "./src/components/src",
     "--out-dir",
     "$(@D)",
     "--copy-files",
@@ -30,5 +28,5 @@ js_library(
     package_name = "@tbergq/components",
     srcs = ["package.json"],
     visibility = ["//visibility:public"],
-    deps = [":compile"],
+    deps = [":dist"],
 )

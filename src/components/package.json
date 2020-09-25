@@ -2,7 +2,7 @@
   "name": "@tbergq/components",
   "version": "0.0.1",
   "sideEffects": false,
-  "main": "compile/src/index",
+  "main": "dist/index",
   "private": true,
   "license": "MIT",
   "scripts": {
