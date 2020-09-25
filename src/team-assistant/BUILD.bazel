@@ -75,7 +75,6 @@ jest_test(
     ],
     deps = [
         "@npm//@adeira/babel-preset-adeira",
-        "@npm//@jest/transform",
         "@npm//babel-jest",
         "@npm//react",
         "@npm//react-dom",
