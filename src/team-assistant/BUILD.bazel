@@ -1,6 +1,6 @@
 load("@npm//http-server:index.bzl", "http_server")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
-load("//:jest.bzl", "jest_test")
+load("//jest:jest.bzl", "jest_test")
 
 webpack_cli(
     name = "compile",
@@ -62,7 +62,7 @@ jest_test(
   srcs = [
     "//:babel.config.js",
     ":.babelrc.js",
-    ":scripts/setupJest.js",
+    ":scripts/setup-jest.js",
   ] + glob(["src/**/*.js", "mocks/*.js", "**/*.json"]),
   jest_config = ":jest.config.js",
   tags = [
@@ -79,9 +79,6 @@ jest_test(
         "@npm//babel-jest",
         "@npm//react",
         "@npm//react-dom",
-        "@npm//style-loader",
-        "@npm//css-loader",
-        "@npm//@svgr/webpack",
         "@npm//@adeira/sx",
         "@npm//@babel/runtime",
         "@npm//shortid",
@@ -104,5 +101,6 @@ jest_test(
         "@npm//@testing-library/user-event",
         "@npm//@testing-library/jest-dom",
         "//src/components:components",
+        "//jest:preset",
     ],
 )

@@ -1,0 +1,8 @@
+load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
+
+js_library(
+    name = "preset",
+    package_name = "@tbergq/jest-preset",
+    srcs = ["package.json", "jest-preset.js", "setup-jest.js"],
+    visibility = ["//visibility:public"],
+)
