@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Test {
+  id: ID!
+  firstName: String!
+  lastName: String
+}
+
+type Login {
+  token: String
+}
+
+type Query {
+  test(id: String!): Test!
+}
+
+type Mutation {
+  createAccount(password: String!, email: String!): CreateAccountResponse!
+  login(password: String!, email: String!): Login!
+}
+
+union CreateAccountResponse = CreateAccountError | Identity
+
+type CreateAccountError implements Error {
+  message: String!
+  reason: CreateAccountErrorReason!
+}
+
+interface Error {
+  message: String!
+}
+
+enum CreateAccountErrorReason {
+  EMAIL_EXISTS
+  UNKNOWN
+  INVALID_EMAIL
+  MISSING_PASSWORD
+}
+
+type Identity {
+  id: ID!
+  email: String
+}

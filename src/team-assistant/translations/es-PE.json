@@ -1,0 +1,155 @@
+{
+  "fb-locale": "es_PE",
+  "translations": {
+    "eRm64b0dkVt+121lfW8YVg==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Casa a hacer",
+          "variations": []
+        }
+      ]
+    },
+    "7CIgyAEAEGPlyX0S/F7DwA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "correo",
+          "variations": []
+        }
+      ]
+    },
+    "Ub0eS5osOE0tKiy8EIVbtw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "contraseña",
+          "variations": []
+        }
+      ]
+    },
+    "6RZqgcqip6AejG03SudUCA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Error al iniciar sesión",
+          "variations": []
+        }
+      ]
+    },
+    "F3p8DbdliugG4CTKslAYqA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Iniciar",
+          "variations": []
+        }
+      ]
+    },
+    "RxTN03wa+rCj2a9uR9IJuw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Iniciar",
+          "variations": []
+        }
+      ]
+    },
+    "BAt6KUtf7sZ47BOgQkl2Ig==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "¿No tienes una cuenta?",
+          "variations": []
+        }
+      ]
+    },
+    "PoSQRs3C3mXEwlSycx6Eyg==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Registrarse",
+          "variations": []
+        }
+      ]
+    },
+    "AWUuyxzzoQu78RlOEqCWyQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "confirmar contraseña",
+          "variations": []
+        }
+      ]
+    },
+    "KnEPm5DgOVgVY59Qh3d5qA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Las contraseñas deben coincidir",
+          "variations": []
+        }
+      ]
+    },
+    "sb0jct6xd9XbxiDdEP4fNQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "El correo electrónico ya existe",
+          "variations": []
+        }
+      ]
+    },
+    "3VU2URsW5m1ZGMbBzJ9srw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Error al crear la cuenta, por favor actualiza la página o vuelve a intentarlo más tarde",
+          "variations": []
+        }
+      ]
+    },
+    "Hvoxrx1yMCVLZfBZDvxoaQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Cuenta creada correctamente",
+          "variations": []
+        }
+      ]
+    },
+    "RTXk2CZMwYWz7IdwwRWtWA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Crear nueva cuenta",
+          "variations": []
+        }
+      ]
+    },
+    "Bj8LytiFxhN5wlPx0jel9g==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Crear cuenta",
+          "variations": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  ".enum_manifest.json": [
+    "src/account/login/login-form.js",
+    "src/account/login/login.js",
+    "src/account/signup/signup.js",
+    "src/components/app.js",
+    "src/home/home.js"
+  ]
+}

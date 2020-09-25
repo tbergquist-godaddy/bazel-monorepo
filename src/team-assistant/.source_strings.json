@@ -1,0 +1,243 @@
+{
+  "phrases": [
+    {
+      "hashToText": {
+        "7CIgyAEAEGPlyX0S/F7DwA==": "email"
+      },
+      "filepath": "src/account/login/login-form.js",
+      "line_beg": 14,
+      "col_beg": 14,
+      "line_end": 14,
+      "col_end": 46,
+      "desc": "email form label",
+      "project": "",
+      "type": "text",
+      "jsfbt": "email"
+    },
+    {
+      "hashToText": {
+        "Ub0eS5osOE0tKiy8EIVbtw==": "password"
+      },
+      "filepath": "src/account/login/login-form.js",
+      "line_beg": 15,
+      "col_beg": 17,
+      "line_end": 15,
+      "col_end": 55,
+      "desc": "password form label",
+      "project": "",
+      "type": "text",
+      "jsfbt": "password"
+    },
+    {
+      "hashToText": {
+        "6RZqgcqip6AejG03SudUCA==": "Login failed"
+      },
+      "filepath": "src/account/login/login-form.js",
+      "line_beg": 43,
+      "col_beg": 18,
+      "line_end": 43,
+      "col_end": 66,
+      "desc": "Login failed notification",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Login failed"
+    },
+    {
+      "hashToText": {
+        "F3p8DbdliugG4CTKslAYqA==": "Login"
+      },
+      "filepath": "src/account/login/login-form.js",
+      "line_beg": 76,
+      "col_beg": 10,
+      "line_end": 76,
+      "col_end": 46,
+      "desc": "Login button",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Login"
+    },
+    {
+      "hashToText": {
+        "RxTN03wa+rCj2a9uR9IJuw==": "Login"
+      },
+      "filepath": "src/account/login/login.js",
+      "line_beg": 18,
+      "col_beg": 8,
+      "line_end": 18,
+      "col_end": 44,
+      "desc": "login header",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Login"
+    },
+    {
+      "hashToText": {
+        "BAt6KUtf7sZ47BOgQkl2Ig==": "Don't have an account?"
+      },
+      "filepath": "src/account/login/login.js",
+      "line_beg": 23,
+      "col_beg": 10,
+      "line_end": 23,
+      "col_end": 74,
+      "desc": "signup description",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Don't have an account?"
+    },
+    {
+      "hashToText": {
+        "PoSQRs3C3mXEwlSycx6Eyg==": "Sign up"
+      },
+      "filepath": "src/account/login/login.js",
+      "line_beg": 26,
+      "col_beg": 10,
+      "line_end": 26,
+      "col_end": 47,
+      "desc": "Signup link",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Sign up"
+    },
+    {
+      "hashToText": {
+        "7CIgyAEAEGPlyX0S/F7DwA==": "email"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 15,
+      "col_beg": 14,
+      "line_end": 15,
+      "col_end": 46,
+      "desc": "email form label",
+      "project": "",
+      "type": "text",
+      "jsfbt": "email"
+    },
+    {
+      "hashToText": {
+        "Ub0eS5osOE0tKiy8EIVbtw==": "password"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 16,
+      "col_beg": 17,
+      "line_end": 16,
+      "col_end": 55,
+      "desc": "password form label",
+      "project": "",
+      "type": "text",
+      "jsfbt": "password"
+    },
+    {
+      "hashToText": {
+        "AWUuyxzzoQu78RlOEqCWyQ==": "confirm password"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 17,
+      "col_beg": 24,
+      "line_end": 17,
+      "col_end": 77,
+      "desc": "confirmPassword form label",
+      "project": "",
+      "type": "text",
+      "jsfbt": "confirm password"
+    },
+    {
+      "hashToText": {
+        "KnEPm5DgOVgVY59Qh3d5qA==": "Passwords must match"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 18,
+      "col_beg": 27,
+      "line_end": 18,
+      "col_end": 89,
+      "desc": "password mismatch error message",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Passwords must match"
+    },
+    {
+      "hashToText": {
+        "sb0jct6xd9XbxiDdEP4fNQ==": "Email already exists"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 59,
+      "col_beg": 18,
+      "line_end": 59,
+      "col_end": 79,
+      "desc": "notification that email exists",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Email already exists"
+    },
+    {
+      "hashToText": {
+        "3VU2URsW5m1ZGMbBzJ9srw==": "Failed to create account, please refresh the page or try again later"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 60,
+      "col_beg": 18,
+      "line_end": 63,
+      "col_end": 19,
+      "desc": "notification about unknown create error",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Failed to create account, please refresh the page or try again later"
+    },
+    {
+      "hashToText": {
+        "Hvoxrx1yMCVLZfBZDvxoaQ==": "Account created successfully"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 68,
+      "col_beg": 18,
+      "line_end": 71,
+      "col_end": 13,
+      "desc": "notification that account creation was successful",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Account created successfully"
+    },
+    {
+      "hashToText": {
+        "RTXk2CZMwYWz7IdwwRWtWA==": "Create new account"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 82,
+      "col_beg": 8,
+      "line_end": 82,
+      "col_end": 69,
+      "desc": "Create new account title",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Create new account"
+    },
+    {
+      "hashToText": {
+        "Bj8LytiFxhN5wlPx0jel9g==": "Create account"
+      },
+      "filepath": "src/account/signup/signup.js",
+      "line_beg": 113,
+      "col_beg": 10,
+      "line_end": 113,
+      "col_end": 77,
+      "desc": "Submit button to create an account",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Create account"
+    },
+    {
+      "hashToText": {
+        "eRm64b0dkVt+121lfW8YVg==": "Home TODO"
+      },
+      "filepath": "src/home/home.js",
+      "line_beg": 29,
+      "col_beg": 8,
+      "line_end": 29,
+      "col_end": 45,
+      "desc": "Todo text",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Home TODO"
+    }
+  ],
+  "childParentMappings": {}
+}

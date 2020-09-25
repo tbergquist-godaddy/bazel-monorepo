@@ -1,0 +1,56 @@
+load("@npm//http-server:index.bzl", "http_server")
+load("@npm//webpack-cli:index.bzl", "webpack_cli")
+
+webpack_cli(
+    name = "compile",
+    output_dir = True,
+    args = [
+        "$(execpath src/index.js)",
+        "--config",
+        "$(execpath webpack.config.js)",
+        "--output-path",
+        "$(@D)",
+        "--mode",
+        "development"
+    ],
+    data = glob(["**/*.js", "**/*.json"]) + [
+        ":src/app.css",
+        "//:babel.config.js",
+        ":.babelrc.js",
+        "@npm//html-webpack-plugin",
+        "@npm//clean-webpack-plugin",
+        "@npm//babel-loader",
+        "@npm//@adeira/babel-preset-adeira",
+        "@npm//react",
+        "@npm//react-dom",
+        "@npm//style-loader",
+        "@npm//css-loader",
+        "@npm//@svgr/webpack",
+        "@npm//@adeira/sx",
+        "@npm//@babel/runtime",
+        "@npm//shortid",
+        "@npm//recoil",
+        "@npm//yup",
+        "@npm//relay-runtime",
+        "@npm//react-router-dom",
+        "@npm//react-relay",
+        "@npm//react-hook-form",
+        "@npm//fbt",
+        "@npm//@hookform/resolvers",
+        "@npm//@adeira/fetch",
+        "@npm//babel-plugin-relay",
+        "@npm//graphql",
+        "@npm//babel-plugin-fbt",
+        "@npm//babel-plugin-fbt-runtime",
+        "@npm//@babel/plugin-syntax-dynamic-import",
+        "//src/components:components",
+    ],
+)
+
+http_server(
+    name = "server",
+    data = [
+        ":compile"
+    ],
+    args = ["src/team-assistant/compile/","-o", "-p", "9000"],
+)

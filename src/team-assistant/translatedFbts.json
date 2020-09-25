@@ -1,0 +1,36 @@
+{
+  "es_PE": {
+    "3v4cdj": "correo",
+    "3PDIMj": "contraseña",
+    "19rO8q": "Error al iniciar sesión",
+    "3fy7LA": "Iniciar",
+    "1zmjS3": "Iniciar",
+    "3MEXCD": "¿No tienes una cuenta?",
+    "3FVowk": "Registrarse",
+    "48A4vu": "confirmar contraseña",
+    "239Icc": "Las contraseñas deben coincidir",
+    "4A3MTc": "El correo electrónico ya existe",
+    "M8ZQd": "Error al crear la cuenta, por favor actualiza la página o vuelve a intentarlo más tarde",
+    "3XBAnP": "Cuenta creada correctamente",
+    "3GxHDh": "Crear nueva cuenta",
+    "1JyRXy": "Crear cuenta",
+    "3qdkbQ": "Casa a hacer"
+  },
+  "nb_NO": {
+    "3v4cdj": "epost",
+    "3PDIMj": "passord",
+    "19rO8q": "Innlogging mislyktes",
+    "3fy7LA": "Log inn",
+    "1zmjS3": "Logg inn",
+    "3MEXCD": "Har du ikke en konto?",
+    "3FVowk": "Registrer deg",
+    "48A4vu": "bekreft passord",
+    "239Icc": "Passordene må samsvare",
+    "4A3MTc": "Epost finnes allerede",
+    "M8ZQd": "Kunne ikke opprette kontoen, oppdater siden eller prøv igjen senere",
+    "3XBAnP": "Kontoen ble opprettet",
+    "3GxHDh": "Opprett ny konto",
+    "1JyRXy": "Opprett konto",
+    "3qdkbQ": "Hjem å gjøre"
+  }
+}

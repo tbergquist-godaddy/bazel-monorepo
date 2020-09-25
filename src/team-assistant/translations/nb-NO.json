@@ -1,0 +1,155 @@
+{
+  "fb-locale": "nb_NO",
+  "translations": {
+    "eRm64b0dkVt+121lfW8YVg==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Hjem å gjøre",
+          "variations": []
+        }
+      ]
+    },
+    "7CIgyAEAEGPlyX0S/F7DwA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "epost",
+          "variations": []
+        }
+      ]
+    },
+    "Ub0eS5osOE0tKiy8EIVbtw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "passord",
+          "variations": []
+        }
+      ]
+    },
+    "6RZqgcqip6AejG03SudUCA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Innlogging mislyktes",
+          "variations": []
+        }
+      ]
+    },
+    "F3p8DbdliugG4CTKslAYqA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Log inn",
+          "variations": []
+        }
+      ]
+    },
+    "RxTN03wa+rCj2a9uR9IJuw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Logg inn",
+          "variations": []
+        }
+      ]
+    },
+    "BAt6KUtf7sZ47BOgQkl2Ig==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Har du ikke en konto?",
+          "variations": []
+        }
+      ]
+    },
+    "PoSQRs3C3mXEwlSycx6Eyg==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Registrer deg",
+          "variations": []
+        }
+      ]
+    },
+    "AWUuyxzzoQu78RlOEqCWyQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "bekreft passord",
+          "variations": []
+        }
+      ]
+    },
+    "KnEPm5DgOVgVY59Qh3d5qA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Passordene må samsvare",
+          "variations": []
+        }
+      ]
+    },
+    "sb0jct6xd9XbxiDdEP4fNQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Epost finnes allerede",
+          "variations": []
+        }
+      ]
+    },
+    "3VU2URsW5m1ZGMbBzJ9srw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Kunne ikke opprette kontoen, oppdater siden eller prøv igjen senere",
+          "variations": []
+        }
+      ]
+    },
+    "Hvoxrx1yMCVLZfBZDvxoaQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Kontoen ble opprettet",
+          "variations": []
+        }
+      ]
+    },
+    "RTXk2CZMwYWz7IdwwRWtWA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Opprett ny konto",
+          "variations": []
+        }
+      ]
+    },
+    "Bj8LytiFxhN5wlPx0jel9g==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Opprett konto",
+          "variations": []
+        }
+      ]
+    }
+  }
+}
