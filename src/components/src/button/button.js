@@ -32,12 +32,12 @@ export default function Button({
 
 const styles = create({
   button: {
-    padding: 'var(--space-small) var(--space-large)',
-    color: 'var(--color-white)',
-    border: 'none',
-    borderRadius: 'var(--border-radius-normal)',
-    outline: 'none',
-    fontWeight: 500,
+    'padding': 'var(--space-small) var(--space-large)',
+    'color': 'var(--color-white)',
+    'border': 'none',
+    'borderRadius': 'var(--border-radius-normal)',
+    'outline': 'none',
+    'fontWeight': 500,
     ':focus': {
       boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
     },

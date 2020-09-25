@@ -40,18 +40,18 @@ const styles = create({
     color: 'var(--color-text-black)',
   },
   input: {
-    borderRadius: 'var(--border-radius-normal)',
-    padding: 'var(--space-normal)',
-    border: '1px solid var(--color-gray-light)',
-    width: '100%',
-    outline: 'none',
-    color: 'var(--color-text-black)',
+    'borderRadius': 'var(--border-radius-normal)',
+    'padding': 'var(--space-normal)',
+    'border': '1px solid var(--color-gray-light)',
+    'width': '100%',
+    'outline': 'none',
+    'color': 'var(--color-text-black)',
     ':focus': {
       boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
     },
   },
   inputError: {
-    border: '1px solid var(--color-error)',
+    'border': '1px solid var(--color-error)',
     ':focus': {
       boxShadow: 'var(--color-error) 0px 0px 0px 0.2rem',
     },
