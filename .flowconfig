@@ -1,0 +1,48 @@
+; https://flow.org/en/docs/config/ignore/
+[ignore]
+.+/bazel-bin/.+
+.+/bazel-out/.+
+.+/bazel-testlogs/.+
+.+/bazel-test_bazel/.+
+
+; https://flow.org/en/docs/config/untyped/
+[untyped]
+
+
+; https://flow.org/en/docs/config/declarations/
+[declarations]
+.+/node_modules/.+
+
+
+; https://flow.org/en/docs/config/libs/
+[libs]
+./flow-typed/
+
+
+; These lints are enabled in normal mode. Consult [strict] mode to see what additional lints
+; are enabled in strict mode. Only disabled rules in normal mode should be added to strict mode.
+;
+; https://flow.org/en/docs/config/lints/
+[lints]
+all=error
+unclear-type=off
+untyped-import=off
+
+
+; https://flow.org/en/docs/strict/
+[strict]
+unclear-type
+untyped-import
+
+
+; https://flow.org/en/docs/config/options/
+[options]
+emoji=true
+include_warnings=true
+exact_by_default=true
+
+module.ignore_non_literal_requires=true
+module.name_mapper='^@tbergq/components' -> '<PROJECT_ROOT>/src/components/src'
+module.name_mapper='^@tbergq/components/lib/theme.css' -> '<PROJECT_ROOT>/src/components/src/theme.css'
+
+experimental.const_params=true

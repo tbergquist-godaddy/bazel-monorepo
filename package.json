@@ -20,6 +20,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "eslint": "^7.9.0",
+    "flow-bin": "^0.134.0",
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.4.2",
     "relay-test-utils": "^10.0.1",
@@ -50,6 +51,7 @@
   "scripts": {
     "build": "bazel build '...'",
     "test": "bazel test '...'",
-    "lint": "yarn eslint . --fix --report-unused-disable-directives"
+    "lint": "yarn eslint . --fix --report-unused-disable-directives",
+    "typecheck": "flow . --max-warnings=0"
   }
 }
