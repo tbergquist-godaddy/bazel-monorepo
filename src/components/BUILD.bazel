@@ -2,7 +2,7 @@ load("@npm//@babel/cli:index.bzl", "babel")
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
 
 babel(
-  name = "dist",
+  name = "lib",
   output_dir = True,
   args = [
     "./src/components/src",
@@ -11,8 +11,27 @@ babel(
     "--copy-files",
     "--root-mode",
     "upward",
+  ],
+  data = [
+    ":src",
+    ":package.json",
+    "//:package.json",
+    "//:babel.config.js",
+    "@npm//@adeira/babel-preset-adeira"
+  ],
+)
+
+babel(
+  name = "esm",
+  output_dir = True,
+  args = [
+    "./src/components/src",
+    "--out-dir",
+    "$(@D)",
+    "--root-mode",
+    "upward",
     "--out-file-extension",
-    ".mjs",
+    ".mjs"
   ],
   data = [
     ":src",
@@ -28,5 +47,5 @@ js_library(
     package_name = "@tbergq/components",
     srcs = ["package.json"],
     visibility = ["//visibility:public"],
-    deps = [":dist"],
+    deps = [":esm", ":lib"],
 )

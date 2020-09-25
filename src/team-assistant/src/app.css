@@ -1,4 +1,4 @@
-@import '@tbergq/components/dist/theme.css';
+@import '@tbergq/components/lib/theme.css';
 
 body {
   font-family: Roboto, sans-serif;

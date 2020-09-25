@@ -1,5 +1,6 @@
 load("@npm//http-server:index.bzl", "http_server")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
+load("//:jest.bzl", "jest_test")
 
 webpack_cli(
     name = "compile",
@@ -43,6 +44,7 @@ webpack_cli(
         "@npm//babel-plugin-fbt",
         "@npm//babel-plugin-fbt-runtime",
         "@npm//@babel/plugin-syntax-dynamic-import",
+        "@npm//jest",
         "//src/components:components",
     ],
 )
@@ -53,4 +55,54 @@ http_server(
         ":compile"
     ],
     args = ["src/team-assistant/compile/","-o", "-p", "9000"],
+)
+
+jest_test(
+  name = "test",
+  srcs = [
+    "//:babel.config.js",
+    ":.babelrc.js",
+    ":scripts/setupJest.js",
+  ] + glob(["src/**/*.js", "mocks/*.js", "**/*.json"]),
+  jest_config = ":jest.config.js",
+  tags = [
+        # Need to set the pwd to avoid jest needing a runfiles helper
+        # Windows users with permissions can use --enable_runfiles
+        # to make this test work
+        "no-bazelci-windows",
+        # TODO: why does this fail almost all the time, but pass on local Mac?
+        "no-bazelci-mac",
+    ],
+    deps = [
+        "@npm//@adeira/babel-preset-adeira",
+        "@npm//@jest/transform",
+        "@npm//babel-jest",
+        "@npm//react",
+        "@npm//react-dom",
+        "@npm//style-loader",
+        "@npm//css-loader",
+        "@npm//@svgr/webpack",
+        "@npm//@adeira/sx",
+        "@npm//@babel/runtime",
+        "@npm//shortid",
+        "@npm//recoil",
+        "@npm//yup",
+        "@npm//relay-runtime",
+        "@npm//react-router-dom",
+        "@npm//react-relay",
+        "@npm//react-hook-form",
+        "@npm//fbt",
+        "@npm//@hookform/resolvers",
+        "@npm//@adeira/fetch",
+        "@npm//babel-plugin-relay",
+        "@npm//graphql",
+        "@npm//babel-plugin-fbt",
+        "@npm//babel-plugin-fbt-runtime",
+        "@npm//@babel/plugin-syntax-dynamic-import",
+        "@npm//relay-test-utils",
+        "@npm//@testing-library/react",
+        "@npm//@testing-library/user-event",
+        "@npm//@testing-library/jest-dom",
+        "//src/components:components",
+    ],
 )

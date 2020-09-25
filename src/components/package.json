@@ -2,7 +2,8 @@
   "name": "@tbergq/components",
   "version": "0.0.1",
   "sideEffects": false,
-  "main": "dist/index",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
   "private": true,
   "license": "MIT",
   "scripts": {
