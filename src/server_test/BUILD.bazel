@@ -1,0 +1,32 @@
+load("@npm//@babel/cli:index.bzl", "babel")
+load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
+
+babel(
+  name = "lib",
+  output_dir = True,
+  args = [
+    "./src/server_test/src",
+    "--out-dir",
+    "$(@D)",
+    "--root-mode",
+    "upward",
+    "--copy-files",
+  ],
+  data = glob(["src/*"]) + [
+    ":package.json",
+    "//:package.json",
+    "//:babel.config.js",
+    "@npm//@adeira/babel-preset-adeira",
+  ],
+)
+
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+nodejs_binary(
+  name = "server",
+  data = [
+    ":lib",
+    "@npm//@babel/runtime"
+    ],
+  entry_point = ":lib"
+)
+
