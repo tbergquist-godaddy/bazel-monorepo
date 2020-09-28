@@ -2,6 +2,7 @@
   "devDependencies": {
     "@adeira/babel-preset-adeira": "^1.0.0",
     "@adeira/eslint-config": "^3.2.0",
+    "@adeira/flow-bin": "^0.4.0",
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
@@ -48,10 +49,13 @@
     "webpack": "^4.44.2",
     "yup": "^0.29.3"
   },
+  "resolutions": {
+    "@adeira/monorepo-utils": "^0.9.0"
+  },
   "scripts": {
     "build": "bazel build '...'",
     "test": "bazel test '...'",
     "lint": "yarn eslint . --fix --report-unused-disable-directives",
-    "typecheck": "flow . --max-warnings=0"
+    "typecheck": "adeira-flow-bin"
   }
 }
