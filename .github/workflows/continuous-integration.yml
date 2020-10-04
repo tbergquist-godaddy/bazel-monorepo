@@ -1,0 +1,39 @@
+name: Continuous Integration
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      
+      # TODO: cache, google storage bucket 🤔 https://docs.bazel.build/versions/master/remote-caching.html
+      - name: Install bazelisk
+        run: |
+          curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64"
+          mkdir -p "${GITHUB_WORKSPACE}/bin/"
+          mv bazelisk-linux-amd64 "${GITHUB_WORKSPACE}/bin/bazel"
+          chmod +x "${GITHUB_WORKSPACE}/bin/bazel"
+
+      - name: Install NPM dependencies
+        run: |
+          yarn install
+
+      - name: Run Buldifier lint
+        run: |
+          "${GITHUB_WORKSPACE}/bin/bazel" run --build_tag_filters=manual //:buildifier.lint
+
+      - name: Build
+        run: |
+          "${GITHUB_WORKSPACE}/bin/bazel" build '...'
+
+      - name: Test
+        run: |
+          "${GITHUB_WORKSPACE}/bin/bazel" test '...'
