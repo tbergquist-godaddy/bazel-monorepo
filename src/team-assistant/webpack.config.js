@@ -1,6 +1,5 @@
 // @flow
 
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -27,7 +26,7 @@ const templateContent = `<!DOCTYPE html>
 
 module.exports = {
   output: {
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[hash].bundle.js',
     chunkFilename: '[contenthash].bundle.js',
   },
   plugins: [
@@ -39,11 +38,6 @@ module.exports = {
       templateContent,
     }) /*: Object */),
   ],
-  devServer: {
-    contentBase: (path.join(__dirname, 'dist') /*: string */),
-    compress: true,
-    port: 9000,
-  },
   optimization: {
     splitChunks: {
       chunks: 'all',

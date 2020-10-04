@@ -26,7 +26,8 @@
     "jest": "^26.4.2",
     "relay-test-utils": "^10.0.1",
     "style-loader": "^1.2.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@adeira/fetch": "^1.0.3",
