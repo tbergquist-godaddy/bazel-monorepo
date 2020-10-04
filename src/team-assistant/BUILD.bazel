@@ -1,12 +1,11 @@
 load("@npm//http-server:index.bzl", "http_server")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
-load("//jest:jest.bzl", "jest_test")
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
+load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
 
 webpack_cli(
     name = "compile",
-    output_dir = True,
     args = [
         "$(execpath src/index.js)",
         "--config",
@@ -16,30 +15,43 @@ webpack_cli(
         "--mode",
         "production",
     ],
-    data = glob(["**/*.js", "**/*.json"]) + get_deps() + [
+    data = glob([
+        "**/*.js",
+        "**/*.json",
+    ]) + get_deps() + [
         ":src/app.css",
         "//:babel.config.js",
         ":.babelrc.js",
     ],
+    output_dir = True,
 )
 
 http_server(
     name = "server",
-    data = [
-        ":compile"
+    args = [
+        "src/team-assistant/compile/",
+        "-o",
+        "-p",
+        "9000",
     ],
-    args = ["src/team-assistant/compile/","-o", "-p", "9000"],
+    data = [
+        ":compile",
+    ],
 )
 
 jest_test(
-  name = "test",
-  srcs = [
-    "//:babel.config.js",
-    ":.babelrc.js",
-    ":scripts/setup-jest.js",
-  ] + glob(["src/**/*.js", "mocks/*.js", "**/*.json"]),
-  jest_config = ":jest.config.js",
-  tags = [
+    name = "test",
+    srcs = [
+        "//:babel.config.js",
+        ":.babelrc.js",
+        ":scripts/setup-jest.js",
+    ] + glob([
+        "src/**/*.js",
+        "mocks/*.js",
+        "**/*.json",
+    ]),
+    jest_config = ":jest.config.js",
+    tags = [
         # Need to set the pwd to avoid jest needing a runfiles helper
         # Windows users with permissions can use --enable_runfiles
         # to make this test work
@@ -56,14 +68,8 @@ jest_test(
     ],
 )
 
-
 webpack_dev_server(
     name = "dev_server",
-    data = glob(["**/*.js", "**/*.json"]) + get_deps() + [
-        ":src/app.css",
-        "//:babel.config.js",
-        ":.babelrc.js",
-    ],
     args = [
         "--entry",
         "./src/team-assistant/src/index.js",
@@ -72,6 +78,14 @@ webpack_dev_server(
         "--port",
         "9000",
         "--hot",
-        "--watch-poll"
-    ]
+        "--watch-poll",
+    ],
+    data = glob([
+        "**/*.js",
+        "**/*.json",
+    ]) + get_deps() + [
+        ":src/app.css",
+        "//:babel.config.js",
+        ":.babelrc.js",
+    ],
 )

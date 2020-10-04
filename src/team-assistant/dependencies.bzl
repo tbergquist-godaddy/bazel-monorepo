@@ -1,7 +1,11 @@
+"""
+Npm build dependencies
+"""
+
 def get_deps():
-  return [
-     "@npm//html-webpack-plugin",
-     "@npm//clean-webpack-plugin",
+    return [
+        "@npm//html-webpack-plugin",
+        "@npm//clean-webpack-plugin",
         "@npm//babel-loader",
         "@npm//@adeira/babel-preset-adeira",
         "@npm//react",
@@ -28,4 +32,4 @@ def get_deps():
         "@npm//@babel/plugin-syntax-dynamic-import",
         "@npm//jest",
         "//src/components:components",
-  ]
+    ]

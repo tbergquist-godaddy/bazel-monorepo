@@ -3,7 +3,6 @@ load("@npm//webpack-cli:index.bzl", "webpack_cli")
 
 webpack_cli(
     name = "compile",
-    output_dir = True,
     args = [
         "$(execpath src/index.js)",
         "--config",
@@ -11,33 +10,37 @@ webpack_cli(
         "--output-path",
         "$(@D)",
         "--mode",
-        "development"
+        "development",
     ],
     data = [
         ":src/index.js",
         ":webpack.config.js",
         "//:babel.config.js",
-        "@npm//html-webpack-plugin",
-        "@npm//clean-webpack-plugin",
-        "@npm//babel-loader",
+        "//src/components",
         "@npm//@adeira/babel-preset-adeira",
-        "@npm//react",
-        "@npm//react-dom",
-        "@npm//style-loader",
-        "@npm//css-loader",
-        "@npm//@svgr/webpack",
         "@npm//@adeira/sx",
         "@npm//@babel/runtime",
-        "@npm//shortid",
+        "@npm//@svgr/webpack",
+        "@npm//babel-loader",
+        "@npm//clean-webpack-plugin",
+        "@npm//css-loader",
+        "@npm//html-webpack-plugin",
+        "@npm//react",
+        "@npm//react-dom",
         "@npm//recoil",
-        "//src/components:components",
+        "@npm//shortid",
+        "@npm//style-loader",
     ],
+    output_dir = True,
 )
 
 http_server(
     name = "server",
-    data = [
-        ":compile"
+    args = [
+        "src/app1/compile/",
+        "-o",
     ],
-    args = ["src/app1/compile/","-o"],
+    data = [
+        ":compile",
+    ],
 )
