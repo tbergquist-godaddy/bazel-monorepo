@@ -21,7 +21,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "eslint": "^7.9.0",
-    "flow-bin": "^0.134.0",
+    "flow-bin": "^0.135.0",
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.4.2",
     "relay-test-utils": "^10.0.1",
