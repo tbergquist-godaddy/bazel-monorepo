@@ -8,9 +8,9 @@ const host = 'localhost';
 const port = 8000;
 
 const requestListener = function (req, res) {
-  const html = fs.readFileSync(path.join(__dirname, 'index.html'));
+  const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
   res.writeHead(200);
-  res.end(html);
+  res.end(html.replace('{% placeholder %}', 'This is a string replacement'));
 };
 
 const server = http.createServer(requestListener);
