@@ -1,4 +1,4 @@
-# @generated SignedSource<<9db907c95fc703432e143ba475f3500c>>
+# @generated SignedSource<<5fdc517dd482eb1b9f2a3003bce3d231>>
 
 # <BREAKING-CHANGES-LOG>
 #  FIELD_REMOVED: Test.test was removed.
@@ -6,6 +6,41 @@
 
 schema {
   query: RootQuery
+  mutation: RootMutation
+}
+
+"""Error type for creating an account"""
+type CreateAccountError implements Error {
+  message: String
+  reason: CreateAccountErrorReason
+}
+
+enum CreateAccountErrorReason {
+  EMAIL_EXISTS
+  INVALID_EMAIL
+  MISSING_PASSWORD
+  UNKNOWN
+}
+
+union CreateAccountResponse = CreateAccountError | Identity
+
+interface Error {
+  message: String
+}
+
+"""Identity object of a user"""
+type Identity {
+  email: String
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+}
+
+"""Root Mutation."""
+type RootMutation {
+  createAccount(email: String!, password: String!): CreateAccountResponse
 }
 
 """Root Query"""
