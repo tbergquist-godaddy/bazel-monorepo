@@ -1,0 +1,45 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@npm//@babel/cli:index.bzl", "babel")
+load("@npm//@babel/node:index.bzl", "babel_node")
+load(":dependencies.bzl", "get_deps")
+
+babel(
+    name = "lib",
+    args = [
+        "./src/team-assistant-gql/src",
+        "--out-dir",
+        "$(@D)",
+        "--root-mode",
+        "upward",
+        "--copy-files",
+    ],
+    data = glob(["src/*"]) + [
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
+    output_dir = True,
+)
+
+nodejs_binary(
+    name = "server",
+    data = get_deps() + [
+        ":lib",
+        "@npm//@babel/runtime",
+    ],
+    entry_point = ":lib",
+)
+
+# Run with ibazel
+babel_node(
+    name = "dev_server",
+    args = [
+        "./src/team-assistant-gql/src",
+    ],
+    data = glob(["src/*"]) + get_deps() + [
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+    ],
+)
