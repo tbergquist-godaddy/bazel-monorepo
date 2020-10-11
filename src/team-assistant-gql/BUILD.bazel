@@ -1,6 +1,7 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//@babel/node:index.bzl", "babel_node")
+load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
 
 babel(
@@ -41,5 +42,17 @@ babel_node(
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
+    ],
+)
+
+jest_test(
+    name = "test",
+    srcs = [
+        "//:babel.config.js",
+        ":scripts/setup-jest.js",
+    ] + glob(["src/**/*.js"]),
+    jest_config = ":jest.config.js",
+    deps = get_deps() + [
+        "@npm//mongodb-memory-server",
     ],
 )
