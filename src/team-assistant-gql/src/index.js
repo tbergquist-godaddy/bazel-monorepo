@@ -7,9 +7,16 @@ import cors from 'cors';
 import compression from 'compression';
 import morgan from 'morgan';
 
-import Schema from './Schema';
+import schema from './schema';
+import connection from './database/connection';
 
-const server = new ApolloServer({ schema: Schema });
+const uri = process.env.MONGO_DB_URL ?? 'mongodb://127.0.0.1:27017/team_assistant';
+connection.openUri(uri, {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+});
+
+const server = new ApolloServer({ schema });
 
 const app = express();
 app.use(cors({ methods: ['GET', 'POST'] }));

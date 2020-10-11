@@ -11,4 +11,5 @@ def get_deps():
         "@npm//morgan",
         "@npm//compression",
         "@npm//@adeira/graphql-global-id",
+        "@npm//mongoose",
     ]
