@@ -13,7 +13,7 @@ babel(
         "upward",
         "--copy-files",
     ],
-    data = glob(["src/*"]) + [
+    data = glob(["src/**/*"]) + [
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
@@ -37,7 +37,7 @@ babel_node(
     args = [
         "./src/team-assistant-gql/src",
     ],
-    data = glob(["src/*"]) + get_deps() + [
+    data = glob(["src/**/*"]) + get_deps() + [
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
