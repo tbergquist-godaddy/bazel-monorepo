@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      
       # TODO: cache, google storage bucket 🤔 https://docs.bazel.build/versions/master/remote-caching.html
       - name: Install bazelisk
         run: |

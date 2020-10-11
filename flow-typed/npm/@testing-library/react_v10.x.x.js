@@ -11,7 +11,7 @@ declare module '@testing-library/react' {
   // This type comes from
   // https://github.com/facebook/flow/blob/v0.104.0/lib/react-dom.js#L116
   declare type ReactDOMTestUtilsAct = (
-    callback: () => void | ReactDOMTestUtilsThenable
+    callback: () => void | ReactDOMTestUtilsThenable,
   ) => ReactDOMTestUtilsThenable;
 
   declare type WaitForElementOptions = {|
@@ -20,10 +20,7 @@ declare module '@testing-library/react' {
     mutationObserverOptions?: MutationObserverInit,
   |};
 
-  declare type TextMatch =
-    | string
-    | RegExp
-    | ((content: string, element: HTMLElement) => boolean);
+  declare type TextMatch = string | RegExp | ((content: string, element: HTMLElement) => boolean);
 
   declare type TextMatchOptions = {
     exact?: boolean,
@@ -40,56 +37,44 @@ declare module '@testing-library/react' {
 
   declare type QueryByBoundAttribute = (
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ) => ?HTMLElement;
 
   declare type AllByBoundAttribute = (
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ) => Array<HTMLElement>;
 
   declare type FindAllByBoundAttribute = (
     text: TextMatch,
     options?: TextMatchOptions,
-    waitForElementOptions?: WaitForElementOptions
+    waitForElementOptions?: WaitForElementOptions,
   ) => Promise<HTMLElement[]>;
 
-  declare type GetByBoundAttribute = (
-    text: TextMatch,
-    options?: TextMatchOptions
-  ) => HTMLElement;
+  declare type GetByBoundAttribute = (text: TextMatch, options?: TextMatchOptions) => HTMLElement;
 
   declare type FindByBoundAttribute = (
     text: TextMatch,
     options?: TextMatchOptions,
-    waitForElementOptions?: WaitForElementOptions
+    waitForElementOptions?: WaitForElementOptions,
   ) => Promise<HTMLElement>;
 
-  declare type QueryByText = (
-    text: TextMatch,
-    options?: SelectorMatchOptions
-  ) => ?HTMLElement;
+  declare type QueryByText = (text: TextMatch, options?: SelectorMatchOptions) => ?HTMLElement;
 
-  declare type AllByText = (
-    text: TextMatch,
-    options?: SelectorMatchOptions
-  ) => Array<HTMLElement>;
+  declare type AllByText = (text: TextMatch, options?: SelectorMatchOptions) => Array<HTMLElement>;
 
   declare type FindAllByText = (
     text: TextMatch,
     options?: SelectorMatchOptions,
-    waitForElementOptions?: WaitForElementOptions
+    waitForElementOptions?: WaitForElementOptions,
   ) => Promise<HTMLElement[]>;
 
-  declare type GetByText = (
-    text: TextMatch,
-    options?: SelectorMatchOptions
-  ) => HTMLElement;
+  declare type GetByText = (text: TextMatch, options?: SelectorMatchOptions) => HTMLElement;
 
   declare type FindByText = (
     text: TextMatch,
     options?: SelectorMatchOptions,
-    waitForElementOptions?: WaitForElementOptions
+    waitForElementOptions?: WaitForElementOptions,
   ) => Promise<HTMLElement>;
 
   declare type ByRoleOptions = {
@@ -108,38 +93,26 @@ declare module '@testing-library/react' {
     /**
      * Only considers  elements with the specified accessible name.
      */
-    name?:
-      | string
-      | RegExp
-      | ((accessibleName: string, element: Element) => boolean),
+    name?: string | RegExp | ((accessibleName: string, element: Element) => boolean),
     ...
   } & TextMatchOptions;
 
-  declare type AllByRole = (
-    role: TextMatch,
-    options?: ByRoleOptions
-  ) => HTMLElement[];
+  declare type AllByRole = (role: TextMatch, options?: ByRoleOptions) => HTMLElement[];
 
-  declare type GetByRole = (
-    role: TextMatch,
-    options?: ByRoleOptions
-  ) => HTMLElement;
+  declare type GetByRole = (role: TextMatch, options?: ByRoleOptions) => HTMLElement;
 
-  declare type QueryByRole = (
-    role: TextMatch,
-    options?: ByRoleOptions
-  ) => HTMLElement | null;
+  declare type QueryByRole = (role: TextMatch, options?: ByRoleOptions) => HTMLElement | null;
 
   declare type FindByRole = (
     role: TextMatch,
     options?: ByRoleOptions,
-    waitForElementOptions?: WaitForElementOptions
+    waitForElementOptions?: WaitForElementOptions,
   ) => Promise<HTMLElement>;
 
   declare type FindAllByRole = (
     role: Matcher,
     options?: ByRoleOptions,
-    waitForElementOptions?: WaitForElementOptions
+    waitForElementOptions?: WaitForElementOptions,
   ) => Promise<HTMLElement[]>;
 
   declare type GetsAndQueries = {|
@@ -200,19 +173,13 @@ declare module '@testing-library/react' {
     findAllByTestId: FindAllByBoundAttribute,
   |};
 
-  declare type FireEvent<TInit> = (
-    element: HTMLElement,
-    eventProperties?: TInit
-  ) => boolean;
+  declare type FireEvent<TInit> = (element: HTMLElement, eventProperties?: TInit) => boolean;
 
   declare type Screen<Queries = GetsAndQueries> = {
     ...Queries,
     debug: (
-      baseElement?:
-        | HTMLElement
-        | DocumentFragment
-        | Array<HTMLElement | DocumentFragment>,
-      maxLength?: number
+      baseElement?: HTMLElement | DocumentFragment | Array<HTMLElement | DocumentFragment>,
+      maxLength?: number,
     ) => void,
     ...
   };
@@ -224,11 +191,8 @@ declare module '@testing-library/react' {
     baseElement: HTMLElement,
     asFragment: () => DocumentFragment,
     debug: (
-      baseElement?:
-        | HTMLElement
-        | DocumentFragment
-        | Array<HTMLElement | DocumentFragment>,
-      maxLength?: number
+      baseElement?: HTMLElement | DocumentFragment | Array<HTMLElement | DocumentFragment>,
+      maxLength?: number,
     ) => void,
     rerender: (ui: React$Element<*>) => void,
     ...
@@ -241,9 +205,7 @@ declare module '@testing-library/react' {
     wrapper?: React.ComponentType,
   |};
 
-  declare export type RenderOptionsWithCustomQueries<
-    CustomQueries: { ... }
-  > = {|
+  declare export type RenderOptionsWithCustomQueries<CustomQueries: { ... }> = {|
     queries: CustomQueries,
     container?: HTMLElement,
     baseElement?: HTMLElement,
@@ -253,13 +215,11 @@ declare module '@testing-library/react' {
 
   declare export function render(
     ui: React.ReactElement<any>,
-    options?: RenderOptionsWithoutCustomQueries
+    options?: RenderOptionsWithoutCustomQueries,
   ): RenderResult<>;
-  declare export function render<
-    CustomQueries: { [string]: (...args: Array<any>) => any, ... }
-  >(
+  declare export function render<CustomQueries: { [string]: (...args: Array<any>) => any, ... }>(
     ui: React.ReactElement<any>,
-    options: RenderOptionsWithCustomQueries<CustomQueries>
+    options: RenderOptionsWithCustomQueries<CustomQueries>,
   ): RenderResult<CustomQueries>;
 
   declare export var act: ReactDOMTestUtilsAct;
@@ -272,7 +232,7 @@ declare module '@testing-library/react' {
       timeout?: number,
       interval?: number,
       mutationObserverOptions?: MutationObserverInit,
-    |}
+    |},
   ): Promise<T>;
 
   declare export function waitForElementToBeRemoved<T>(
@@ -282,7 +242,7 @@ declare module '@testing-library/react' {
       timeout?: number,
       interval?: number,
       mutationObserverOptions?: MutationObserverInit,
-    |}
+    |},
   ): Promise<T>;
 
   /* Deprecated */
@@ -292,7 +252,7 @@ declare module '@testing-library/react' {
       timeout?: number,
       interval?: number,
       ...
-    }
+    },
   ): Promise<void>;
 
   /* Deprecated */
@@ -311,12 +271,12 @@ declare module '@testing-library/react' {
       timeout?: number,
       mutationObserverOptions?: MutationObserverInit,
       ...
-    }
+    },
   ): Promise<T>;
 
   declare export function within(
     element: HTMLElement,
-    queriesToBind?: GetsAndQueries | Array<GetsAndQueries>
+    queriesToBind?: GetsAndQueries | Array<GetsAndQueries>,
   ): GetsAndQueries;
 
   declare export var fireEvent: {|
@@ -396,55 +356,53 @@ declare module '@testing-library/react' {
   declare export function queryByTestId(
     container: HTMLElement,
     id: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): ?HTMLElement;
   declare export function getByTestId(
     container: HTMLElement,
     id: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): HTMLElement;
   declare export function queryByText(
     container: HTMLElement,
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): ?HTMLElement;
   declare export function getByText(
     container: HTMLElement,
     text: TextMatch,
-    options?: { selector?: string, ... } & TextMatchOptions
+    options?: { selector?: string, ... } & TextMatchOptions,
   ): HTMLElement;
   declare export function queryByPlaceholderText(
     container: HTMLElement,
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): ?HTMLElement;
   declare export function getByPlaceholderText(
     container: HTMLElement,
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): HTMLElement;
   declare export function queryByLabelText(
     container: HTMLElement,
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): ?HTMLElement;
   declare export function getByLabelText(
     container: HTMLElement,
     text: TextMatch,
-    options?: { selector?: string, ... } & TextMatchOptions
+    options?: { selector?: string, ... } & TextMatchOptions,
   ): HTMLElement;
   declare export function queryByAltText(
     container: HTMLElement,
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): ?HTMLElement;
   declare export function getByAltText(
     container: HTMLElement,
     text: TextMatch,
-    options?: TextMatchOptions
+    options?: TextMatchOptions,
   ): HTMLElement;
-  declare export function getNodeText(
-    node: HTMLElement,
-  ): string;
+  declare export function getNodeText(node: HTMLElement): string;
   declare export var screen: Screen<>;
 }
