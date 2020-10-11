@@ -529,6 +529,7 @@ declare class Mongoose$Collection {
   mapReduce(): any;
   save(): any;
   update(): any;
+  drop(): void;
   collectionName: string;
   conn: Mongoose$Connection;
   name: string;
