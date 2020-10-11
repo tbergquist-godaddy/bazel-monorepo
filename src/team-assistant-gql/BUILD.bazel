@@ -50,10 +50,13 @@ jest_test(
     srcs = [
         "//:babel.config.js",
         ":scripts/setup-jest.js",
-    ] + glob(["src/**/*.js"]),
+    ] + glob([
+        "src/**/*.js",
+    ]),
     jest_config = ":jest.config.js",
     deps = get_deps() + [
         "@npm//mongodb-memory-server",
+        "@npm//supertest",
     ],
 )
 
