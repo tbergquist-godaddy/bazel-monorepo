@@ -1,4 +1,4 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary", "nodejs_test")
 load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//@babel/node:index.bzl", "babel_node")
 load("//jest:jest.bzl", "jest_test")
@@ -55,4 +55,19 @@ jest_test(
     deps = get_deps() + [
         "@npm//mongodb-memory-server",
     ],
+)
+
+# Use with bazel run to update local snapshot
+nodejs_test(
+    name = "test_bc",
+    data = get_deps() + [
+        ":src",
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+        "@npm//@adeira/graphql-bc-checker",
+        "@npm//@babel/register",
+        ":schema.graphql",
+    ],
+    entry_point = ":scripts/test-bc.js",
 )
