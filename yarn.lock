@@ -78,6 +78,15 @@
     chalk "^4.1.0"
     is-ci "^2.0.0"
 
+"@adeira/graphql-bc-checker@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@adeira/graphql-bc-checker/-/graphql-bc-checker-0.2.0.tgz#6ee52d81bcd4f55b5b5f3b39b1187ed25e136f7a"
+  integrity sha512-3ZPRSI5OQg/WfAy8VbOhkNBoqoF3WjNhBTfzAp01KRE4mWtH4C/ox5y6TSOa4F9pq9iOtN4PqSUMjbs60izyTA==
+  dependencies:
+    "@adeira/signed-source" "^1.0.0"
+    "@babel/runtime" "^7.10.3"
+    chalk "^4.1.0"
+
 "@adeira/graphql-global-id@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@adeira/graphql-global-id/-/graphql-global-id-1.1.1.tgz#76da8a049f80b5f693f90b454b4f3d862b2efc7e"
