@@ -9,7 +9,7 @@ const opts = { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: 
 
 beforeAll(async () => {
   server = new MongoMemoryServer();
-  const uri = await server.getConnectionString();
+  const uri = await server.getUri();
 
   await connection.openUri(uri, opts);
 }, 60000);

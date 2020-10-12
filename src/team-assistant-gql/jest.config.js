@@ -8,5 +8,6 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
   },
   setupFilesAfterEnv: [(path.join(__dirname, 'scripts', 'setup-jest.js') /*: string  */)],
+  setupFiles: [(path.join(__dirname, 'scripts', 'setup-env-vars.js') /*: string  */)],
   testEnvironment: 'node',
 };

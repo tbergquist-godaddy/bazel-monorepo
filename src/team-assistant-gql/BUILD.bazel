@@ -49,9 +49,9 @@ jest_test(
     name = "test",
     srcs = [
         "//:babel.config.js",
-        ":scripts/setup-jest.js",
     ] + glob([
         "src/**/*.js",
+        "scripts/**/*.js",
     ]),
     jest_config = ":jest.config.js",
     deps = get_deps() + [

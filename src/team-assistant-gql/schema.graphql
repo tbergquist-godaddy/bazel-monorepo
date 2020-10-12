@@ -1,4 +1,4 @@
-# @generated SignedSource<<5fdc517dd482eb1b9f2a3003bce3d231>>
+# @generated SignedSource<<b12a59526e83ce4cd6d6dd49834e9c05>>
 
 # <BREAKING-CHANGES-LOG>
 #  FIELD_REMOVED: Test.test was removed.
@@ -38,9 +38,15 @@ type Identity {
   id(opaque: Boolean = true): ID!
 }
 
+"""The response of a login mutation"""
+type LoginResponse {
+  token: String
+}
+
 """Root Mutation."""
 type RootMutation {
   createAccount(email: String!, password: String!): CreateAccountResponse
+  login(email: String!, password: String!): LoginResponse
 }
 
 """Root Query"""

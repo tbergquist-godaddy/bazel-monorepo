@@ -12,4 +12,5 @@ def get_deps():
         "@npm//compression",
         "@npm//@adeira/graphql-global-id",
         "@npm//mongoose",
+        "@npm//jsonwebtoken",
     ]
