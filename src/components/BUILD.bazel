@@ -1,5 +1,6 @@
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
 load("@npm//@babel/cli:index.bzl", "babel")
+load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 
 babel(
@@ -76,4 +77,10 @@ jest_test(
         "@npm//recoil",
         "@npm//shortid",
     ],
+)
+
+eslint(
+    name = "lint",
+    data = [":src"],
+    entry = ":src",
 )
