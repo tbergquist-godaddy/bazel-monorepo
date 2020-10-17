@@ -1,6 +1,7 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary", "nodejs_test")
 load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//@babel/node:index.bzl", "babel_node")
+load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
 
@@ -73,4 +74,10 @@ nodejs_test(
         ":schema.graphql",
     ],
     entry_point = ":scripts/test-bc.js",
+)
+
+eslint(
+    name = "lint",
+    data = [":src"],
+    entry = ":src",
 )
