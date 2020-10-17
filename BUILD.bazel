@@ -4,6 +4,9 @@ exports_files(
     [
         "package.json",
         "babel.config.js",
+        ".eslintrc.js",
+        ".eslintignore",
+        ".prettierignore",
     ],
     visibility = ["//visibility:public"],
 )
