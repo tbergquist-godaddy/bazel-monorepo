@@ -4,6 +4,7 @@
 .+/bazel-out/.+
 .+/bazel-testlogs/.+
 .+/bazel-test_bazel/.+
+/private/var/tmp/.*
 
 ; https://flow.org/en/docs/config/untyped/
 [untyped]
