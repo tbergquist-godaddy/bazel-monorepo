@@ -25,6 +25,9 @@ jobs:
         run: |
           yarn install
 
+      - name: Typecheck
+        run: yarn typecheck
+
       - name: Run Buldifier lint
         run: |
           "${GITHUB_WORKSPACE}/bin/bazel" run --build_tag_filters=manual //:buildifier.lint
