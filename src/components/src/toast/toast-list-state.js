@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import { useCallback, useMemo } from 'react';
 import { atom, useRecoilValue, useSetRecoilState } from 'recoil';
 import shortid from 'shortid';
 
@@ -38,7 +38,7 @@ type UseToastAction = {
 
 function useToastActions(): UseToastAction {
   const setToastList = useSetRecoilState(toastListState);
-  const setVisible = React.useCallback(
+  const setVisible = useCallback(
     (id: string) => {
       setToastList((toasts) => {
         return toasts.map((toast) => {
@@ -55,7 +55,7 @@ function useToastActions(): UseToastAction {
     [setToastList],
   );
 
-  const hide = React.useCallback(
+  const hide = useCallback(
     (id: string) => {
       setToastList((toasts) =>
         toasts.map((toast) => {
@@ -72,14 +72,14 @@ function useToastActions(): UseToastAction {
     [setToastList],
   );
 
-  const remove = React.useCallback(
+  const remove = useCallback(
     (id: string) => {
       setToastList((toasts) => toasts.filter((toast) => toast.id !== id));
     },
     [setToastList],
   );
 
-  const state = React.useMemo(
+  const state = useMemo(
     () => ({
       setVisible,
       hide,
@@ -92,7 +92,7 @@ function useToastActions(): UseToastAction {
 
 function useShowToast(): (Config) => void {
   const setToastList = useSetRecoilState(toastListState);
-  const showToast = React.useCallback(
+  const showToast = useCallback(
     (config: Config) => {
       setToastList((toasts) => {
         return [

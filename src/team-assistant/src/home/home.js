@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import { useEffect, Suspense, type Node } from 'react';
 import { Link } from 'react-router-dom';
 import fbt from 'fbt';
 import { useQueryLoader, usePreloadedQuery, graphql } from 'react-relay/hooks';
@@ -37,9 +37,9 @@ function Content({ queryReference }) {
   );
 }
 
-export default function Home(): React.Node {
+export default function Home(): Node {
   const [queryReference, loadQuery] = useQueryLoader(query);
-  React.useEffect(() => {
+  useEffect(() => {
     loadQuery({});
   }, [loadQuery]);
 
@@ -48,8 +48,8 @@ export default function Home(): React.Node {
   }
 
   return (
-    <React.Suspense fallback={<Spinner />}>
+    <Suspense fallback={<Spinner />}>
       <Content queryReference={queryReference} />
-    </React.Suspense>
+    </Suspense>
   );
 }

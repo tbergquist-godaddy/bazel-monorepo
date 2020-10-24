@@ -1,6 +1,5 @@
 // @flow
 
-import * as React from 'react';
 import { render } from 'react-dom';
 import * as sx from '@adeira/sx';
 

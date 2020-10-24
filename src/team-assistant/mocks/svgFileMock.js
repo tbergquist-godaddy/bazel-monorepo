@@ -1,7 +1,7 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 
-export default function svgMock(): React.Node {
+export default function svgMock(): Node {
   return <div />;
 }

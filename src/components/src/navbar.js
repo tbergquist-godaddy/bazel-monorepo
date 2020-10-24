@@ -1,13 +1,13 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 type Props = {
   brand: string,
 };
 
-export default function Navbar({ brand }: Props): React.Node {
+export default function Navbar({ brand }: Props): Node {
   return (
     <header className={styles('header')}>
       <nav>

@@ -1,6 +1,5 @@
 // @flow
 
-import * as React from 'react';
 import { render } from 'react-dom';
 import { Heading } from '@tbergq/components';
 // eslint-disable-next-line import/extensions

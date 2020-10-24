@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import type { Element, ComponentType } from 'react';
 import { create } from '@adeira/sx';
 
 import { useToastListState } from './toast-list-state';
@@ -11,7 +11,7 @@ type Props = {};
 export type Config = {
   +text: string,
   +type?: 'success' | 'danger',
-  +icon?: React.Element<any>,
+  +icon?: Element<any>,
   +timeout?: number,
 };
 
@@ -34,7 +34,7 @@ export default (function Toast() {
       })}
     </div>
   );
-}: React.ComponentType<Props>);
+}: ComponentType<Props>);
 
 const styles = create({
   toast: {

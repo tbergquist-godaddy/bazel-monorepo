@@ -1,6 +1,6 @@
 // @flow strict-local
 
-import * as React from 'react';
+import { useEffect } from 'react';
 import * as sx from '@adeira/sx';
 
 /**
@@ -8,7 +8,7 @@ import * as sx from '@adeira/sx';
  * hook on each piece of lazy loaded code
  */
 export default function useInjectSxStyles() {
-  React.useEffect(() => {
+  useEffect(() => {
     const sxStyleTags = sx.renderPageWithSX(() => {}).styles;
     let sxTag = document.querySelector('style[data-adeira-sx="true"]');
 

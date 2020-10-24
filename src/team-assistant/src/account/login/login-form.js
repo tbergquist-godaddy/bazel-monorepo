@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
 import { object, string } from 'yup';
@@ -20,7 +20,7 @@ const schema = object().shape({
   email: string().required().email().label(email),
 });
 
-export default function LoginForm(): React.Node {
+export default function LoginForm(): Node {
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });

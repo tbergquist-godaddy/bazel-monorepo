@@ -1,6 +1,6 @@
 // @flow strict-local
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 import Spin from './spinner.svg';
@@ -10,7 +10,7 @@ type Props = {
   +color?: 'primary' | 'white',
 };
 
-export default function Spinner({ size = 'normal', color = 'primary' }: Props): React.Node {
+export default function Spinner({ size = 'normal', color = 'primary' }: Props): Node {
   return <Spin data-testid="spinner" className={`spinner spin-${color} ${styles(size)}`} />;
 }
 

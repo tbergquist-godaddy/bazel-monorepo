@@ -1,15 +1,15 @@
 // @flow strict-local
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 type Props = {
-  +children: React.Node,
+  +children: Node,
   +type?: 'primary' | 'white',
   +as?: 'p' | 'div' | 'span',
 };
 
-export default function Text({ children, type = 'primary', as = 'span' }: Props): React.Node {
+export default function Text({ children, type = 'primary', as = 'span' }: Props): Node {
   const Component = as;
   return <Component className={styles(type)}>{children}</Component>;
 }

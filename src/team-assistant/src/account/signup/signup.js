@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { Heading, Input, FormGroup, Button, useShowToast } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { graphql, useMutation } from 'react-relay/hooks';
@@ -27,7 +27,7 @@ const schema = object().shape({
   email: string().required().email().label(email),
 });
 
-export default function Signup(): React.Node {
+export default function Signup(): Node {
   const navigate = useNavigate();
   const showToast = useShowToast();
   const { register, handleSubmit, errors } = useForm({

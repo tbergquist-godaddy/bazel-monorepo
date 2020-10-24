@@ -1,14 +1,14 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 type Props = {
-  +children: React.Node,
+  +children: Node,
   +align?: 'right' | 'center',
 };
 
-export default function FormGroup({ children, align }: Props): React.Node {
+export default function FormGroup({ children, align }: Props): Node {
   return <div className={styles('formGroup', align)}>{children}</div>;
 }
 

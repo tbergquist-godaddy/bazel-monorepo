@@ -1,12 +1,12 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 import Spinner from '../spinner/spinner';
 
 type Props = {
-  +children: React.Node,
+  +children: Node,
   +variant?: 'primary' | 'secondary',
   +type?: 'button' | 'submit',
   +onClick?: () => void,
@@ -19,7 +19,7 @@ export default function Button({
   type = 'button',
   isLoading,
   ...rest
-}: Props): React.Node {
+}: Props): Node {
   return (
     <>
       {/* eslint-disable-next-line react/button-has-type */}

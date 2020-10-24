@@ -1,12 +1,12 @@
 // @flow
 
-import * as React from 'react';
+import { forwardRef, type Node, type ComponentType } from 'react';
 import { create } from '@adeira/sx';
 
 type Props = {
   +value?: string,
   +onChange?: (SyntheticEvent<HTMLInputElement>) => void,
-  +label: React.Node,
+  +label: Node,
   +type?: 'text' | 'password' | 'email',
   +inputMode?: ?'email' | 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'url',
   +name: string,
@@ -14,7 +14,7 @@ type Props = {
   +error?: ?string,
 };
 
-function Input({ label, type = 'text', error, ...rest }: Props, ref): React.Node {
+function Input({ label, type = 'text', error, ...rest }: Props, ref): Node {
   const hasError = error != null && error !== '';
   return (
     <label>
@@ -63,4 +63,4 @@ const styles = create({
   },
 });
 
-export default (React.forwardRef(Input): React.ComponentType<Props>);
+export default (forwardRef(Input): ComponentType<Props>);
