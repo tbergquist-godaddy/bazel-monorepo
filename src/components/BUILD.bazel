@@ -1,5 +1,6 @@
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
 load("@npm//@babel/cli:index.bzl", "babel")
+load("@npm//@storybook/react:index.bzl", "start_storybook")
 load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 
@@ -83,4 +84,22 @@ eslint(
     name = "lint",
     data = [":src"],
     entry = ":src",
+)
+
+start_storybook(
+    name = "storybook",
+    args = [
+        "-c",
+        "$(execpath .storybook)",
+        "-p",
+        "6006",
+    ],
+    data = [
+        ":.storybook",
+        ":package.json",
+        ":src",
+        "//:babel.config.js",
+        "//:package.json",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
 )

@@ -11,41 +11,62 @@ type Props = {
   +type?: 'button' | 'submit',
   +onClick?: () => void,
   +isLoading?: boolean,
+  +size?: 'small' | 'normal',
 };
 
 export default function Button({
   children,
   variant = 'primary',
   type = 'button',
+  size = 'normal',
   isLoading,
   ...rest
 }: Props): Node {
   return (
-    <>
-      {/* eslint-disable-next-line react/button-has-type */}
-      <button disabled={isLoading} type={type} className={styles('button', variant)} {...rest}>
-        {isLoading === true ? <Spinner size="small" color="white" /> : children}
-      </button>
-    </>
+    <button
+      disabled={isLoading}
+      // eslint-disable-next-line react/button-has-type
+      type={type}
+      className={styles('button', variant, size)}
+      {...rest}
+    >
+      {isLoading === true ? <Spinner size="small" color="white" /> : children}
+    </button>
   );
 }
 
 const styles = create({
   button: {
-    'padding': 'var(--space-small) var(--space-large)',
     'color': 'var(--color-white)',
     'border': 'none',
     'borderRadius': 'var(--border-radius-normal)',
     'outline': 'none',
     'fontWeight': 500,
+    'transition': 'all .3s',
+    'cursor': 'pointer',
+    ':hover': {
+      transform: 'translateY(-3px)',
+    },
+    ':active': {
+      transform: 'translateY(-1px)',
+    },
+  },
+  normal: {
+    padding: 'var(--space-normal) var(--space-large)',
+  },
+  small: {
+    padding: 'var(--space-small) var(--space-large)',
+  },
+  primary: {
+    'backgroundColor': 'var(--color-primary)',
     ':focus': {
       boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
     },
   },
-  primary: {
-    backgroundColor: 'var(--color-primary)',
-  },
   secondary: {
-    backgroundColor: 'var(--color-secondary)',
+    'backgroundColor': 'var(--color-secondary)',
+    ':focus': {
+      boxShadow: 'var(--color-secondary-focus) 0px 0px 0px 0.2rem',
+    },
   },
 });
