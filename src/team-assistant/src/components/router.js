@@ -1,23 +1,23 @@
 // @flow
 
-import * as React from 'react';
+import { lazy, Suspense, type Node } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Spinner } from '@tbergq/components';
 
-const Login = React.lazy(() => import('../account/login/login'));
-const Home = React.lazy(() => import('../home/home'));
-const Signup = React.lazy(() => import('../account/signup/signup'));
-const Dashboard = React.lazy(() => import('../dashboard/dashboard'));
+const Login = lazy(() => import('../account/login/login'));
+const Home = lazy(() => import('../home/home'));
+const Signup = lazy(() => import('../account/signup/signup'));
+const Dashboard = lazy(() => import('../dashboard/dashboard'));
 
-export default function Router(): React.Node {
+export default function Router(): Node {
   return (
-    <React.Suspense fallback={<Spinner />}>
+    <Suspense fallback={<Spinner />}>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </React.Suspense>
+    </Suspense>
   );
 }

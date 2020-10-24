@@ -1,12 +1,12 @@
 // @flow strict-local
 
-import * as React from 'react';
+import type { Node } from 'react';
 
 type Props = {
-  +children: React.Node,
+  +children: Node,
   +href: string,
 };
 
-export default function Link({ children, ...rest }: Props): React.Node {
+export default function Link({ children, ...rest }: Props): Node {
   return <a {...rest}>{children}</a>;
 }

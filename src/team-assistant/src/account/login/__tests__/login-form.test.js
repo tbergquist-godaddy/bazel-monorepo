@@ -1,6 +1,5 @@
 // @flow
 
-import * as React from 'react';
 import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 import { screen, waitFor, act } from '@testing-library/react';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';

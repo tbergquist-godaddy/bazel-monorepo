@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import { useEffect, type Node } from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 import * as sx from '@adeira/sx';
 import { Navbar, breakpoints, Toast } from '@tbergq/components';
@@ -14,8 +14,8 @@ import environment from '../relay/environment';
 import getLanguage from './get-language';
 import './yup-locale';
 
-export default function App(): React.Node {
-  React.useEffect(() => {
+export default function App(): Node {
+  useEffect(() => {
     init({
       translations,
       hooks: {

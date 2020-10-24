@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import { useRef, useEffect, type Node } from 'react';
 import { create } from '@adeira/sx';
 
 import { useToastActions } from './toast-list-state';
@@ -14,13 +14,13 @@ type Props = $ReadOnly<{
   toastId: string,
 }>;
 
-export default function ToastContent(props: Props): React.Node {
-  const toastRef = React.useRef(null);
-  const timeoutRef = React.useRef();
+export default function ToastContent(props: Props): Node {
+  const toastRef = useRef(null);
+  const timeoutRef = useRef();
   const { hide, remove, setVisible } = useToastActions();
   const { timeout, toastId } = props;
 
-  React.useEffect(() => {
+  useEffect(() => {
     timeoutRef.current = setTimeout(() => {
       hide(toastId);
       setTimeout(() => {
@@ -32,7 +32,7 @@ export default function ToastContent(props: Props): React.Node {
     };
   }, [timeout, hide, remove, toastId]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // This component is now mounted, we are ready to animate
     requestAnimationFrame(() => {
       setVisible(toastId);

@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { useHref } from 'react-router-dom';
 import fbt from 'fbt';
 import { Heading, Link, Text } from '@tbergq/components';
@@ -9,7 +9,7 @@ import useInjectSxStyles from '../../components/use-inject-sx-styles';
 import LoginForm from './login-form';
 import AccountFormContainer from '../components/account-form-container';
 
-export default function Login(): React.Node {
+export default function Login(): Node {
   useInjectSxStyles();
   const href = useHref('/signup');
 

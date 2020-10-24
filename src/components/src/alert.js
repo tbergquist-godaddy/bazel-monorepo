@@ -1,14 +1,14 @@
 // @flow strict-local
 
-import * as React from 'react';
+import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 type Props = {
-  +children: React.Node,
+  +children: Node,
   +type: 'success' | 'danger',
 };
 
-export default function Alert({ children, type = 'success' }: Props): React.Node {
+export default function Alert({ children, type = 'success' }: Props): Node {
   return (
     <div role="alert" className={styles('alert', type)}>
       {children}
