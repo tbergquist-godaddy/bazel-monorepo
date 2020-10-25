@@ -1,6 +1,6 @@
 // @flow
 
-import mongoose from 'mongoose';
+import mongoose, { type MongoId } from 'mongoose';
 import crypto from 'crypto';
 
 import connection from '../connection';
@@ -49,6 +49,7 @@ type CreateUserInput = {
 };
 
 class UserDoc extends mongoose.Model {
+  _id: MongoId;
   password: string;
   email: string;
   salt: string;
