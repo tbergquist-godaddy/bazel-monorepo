@@ -11,6 +11,7 @@
     "@bazel/bazelisk": "^1.6.1",
     "@bazel/ibazel": "^0.13.2",
     "@storybook/addon-actions": "^6.0.27",
+    "@storybook/react": "^6.0.27",
     "@svgr/webpack": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
@@ -31,8 +32,8 @@
     "relay-test-utils": "^10.0.1",
     "style-loader": "^1.2.1",
     "supertest": "^5.0.0",
+    "vercel": "^20.1.2",
     "webpack-cli": "^3.3.12",
-    "@storybook/react": "^6.0.27",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
