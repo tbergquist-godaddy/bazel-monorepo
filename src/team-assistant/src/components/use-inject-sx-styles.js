@@ -15,13 +15,13 @@ export default function useInjectSxStyles() {
     if (sxTag == null) {
       sxTag = document.createElement('style');
       sxTag.setAttribute('data-adeira-sx', 'true');
-      sxTag.innerHTML = sxStyleTags[0].props.children;
+      sxTag.innerHTML = sxStyleTags[0].props.dangerouslySetInnerHTML.__html;
 
       if (document.head != null) {
         document.head.appendChild(sxTag);
       }
     } else {
-      sxTag.innerHTML = sxStyleTags[0].props.children;
+      sxTag.innerHTML = sxStyleTags[0].props.dangerouslySetInnerHTML.__html;
     }
   }, []);
 }

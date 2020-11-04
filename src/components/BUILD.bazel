@@ -69,6 +69,7 @@ jest_test(
         "//jest:preset",
         "@npm//@adeira/babel-preset-adeira",
         "@npm//@adeira/sx",
+        "@npm//@babel/runtime",
         "@npm//@jest/transform",
         "@npm//@testing-library/jest-dom",
         "@npm//@testing-library/react",

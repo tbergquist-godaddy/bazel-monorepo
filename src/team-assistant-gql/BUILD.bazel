@@ -58,6 +58,7 @@ jest_test(
     deps = get_deps() + [
         "@npm//mongodb-memory-server",
         "@npm//supertest",
+        "@npm//@babel/runtime",
     ],
 )
 
@@ -71,6 +72,7 @@ nodejs_test(
         "//:babel.config.js",
         "@npm//@adeira/graphql-bc-checker",
         "@npm//@babel/register",
+        "@npm//@babel/runtime",
         ":schema.graphql",
     ],
     entry_point = ":scripts/test-bc.js",
