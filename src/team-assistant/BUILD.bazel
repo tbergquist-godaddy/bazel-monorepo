@@ -1,4 +1,6 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin")
 load("@npm//http-server:index.bzl", "http_server")
+load("@npm//vercel:index.bzl", "vercel")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
 load("//:eslint/eslint.bzl", "eslint")
@@ -6,7 +8,7 @@ load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
 
 webpack_cli(
-    name = "compile",
+    name = "public",
     args = [
         "$(execpath src/index.js)",
         "--config",
@@ -30,13 +32,13 @@ webpack_cli(
 http_server(
     name = "server",
     args = [
-        "src/team-assistant/compile/",
+        "src/team-assistant/public/",
         "-o",
         "-p",
         "9000",
     ],
     data = [
-        ":compile",
+        ":public",
     ],
 )
 
@@ -97,4 +99,20 @@ eslint(
         ":src",
     ],
     entry = ":src",
+)
+
+copy_to_bin(
+    name = "copy",
+    srcs = ["vercel.json"],
+)
+
+vercel(
+    name = "deploy",
+    args = [
+        "./src/team-assistant",
+    ],
+    data = [
+        ":public",
+        ":vercel.json",
+    ],
 )
