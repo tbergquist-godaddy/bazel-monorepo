@@ -52,7 +52,7 @@ export default function Signup(): Node {
     signUp({
       variables: { password, email },
       onCompleted: (res, err) => {
-        const reason = res.createAccount.reason;
+        const reason = res.createAccount?.reason;
         if (reason != null || err != null) {
           showToast({
             text:

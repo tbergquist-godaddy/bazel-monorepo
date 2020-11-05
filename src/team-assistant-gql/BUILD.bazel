@@ -105,3 +105,10 @@ vercel(
         ":vercel.json",
     ],
 )
+
+exports_files(
+    [
+        "schema.graphql",
+    ],
+    visibility = ["//visibility:public"],
+)

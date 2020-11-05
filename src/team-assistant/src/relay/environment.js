@@ -4,7 +4,7 @@ import fetch from '@adeira/fetch';
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 // TODO: Move to .env
-const url = 'https://team-assistant-gql.herokuapp.com/graphql';
+const url = 'https://team-assistant-gql.now.sh/';
 // const url = 'http://localhost:3000/graphql';
 
 function fetchQuery(operation, variables) {
