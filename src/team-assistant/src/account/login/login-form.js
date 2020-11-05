@@ -39,7 +39,7 @@ export default function LoginForm(): Node {
     login({
       variables: { email, password },
       onCompleted: (res, err) => {
-        const token = res.login.token;
+        const token = res.login?.token;
         if (token == null || err != null) {
           showToast({
             text: fbt('Login failed', 'Login failed notification'),

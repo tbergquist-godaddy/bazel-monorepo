@@ -29,9 +29,9 @@ function Content({ queryReference }) {
         <fbt desc="Todo text">Home TODO</fbt>
       </h1>
       <Link to="/login">Go login</Link>
-      <div>{data.test.id}</div>
-      <div>{data.test.firstName}</div>
-      <div>{data.test.lastName}</div>
+      <div>{data.test?.id}</div>
+      <div>{data.test?.firstName}</div>
+      <div>{data.test?.lastName}</div>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );

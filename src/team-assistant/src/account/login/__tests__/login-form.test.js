@@ -43,11 +43,11 @@ it('shows error message for failed login', async () => {
   await waitFor(() => expect(submitButton).toBeDisabled());
 
   act(() => {
-    environment.mock.resolveMostRecentOperation((operation) =>
-      MockPayloadGenerator.generate(operation, {
-        Login: () => ({ token: null }),
-      }),
-    );
+    environment.mock.resolveMostRecentOperation((operation) => {
+      return MockPayloadGenerator.generate(operation, {
+        LoginResponse: () => ({ token: null }),
+      });
+    });
   });
 
   await waitFor(() => expect(screen.getByText('Login failed')).toBeInTheDocument());

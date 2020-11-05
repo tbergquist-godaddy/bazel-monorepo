@@ -1,5 +1,6 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin")
 load("@npm//http-server:index.bzl", "http_server")
+load("@npm//relay-compiler:index.bzl", "relay_compiler")
 load("@npm//vercel:index.bzl", "vercel")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
@@ -114,5 +115,19 @@ vercel(
     data = [
         ":public",
         ":vercel.json",
+    ],
+)
+
+relay_compiler(
+    name = "relay",
+    args = [
+        "--src",
+        "./src/team-assistant/src",
+        "--schema",
+        "./src/team-assistant-gql/schema.graphql",
+    ],
+    data = [
+        ":src",
+        "//src/team-assistant-gql:schema.graphql",
     ],
 )
