@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "team-assistant-gql",
+  "builds": [
+    { "src": "lib/index.js", "use": "@now/node-server", "config": { "maxLambdaSize": "50mb" } }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGO_DB_URL":"@mongo-db-url-production-twzp",
+    "JWT_SECRET": "@jwt-secret-production-sbrw"
+  },
+  "alias": "team-assistant-gql.now.sh",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/lib"
+    }
+  ]
+}

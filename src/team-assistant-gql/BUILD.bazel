@@ -1,6 +1,7 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary", "nodejs_test")
+load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin", "nodejs_binary", "nodejs_test")
 load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//@babel/node:index.bzl", "babel_node")
+load("@npm//vercel:index.bzl", "vercel")
 load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
@@ -82,4 +83,25 @@ eslint(
     name = "lint",
     data = [":src"],
     entry = ":src",
+)
+
+copy_to_bin(
+    name = "copy",
+    srcs = [
+        "package.json",
+        "vercel.json",
+    ],
+)
+
+vercel(
+    name = "deploy",
+    args = [
+        "./src/team-assistant-gql",
+        "--prod",
+    ],
+    data = [
+        ":lib",
+        ":package.json",
+        ":vercel.json",
+    ],
 )

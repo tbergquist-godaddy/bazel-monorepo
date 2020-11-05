@@ -1,5 +1,6 @@
-/* eslint-disable no-console */
 // @flow
+
+/* eslint-disable no-console */
 
 import connection from './database/connection';
 import app from './app';
@@ -10,6 +11,10 @@ connection.openUri(uri, {
   useNewUrlParser: true,
 });
 
-app.listen({ port: process.env.PORT ?? 4000 }, () =>
-  console.log(`🚀 Server ready at http://localhost:4000/graphql`),
-);
+if (__DEV__) {
+  app.listen({ port: process.env.PORT ?? 4000 }, () =>
+    console.log(`🚀 Server ready at http://localhost:4000/graphql`),
+  );
+} else {
+  app.listen();
+}
