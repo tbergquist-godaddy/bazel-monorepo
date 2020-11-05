@@ -1,6 +1,7 @@
 // @flow
 
 const OFF = 0;
+const ERROR = 2;
 
 module.exports = {
   root: true,
@@ -18,7 +19,12 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': OFF,
     'import/no-unresolved': OFF,
-    'import/no-extraneous-dependencies': OFF,
+    'import/no-extraneous-dependencies': [
+      ERROR,
+      {
+        devDependencies: ['**/*.test.js', '**/scripts/**/*.js'],
+      },
+    ],
     'flowtype/require-inexact-type': OFF,
   },
 };

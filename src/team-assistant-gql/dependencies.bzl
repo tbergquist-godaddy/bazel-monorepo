@@ -5,7 +5,6 @@ Npm build dependencies
 def get_deps():
     return [
         "@npm//@adeira/babel-preset-adeira",
-        "@npm//apollo-server-express",
         "@npm//express",
         "@npm//cors",
         "@npm//morgan",
@@ -13,4 +12,5 @@ def get_deps():
         "@npm//@adeira/graphql-global-id",
         "@npm//mongoose",
         "@npm//jsonwebtoken",
+        "@npm//express-graphql",
     ]
