@@ -1,4 +1,5 @@
 {
   "name": "team-assistant",
-  "version": 2
+  "version": 2,
+  "scope": "tbergq"
 }
