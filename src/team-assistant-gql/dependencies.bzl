@@ -13,4 +13,7 @@ def get_deps():
         "@npm//mongoose",
         "@npm//jsonwebtoken",
         "@npm//express-graphql",
+        "@npm//passport",
+        "@npm//passport-jwt",
+        "@npm//dotenv",
     ]
