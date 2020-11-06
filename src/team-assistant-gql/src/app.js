@@ -5,15 +5,36 @@ import cors from 'cors';
 import compression from 'compression';
 import morgan from 'morgan';
 import { graphqlHTTP } from 'express-graphql';
+import passport from 'passport';
+import passportJwt from 'passport-jwt';
+import { config } from 'dotenv';
 
 import schema from './schema';
+import { jwtFromRequest, tokenToUser, attachUserToRequest } from './middleware/auth';
+import createContext from './context';
+
+config();
+
+const { JWT_SECRET } = process.env;
+
+passport.use(
+  new passportJwt.Strategy(
+    {
+      secretOrKey: JWT_SECRET,
+      jwtFromRequest,
+    },
+    tokenToUser,
+  ),
+);
 
 const app: $Application<> = express();
 
-function createGraphqlServer() {
+function createGraphqlServer(req) {
   return graphqlHTTP({
     schema,
     graphiql: true,
+    // $FlowExpectedError[prop-missing]
+    context: createContext(req),
   });
 }
 
@@ -21,10 +42,10 @@ app.use(cors({ methods: ['GET', 'POST'] }));
 app.use(compression());
 app.use(morgan('dev'));
 
-app.use('/', (request: $Request, response: $Response) => {
+app.use('/', attachUserToRequest, (request: $Request, response: $Response) => {
   // $FlowExpectedError[incompatible-exact]: graphqlHTTP uses types from node http module
   // $FlowExpectedError[incompatible-call]: graphqlHTTP uses types from node http module
-  return createGraphqlServer()(request, response);
+  return createGraphqlServer(request)(request, response);
 });
 
 export default app;
