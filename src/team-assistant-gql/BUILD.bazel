@@ -82,7 +82,10 @@ nodejs_test(
 
 eslint(
     name = "lint",
-    data = [":src"],
+    data = [
+        ":package.json",
+        ":src",
+    ],
     entry = ":src",
 )
 
