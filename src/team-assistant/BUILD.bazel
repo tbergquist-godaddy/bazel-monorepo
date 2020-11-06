@@ -111,6 +111,8 @@ vercel(
     name = "deploy",
     args = [
         "./src/team-assistant",
+        "--prod",
+        "--confirm",
     ],
     data = [
         ":public",

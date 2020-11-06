@@ -102,6 +102,7 @@ vercel(
     args = [
         "./src/team-assistant-gql",
         "--prod",
+        "--confirm",
     ],
     data = [
         ":lib",
