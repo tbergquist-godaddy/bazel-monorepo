@@ -2,7 +2,7 @@
 Eslint.
 """
 
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_test")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary", "nodejs_test")
 
 def eslint(name, data, entry, **kwargs):
     templated_args = ["$(execpath %s)" % entry, "--report-unused-disable-directives"]
@@ -24,7 +24,7 @@ def eslint(name, data, entry, **kwargs):
         templated_args = templated_args,
     )
 
-    nodejs_test(
+    nodejs_binary(
         name = "%s.fix" % name,
         data = lint_data,
         entry_point = "@npm//:node_modules/eslint/bin/eslint.js",
