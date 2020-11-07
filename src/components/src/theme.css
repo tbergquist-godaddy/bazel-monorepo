@@ -17,13 +17,13 @@
   --color-secondary-focus: rgba(226, 149, 120, 0.5);
   --color-error: #d62828;
 
-  --space-x-small: 4px;
-  --space-small: 8px;
-  --space-normal: 12px;
-  --space-large: 16px;
+  --space-x-small: .4rem;
+  --space-small: .8rem;
+  --space-normal: 1.2rem;
+  --space-large: 1.6rem;
 
-  --text-size-normal: 1rem;
-  --text-size-small: 0.875rem;
+  --text-size-normal: 1.6rem;
+  --text-size-small: 1.4rem;
 
   --z-index-on-top: 900;
 }

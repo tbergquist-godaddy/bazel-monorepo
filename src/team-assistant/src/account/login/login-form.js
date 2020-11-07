@@ -2,7 +2,7 @@
 
 import type { Node } from 'react';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string } from 'yup';
 import { Input, FormGroup, Button, useShowToast } from '@tbergq/components';
 import { fbt } from 'fbt';

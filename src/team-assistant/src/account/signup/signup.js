@@ -5,7 +5,7 @@ import { Heading, Input, FormGroup, Button, useShowToast } from '@tbergq/compone
 import { fbt } from 'fbt';
 import { graphql, useMutation } from 'react-relay/hooks';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string, ref } from 'yup';
 import { useNavigate } from 'react-router-dom';
 

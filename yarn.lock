@@ -1430,10 +1430,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hookform/resolvers@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-0.1.1.tgz#285fa7aa1b7b94fab526c4d39713ed3470558497"
-  integrity sha512-IKWcvDG82D0N+3ZjMSbdHul6TgL2Dd68aXyijLvc1mUCzBChvQwS6YDsXRrc9WuIjUPb9nluaVIIrmg3V1JMGQ==
+"@hookform/resolvers@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.0.1.tgz#a80029fb8e1fb8e17960731010d48b4cdbad1941"
+  integrity sha512-hhixh7KHFr88kH+jwoQW3Y1h/77Q54RykO3vrrwnqkSW3aGjpJVzGjr5dvkJrguGljO62zryqHvQdR9Fhf1kig==
 
 "@icons/material@^0.2.4":
   version "0.2.4"
