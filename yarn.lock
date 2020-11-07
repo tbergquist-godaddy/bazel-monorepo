@@ -88,7 +88,7 @@
     "@babel/runtime" "^7.10.3"
     chalk "^4.1.0"
 
-"@adeira/graphql-global-id@^1.1.1":
+"@adeira/graphql-global-id@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@adeira/graphql-global-id/-/graphql-global-id-1.2.0.tgz#7b24bbc714f7f2e0351c0d4496d93052c935d904"
   integrity sha512-xeBBmM0e1ChO7BMvuKRM1dS0gLRGiB1fyuat/GUDekS9RFVHbCqWB3VgYuUPpCiDOidspGfz5m3Oc3HrevN3jQ==

@@ -1,12 +1,10 @@
 // @flow
 
 import { GraphQLNonNull, GraphQLString } from 'graphql';
-import jwt from 'jsonwebtoken';
 
 import LoginResponse from '../models/login-response';
 import UserModel from '../../database/models/users';
-
-const { JWT_SECRET } = process.env;
+import { signToken } from '../../middleware/auth';
 
 type Args = {
   +password: string,
@@ -32,10 +30,7 @@ export default {
     if (user == null) {
       return { token: null };
     }
-    const token = jwt.sign({ id: email, email }, JWT_SECRET, {
-      expiresIn: '1d',
-      issuer: 'team_assistant',
-    });
+    const token = signToken(user.email);
     return { token };
   },
 };

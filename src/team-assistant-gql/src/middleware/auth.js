@@ -2,8 +2,11 @@
 
 import { type $Request, type $Response, type NextFunction } from 'express';
 import passport from 'passport';
+import jwt from 'jsonwebtoken';
 
 import UserModel from '../database/models/users';
+
+const { JWT_SECRET } = process.env;
 
 export type JwtPayload = {|
   +iss?: string,
@@ -42,3 +45,9 @@ export const attachUserToRequest = (req: $Request, res: $Response, next: NextFun
     next();
   })(req, res, next);
 };
+
+export const signToken = (email: string): string =>
+  jwt.sign({ id: email, email }, JWT_SECRET, {
+    expiresIn: '1d',
+    issuer: 'team_assistant',
+  });

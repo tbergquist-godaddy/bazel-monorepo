@@ -1,4 +1,4 @@
-# @generated SignedSource<<b12a59526e83ce4cd6d6dd49834e9c05>>
+# @generated SignedSource<<0079a5b695880c8511127e4bca442f23>>
 
 # <BREAKING-CHANGES-LOG>
 #  FIELD_REMOVED: Test.test was removed.
@@ -24,6 +24,18 @@ enum CreateAccountErrorReason {
 
 union CreateAccountResponse = CreateAccountError | Identity
 
+"""Error type for creating a team"""
+type CreateTeamError implements Error {
+  message: String
+  reason: CreateTeamErrorReason
+}
+
+enum CreateTeamErrorReason {
+  NAME_MISSING
+}
+
+union CreateTeamPayload = CreateTeamError | Team
+
 interface Error {
   message: String
 }
@@ -46,6 +58,7 @@ type LoginResponse {
 """Root Mutation."""
 type RootMutation {
   createAccount(email: String!, password: String!): CreateAccountResponse
+  createTeam(name: String!): CreateTeamPayload
   login(email: String!, password: String!): LoginResponse
 }
 
@@ -53,6 +66,15 @@ type RootMutation {
 type RootQuery {
   """Just for testing purpose"""
   test(id: String!): Test
+}
+
+"""A team"""
+type Team {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  name: String
 }
 
 """Just for test purpose, will be removed later"""

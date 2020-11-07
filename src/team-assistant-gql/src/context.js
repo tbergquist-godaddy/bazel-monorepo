@@ -4,7 +4,7 @@ import type { $Request } from 'express';
 
 import type { JwtPayload } from './middleware/auth';
 
-type Context = {
+export type Context = {
   user: JwtPayload | null,
 };
 type Request = $ReadOnly<{
