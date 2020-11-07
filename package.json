@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@adeira/fetch": "^1.0.3",
-    "@adeira/graphql-global-id": "^1.1.1",
+    "@adeira/graphql-global-id": "^1.2.0",
     "@adeira/sx": "^0.15.1",
     "@babel/node": "^7.12.6",
     "@babel/runtime": "^7.12.5",
