@@ -22,7 +22,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: ['**/*.test.js', '**/scripts/**/*.js'],
+        devDependencies: ['**/*.test.js', '**/scripts/**/*.js', '**/*.stories.js'],
       },
     ],
     'flowtype/require-inexact-type': OFF,

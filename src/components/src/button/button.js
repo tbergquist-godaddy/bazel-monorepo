@@ -42,7 +42,8 @@ const styles = create({
     'borderRadius': 'var(--border-radius-normal)',
     'outline': 'none',
     'fontWeight': 500,
-    'transition': 'all .3s',
+    'fontFamily': 'inherit',
+    'transition': 'transform .3s',
     'cursor': 'pointer',
     ':hover': {
       transform: 'translateY(-3px)',

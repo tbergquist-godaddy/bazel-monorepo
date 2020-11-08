@@ -26,7 +26,7 @@ const WithSx = ({ children }) => {
 
     for (const style of sxStyleTags) {
       const styleTag = document.createElement('style');
-      styleTag.innerHTML = style.props.children;
+      styleTag.innerHTML = style.props.dangerouslySetInnerHTML.__html;
       styleTag.setAttribute('data-adeira-sx', 'true');
 
       if (head != null) {
