@@ -32,7 +32,7 @@
     "relay-compiler": "^10.0.1",
     "relay-test-utils": "^10.0.1",
     "style-loader": "^2.0.0",
-    "supertest": "^5.0.0",
+    "supertest": "^6.0.1",
     "vercel": "^20.1.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
