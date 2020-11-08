@@ -32,4 +32,5 @@ def get_deps():
         "@npm//@babel/plugin-syntax-dynamic-import",
         "@npm//jest",
         "//src/components:components",
+        "@npm//copy-webpack-plugin",
     ]

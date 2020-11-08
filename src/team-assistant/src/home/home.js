@@ -4,7 +4,7 @@ import { useEffect, Suspense, type Node } from 'react';
 import { Link } from 'react-router-dom';
 import fbt from 'fbt';
 import { useQueryLoader, usePreloadedQuery, graphql } from 'react-relay/hooks';
-import { Spinner } from '@tbergq/components';
+import { Spinner, Heading } from '@tbergq/components';
 
 import type { homeQuery } from './__generated__/homeQuery.graphql';
 import useInjectSxStyles from '../components/use-inject-sx-styles';
@@ -25,9 +25,9 @@ function Content({ queryReference }) {
 
   return (
     <div>
-      <h1>
+      <Heading level="h1">
         <fbt desc="Todo text">Home TODO</fbt>
-      </h1>
+      </Heading>
       <Link to="/login">Go login</Link>
       <div>{data.test?.id}</div>
       <div>{data.test?.firstName}</div>

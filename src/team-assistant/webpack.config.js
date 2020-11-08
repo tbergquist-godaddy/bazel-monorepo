@@ -2,6 +2,7 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const templateContent = `<!DOCTYPE html>
 <html lang="en">
@@ -9,10 +10,7 @@ const templateContent = `<!DOCTYPE html>
     <meta charset="UTF-8" />
     <title>Team assistant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" href="/favicon.ico"/>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700"
       rel="stylesheet"
@@ -36,6 +34,9 @@ module.exports = {
       hash: true,
       scriptLoading: 'defer',
       templateContent,
+    }) /*: Object */),
+    (new CopyPlugin({
+      patterns: [{ from: './src/team-assistant/src/favicon.ico', to: 'favicon.ico' }],
     }) /*: Object */),
   ],
   optimization: {
