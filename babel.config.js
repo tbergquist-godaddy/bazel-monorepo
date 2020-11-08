@@ -55,7 +55,6 @@ module.exports = function (api /*: ApiType */) /*: BabelConfig */ {
         '@adeira/babel-preset-adeira',
         {
           target,
-          reactRuntime: 'automatic',
         },
       ],
     ],
