@@ -95,10 +95,13 @@ start_storybook(
         "-p",
         "6006",
     ],
-    data = [
+    data = glob([
+        "**/*.js",
+        "**/*.svg",
+        "**/*.css",
+    ]) + [
         ":.storybook",
         ":package.json",
-        ":src",
         "//:babel.config.js",
         "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
