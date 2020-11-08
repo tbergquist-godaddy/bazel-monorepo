@@ -26,5 +26,6 @@ module.exports = {
       },
     ],
     'flowtype/require-inexact-type': OFF,
+    'adeira/only-nullable-fields': OFF,
   },
 };
