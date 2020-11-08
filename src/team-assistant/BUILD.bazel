@@ -22,6 +22,7 @@ webpack_cli(
     data = glob([
         "**/*.js",
         "**/*.json",
+        "**/*.ico",
     ]) + get_deps() + [
         ":src/app.css",
         "//:babel.config.js",
@@ -87,6 +88,7 @@ webpack_dev_server(
     data = glob([
         "**/*.js",
         "**/*.json",
+        "**/*.ico",
     ]) + get_deps() + [
         ":src/app.css",
         "//:babel.config.js",
