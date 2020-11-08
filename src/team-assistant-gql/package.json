@@ -14,7 +14,9 @@
     "express-graphql": "^0.11.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "dataloader": "^2.0.0",
+    "@adeira/graphql-relay": "^0.2.0"
   },
   "devDependencies": {
     "supertest": "^6.0.1",

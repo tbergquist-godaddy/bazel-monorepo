@@ -1,9 +1,9 @@
 // @flow
 
 import { GraphQLUnionType, GraphQLObjectType, GraphQLEnumType, GraphQLString } from 'graphql';
-import globalId from '@adeira/graphql-global-id';
 
 import ErrorInterface from '../../models/error-interface';
+import Team from './team';
 
 const CreateTeamErrorReason = new GraphQLEnumType({
   name: 'CreateTeamErrorReason',
@@ -18,15 +18,6 @@ const CreateTeamError = new GraphQLObjectType({
   fields: {
     message: { type: GraphQLString },
     reason: { type: CreateTeamErrorReason },
-  },
-});
-
-const Team = new GraphQLObjectType({
-  name: 'Team',
-  description: 'A team',
-  fields: {
-    id: globalId(({ id }) => id),
-    name: { type: GraphQLString },
   },
 });
 
