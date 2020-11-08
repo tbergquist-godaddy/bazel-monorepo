@@ -3,6 +3,8 @@
 import { GraphQLObjectType, GraphQLString, GraphQLNonNull } from 'graphql';
 import globalId from '@adeira/graphql-global-id';
 
+import accountQueries from './account/queries';
+
 const Test = new GraphQLObjectType({
   name: 'Test',
   description: 'Just for test purpose, will be removed later',
@@ -29,6 +31,7 @@ const RootQuery: GraphQLObjectType = new GraphQLObjectType({
         lastName: 'Bonito',
       }),
     },
+    ...accountQueries,
   },
 });
 

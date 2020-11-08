@@ -1,4 +1,4 @@
-# @generated SignedSource<<0079a5b695880c8511127e4bca442f23>>
+# @generated SignedSource<<c2bd6c2db445ece27ed5615ca7adf425>>
 
 # <BREAKING-CHANGES-LOG>
 #  FIELD_REMOVED: Test.test was removed.
@@ -66,6 +66,9 @@ type RootMutation {
 type RootQuery {
   """Just for testing purpose"""
   test(id: String!): Test
+
+  """The context of the logged in user"""
+  viewer: Viewer
 }
 
 """A team"""
@@ -87,3 +90,20 @@ type Test {
   id(opaque: Boolean = true): ID!
   lastName: String
 }
+
+"""Defines a not logged in type"""
+type Unauthorized {
+  message: String!
+}
+
+"""The logged in user"""
+type User {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  identity: Identity
+}
+
+"""The viewer type"""
+union Viewer = Unauthorized | User
