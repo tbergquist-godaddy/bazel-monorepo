@@ -5,7 +5,7 @@ export { default as breakpoints } from './breakpoints';
 export { default as Button } from './button/button';
 export { default as Card } from './card/card';
 export { default as FormGroup } from './form-group';
-export { default as Heading } from './heading';
+export { default as Heading } from './heading/heading';
 export { default as Input } from './input/input';
 export { default as Link } from './link';
 export { default as Navbar } from './navbar';
