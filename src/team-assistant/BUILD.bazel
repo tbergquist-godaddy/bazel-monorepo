@@ -97,6 +97,7 @@ webpack_dev_server(
 eslint(
     name = "lint",
     data = [
+        ":.eslintrc.js",
         ":src",
     ],
     entry = ":src",
