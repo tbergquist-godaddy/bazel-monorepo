@@ -16,4 +16,6 @@ def get_deps():
         "@npm//passport",
         "@npm//passport-jwt",
         "@npm//dotenv",
+        "@npm//@adeira/graphql-relay",
+        "@npm//dataloader",
     ]

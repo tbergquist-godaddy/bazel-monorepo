@@ -16,7 +16,7 @@ const TeamSchema = new Schema({
   },
 });
 
-class TeamDoc extends Model {
+export class TeamDoc extends Model {
   _id: MongoId;
   userId: string;
   name: string;
@@ -24,6 +24,11 @@ class TeamDoc extends Model {
   static async createTeam({ userId, name }: { userId: string, name: string }): Promise<TeamDoc> {
     const newTeam = await this.create({ userId, name });
     return newTeam;
+  }
+
+  static async getTeams({ userId }: { +userId: string }): Promise<$ReadOnlyArray<TeamDoc>> {
+    const teams = await this.find({ userId });
+    return teams;
   }
 }
 
