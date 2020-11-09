@@ -1,0 +1,23 @@
+.modal.enter .modal__modal-backdrop {
+  background-color: rgba(0,0,0, 0);
+}
+
+.modal.enter-active .modal__modal-backdrop {
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.modal .modal__modal-backdrop, .modal .modal__modal-content {
+  transition: background-color .3s ease-in-out;
+}
+
+.modal .modal__modal-content {
+  transition: transform .3s ease-in;
+}
+
+.modal.enter .modal__modal-content {
+  transform: translateY(-100%);
+}
+
+.modal.enter-active .modal__modal-content {
+  transform: translateY(0);
+}

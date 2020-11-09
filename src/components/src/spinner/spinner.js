@@ -4,6 +4,7 @@ import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 import Spin from './spinner.svg';
+import './spinner.css';
 
 type Props = {
   +size?: 'small' | 'normal' | 'large',

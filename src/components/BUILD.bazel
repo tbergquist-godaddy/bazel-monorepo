@@ -76,6 +76,7 @@ jest_test(
         "@npm//@testing-library/user-event",
         "@npm//babel-jest",
         "@npm//react",
+        "@npm//react-transition-group",
         "@npm//recoil",
         "@npm//shortid",
     ],

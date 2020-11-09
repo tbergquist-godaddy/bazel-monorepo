@@ -1,5 +1,3 @@
-@import './spinner/spinner.css';
-
 :root {
   --border-radius-normal: 3px;
 
@@ -28,4 +26,5 @@
   --text-size-small: 1.4rem;
 
   --z-index-on-top: 900;
+  --z-index-modal: 800;
 }
