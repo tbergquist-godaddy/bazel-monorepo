@@ -1,3 +1,4 @@
+/* We cannot target child selectors with sx */
 .spinner.spin-white circle {
   stroke: var(--color-white);
 }

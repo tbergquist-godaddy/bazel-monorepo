@@ -7,5 +7,6 @@ module.exports = {
   preset: '@tbergq/jest-preset',
   moduleNameMapper: {
     '\\.(svg)$': (path.join(__dirname, 'mocks', 'svgFileMock.js') /*: string  */),
+    '\\.(css)$': (path.join(__dirname, 'mocks', 'css-file-mock.js') /*: string  */),
   },
 };
