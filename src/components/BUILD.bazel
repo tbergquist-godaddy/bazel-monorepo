@@ -20,6 +20,7 @@ babel(
         "//:babel.config.js",
         "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
+        "@npm//react-transition-group",
     ],
     output_dir = True,
 )
@@ -41,6 +42,7 @@ babel(
         "//:babel.config.js",
         "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
+        "@npm//react-transition-group",
     ],
     output_dir = True,
 )
@@ -53,6 +55,7 @@ js_library(
     deps = [
         ":esm",
         ":lib",
+        "@npm//react-transition-group",
     ],
 )
 

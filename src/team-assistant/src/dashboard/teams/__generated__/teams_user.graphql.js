@@ -8,6 +8,7 @@
 
 /*::
 import type { ReaderFragment } from 'relay-runtime';
+type team_team$ref = any;
 import type { FragmentReference } from "relay-runtime";
 declare export opaque type teams_user$ref: FragmentReference;
 declare export opaque type teams_user$fragmentType: teams_user$ref;
@@ -16,7 +17,7 @@ export type teams_user = {|
     +edges: ?$ReadOnlyArray<?{|
       +node: ?{|
         +id: string,
-        +name: ?string,
+        +$fragmentRefs: team_team$ref,
       |}
     |}>
   |},
@@ -75,11 +76,9 @@ const node/*: ReaderFragment*/ = {
                   "storageKey": null
                 },
                 {
-                  "alias": null,
                   "args": null,
-                  "kind": "ScalarField",
-                  "name": "name",
-                  "storageKey": null
+                  "kind": "FragmentSpread",
+                  "name": "team_team"
                 }
               ],
               "storageKey": null
@@ -95,6 +94,6 @@ const node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 // prettier-ignore
-(node/*: any*/).hash = 'e6f25b2da94d0c2a1fcd5a46281e0be9';
+(node/*: any*/).hash = 'e0bbe8bbac2adaad6283130acde779df';
 
 module.exports = node;
