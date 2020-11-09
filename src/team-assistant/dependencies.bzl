@@ -33,4 +33,5 @@ def get_deps():
         "@npm//jest",
         "//src/components:components",
         "@npm//copy-webpack-plugin",
+        "@npm//react-icons",
     ]

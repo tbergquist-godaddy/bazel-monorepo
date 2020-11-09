@@ -32,12 +32,16 @@ query dashboardQuery {
   }
 }
 
+fragment team_team on Team {
+  name
+}
+
 fragment teams_user on User {
   teams(first: 5) {
     edges {
       node {
         id
-        name
+        ...team_team
       }
     }
   }
@@ -165,12 +169,12 @@ const node/*: ConcreteRequest*/ = {
     ]
   },
   "params": {
-    "cacheID": "24fe5440c66fb3dbd46d53f4fa97af9b",
+    "cacheID": "f26554ce1803bddf9b090237ec6a4c8f",
     "id": null,
     "metadata": {},
     "name": "dashboardQuery",
     "operationKind": "query",
-    "text": "query dashboardQuery {\n  viewer {\n    __typename\n    ... on User {\n      ...teams_user\n    }\n  }\n}\n\nfragment teams_user on User {\n  teams(first: 5) {\n    edges {\n      node {\n        id\n        name\n      }\n    }\n  }\n}\n"
+    "text": "query dashboardQuery {\n  viewer {\n    __typename\n    ... on User {\n      ...teams_user\n    }\n  }\n}\n\nfragment team_team on Team {\n  name\n}\n\nfragment teams_user on User {\n  teams(first: 5) {\n    edges {\n      node {\n        id\n        ...team_team\n      }\n    }\n  }\n}\n"
   }
 };
 // prettier-ignore

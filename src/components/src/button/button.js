@@ -6,12 +6,13 @@ import { create } from '@adeira/sx';
 import Spinner from '../spinner/spinner';
 
 type Props = {
-  +children: Node,
-  +variant?: 'primary' | 'secondary',
-  +type?: 'button' | 'submit',
-  +onClick?: () => void,
-  +isLoading?: boolean,
-  +size?: 'small' | 'normal',
+  +'children': Node,
+  +'variant'?: 'primary' | 'secondary',
+  +'type'?: 'button' | 'submit',
+  +'onClick'?: () => void,
+  +'isLoading'?: boolean,
+  +'size'?: 'small' | 'normal',
+  +'aria-label'?: string,
 };
 
 export default function Button({

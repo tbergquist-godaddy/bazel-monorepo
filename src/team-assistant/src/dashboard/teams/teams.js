@@ -1,14 +1,21 @@
 // @flow
 
-import type { Node } from 'react';
+import { type Node, useState } from 'react';
 import { useFragment, graphql } from 'react-relay/hooks';
+import { Card, Heading, Button } from '@tbergq/components';
+import { create } from '@adeira/sx';
+import { MdAddCircle } from 'react-icons/md';
 
 import type { teams_user$key as User } from './__generated__/teams_user.graphql';
+import Team from './team';
+import AddTeamModal from './add-team-modal';
 
 type Props = {
   +user: ?User,
 };
 export default function Teams({ user }: Props): Node {
+  const [show, setShow] = useState(false);
+  const toggle = () => setShow((show) => !show);
   const ref = useFragment(
     graphql`
       fragment teams_user on User {
@@ -16,7 +23,7 @@ export default function Teams({ user }: Props): Node {
           edges {
             node {
               id
-              name
+              ...team_team
             }
           }
         }
@@ -26,11 +33,26 @@ export default function Teams({ user }: Props): Node {
   );
   const teams = ref?.teams?.edges ?? [];
   return (
-    <div>
-      teams
+    <Card>
+      <div className={styles('heading')}>
+        <Heading level="h2" as="h5">
+          Teams
+        </Heading>
+        <Button aria-label="Add team" onClick={toggle} size="small">
+          <MdAddCircle />
+        </Button>
+      </div>
       {teams.map((edge) => (
-        <div key={edge?.node?.id}>{edge?.node?.name}</div>
+        <Team key={edge?.node?.id} team={edge?.node} />
       ))}
-    </div>
+      <AddTeamModal isVisible={show} onClose={toggle} />
+    </Card>
   );
 }
+
+const styles = create({
+  heading: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+});

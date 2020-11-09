@@ -1,13 +1,14 @@
 // @flow
 
-import { useEffect, Suspense, type Node } from 'react';
+import { type AbstractComponent } from 'react';
 import { Link } from 'react-router-dom';
 import fbt from 'fbt';
-import { useQueryLoader, usePreloadedQuery, graphql } from 'react-relay/hooks';
-import { Spinner, Heading } from '@tbergq/components';
+import { usePreloadedQuery, graphql } from 'react-relay/hooks';
+import { Heading } from '@tbergq/components';
 
 import type { homeQuery } from './__generated__/homeQuery.graphql';
 import useInjectSxStyles from '../components/use-inject-sx-styles';
+import withUseQuery, { type QueryReference } from '../relay/with-use-query';
 
 const query = graphql`
   query homeQuery {
@@ -19,15 +20,16 @@ const query = graphql`
   }
 `;
 
-function Content({ queryReference }) {
+type Props = {
+  +queryReference?: QueryReference<any, any>,
+};
+
+function Home({ queryReference = null }: Props) {
   useInjectSxStyles();
   const data = usePreloadedQuery<homeQuery>(query, queryReference);
 
   return (
     <div>
-      <Heading level="h1">
-        <fbt desc="Todo text">Home TODO</fbt>
-      </Heading>
       <Link to="/login">Go login</Link>
       <div>{data.test?.id}</div>
       <div>{data.test?.firstName}</div>
@@ -37,19 +39,11 @@ function Content({ queryReference }) {
   );
 }
 
-export default function Home(): Node {
-  const [queryReference, loadQuery] = useQueryLoader(query);
-  useEffect(() => {
-    loadQuery({});
-  }, [loadQuery]);
-
-  if (queryReference == null) {
-    return <Spinner />;
-  }
-
-  return (
-    <Suspense fallback={<Spinner />}>
-      <Content queryReference={queryReference} />
-    </Suspense>
-  );
-}
+export default (withUseQuery(Home, {
+  query,
+  persistentChildren: (
+    <Heading level="h1">
+      <fbt desc="Todo text">Home TODO</fbt>
+    </Heading>
+  ),
+}): AbstractComponent<Props>);
