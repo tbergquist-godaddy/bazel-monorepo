@@ -1,25 +1,10 @@
 // @flow
 
 import { render } from 'react-dom';
-import * as sx from '@adeira/sx';
 
 import './app.css';
 import App from './components/app';
 import getLanguage from './components/get-language';
-
-const sxStyleTags = sx.renderPageWithSX(() => {}).styles;
-const head = document.head;
-
-for (const style of sxStyleTags) {
-  const styleTag = document.createElement('style');
-  styleTag.innerHTML = style.props.dangerouslySetInnerHTML.__html;
-  styleTag.setAttribute('data-adeira-sx', 'true');
-
-  if (head != null) {
-    // 🤷‍♂️
-    head.appendChild(styleTag);
-  }
-}
 
 const root = document.querySelector('#root');
 

@@ -7,7 +7,6 @@ import { usePreloadedQuery, graphql } from 'react-relay/hooks';
 import { Heading } from '@tbergq/components';
 
 import type { homeQuery } from './__generated__/homeQuery.graphql';
-import useInjectSxStyles from '../components/use-inject-sx-styles';
 import withUseQuery, { type QueryReference } from '../relay/with-use-query';
 
 const query = graphql`
@@ -25,7 +24,6 @@ type Props = {
 };
 
 function Home({ queryReference = null }: Props) {
-  useInjectSxStyles();
   const data = usePreloadedQuery<homeQuery>(query, queryReference);
 
   return (

@@ -42,7 +42,7 @@
     "@adeira/fetch": "^1.0.3",
     "@adeira/graphql-global-id": "^1.2.0",
     "@adeira/graphql-relay": "^0.2.0",
-    "@adeira/sx": "^0.17.0",
+    "@adeira/sx": "^0.18.0",
     "@babel/node": "^7.12.6",
     "@babel/runtime": "^7.12.5",
     "@hookform/resolvers": "^1.0.1",
