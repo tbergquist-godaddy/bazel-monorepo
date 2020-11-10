@@ -1,6 +1,6 @@
 {
   "name": "@tbergq/components",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "sideEffects": false,
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -16,7 +16,8 @@
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.28",
     "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.2.0"
+    "@testing-library/user-event": "^12.2.0",
+    "react-icons": "^3.11.0"
   },
   "peerDependencies": {
     "react": "^16.14.0 || ^17.0.0"
