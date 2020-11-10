@@ -9,7 +9,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string, ref } from 'yup';
 import { useNavigate } from 'react-router-dom';
 
-import useInjectSxStyles from '../../components/use-inject-sx-styles';
 import type { signupMutation as SignupMutation } from './__generated__/signupMutation.graphql';
 import AccountFormContainer from '../components/account-form-container';
 
@@ -33,7 +32,6 @@ export default function Signup(): Node {
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
-  useInjectSxStyles();
 
   const [signUp, isLoading] = useMutation<SignupMutation>(graphql`
     mutation signupMutation($password: String!, $email: String!) {

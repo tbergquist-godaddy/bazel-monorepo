@@ -5,7 +5,6 @@ import { usePreloadedQuery, graphql } from 'react-relay/hooks';
 import { Heading } from '@tbergq/components';
 
 import withUseQuery, { type QueryReference } from '../relay/with-use-query';
-import useInjectSxStyles from '../components/use-inject-sx-styles';
 import useIsLoggedIn from '../components/use-is-logged-in';
 import Teams from './teams/teams';
 import type { dashboardQuery } from './__generated__/dashboardQuery.graphql';
@@ -26,7 +25,6 @@ type Props = {
 
 function Dashboard({ queryReference = null }: Props) {
   const data = usePreloadedQuery<dashboardQuery>(query, queryReference);
-  useInjectSxStyles();
   useIsLoggedIn();
 
   return <Teams user={data.viewer} />;
