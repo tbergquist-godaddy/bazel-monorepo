@@ -2,7 +2,7 @@
 
 import { type Node, useState } from 'react';
 import { useFragment, graphql } from 'react-relay/hooks';
-import { Card, Heading, Button } from '@tbergq/components';
+import { Card, Heading, IconButton } from '@tbergq/components';
 import { create } from '@adeira/sx';
 import { MdAddCircle } from 'react-icons/md';
 
@@ -38,9 +38,9 @@ export default function Teams({ user }: Props): Node {
         <Heading level="h2" as="h5">
           Teams
         </Heading>
-        <Button aria-label="Add team" onClick={toggle} size="small">
+        <IconButton aria-label="Add team" onClick={toggle}>
           <MdAddCircle />
-        </Button>
+        </IconButton>
       </div>
       {teams.map((edge) => (
         <Team key={edge?.node?.id} team={edge?.node} />
