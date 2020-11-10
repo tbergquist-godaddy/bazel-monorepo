@@ -49,7 +49,7 @@ const styles = create({
     ':hover': {
       transform: 'translateY(-3px)',
     },
-    ':active': {
+    ':active:hover': {
       transform: 'translateY(-1px)',
     },
   },
