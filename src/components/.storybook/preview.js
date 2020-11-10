@@ -1,41 +1,59 @@
 // @flow
 
-import * as React from 'react';
+import { breakpoints } from '../src/breakpoints';
 import '../src/theme.css';
-import * as sx from '@adeira/sx';
-import { addDecorator } from '@storybook/react';
 
-const sxStyleTags = sx.renderPageWithSX(() => {}).styles;
-const head = document.head;
-
-for (const style of sxStyleTags) {
-  const styleTag = document.createElement('style');
-  styleTag.innerHTML = style.props.children;
-  styleTag.setAttribute('data-adeira-sx', 'true');
-
-  if (head != null) {
-    // 🤷‍♂️
-    head.appendChild(styleTag);
-  }
-}
-
-const WithSx = ({ children }) => {
-  React.useEffect(() => {
-    const sxStyleTags = sx.renderPageWithSX(() => {}).styles;
-    const head = document.head;
-
-    for (const style of sxStyleTags) {
-      const styleTag = document.createElement('style');
-      styleTag.innerHTML = style.props.dangerouslySetInnerHTML.__html;
-      styleTag.setAttribute('data-adeira-sx', 'true');
-
-      if (head != null) {
-        // 🤷‍♂️
-        head.appendChild(styleTag);
-      }
-    }
-  }, []);
-  return children;
+export const parameters = {
+  viewport: {
+    viewports: {
+      smallMobile: {
+        name: 'small mobile',
+        styles: {
+          height: '568px',
+          width: '320px',
+        },
+        type: 'mobile',
+      },
+      mediumMobile: {
+        name: 'medium mobile',
+        styles: {
+          height: '568px',
+          width: (breakpoints.mediumMobile + 'px' /*:string */),
+        },
+        type: 'mobile',
+      },
+      largeMobile: {
+        name: 'large mobile',
+        styles: {
+          height: '568px',
+          width: (breakpoints.largeMobile + 'px' /*:string */),
+        },
+        type: 'mobile',
+      },
+      tablet: {
+        name: 'tablet',
+        styles: {
+          height: '568px',
+          width: (breakpoints.tablet + 'px' /*:string */),
+        },
+        type: 'tablet',
+      },
+      desktop: {
+        name: 'desktop',
+        styles: {
+          height: '568px',
+          width: (breakpoints.desktop + 'px' /*:string */),
+        },
+        type: 'desktop',
+      },
+      largeDesktop: {
+        name: 'large desktop',
+        styles: {
+          height: '568px',
+          width: (breakpoints.largeDesktop + 'px' /*:string */),
+        },
+        type: 'desktop',
+      },
+    },
+  },
 };
-
-addDecorator((storyFn) => <WithSx>{storyFn()}</WithSx>);
