@@ -22,8 +22,12 @@ afterEach(async () => {
 const query = `mutation createTeamMutation($name: String!) {
   createTeam(name: $name) {
     __typename
-    ... on Team {
-      name
+    ... on CreateTeamEdge {
+      teamEdge {
+        node {
+          name
+        }
+      }
     }
     ... on CreateTeamError {
       reason
@@ -80,6 +84,7 @@ it('creates a team', async () => {
     })
     .set('content-type', 'application/json')
     .set('Authorization', signToken(email));
-  expect(res.body.data.createTeam.name).toBe('My team');
+  expect(res.body.data.createTeam.teamEdge.node.name).toBe('My team');
+
   await connection.collection('teams').drop();
 });

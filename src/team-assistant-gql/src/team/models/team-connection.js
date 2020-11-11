@@ -11,8 +11,8 @@ type GraphQLConnectionDefinitions = {
   ...
 };
 
-const { connectionType: TeamConnection } = (connectionDefinitions({
+const { connectionType: TeamConnection, edgeType: TeamEdge } = (connectionDefinitions({
   nodeType: Team,
 }): GraphQLConnectionDefinitions);
 
-export default TeamConnection;
+export { TeamConnection, TeamEdge };

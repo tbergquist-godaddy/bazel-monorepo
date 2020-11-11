@@ -3,7 +3,7 @@
 import { GraphQLUnionType, GraphQLObjectType, GraphQLEnumType, GraphQLString } from 'graphql';
 
 import ErrorInterface from '../../models/error-interface';
-import Team from './team';
+import { TeamEdge } from './team-connection';
 
 const CreateTeamErrorReason = new GraphQLEnumType({
   name: 'CreateTeamErrorReason',
@@ -21,12 +21,23 @@ const CreateTeamError = new GraphQLObjectType({
   },
 });
 
+const CreateTeamEdge = new GraphQLObjectType({
+  name: 'CreateTeamEdge',
+  description: 'Contains the team edge',
+  fields: {
+    teamEdge: {
+      type: TeamEdge,
+      resolve: (node) => ({ node }),
+    },
+  },
+});
+
 export default (new GraphQLUnionType({
   name: 'CreateTeamPayload',
-  types: [Team, CreateTeamError],
+  types: [CreateTeamEdge, CreateTeamError],
   resolveType: (value) => {
     if (value.name != null) {
-      return Team;
+      return CreateTeamEdge;
     }
     return CreateTeamError;
   },

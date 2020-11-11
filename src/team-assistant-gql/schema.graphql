@@ -1,7 +1,8 @@
-# @generated SignedSource<<803bd27512e7a0b39aacc2c0f03c3604>>
+# @generated SignedSource<<3d27ab01bc2eae997d0947134aa9fc3a>>
 
 # <BREAKING-CHANGES-LOG>
 #  FIELD_REMOVED: Test.test was removed.
+#  TYPE_REMOVED_FROM_UNION: Team was removed from union type CreateTeamPayload.
 # </BREAKING-CHANGES-LOG>
 
 schema {
@@ -24,6 +25,11 @@ enum CreateAccountErrorReason {
 
 union CreateAccountResponse = CreateAccountError | Identity
 
+"""Contains the team edge"""
+type CreateTeamEdge {
+  teamEdge: TeamEdge
+}
+
 """Error type for creating a team"""
 type CreateTeamError implements Error {
   message: String
@@ -34,7 +40,7 @@ enum CreateTeamErrorReason {
   NAME_MISSING
 }
 
-union CreateTeamPayload = CreateTeamError | Team
+union CreateTeamPayload = CreateTeamEdge | CreateTeamError
 
 interface Error {
   message: String
