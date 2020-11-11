@@ -12,6 +12,6 @@ export default async function TeamsResolver(
   if (user == null) {
     throw new Error('You cannot access your teams without being logged in');
   }
-  const teams = await dataloader.teams.teamsLoader.load(user.email);
+  const teams = await dataloader.teams.teamsLoader.load(user.id);
   return connectionFromArray<any>(teams, args);
 }

@@ -22,7 +22,7 @@ afterEach(async () => {
   await connection.collection('users').drop();
 });
 
-it('returns works for users with no teams', async () => {
+it('works for users with no teams', async () => {
   const res = await request(app)
     .post('/graphql')
     .send({
@@ -55,7 +55,7 @@ it('returns works for users with no teams', async () => {
 });
 
 it('returns teams', async () => {
-  await TeamModel.createTeam({ userId: 'test@test.no', name: 'Test team' });
+  await TeamModel.createTeam({ userId, name: 'Test team' });
   const res = await request(app)
     .post('/graphql')
     .send({

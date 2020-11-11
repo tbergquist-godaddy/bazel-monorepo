@@ -6,9 +6,11 @@ import connection from './database/connection';
 import app from './app';
 
 const uri = process.env.MONGO_DB_URL ?? 'mongodb://127.0.0.1:27017/team_assistant';
+
 connection.openUri(uri, {
   useCreateIndex: true,
   useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 if (__DEV__) {
