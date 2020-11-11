@@ -10,7 +10,7 @@ type Props = {
   +isVisible: boolean,
   +onClose: () => void,
   +closeLabel?: string,
-  +title?: string,
+  +title?: Node,
   +children: Node,
 };
 

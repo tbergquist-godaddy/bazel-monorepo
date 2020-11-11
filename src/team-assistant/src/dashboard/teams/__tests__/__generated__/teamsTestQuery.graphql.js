@@ -9,21 +9,21 @@
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
 type teams_user$ref = any;
-export type dashboardQueryVariables = {||};
-export type dashboardQueryResponse = {|
+export type teamsTestQueryVariables = {||};
+export type teamsTestQueryResponse = {|
   +viewer: ?{|
     +$fragmentRefs: teams_user$ref
   |}
 |};
-export type dashboardQuery = {|
-  variables: dashboardQueryVariables,
-  response: dashboardQueryResponse,
+export type teamsTestQuery = {|
+  variables: teamsTestQueryVariables,
+  response: teamsTestQueryResponse,
 |};
 */
 
 
 /*
-query dashboardQuery {
+query teamsTestQuery {
   viewer {
     __typename
     ... on User {
@@ -68,13 +68,25 @@ v1 = [
     "name": "first",
     "value": 5
   }
-];
+],
+v2 = {
+  "enumValues": null,
+  "nullable": false,
+  "plural": false,
+  "type": "String"
+},
+v3 = {
+  "enumValues": null,
+  "nullable": true,
+  "plural": false,
+  "type": "String"
+};
 return {
   "fragment": {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
-    "name": "dashboardQuery",
+    "name": "teamsTestQuery",
     "selections": [
       {
         "alias": null,
@@ -107,7 +119,7 @@ return {
   "operation": {
     "argumentDefinitions": [],
     "kind": "Operation",
-    "name": "dashboardQuery",
+    "name": "teamsTestQuery",
     "selections": [
       {
         "alias": null,
@@ -232,16 +244,66 @@ return {
     ]
   },
   "params": {
-    "cacheID": "bef1e42f40538c149baec6329a070642",
+    "cacheID": "84ff4e1bab2438af3ec83977cb2c3700",
     "id": null,
-    "metadata": {},
-    "name": "dashboardQuery",
+    "metadata": {
+      "relayTestingSelectionTypeInfo": {
+        "viewer": {
+          "enumValues": null,
+          "nullable": true,
+          "plural": false,
+          "type": "Viewer"
+        },
+        "viewer.__typename": (v2/*: any*/),
+        "viewer.teams": {
+          "enumValues": null,
+          "nullable": true,
+          "plural": false,
+          "type": "TeamConnection"
+        },
+        "viewer.teams.edges": {
+          "enumValues": null,
+          "nullable": true,
+          "plural": true,
+          "type": "TeamEdge"
+        },
+        "viewer.teams.edges.cursor": (v2/*: any*/),
+        "viewer.teams.edges.node": {
+          "enumValues": null,
+          "nullable": true,
+          "plural": false,
+          "type": "Team"
+        },
+        "viewer.teams.edges.node.__typename": (v2/*: any*/),
+        "viewer.teams.edges.node.id": {
+          "enumValues": null,
+          "nullable": false,
+          "plural": false,
+          "type": "ID"
+        },
+        "viewer.teams.edges.node.name": (v3/*: any*/),
+        "viewer.teams.pageInfo": {
+          "enumValues": null,
+          "nullable": false,
+          "plural": false,
+          "type": "PageInfo"
+        },
+        "viewer.teams.pageInfo.endCursor": (v3/*: any*/),
+        "viewer.teams.pageInfo.hasNextPage": {
+          "enumValues": null,
+          "nullable": false,
+          "plural": false,
+          "type": "Boolean"
+        }
+      }
+    },
+    "name": "teamsTestQuery",
     "operationKind": "query",
-    "text": "query dashboardQuery {\n  viewer {\n    __typename\n    ... on User {\n      ...teams_user\n    }\n  }\n}\n\nfragment team_team on Team {\n  name\n}\n\nfragment teams_user on User {\n  teams(first: 5) {\n    edges {\n      node {\n        id\n        ...team_team\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n"
+    "text": "query teamsTestQuery {\n  viewer {\n    __typename\n    ... on User {\n      ...teams_user\n    }\n  }\n}\n\nfragment team_team on Team {\n  name\n}\n\nfragment teams_user on User {\n  teams(first: 5) {\n    edges {\n      node {\n        id\n        ...team_team\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '83b6967a748da3369a15b783b4d4b521';
+(node/*: any*/).hash = '808c43d0e1f04e88caaca07cfb56c3b9';
 
 module.exports = node;
