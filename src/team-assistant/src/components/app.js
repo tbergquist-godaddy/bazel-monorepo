@@ -33,10 +33,10 @@ export default function App(): Node {
       <RecoilRoot>
         <Router>
           <Navbar brand="Team assistant" />
-          <div data-testid="app" className={styles('container')}>
+          <main data-testid="app" className={styles('container')}>
             <Routes />
             <Toast />
-          </div>
+          </main>
         </Router>
       </RecoilRoot>
     </RelayEnvironmentProvider>

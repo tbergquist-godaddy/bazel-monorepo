@@ -1,5 +1,6 @@
 // @flow
 
+import * as React from 'react';
 import { render } from 'react-dom';
 
 import './app.css';
@@ -17,4 +18,12 @@ if (language != null && htmlTag != null) {
 
 if (root != null) {
   render(<App />, root);
+}
+
+if (__DEV__) {
+  Promise.all([import('react-dom'), import('@axe-core/react')]).then(([reactDom, reactAxe]) => {
+    const axe = reactAxe.default;
+    const reactDOM = reactDom.default;
+    axe(React, reactDOM, 1000);
+  });
 }
