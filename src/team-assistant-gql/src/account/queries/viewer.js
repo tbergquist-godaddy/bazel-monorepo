@@ -10,6 +10,7 @@ type ViewerResult =
   | {
       identity: {
         email: string,
+        id: string,
       },
     };
 export default {
@@ -19,6 +20,6 @@ export default {
     if (user == null) {
       return { message: 'You must be logged in to see this field' };
     }
-    return { identity: { email: user.email } };
+    return { identity: { email: user.email, id: user.id } };
   },
 };

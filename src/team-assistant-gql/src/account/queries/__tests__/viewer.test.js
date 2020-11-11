@@ -7,11 +7,14 @@ import connection from '../../../database/connection';
 import UserModel from '../../../database/models/users';
 import { signToken } from '../../../middleware/auth';
 
+let userId;
+
 beforeEach(async () => {
-  await UserModel.createUser({
+  const user = await UserModel.createUser({
     email: 'test@test.no',
     password: '123456',
   });
+  userId = user._id;
 });
 
 afterEach(async () => {
@@ -48,7 +51,7 @@ it('returns user for logged in user', async () => {
       }`,
     })
     .set('content-type', 'application/json')
-    .set('Authorization', signToken('test@test.no'));
+    .set('Authorization', signToken({ email: 'test@test.no', id: userId }));
 
   expect(res.body.data.viewer.identity.email).toBe('test@test.no');
 });

@@ -39,7 +39,7 @@ export default {
         reason: 'NAME_MISSING',
       };
     }
-    const team = await TeamModel.createTeam({ name, userId: user.email });
+    const team = await TeamModel.createTeam({ name, userId: user.id });
     return team;
   },
 };

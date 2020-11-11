@@ -8,11 +8,14 @@ import UserModel from '../../../database/models/users';
 import { signToken } from '../../../middleware/auth';
 
 const email = 'test@test.no';
+let userId;
+
 beforeEach(async () => {
-  await UserModel.createUser({
+  const user = await UserModel.createUser({
     email,
     password: '123456',
   });
+  userId = user._id;
 });
 
 afterEach(async () => {
@@ -71,7 +74,7 @@ it('returns error when name is empty string', async () => {
       variables: { name: '' },
     })
     .set('content-type', 'application/json')
-    .set('Authorization', signToken(email));
+    .set('Authorization', signToken({ email, id: userId }));
   expect(res.body.data.createTeam.reason).toBe('NAME_MISSING');
 });
 
@@ -83,7 +86,7 @@ it('creates a team', async () => {
       variables: { name: 'My team' },
     })
     .set('content-type', 'application/json')
-    .set('Authorization', signToken(email));
+    .set('Authorization', signToken({ email, id: userId }));
   expect(res.body.data.createTeam.teamEdge.node.name).toBe('My team');
 
   await connection.collection('teams').drop();

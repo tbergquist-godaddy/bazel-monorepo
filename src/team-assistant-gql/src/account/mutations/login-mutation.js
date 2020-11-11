@@ -30,7 +30,7 @@ export default {
     if (user == null) {
       return { token: null };
     }
-    const token = signToken(user.email);
+    const token = signToken({ email: user.email, id: user._id });
     return { token };
   },
 };

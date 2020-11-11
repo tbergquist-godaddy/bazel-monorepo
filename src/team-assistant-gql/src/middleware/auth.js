@@ -24,7 +24,7 @@ export const tokenToUser = async (jwtPayload: JwtPayload, done: DoneFunction) =>
   const user = await UserModel.getByEmail(jwtPayload.email);
   if (user != null) {
     done(null, {
-      id: user.email,
+      id: user._id,
       email: user.email,
     });
   } else {
@@ -46,8 +46,8 @@ export const attachUserToRequest = (req: $Request, res: $Response, next: NextFun
   })(req, res, next);
 };
 
-export const signToken = (email: string): string =>
-  jwt.sign({ id: email, email }, JWT_SECRET, {
+export const signToken = ({ email, id }: { +email: string, +id: string }): string =>
+  jwt.sign({ id, email }, JWT_SECRET, {
     expiresIn: '1d',
     issuer: 'team_assistant',
   });
