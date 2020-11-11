@@ -23,7 +23,7 @@ function encryptPassword(password: string, salt: string): string {
 }
 
 const UserSchema = new mongoose.Schema({
-  _id: String,
+  id: mongoose.Schema.Types.ObjectId,
   email: {
     type: String,
     required: true,
@@ -36,11 +36,6 @@ const UserSchema = new mongoose.Schema({
   salt: {
     type: String,
   },
-});
-
-UserSchema.pre('save', function (next) {
-  this._id = this.email;
-  next();
 });
 
 type CreateUserInput = {
@@ -66,7 +61,7 @@ class UserDoc extends mongoose.Model {
   }
 
   static async getByEmail(email: string): Promise<?UserDoc> {
-    const user = await this.findById(email.toLowerCase());
+    const user = await this.findOne({ email: email.toLowerCase() });
     return user;
   }
 

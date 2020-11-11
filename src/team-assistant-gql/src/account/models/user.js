@@ -10,7 +10,7 @@ export default (new GraphQLObjectType({
   name: 'User',
   description: 'The logged in user',
   fields: {
-    id: globalId(({ identity: { email } }) => email),
+    id: globalId(({ identity: { _id } }) => _id),
     identity: { type: Identity },
     teams,
   },

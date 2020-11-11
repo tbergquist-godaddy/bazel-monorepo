@@ -12,7 +12,6 @@ it('works', async () => {
       query: `mutation createAccountMutation($email: String!, $password: String!) {
     createAccount(email: $email, password: $password) {
       ... on Identity {
-        id
         email
       }
     }
@@ -25,7 +24,6 @@ it('works', async () => {
     data: {
       createAccount: {
         email: 'test@test.no',
-        id: 'SWRlbnRpdHk6dGVzdEB0ZXN0Lm5v',
       },
     },
   });
