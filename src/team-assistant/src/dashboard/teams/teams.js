@@ -14,7 +14,7 @@ type Props = {
   +user: ?User,
 };
 export default function Teams({ user }: Props): Node {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const toggle = () => setShow((show) => !show);
   const ref = useFragment(
     graphql`
