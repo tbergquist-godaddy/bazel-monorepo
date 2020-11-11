@@ -168,6 +168,14 @@
     mdn-data "^2.0.12"
     prettier "^2.1.2"
 
+"@axe-core/react@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@axe-core/react/-/react-4.0.0.tgz#2c1206a65505bb0945fe9856673ed9a724639791"
+  integrity sha512-/hwpydX/JkP+uWfHd4pFAAq0hgGbdmEf4m3SPuhacgjkVwmYhmltAPHXShswcKhys086jKJ402CGmy/BKNF9og==
+  dependencies:
+    axe-core "^4.0.1"
+    requestidlecallback "^0.3.0"
+
 "@babel/cli@^7.11.6":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.12.1.tgz#e08a0b1cb6fcd4b9eb6a606ba5602c5c0fe24a0c"
@@ -3282,7 +3290,7 @@ axe-core@^3.5.2:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.5.5.tgz#84315073b53fa3c0c51676c588d59da09a192227"
   integrity sha512-5P0QZ6J5xGikH780pghEdbEKijCTrruK9KxtPZCFWUpef0f6GipO+xEZ5GKCb020mmqgbiNO6TcA55CriL784Q==
 
-axe-core@^4.0.2:
+axe-core@^4.0.1, axe-core@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.0.2.tgz#c7cf7378378a51fcd272d3c09668002a4990b1cb"
   integrity sha512-arU1h31OGFu+LPrOLGZ7nB45v940NMDMEJeNmbutu57P+UFDVnkZg3e+J1I2HJRZ9hT7gO8J91dn/PMrAiKakA==
@@ -11668,6 +11676,11 @@ request@^2.88.2:
     tough-cookie "~2.5.0"
     tunnel-agent "^0.6.0"
     uuid "^3.3.2"
+
+requestidlecallback@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/requestidlecallback/-/requestidlecallback-0.3.0.tgz#6fb74e0733f90df3faa4838f9f6a2a5f9b742ac5"
+  integrity sha1-b7dOBzP5DfP6pIOPn2oqX5t0KsU=
 
 require-directory@^2.1.1:
   version "2.1.1"
