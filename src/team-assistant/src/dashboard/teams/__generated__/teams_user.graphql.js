@@ -14,12 +14,13 @@ declare export opaque type teams_user$ref: FragmentReference;
 declare export opaque type teams_user$fragmentType: teams_user$ref;
 export type teams_user = {|
   +teams: ?{|
+    +__id: string,
     +edges: ?$ReadOnlyArray<?{|
       +node: ?{|
         +id: string,
         +$fragmentRefs: team_team$ref,
       |}
-    |}>
+    |}>,
   |},
   +$refType: teams_user$ref,
 |};
@@ -35,21 +36,26 @@ export type teams_user$key = {
 const node/*: ReaderFragment*/ = {
   "argumentDefinitions": [],
   "kind": "Fragment",
-  "metadata": null,
+  "metadata": {
+    "connection": [
+      {
+        "count": null,
+        "cursor": null,
+        "direction": "forward",
+        "path": [
+          "teams"
+        ]
+      }
+    ]
+  },
   "name": "teams_user",
   "selections": [
     {
-      "alias": null,
-      "args": [
-        {
-          "kind": "Literal",
-          "name": "first",
-          "value": 5
-        }
-      ],
+      "alias": "teams",
+      "args": null,
       "concreteType": "TeamConnection",
       "kind": "LinkedField",
-      "name": "teams",
+      "name": "__Teams_teams_connection",
       "plural": false,
       "selections": [
         {
@@ -76,24 +82,75 @@ const node/*: ReaderFragment*/ = {
                   "storageKey": null
                 },
                 {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "__typename",
+                  "storageKey": null
+                },
+                {
                   "args": null,
                   "kind": "FragmentSpread",
                   "name": "team_team"
                 }
               ],
               "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "cursor",
+              "storageKey": null
             }
           ],
           "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "concreteType": "PageInfo",
+          "kind": "LinkedField",
+          "name": "pageInfo",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "endCursor",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "hasNextPage",
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        },
+        {
+          "kind": "ClientExtension",
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "__id",
+              "storageKey": null
+            }
+          ]
         }
       ],
-      "storageKey": "teams(first:5)"
+      "storageKey": null
     }
   ],
   "type": "User",
   "abstractKey": null
 };
 // prettier-ignore
-(node/*: any*/).hash = 'e0bbe8bbac2adaad6283130acde779df';
+(node/*: any*/).hash = '836816d2dd867bc25823a304d7d25776';
 
 module.exports = node;

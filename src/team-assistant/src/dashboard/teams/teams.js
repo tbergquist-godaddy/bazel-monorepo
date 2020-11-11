@@ -8,18 +8,19 @@ import { MdAddCircle } from 'react-icons/md';
 
 import type { teams_user$key as User } from './__generated__/teams_user.graphql';
 import Team from './team';
-import AddTeamModal from './add-team-modal';
+import AddTeamModal from './add-team-modal/add-team-modal';
 
 type Props = {
   +user: ?User,
 };
 export default function Teams({ user }: Props): Node {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const toggle = () => setShow((show) => !show);
   const ref = useFragment(
     graphql`
       fragment teams_user on User {
-        teams(first: 5) {
+        teams(first: 5) @connection(key: "Teams_teams") {
+          __id
           edges {
             node {
               id
@@ -45,7 +46,7 @@ export default function Teams({ user }: Props): Node {
       {teams.map((edge) => (
         <Team key={edge?.node?.id} team={edge?.node} />
       ))}
-      <AddTeamModal isVisible={show} onClose={toggle} />
+      <AddTeamModal connectionId={ref?.teams?.__id} isVisible={show} onClose={toggle} />
     </Card>
   );
 }
