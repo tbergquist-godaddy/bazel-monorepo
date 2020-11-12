@@ -4,6 +4,7 @@ import { type Node, useEffect, useRef } from 'react';
 import { create } from '@adeira/sx';
 import { CSSTransition } from 'react-transition-group';
 
+import breakpoints from '../breakpoints';
 import './modal.css';
 
 type Props = {
@@ -86,9 +87,22 @@ const styles = create({
   },
   modal: {
     backgroundColor: 'var(--color-white)',
-    margin: 'var(--space-large)',
+    marginTop: '6rem',
+    marginBottom: '6rem',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     padding: 'var(--space-normal)',
-    borderRadius: 'var(--border-radius-normal)',
+    borderRadius: 'var(--border-radius-large)',
+    width: '100%',
+    [breakpoints.tablet]: {
+      maxWidth: 'min(750px, 80%)',
+    },
+    [breakpoints.desktop]: {
+      maxWidth: 'min(970px, 80%)',
+    },
+    [breakpoints.largeDesktop]: {
+      maxWidth: 'min(1170px, 80%)',
+    },
   },
   header: {
     display: 'flex',

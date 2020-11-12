@@ -11,11 +11,11 @@
 }
 
 .modal .modal__modal-content {
-  transition: transform .3s ease-in;
+  transition: transform .3s linear;
 }
 
 .modal.enter .modal__modal-content {
-  transform: translateY(-100%);
+  transform: translateY(-200%);
 }
 
 .modal.enter-active .modal__modal-content {
