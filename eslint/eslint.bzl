@@ -16,6 +16,7 @@ def eslint(name, data, entry, **kwargs):
         "@npm//babel-eslint",
         "@npm//eslint",
         "@npm//jest",
+        "@npm//eslint-plugin-sx",
     ]
     nodejs_test(
         name = name,

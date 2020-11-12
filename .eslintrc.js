@@ -5,7 +5,7 @@ const ERROR = 2;
 
 module.exports = {
   root: true,
-
+  plugins: ['sx'],
   extends: ['@adeira/eslint-config/strict'],
 
   // adjust the rules as needed
@@ -17,6 +17,7 @@ module.exports = {
     es6: true,
   },
   rules: {
+    'sx/no-unused-stylesheet': ERROR,
     'react/react-in-jsx-scope': OFF,
     'import/no-unresolved': OFF,
     'import/no-extraneous-dependencies': [
