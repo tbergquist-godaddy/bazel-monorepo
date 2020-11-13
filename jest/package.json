@@ -1,3 +1,6 @@
 {
-  "name": "@tbergq/jest-preset"
+  "name": "@tbergq/jest-preset",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.5"
+  }
 }

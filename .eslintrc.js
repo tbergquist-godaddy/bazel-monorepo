@@ -23,7 +23,12 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: ['**/*.test.js', '**/scripts/**/*.js', '**/*.stories.js'],
+        devDependencies: [
+          '**/*.test.js',
+          '**/scripts/**/*.js',
+          '**/*.stories.js',
+          'src/app1/webpack.config.js',
+        ],
       },
     ],
     'flowtype/require-inexact-type': OFF,
