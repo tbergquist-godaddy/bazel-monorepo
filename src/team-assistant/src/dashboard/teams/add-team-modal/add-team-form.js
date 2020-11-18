@@ -23,7 +23,7 @@ export default function AddTeamForm({ connectionId, onClose }: Props): Node {
   });
 
   const [createTeam, isLoading] = useMutation<addTeamFormMutation>(graphql`
-    mutation addTeamFormMutation($name: String!, $connections: [String!]!) {
+    mutation addTeamFormMutation($name: String!, $connections: [ID!]!) {
       createTeam(name: $name) {
         __typename
         ... on CreateTeamEdge {
