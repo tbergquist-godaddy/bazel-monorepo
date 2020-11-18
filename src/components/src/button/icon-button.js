@@ -46,6 +46,8 @@ const styles = create({
     height: '4rem',
     width: '4rem',
   },
+  // This is a false positive
+  // eslint-disable-next-line sx/no-unused-stylesheet
   icon: {
     position: 'absolute',
     top: '50%',
