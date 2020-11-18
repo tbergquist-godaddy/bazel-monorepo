@@ -3,8 +3,8 @@
 .+/bazel-bin/.+
 .+/bazel-out/.+
 .+/bazel-testlogs/.+
-.+/bazel-test_bazel/.+
-/private/var/tmp/.*
+.+/bazel-bazel-monorepo/.+
+
 
 ; https://flow.org/en/docs/config/untyped/
 [untyped]
