@@ -1,0 +1,8 @@
+mutation {
+  deleteWatchedEpisode(episodeId: "ZXBpc29kZTo2") {
+    success
+    episode {
+      id
+    }
+  }
+}

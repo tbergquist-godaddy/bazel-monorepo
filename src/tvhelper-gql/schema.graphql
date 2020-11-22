@@ -1,0 +1,273 @@
+# @generated SignedSource<<9154dd4b56bcc22c7f433a3241297818>>
+
+# <BREAKING-CHANGES-LOG>
+# </BREAKING-CHANGES-LOG>
+
+schema {
+  query: RootQuery
+  mutation: RootMutation
+}
+
+"""The return type for the add favorite mutation"""
+type AddFavorite {
+  success: Boolean
+  tvShow: TvShowNode
+}
+
+"""A character appearing in a tvshow, and the actor/actress"""
+type Cast {
+  character: Person
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  person: Person
+}
+
+"""Response type indicating an error"""
+type ChangePasswordError implements Error {
+  isInvalidPassword: Boolean
+  message: String
+}
+
+union ChangePasswordOrError = ChangePasswordError | ChangePasswordResponse
+
+"""Response indicating that the password was changed"""
+type ChangePasswordResponse {
+  success: Boolean
+}
+
+"""A stored operation, a has with a corresponding graphql operation"""
+type CreateStoredOperation {
+  createdOperations: [StoredOperation]
+}
+
+"""The reply for a newly created user"""
+type CreateUserMutation {
+  success: Boolean
+}
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+"""Episodes of the tv show"""
+type Episode {
+  airdate: Date
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  image: TvHelperImage
+  name: String
+  number: Int
+  season: Int
+
+  """Gives season and episode number on format S01E01"""
+  seasonAndNumber: String
+  summary(stripTags: Boolean = true): String
+  watched: Boolean
+}
+
+"""Mutation response type for episode watched mutation"""
+type EpisodeWatched {
+  episode: Episode
+  success: Boolean
+}
+
+"""Interface to describe an error"""
+interface Error {
+  message: String
+}
+
+"""Login response, indicates success and gives the token"""
+type LoginType {
+  success: Boolean
+  token: String
+}
+
+"""The network hosting a tv show"""
+type Network {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  name: String
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+}
+
+"""An actor or a character in a tv show"""
+type Person {
+  id: ID
+  image: TvHelperImage
+  name: String
+}
+
+"""Return type used for range delete mutations"""
+type RangeDelete {
+  id: ID
+  success: Boolean
+}
+
+"""Root Mutation."""
+type RootMutation {
+  """Add tv show to favorite list"""
+  addFavorite(serieId: ID!): AddFavorite
+  createdStoredOperations(storedOperations: [StoredOperationInput!]!): CreateStoredOperation
+  createUser(email: String!, password: String!, username: String!): CreateUserMutation
+
+  """Remove tv show from favorite list"""
+  deleteFavorite(serieId: ID!): RangeDelete
+
+  """Delete an episode as watched"""
+  deleteWatchedEpisode(episodeId: ID!): EpisodeWatched
+
+  """Mark an episode as watched"""
+  markAsWatched(episodeId: ID!): EpisodeWatched
+  tvHelperChangePassword(newPassword: String!, password: String!): ChangePasswordOrError
+  tvHelperLogin(password: String!, username: String!): LoginType
+}
+
+"""Root Query"""
+type RootQuery {
+  """Load episode by id"""
+  episode(id: ID!): Episode
+
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+
+  """Search for tv shows by name"""
+  searchTvShow(after: String, before: String, first: Int, last: Int, query: String!): TvShowConnection
+
+  """User context"""
+  viewer: Viewer
+}
+
+enum SortBy {
+  NAME
+  NEXT_EPISODE
+  PREVIOUS_EPISODE
+  STATUS
+}
+
+enum SortDirection {
+  ASC
+  DESC
+}
+
+"""Options of how to sort series by"""
+input SortOptions {
+  sortBy: SortBy = NAME
+  sortDirection: SortDirection = ASC
+}
+
+"""A stored operation, a has with a corresponding graphql operation"""
+type StoredOperation {
+  operationId: String
+  text: String
+}
+
+"""Input type to create a stored operation"""
+input StoredOperationInput {
+  operationId: String!
+  text: String!
+}
+
+"""The image of a person or tvshow or episode"""
+type TvHelperImage {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  medium: String
+  original: String
+}
+
+"""The viewer object for the current logged in user in tvhelper app"""
+type TvHelperViewer {
+  """Your favorite tv shows"""
+  favorites(after: String, before: String, first: Int, last: Int, options: SortOptions = {sortBy: NAME, sortDirection: ASC}): TvShowConnection
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  username: String
+}
+
+"""Information about a tv show"""
+type TvShow implements Node {
+  cast: [Cast]
+  episodes: [Episode]
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  image: TvHelperImage
+  isFavorite: Boolean
+  name: String
+  network: Network
+  nextEpisode: Date
+  premiered: Date
+  previousEpisode: Date
+  rating: Float
+  status: String
+  summary(stripTags: Boolean = true): String
+}
+
+"""A connection to a list of items."""
+type TvShowConnection {
+  """A list of edges."""
+  edges: [TvShowEdge]
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+}
+
+"""An edge in a connection."""
+type TvShowEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: TvShow
+}
+
+"""A tv show node"""
+type TvShowNode {
+  node: TvShow
+}
+
+"""User is not authorized to view content"""
+type Unauthorized {
+  message: String
+}
+
+union Viewer = TvHelperViewer | Unauthorized

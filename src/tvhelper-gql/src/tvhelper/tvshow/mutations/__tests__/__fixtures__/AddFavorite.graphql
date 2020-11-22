@@ -1,0 +1,11 @@
+mutation addFavorite {
+  addFavorite(serieId: "dHZzaG93OjY=") {
+    success
+    tvShow {
+      node {
+        name
+        status
+      }
+    }
+  }
+}

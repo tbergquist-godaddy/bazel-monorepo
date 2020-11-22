@@ -1,0 +1,122 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin", "nodejs_binary", "nodejs_test")
+load("@npm//@babel/cli:index.bzl", "babel")
+load("@npm//@babel/node:index.bzl", "babel_node")
+load("@npm//vercel:index.bzl", "vercel")
+load("//:eslint/eslint.bzl", "eslint")
+load("//jest:jest.bzl", "jest_test")
+load(":dependencies.bzl", "get_deps")
+
+babel(
+    name = "lib",
+    args = [
+        "./src/tvhelper-gql/src",
+        "--out-dir",
+        "$(@D)",
+        "--root-mode",
+        "upward",
+        "--copy-files",
+    ],
+    data = glob(["src/**/*"]) + [
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
+    output_dir = True,
+)
+
+eslint(
+    name = "lint",
+    data = [
+        ":package.json",
+        ":src",
+    ],
+    entry = ":src",
+)
+
+# Run with ibazel
+babel_node(
+    name = "dev_server",
+    args = [
+        "./src/tvhelper-gql/src",
+    ],
+    data = glob([
+        "src/**/*",
+        "**/.env",
+    ]) + get_deps() + [
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+    ],
+)
+
+nodejs_binary(
+    name = "server",
+    data = get_deps() + [
+        ":lib",
+        "@npm//@babel/runtime",
+    ],
+    entry_point = ":lib",
+)
+
+copy_to_bin(
+    name = "copy",
+    srcs = [
+        "package.json",
+        "vercel.json",
+    ],
+)
+
+jest_test(
+    name = "test",
+    srcs = [
+        "//:babel.config.js",
+    ] + glob([
+        "src/**/*.js",
+        "src/**/*.graphql",
+        "scripts/**/*.js",
+        "mocks/**/*.js",
+        "mocks/**/*.json",
+    ]),
+    extra_args = [
+        "-i",
+    ],
+    jest_config = ":jest.config.js",
+    deps = get_deps() + [
+        "@npm//mongodb-memory-server",
+        "@npm//@babel/runtime",
+        "@npm//mockdate",
+        "@npm//supertest",
+        "@npm//msw",
+    ],
+)
+
+# Use with bazel run to update local snapshot
+nodejs_test(
+    name = "test_bc",
+    data = get_deps() + [
+        ":src",
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+        "@npm//@adeira/graphql-bc-checker",
+        "@npm//@babel/register",
+        "@npm//@babel/runtime",
+        ":schema.graphql",
+    ],
+    entry_point = ":scripts/test-bc.js",
+)
+
+vercel(
+    name = "deploy",
+    args = [
+        "./src/tvhelper-gql",
+        "--prod",
+        "--confirm",
+    ],
+    data = [
+        ":lib",
+        ":package.json",
+        ":vercel.json",
+    ],
+)

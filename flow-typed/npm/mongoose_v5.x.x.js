@@ -497,6 +497,7 @@ type ConnectionEventTypes = 'error' | 'open' | 'disconnected' | string;
 
 declare class Mongoose$Connection {
   constructor(): this;
+  dropDatabase(): Promise<void>;
   close(): Promise<any>;
   connect(
     uri: string,

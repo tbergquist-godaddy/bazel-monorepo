@@ -1,0 +1,1902 @@
+[
+  {
+    "id": 1460567,
+    "url": "http://www.tvmaze.com/episodes/1460567/100-ev-100-film-1x01-1900-eljen-az-evszazad",
+    "name": "1900 - Éljen az évszázad!",
+    "season": 1,
+    "number": 1,
+    "type": "regular",
+    "airdate": "2001-01-01",
+    "airtime": "20:00",
+    "airstamp": "2001-01-01T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460567"
+      }
+    }
+  },
+  {
+    "id": 1460568,
+    "url": "http://www.tvmaze.com/episodes/1460568/100-ev-100-film-1x02-1901-jonnek-az-uralkodok",
+    "name": "1901 - Jönnek az uralkodók",
+    "season": 1,
+    "number": 2,
+    "type": "regular",
+    "airdate": "2001-01-02",
+    "airtime": "20:00",
+    "airstamp": "2001-01-02T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460568"
+      }
+    }
+  },
+  {
+    "id": 1460569,
+    "url": "http://www.tvmaze.com/episodes/1460569/100-ev-100-film-1x03-1903-a-wrightt-fiverek",
+    "name": "1903 - A Wrightt fivérek",
+    "season": 1,
+    "number": 3,
+    "type": "regular",
+    "airdate": "2001-01-03",
+    "airtime": "20:00",
+    "airstamp": "2001-01-03T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460569"
+      }
+    }
+  },
+  {
+    "id": 1460570,
+    "url": "http://www.tvmaze.com/episodes/1460570/100-ev-100-film-1x04-1906-a-foldrenges",
+    "name": "1906 - A földrengés",
+    "season": 1,
+    "number": 4,
+    "type": "regular",
+    "airdate": "2001-01-04",
+    "airtime": "20:00",
+    "airstamp": "2001-01-04T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460570"
+      }
+    }
+  },
+  {
+    "id": 1460571,
+    "url": "http://www.tvmaze.com/episodes/1460571/100-ev-100-film-1x05-1907-raszputyin",
+    "name": "1907 - Raszputyin",
+    "season": 1,
+    "number": 5,
+    "type": "regular",
+    "airdate": "2001-01-05",
+    "airtime": "20:00",
+    "airstamp": "2001-01-05T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460571"
+      }
+    }
+  },
+  {
+    "id": 1460572,
+    "url": "http://www.tvmaze.com/episodes/1460572/100-ev-100-film-1x06-1909-szufrazsettek",
+    "name": "1909 - Szüfrazsettek",
+    "season": 1,
+    "number": 6,
+    "type": "regular",
+    "airdate": "2001-01-06",
+    "airtime": "20:00",
+    "airstamp": "2001-01-06T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460572"
+      }
+    }
+  },
+  {
+    "id": 1460573,
+    "url": "http://www.tvmaze.com/episodes/1460573/100-ev-100-film-1x07-1911-a-deli-sark",
+    "name": "1911 - A Déli-sark",
+    "season": 1,
+    "number": 7,
+    "type": "regular",
+    "airdate": "2001-01-07",
+    "airtime": "20:00",
+    "airstamp": "2001-01-07T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460573"
+      }
+    }
+  },
+  {
+    "id": 1460574,
+    "url": "http://www.tvmaze.com/episodes/1460574/100-ev-100-film-1x08-1912-titanic",
+    "name": "1912 - Titanic",
+    "season": 1,
+    "number": 8,
+    "type": "regular",
+    "airdate": "2001-01-08",
+    "airtime": "20:00",
+    "airstamp": "2001-01-08T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460574"
+      }
+    }
+  },
+  {
+    "id": 1460575,
+    "url": "http://www.tvmaze.com/episodes/1460575/100-ev-100-film-1x09-1913-csaszarjubileum",
+    "name": "1913 - Császárjubileum",
+    "season": 1,
+    "number": 9,
+    "type": "regular",
+    "airdate": "2001-01-09",
+    "airtime": "20:00",
+    "airstamp": "2001-01-09T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460575"
+      }
+    }
+  },
+  {
+    "id": 1460577,
+    "url": "http://www.tvmaze.com/episodes/1460577/100-ev-100-film-1x10-1914-szarajevo",
+    "name": "1914 - Szarajevó",
+    "season": 1,
+    "number": 10,
+    "type": "regular",
+    "airdate": "2001-01-10",
+    "airtime": "20:00",
+    "airstamp": "2001-01-10T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460577"
+      }
+    }
+  },
+  {
+    "id": 1460578,
+    "url": "http://www.tvmaze.com/episodes/1460578/100-ev-100-film-1x11-1916-verdun",
+    "name": "1916 - Verdun",
+    "season": 1,
+    "number": 11,
+    "type": "regular",
+    "airdate": "2001-01-11",
+    "airtime": "20:00",
+    "airstamp": "2001-01-11T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460578"
+      }
+    }
+  },
+  {
+    "id": 1460579,
+    "url": "http://www.tvmaze.com/episodes/1460579/100-ev-100-film-1x12-1917-az-oktoberi-forradalom",
+    "name": "1917 - Az Októberi Forradalom",
+    "season": 1,
+    "number": 12,
+    "type": "regular",
+    "airdate": "2001-01-12",
+    "airtime": "20:00",
+    "airstamp": "2001-01-12T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460579"
+      }
+    }
+  },
+  {
+    "id": 1460580,
+    "url": "http://www.tvmaze.com/episodes/1460580/100-ev-100-film-1x13-1918-forradalom",
+    "name": "1918 - Forradalom",
+    "season": 1,
+    "number": 13,
+    "type": "regular",
+    "airdate": "2001-01-13",
+    "airtime": "20:00",
+    "airstamp": "2001-01-13T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460580"
+      }
+    }
+  },
+  {
+    "id": 1460581,
+    "url": "http://www.tvmaze.com/episodes/1460581/100-ev-100-film-1x14-1919-versailles",
+    "name": "1919 - Versailles",
+    "season": 1,
+    "number": 14,
+    "type": "regular",
+    "airdate": "2001-01-14",
+    "airtime": "20:00",
+    "airstamp": "2001-01-14T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460581"
+      }
+    }
+  },
+  {
+    "id": 1460582,
+    "url": "http://www.tvmaze.com/episodes/1460582/100-ev-100-film-1x15-1920-a-nagy-alkoholtilalom",
+    "name": "1920 - A nagy alkoholtilalom",
+    "season": 1,
+    "number": 15,
+    "type": "regular",
+    "airdate": "2001-01-15",
+    "airtime": "20:00",
+    "airstamp": "2001-01-15T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460582"
+      }
+    }
+  },
+  {
+    "id": 1460583,
+    "url": "http://www.tvmaze.com/episodes/1460583/100-ev-100-film-1x16-1922-mussolini",
+    "name": "1922 - Mussolini",
+    "season": 1,
+    "number": 16,
+    "type": "regular",
+    "airdate": "2001-01-16",
+    "airtime": "20:00",
+    "airstamp": "2001-01-16T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460583"
+      }
+    }
+  },
+  {
+    "id": 1460584,
+    "url": "http://www.tvmaze.com/episodes/1460584/100-ev-100-film-1x17-1922-tutanhamon",
+    "name": "1922 - Tutanhamon",
+    "season": 1,
+    "number": 17,
+    "type": "regular",
+    "airdate": "2001-01-17",
+    "airtime": "20:00",
+    "airstamp": "2001-01-17T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460584"
+      }
+    }
+  },
+  {
+    "id": 1460585,
+    "url": "http://www.tvmaze.com/episodes/1460585/100-ev-100-film-1x18-1923-a-hitleri-puccs",
+    "name": "1923 - A hitleri puccs",
+    "season": 1,
+    "number": 18,
+    "type": "regular",
+    "airdate": "2001-01-18",
+    "airtime": "20:00",
+    "airstamp": "2001-01-18T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460585"
+      }
+    }
+  },
+  {
+    "id": 1460587,
+    "url": "http://www.tvmaze.com/episodes/1460587/100-ev-100-film-1x19-1924-sztalinlenin",
+    "name": "1924 - Sztálin/Lenin",
+    "season": 1,
+    "number": 19,
+    "type": "regular",
+    "airdate": "2001-01-19",
+    "airtime": "20:00",
+    "airstamp": "2001-01-19T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460587"
+      }
+    }
+  },
+  {
+    "id": 1460588,
+    "url": "http://www.tvmaze.com/episodes/1460588/100-ev-100-film-1x20-1925-charlie-chaplin",
+    "name": "1925 - Charlie Chaplin",
+    "season": 1,
+    "number": 20,
+    "type": "regular",
+    "airdate": "2001-01-20",
+    "airtime": "20:00",
+    "airstamp": "2001-01-20T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460588"
+      }
+    }
+  },
+  {
+    "id": 1460589,
+    "url": "http://www.tvmaze.com/episodes/1460589/100-ev-100-film-1x21-1926-josephine-baker",
+    "name": "1926 - Josephine Baker",
+    "season": 1,
+    "number": 21,
+    "type": "regular",
+    "airdate": "2001-01-21",
+    "airtime": "20:00",
+    "airstamp": "2001-01-21T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460589"
+      }
+    }
+  },
+  {
+    "id": 1460590,
+    "url": "http://www.tvmaze.com/episodes/1460590/100-ev-100-film-1x22-1927-lindbergh",
+    "name": "1927 - Lindbergh",
+    "season": 1,
+    "number": 22,
+    "type": "regular",
+    "airdate": "2001-01-22",
+    "airtime": "20:00",
+    "airstamp": "2001-01-22T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460590"
+      }
+    }
+  },
+  {
+    "id": 1460591,
+    "url": "http://www.tvmaze.com/episodes/1460591/100-ev-100-film-1x23-1928-penicillin",
+    "name": "1928 - Penicillin",
+    "season": 1,
+    "number": 23,
+    "type": "regular",
+    "airdate": "2001-01-23",
+    "airtime": "20:00",
+    "airstamp": "2001-01-23T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460591"
+      }
+    }
+  },
+  {
+    "id": 1460592,
+    "url": "http://www.tvmaze.com/episodes/1460592/100-ev-100-film-1x24-1929-fekete-pentek",
+    "name": "1929 - Fekete péntek",
+    "season": 1,
+    "number": 24,
+    "type": "regular",
+    "airdate": "2001-01-24",
+    "airtime": "20:00",
+    "airstamp": "2001-01-24T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460592"
+      }
+    }
+  },
+  {
+    "id": 1460593,
+    "url": "http://www.tvmaze.com/episodes/1460593/100-ev-100-film-1x25-1930-gandhi",
+    "name": "1930 - Gandhi",
+    "season": 1,
+    "number": 25,
+    "type": "regular",
+    "airdate": "2001-01-25",
+    "airtime": "20:00",
+    "airstamp": "2001-01-25T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460593"
+      }
+    }
+  },
+  {
+    "id": 1460594,
+    "url": "http://www.tvmaze.com/episodes/1460594/100-ev-100-film-1x26-1932-weimar",
+    "name": "1932 - Weimar",
+    "season": 1,
+    "number": 26,
+    "type": "regular",
+    "airdate": "2001-01-26",
+    "airtime": "20:00",
+    "airstamp": "2001-01-26T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460594"
+      }
+    }
+  },
+  {
+    "id": 1460595,
+    "url": "http://www.tvmaze.com/episodes/1460595/100-ev-100-film-1x27-1933-a-hatalomatvetel",
+    "name": "1933 - A hatalomátvétel",
+    "season": 1,
+    "number": 27,
+    "type": "regular",
+    "airdate": "2001-01-27",
+    "airtime": "20:00",
+    "airstamp": "2001-01-27T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460595"
+      }
+    }
+  },
+  {
+    "id": 1460596,
+    "url": "http://www.tvmaze.com/episodes/1460596/100-ev-100-film-1x28-1934-mao",
+    "name": "1934 - Mao",
+    "season": 1,
+    "number": 28,
+    "type": "regular",
+    "airdate": "2001-01-28",
+    "airtime": "20:00",
+    "airstamp": "2001-01-28T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460596"
+      }
+    }
+  },
+  {
+    "id": 1460599,
+    "url": "http://www.tvmaze.com/episodes/1460599/100-ev-100-film-1x29-1936-jesse-owens",
+    "name": "1936 - Jesse Owens",
+    "season": 1,
+    "number": 29,
+    "type": "regular",
+    "airdate": "2001-01-29",
+    "airtime": "20:00",
+    "airstamp": "2001-01-29T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460599"
+      }
+    }
+  },
+  {
+    "id": 1460600,
+    "url": "http://www.tvmaze.com/episodes/1460600/100-ev-100-film-1x30-1936-a-spanyol-polgarhaboru",
+    "name": "1936 - A spanyol polgárháború",
+    "season": 1,
+    "number": 30,
+    "type": "regular",
+    "airdate": "2001-01-30",
+    "airtime": "20:00",
+    "airstamp": "2001-01-30T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460600"
+      }
+    }
+  },
+  {
+    "id": 1460601,
+    "url": "http://www.tvmaze.com/episodes/1460601/100-ev-100-film-1x31-1937-sztalin",
+    "name": "1937 - Sztálin",
+    "season": 1,
+    "number": 31,
+    "type": "regular",
+    "airdate": "2001-01-31",
+    "airtime": "20:00",
+    "airstamp": "2001-01-31T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460601"
+      }
+    }
+  },
+  {
+    "id": 1460602,
+    "url": "http://www.tvmaze.com/episodes/1460602/100-ev-100-film-1x32-1937-hindenburg",
+    "name": "1937 - Hindenburg",
+    "season": 1,
+    "number": 32,
+    "type": "regular",
+    "airdate": "2001-02-01",
+    "airtime": "20:00",
+    "airstamp": "2001-02-01T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460602"
+      }
+    }
+  },
+  {
+    "id": 1460603,
+    "url": "http://www.tvmaze.com/episodes/1460603/100-ev-100-film-1x33-1938-a-kristalyejszaka",
+    "name": "1938 - A kristályéjszaka",
+    "season": 1,
+    "number": 33,
+    "type": "regular",
+    "airdate": "2001-02-02",
+    "airtime": "20:00",
+    "airstamp": "2001-02-02T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460603"
+      }
+    }
+  },
+  {
+    "id": 1460604,
+    "url": "http://www.tvmaze.com/episodes/1460604/100-ev-100-film-1x34-1938-munchen-bekekonferencia",
+    "name": "1938 - München - békekonferencia",
+    "season": 1,
+    "number": 34,
+    "type": "regular",
+    "airdate": "2001-02-03",
+    "airtime": "20:00",
+    "airstamp": "2001-02-03T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460604"
+      }
+    }
+  },
+  {
+    "id": 1460605,
+    "url": "http://www.tvmaze.com/episodes/1460605/100-ev-100-film-1x35-1939-lengyelorszag-lerohanasa",
+    "name": "1939 - Lengyelország lerohanása",
+    "season": 1,
+    "number": 35,
+    "type": "regular",
+    "airdate": "2001-02-04",
+    "airtime": "20:00",
+    "airstamp": "2001-02-04T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460605"
+      }
+    }
+  },
+  {
+    "id": 1460606,
+    "url": "http://www.tvmaze.com/episodes/1460606/100-ev-100-film-1x36-1940-hitler-parizsban",
+    "name": "1940 - Hitler Párizsban",
+    "season": 1,
+    "number": 36,
+    "type": "regular",
+    "airdate": "2001-02-05",
+    "airtime": "20:00",
+    "airstamp": "2001-02-05T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460606"
+      }
+    }
+  },
+  {
+    "id": 1460607,
+    "url": "http://www.tvmaze.com/episodes/1460607/100-ev-100-film-1x37-1941-pearl-harbour",
+    "name": "1941 - Pearl Harbour",
+    "season": 1,
+    "number": 37,
+    "type": "regular",
+    "airdate": "2001-02-06",
+    "airtime": "20:00",
+    "airstamp": "2001-02-06T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460607"
+      }
+    }
+  },
+  {
+    "id": 1460608,
+    "url": "http://www.tvmaze.com/episodes/1460608/100-ev-100-film-1x38-1941-a-barbarossa-hadmuvelet",
+    "name": "1941 - A Barbarossa-hadművelet",
+    "season": 1,
+    "number": 38,
+    "type": "regular",
+    "airdate": "2001-02-07",
+    "airtime": "20:00",
+    "airstamp": "2001-02-07T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460608"
+      }
+    }
+  },
+  {
+    "id": 1460609,
+    "url": "http://www.tvmaze.com/episodes/1460609/100-ev-100-film-1x39-1942-auschwitz",
+    "name": "1942 - Auschwitz",
+    "season": 1,
+    "number": 39,
+    "type": "regular",
+    "airdate": "2001-02-08",
+    "airtime": "20:00",
+    "airstamp": "2001-02-08T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460609"
+      }
+    }
+  },
+  {
+    "id": 1460610,
+    "url": "http://www.tvmaze.com/episodes/1460610/100-ev-100-film-1x40-1943-a-varsoi-getto",
+    "name": "1943 - A varsói gettó",
+    "season": 1,
+    "number": 40,
+    "type": "regular",
+    "airdate": "2001-02-09",
+    "airtime": "20:00",
+    "airstamp": "2001-02-09T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460610"
+      }
+    }
+  },
+  {
+    "id": 1460611,
+    "url": "http://www.tvmaze.com/episodes/1460611/100-ev-100-film-1x41-1943-sztalingrad",
+    "name": "1943 - Sztálingrád",
+    "season": 1,
+    "number": 41,
+    "type": "regular",
+    "airdate": "2001-02-10",
+    "airtime": "20:00",
+    "airstamp": "2001-02-10T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460611"
+      }
+    }
+  },
+  {
+    "id": 1460612,
+    "url": "http://www.tvmaze.com/episodes/1460612/100-ev-100-film-1x42-1944-a-d-nap",
+    "name": "1944 - A D-nap",
+    "season": 1,
+    "number": 42,
+    "type": "regular",
+    "airdate": "2001-02-11",
+    "airtime": "20:00",
+    "airstamp": "2001-02-11T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460612"
+      }
+    }
+  },
+  {
+    "id": 1460613,
+    "url": "http://www.tvmaze.com/episodes/1460613/100-ev-100-film-1x43-1945-hirosima",
+    "name": "1945 - Hirosima",
+    "season": 1,
+    "number": 43,
+    "type": "regular",
+    "airdate": "2001-02-12",
+    "airtime": "20:00",
+    "airstamp": "2001-02-12T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460613"
+      }
+    }
+  },
+  {
+    "id": 1460614,
+    "url": "http://www.tvmaze.com/episodes/1460614/100-ev-100-film-1x44-1945-a-kapitulacio",
+    "name": "1945 - A kapituláció",
+    "season": 1,
+    "number": 44,
+    "type": "regular",
+    "airdate": "2001-02-13",
+    "airtime": "20:00",
+    "airstamp": "2001-02-13T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460614"
+      }
+    }
+  },
+  {
+    "id": 1460615,
+    "url": "http://www.tvmaze.com/episodes/1460615/100-ev-100-film-1x45-1946-a-nurnbergi-per",
+    "name": "1946 - A nürnbergi per",
+    "season": 1,
+    "number": 45,
+    "type": "regular",
+    "airdate": "2001-02-14",
+    "airtime": "20:00",
+    "airstamp": "2001-02-14T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460615"
+      }
+    }
+  },
+  {
+    "id": 1460616,
+    "url": "http://www.tvmaze.com/episodes/1460616/100-ev-100-film-1x46-1947-izrael",
+    "name": "1947 - Izrael",
+    "season": 1,
+    "number": 46,
+    "type": "regular",
+    "airdate": "2001-02-15",
+    "airtime": "20:00",
+    "airstamp": "2001-02-15T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460616"
+      }
+    }
+  },
+  {
+    "id": 1460617,
+    "url": "http://www.tvmaze.com/episodes/1460617/100-ev-100-film-1x47-1948-segelyszallitmanyok",
+    "name": "1948 - Segélyszállítmányok",
+    "season": 1,
+    "number": 47,
+    "type": "regular",
+    "airdate": "2001-02-16",
+    "airtime": "20:00",
+    "airstamp": "2001-02-16T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460617"
+      }
+    }
+  },
+  {
+    "id": 1460618,
+    "url": "http://www.tvmaze.com/episodes/1460618/100-ev-100-film-1x48-1949-az-nszk-megalapitasa",
+    "name": "1949 - Az NSZK megalapítása",
+    "season": 1,
+    "number": 48,
+    "type": "regular",
+    "airdate": "2001-02-17",
+    "airtime": "20:00",
+    "airstamp": "2001-02-17T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460618"
+      }
+    }
+  },
+  {
+    "id": 1460619,
+    "url": "http://www.tvmaze.com/episodes/1460619/100-ev-100-film-1x49-1951-churchill",
+    "name": "1951 - Churchill",
+    "season": 1,
+    "number": 49,
+    "type": "regular",
+    "airdate": "2001-02-18",
+    "airtime": "20:00",
+    "airstamp": "2001-02-18T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460619"
+      }
+    }
+  },
+  {
+    "id": 1460620,
+    "url": "http://www.tvmaze.com/episodes/1460620/100-ev-100-film-1x50-1953-mount-everest",
+    "name": "1953 - Mount Everest",
+    "season": 1,
+    "number": 50,
+    "type": "regular",
+    "airdate": "2001-02-19",
+    "airtime": "20:00",
+    "airstamp": "2001-02-19T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460620"
+      }
+    }
+  },
+  {
+    "id": 1460621,
+    "url": "http://www.tvmaze.com/episodes/1460621/100-ev-100-film-1x51-1953-ii-erzsebet",
+    "name": "1953 - II. Erzsébet",
+    "season": 1,
+    "number": 51,
+    "type": "regular",
+    "airdate": "2001-02-20",
+    "airtime": "20:00",
+    "airstamp": "2001-02-20T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460621"
+      }
+    }
+  },
+  {
+    "id": 1460622,
+    "url": "http://www.tvmaze.com/episodes/1460622/100-ev-100-film-1x52-1953-a-keletnemet-felkeles",
+    "name": "1953 - A keletnémet felkelés",
+    "season": 1,
+    "number": 52,
+    "type": "regular",
+    "airdate": "2001-02-21",
+    "airtime": "20:00",
+    "airstamp": "2001-02-21T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460622"
+      }
+    }
+  },
+  {
+    "id": 1460623,
+    "url": "http://www.tvmaze.com/episodes/1460623/100-ev-100-film-1x53-1954-marilyn-monroe",
+    "name": "1954 - Marilyn Monroe",
+    "season": 1,
+    "number": 53,
+    "type": "regular",
+    "airdate": "2001-02-22",
+    "airtime": "20:00",
+    "airstamp": "2001-02-22T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460623"
+      }
+    }
+  },
+  {
+    "id": 1460624,
+    "url": "http://www.tvmaze.com/episodes/1460624/100-ev-100-film-1x54-1954-atomkiserlet-a-bikini-szigeten",
+    "name": "1954 - Atomkísérlet a Bikini-szigeten",
+    "season": 1,
+    "number": 54,
+    "type": "regular",
+    "airdate": "2001-02-23",
+    "airtime": "20:00",
+    "airstamp": "2001-02-23T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460624"
+      }
+    }
+  },
+  {
+    "id": 1460625,
+    "url": "http://www.tvmaze.com/episodes/1460625/100-ev-100-film-1x55-1955-konrad-adenauer",
+    "name": "1955 - Konrad Adenauer",
+    "season": 1,
+    "number": 55,
+    "type": "regular",
+    "airdate": "2001-02-24",
+    "airtime": "20:00",
+    "airstamp": "2001-02-24T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460625"
+      }
+    }
+  },
+  {
+    "id": 1460626,
+    "url": "http://www.tvmaze.com/episodes/1460626/100-ev-100-film-1x56-1956-a-magyar-forradalom",
+    "name": "1956 - A magyar forradalom",
+    "season": 1,
+    "number": 56,
+    "type": "regular",
+    "airdate": "2001-02-25",
+    "airtime": "20:00",
+    "airstamp": "2001-02-25T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460626"
+      }
+    }
+  },
+  {
+    "id": 1460627,
+    "url": "http://www.tvmaze.com/episodes/1460627/100-ev-100-film-1x57-1958-elvis-presley",
+    "name": "1958 - Elvis Presley",
+    "season": 1,
+    "number": 57,
+    "type": "regular",
+    "airdate": "2001-02-26",
+    "airtime": "20:00",
+    "airstamp": "2001-02-26T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460627"
+      }
+    }
+  },
+  {
+    "id": 1460628,
+    "url": "http://www.tvmaze.com/episodes/1460628/100-ev-100-film-1x58-1959-fidel-castro",
+    "name": "1959 - Fidel Castro",
+    "season": 1,
+    "number": 58,
+    "type": "regular",
+    "airdate": "2001-02-27",
+    "airtime": "20:00",
+    "airstamp": "2001-02-27T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460628"
+      }
+    }
+  },
+  {
+    "id": 1460629,
+    "url": "http://www.tvmaze.com/episodes/1460629/100-ev-100-film-1x59-1960-adolf-eichmann",
+    "name": "1960 - Adolf Eichmann",
+    "season": 1,
+    "number": 59,
+    "type": "regular",
+    "airdate": "2001-02-28",
+    "airtime": "20:00",
+    "airstamp": "2001-02-28T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460629"
+      }
+    }
+  },
+  {
+    "id": 1460630,
+    "url": "http://www.tvmaze.com/episodes/1460630/100-ev-100-film-1x60-1961-epul-a-berlini-fal",
+    "name": "1961 - Épül a berlini fal",
+    "season": 1,
+    "number": 60,
+    "type": "regular",
+    "airdate": "2001-03-01",
+    "airtime": "20:00",
+    "airstamp": "2001-03-01T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460630"
+      }
+    }
+  },
+  {
+    "id": 1460631,
+    "url": "http://www.tvmaze.com/episodes/1460631/100-ev-100-film-1x61-1962-a-kubai-valsag",
+    "name": "1962 - A kubai válság",
+    "season": 1,
+    "number": 61,
+    "type": "regular",
+    "airdate": "2001-03-02",
+    "airtime": "20:00",
+    "airstamp": "2001-03-02T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460631"
+      }
+    }
+  },
+  {
+    "id": 1460632,
+    "url": "http://www.tvmaze.com/episodes/1460632/100-ev-100-film-1x62-1963-john-f-kennedy",
+    "name": "1963 - John F. Kennedy",
+    "season": 1,
+    "number": 62,
+    "type": "regular",
+    "airdate": "2001-03-03",
+    "airtime": "20:00",
+    "airstamp": "2001-03-03T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460632"
+      }
+    }
+  },
+  {
+    "id": 1460633,
+    "url": "http://www.tvmaze.com/episodes/1460633/100-ev-100-film-1x63-1964-cassius-clay",
+    "name": "1964 - Cassius Clay",
+    "season": 1,
+    "number": 63,
+    "type": "regular",
+    "airdate": "2001-03-04",
+    "airtime": "20:00",
+    "airstamp": "2001-03-04T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460633"
+      }
+    }
+  },
+  {
+    "id": 1460634,
+    "url": "http://www.tvmaze.com/episodes/1460634/100-ev-100-film-1x64-1965-a-beatles",
+    "name": "1965 - A Beatles",
+    "season": 1,
+    "number": 64,
+    "type": "regular",
+    "airdate": "2001-03-05",
+    "airtime": "20:00",
+    "airstamp": "2001-03-05T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460634"
+      }
+    }
+  },
+  {
+    "id": 1460635,
+    "url": "http://www.tvmaze.com/episodes/1460635/100-ev-100-film-1x65-1966-a-wembley-gol",
+    "name": "1966 - A Wembley-gól",
+    "season": 1,
+    "number": 65,
+    "type": "regular",
+    "airdate": "2001-03-06",
+    "airtime": "20:00",
+    "airstamp": "2001-03-06T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460635"
+      }
+    }
+  },
+  {
+    "id": 1460636,
+    "url": "http://www.tvmaze.com/episodes/1460636/100-ev-100-film-1x66-1967-benno-ohnesorg",
+    "name": "1967 - Benno Ohnesorg",
+    "season": 1,
+    "number": 66,
+    "type": "regular",
+    "airdate": "2001-03-07",
+    "airtime": "20:00",
+    "airstamp": "2001-03-07T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460636"
+      }
+    }
+  },
+  {
+    "id": 1460637,
+    "url": "http://www.tvmaze.com/episodes/1460637/100-ev-100-film-1x67-1967-a-hatnapos-haboru",
+    "name": "1967 - A hatnapos háború",
+    "season": 1,
+    "number": 67,
+    "type": "regular",
+    "airdate": "2001-03-08",
+    "airtime": "20:00",
+    "airstamp": "2001-03-08T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460637"
+      }
+    }
+  },
+  {
+    "id": 1460638,
+    "url": "http://www.tvmaze.com/episodes/1460638/100-ev-100-film-1x68-1968-a-halalos-loves",
+    "name": "1968 - A halálos lövés",
+    "season": 1,
+    "number": 68,
+    "type": "regular",
+    "airdate": "2001-03-09",
+    "airtime": "20:00",
+    "airstamp": "2001-03-09T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460638"
+      }
+    }
+  },
+  {
+    "id": 1460639,
+    "url": "http://www.tvmaze.com/episodes/1460639/100-ev-100-film-1x69-1968-a-pragai-tavasz",
+    "name": "1968 - A prágai tavasz",
+    "season": 1,
+    "number": 69,
+    "type": "regular",
+    "airdate": "2001-03-10",
+    "airtime": "20:00",
+    "airstamp": "2001-03-10T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460639"
+      }
+    }
+  },
+  {
+    "id": 1460640,
+    "url": "http://www.tvmaze.com/episodes/1460640/100-ev-100-film-1x70-1969-neil-armstrong",
+    "name": "1969 - Neil Armstrong",
+    "season": 1,
+    "number": 70,
+    "type": "regular",
+    "airdate": "2001-03-11",
+    "airtime": "20:00",
+    "airstamp": "2001-03-11T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460640"
+      }
+    }
+  },
+  {
+    "id": 1460641,
+    "url": "http://www.tvmaze.com/episodes/1460641/100-ev-100-film-1x71-1970-willy-brandt",
+    "name": "1970 - Willy Brandt",
+    "season": 1,
+    "number": 71,
+    "type": "regular",
+    "airdate": "2001-03-12",
+    "airtime": "20:00",
+    "airstamp": "2001-03-12T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460641"
+      }
+    }
+  },
+  {
+    "id": 1460642,
+    "url": "http://www.tvmaze.com/episodes/1460642/100-ev-100-film-1x72-1972-kim-phuc",
+    "name": "1972 - Kim Phuc",
+    "season": 1,
+    "number": 72,
+    "type": "regular",
+    "airdate": "2001-03-13",
+    "airtime": "20:00",
+    "airstamp": "2001-03-13T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460642"
+      }
+    }
+  },
+  {
+    "id": 1460643,
+    "url": "http://www.tvmaze.com/episodes/1460643/100-ev-100-film-1x73-1972-terror-az-olimpian",
+    "name": "1972 - Terror az olimpián",
+    "season": 1,
+    "number": 73,
+    "type": "regular",
+    "airdate": "2001-03-14",
+    "airtime": "20:00",
+    "airstamp": "2001-03-14T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460643"
+      }
+    }
+  },
+  {
+    "id": 1460644,
+    "url": "http://www.tvmaze.com/episodes/1460644/100-ev-100-film-1x74-1974-watergate",
+    "name": "1974 - Watergate",
+    "season": 1,
+    "number": 74,
+    "type": "regular",
+    "airdate": "2001-03-15",
+    "airtime": "20:00",
+    "airstamp": "2001-03-15T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460644"
+      }
+    }
+  },
+  {
+    "id": 1460645,
+    "url": "http://www.tvmaze.com/episodes/1460645/100-ev-100-film-1x75-1974-guillaume-botrany",
+    "name": "1974 - Guillaume-botrány",
+    "season": 1,
+    "number": 75,
+    "type": "regular",
+    "airdate": "2001-03-16",
+    "airtime": "20:00",
+    "airstamp": "2001-03-16T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460645"
+      }
+    }
+  },
+  {
+    "id": 1460646,
+    "url": "http://www.tvmaze.com/episodes/1460646/100-ev-100-film-1x76-1975-vietnam",
+    "name": "1975 - Vietnam",
+    "season": 1,
+    "number": 76,
+    "type": "regular",
+    "airdate": "2001-03-17",
+    "airtime": "20:00",
+    "airstamp": "2001-03-17T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460646"
+      }
+    }
+  },
+  {
+    "id": 1460647,
+    "url": "http://www.tvmaze.com/episodes/1460647/100-ev-100-film-1x77-1976-soweto",
+    "name": "1976 - Soweto",
+    "season": 1,
+    "number": 77,
+    "type": "regular",
+    "airdate": "2001-03-18",
+    "airtime": "20:00",
+    "airstamp": "2001-03-18T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460647"
+      }
+    }
+  },
+  {
+    "id": 1460648,
+    "url": "http://www.tvmaze.com/episodes/1460648/100-ev-100-film-1x78-1977-nemetorszagi-osz",
+    "name": "1977 - Németországi ősz",
+    "season": 1,
+    "number": 78,
+    "type": "regular",
+    "airdate": "2001-03-19",
+    "airtime": "20:00",
+    "airstamp": "2001-03-19T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460648"
+      }
+    }
+  },
+  {
+    "id": 1460649,
+    "url": "http://www.tvmaze.com/episodes/1460649/100-ev-100-film-1x79-1978-lombikbebi",
+    "name": "1978 - Lombikbébi",
+    "season": 1,
+    "number": 79,
+    "type": "regular",
+    "airdate": "2001-03-20",
+    "airtime": "20:00",
+    "airstamp": "2001-03-20T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460649"
+      }
+    }
+  },
+  {
+    "id": 1460650,
+    "url": "http://www.tvmaze.com/episodes/1460650/100-ev-100-film-1x80-1979-komeini-ayatollah",
+    "name": "1979 - Komeini ayatollah",
+    "season": 1,
+    "number": 80,
+    "type": "regular",
+    "airdate": "2001-03-21",
+    "airtime": "20:00",
+    "airstamp": "2001-03-21T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460650"
+      }
+    }
+  },
+  {
+    "id": 1460651,
+    "url": "http://www.tvmaze.com/episodes/1460651/100-ev-100-film-1x81-1980-a-szolidaritas",
+    "name": "1980 - A Szolidaritás",
+    "season": 1,
+    "number": 81,
+    "type": "regular",
+    "airdate": "2001-03-22",
+    "airtime": "20:00",
+    "airstamp": "2001-03-22T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460651"
+      }
+    }
+  },
+  {
+    "id": 1460652,
+    "url": "http://www.tvmaze.com/episodes/1460652/100-ev-100-film-1x82-1981-merenylet-a-papa-ellen",
+    "name": "1981 - Merénylet a pápa ellen",
+    "season": 1,
+    "number": 82,
+    "type": "regular",
+    "airdate": "2001-03-23",
+    "airtime": "20:00",
+    "airstamp": "2001-03-23T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460652"
+      }
+    }
+  },
+  {
+    "id": 1460653,
+    "url": "http://www.tvmaze.com/episodes/1460653/100-ev-100-film-1x83-1982-falklandi-haboru",
+    "name": "1982 - Falklandi háború",
+    "season": 1,
+    "number": 83,
+    "type": "regular",
+    "airdate": "2001-03-24",
+    "airtime": "20:00",
+    "airstamp": "2001-03-24T19:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460653"
+      }
+    }
+  },
+  {
+    "id": 1460654,
+    "url": "http://www.tvmaze.com/episodes/1460654/100-ev-100-film-1x84-1983-hitler-naploja",
+    "name": "1983 - Hitler naplója",
+    "season": 1,
+    "number": 84,
+    "type": "regular",
+    "airdate": "2001-03-25",
+    "airtime": "20:00",
+    "airstamp": "2001-03-25T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460654"
+      }
+    }
+  },
+  {
+    "id": 1460655,
+    "url": "http://www.tvmaze.com/episodes/1460655/100-ev-100-film-1x85-1985-aids",
+    "name": "1985 - AIDS",
+    "season": 1,
+    "number": 85,
+    "type": "regular",
+    "airdate": "2001-03-26",
+    "airtime": "20:00",
+    "airstamp": "2001-03-26T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460655"
+      }
+    }
+  },
+  {
+    "id": 1460656,
+    "url": "http://www.tvmaze.com/episodes/1460656/100-ev-100-film-1x86-1986-csernobil",
+    "name": "1986 - Csernobil",
+    "season": 1,
+    "number": 86,
+    "type": "regular",
+    "airdate": "2001-03-27",
+    "airtime": "20:00",
+    "airstamp": "2001-03-27T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460656"
+      }
+    }
+  },
+  {
+    "id": 1460657,
+    "url": "http://www.tvmaze.com/episodes/1460657/100-ev-100-film-1x87-1986-challenger",
+    "name": "1986 - Challenger",
+    "season": 1,
+    "number": 87,
+    "type": "regular",
+    "airdate": "2001-03-28",
+    "airtime": "20:00",
+    "airstamp": "2001-03-28T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460657"
+      }
+    }
+  },
+  {
+    "id": 1460658,
+    "url": "http://www.tvmaze.com/episodes/1460658/100-ev-100-film-1x88-1987-uwe-barschel",
+    "name": "1987 - Uwe Barschel",
+    "season": 1,
+    "number": 88,
+    "type": "regular",
+    "airdate": "2001-03-29",
+    "airtime": "20:00",
+    "airstamp": "2001-03-29T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460658"
+      }
+    }
+  },
+  {
+    "id": 1460659,
+    "url": "http://www.tvmaze.com/episodes/1460659/100-ev-100-film-1x89-1988-gladbeck",
+    "name": "1988 - Gladbeck",
+    "season": 1,
+    "number": 89,
+    "type": "regular",
+    "airdate": "2001-03-30",
+    "airtime": "20:00",
+    "airstamp": "2001-03-30T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460659"
+      }
+    }
+  },
+  {
+    "id": 1460660,
+    "url": "http://www.tvmaze.com/episodes/1460660/100-ev-100-film-1x90-1989-a-berlini-fal",
+    "name": "1989 - A berlini fal",
+    "season": 1,
+    "number": 90,
+    "type": "regular",
+    "airdate": "2001-03-31",
+    "airtime": "20:00",
+    "airstamp": "2001-03-31T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460660"
+      }
+    }
+  },
+  {
+    "id": 1460661,
+    "url": "http://www.tvmaze.com/episodes/1460661/100-ev-100-film-1x91-1990-az-ujraegyesules",
+    "name": "1990 - Az újraegyesülés",
+    "season": 1,
+    "number": 91,
+    "type": "regular",
+    "airdate": "2001-04-01",
+    "airtime": "20:00",
+    "airstamp": "2001-04-01T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460661"
+      }
+    }
+  },
+  {
+    "id": 1460662,
+    "url": "http://www.tvmaze.com/episodes/1460662/100-ev-100-film-1x92-1991-az-obolhaboru",
+    "name": "1991 - Az öbölháború",
+    "season": 1,
+    "number": 92,
+    "type": "regular",
+    "airdate": "2001-04-02",
+    "airtime": "20:00",
+    "airstamp": "2001-04-02T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460662"
+      }
+    }
+  },
+  {
+    "id": 1460663,
+    "url": "http://www.tvmaze.com/episodes/1460663/100-ev-100-film-1x93-1991-puccs-moszkvaban",
+    "name": "1991 - Puccs Moszkvában",
+    "season": 1,
+    "number": 93,
+    "type": "regular",
+    "airdate": "2001-04-03",
+    "airtime": "20:00",
+    "airstamp": "2001-04-03T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460663"
+      }
+    }
+  },
+  {
+    "id": 1460664,
+    "url": "http://www.tvmaze.com/episodes/1460664/100-ev-100-film-1x94-1992-omarszka",
+    "name": "1992 - Omarszka",
+    "season": 1,
+    "number": 94,
+    "type": "regular",
+    "airdate": "2001-04-04",
+    "airtime": "20:00",
+    "airstamp": "2001-04-04T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460664"
+      }
+    }
+  },
+  {
+    "id": 1460665,
+    "url": "http://www.tvmaze.com/episodes/1460665/100-ev-100-film-1x95-1993-szomalia",
+    "name": "1993 - Szomália",
+    "season": 1,
+    "number": 95,
+    "type": "regular",
+    "airdate": "2001-04-05",
+    "airtime": "20:00",
+    "airstamp": "2001-04-05T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460665"
+      }
+    }
+  },
+  {
+    "id": 1460666,
+    "url": "http://www.tvmaze.com/episodes/1460666/100-ev-100-film-1x96-1994-nelson-mandela",
+    "name": "1994 - Nelson Mandela",
+    "season": 1,
+    "number": 96,
+    "type": "regular",
+    "airdate": "2001-04-06",
+    "airtime": "20:00",
+    "airstamp": "2001-04-06T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460666"
+      }
+    }
+  },
+  {
+    "id": 1460667,
+    "url": "http://www.tvmaze.com/episodes/1460667/100-ev-100-film-1x97-1995-jichak-rabin",
+    "name": "1995 - Jichák Rabin",
+    "season": 1,
+    "number": 97,
+    "type": "regular",
+    "airdate": "2001-04-07",
+    "airtime": "20:00",
+    "airstamp": "2001-04-07T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460667"
+      }
+    }
+  },
+  {
+    "id": 1460668,
+    "url": "http://www.tvmaze.com/episodes/1460668/100-ev-100-film-1x98-1997-lady-diana",
+    "name": "1997 - Lady Diana",
+    "season": 1,
+    "number": 98,
+    "type": "regular",
+    "airdate": "2001-04-08",
+    "airtime": "20:00",
+    "airstamp": "2001-04-08T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460668"
+      }
+    }
+  },
+  {
+    "id": 1460669,
+    "url": "http://www.tvmaze.com/episodes/1460669/100-ev-100-film-1x99-1998-bill-clinton",
+    "name": "1998 - Bill Clinton",
+    "season": 1,
+    "number": 99,
+    "type": "regular",
+    "airdate": "2001-04-09",
+    "airtime": "20:00",
+    "airstamp": "2001-04-09T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460669"
+      }
+    }
+  },
+  {
+    "id": 1460670,
+    "url": "http://www.tvmaze.com/episodes/1460670/100-ev-100-film-1x100-1999-egy-evszazad-vege",
+    "name": "1999 - Egy évszázad vége",
+    "season": 1,
+    "number": 100,
+    "type": "regular",
+    "airdate": "2001-04-10",
+    "airtime": "20:00",
+    "airstamp": "2001-04-10T18:00:00+00:00",
+    "runtime": 10,
+    "image": null,
+    "summary": null,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/episodes/1460670"
+      }
+    }
+  }
+]

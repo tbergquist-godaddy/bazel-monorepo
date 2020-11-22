@@ -1,0 +1,515 @@
+[
+  {
+    "score": 20.151329,
+    "show": {
+      "id": 6,
+      "url": "http://www.tvmaze.com/shows/6/the-100",
+      "name": "The 100",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Action", "Adventure", "Science-Fiction"],
+      "status": "Ended",
+      "runtime": 60,
+      "premiered": "2014-03-19",
+      "officialSite": "http://www.cwtv.com/shows/the-100/",
+      "schedule": {
+        "time": "20:00",
+        "days": ["Wednesday"]
+      },
+      "rating": {
+        "average": 7.7
+      },
+      "weight": 100,
+      "network": {
+        "id": 5,
+        "name": "The CW",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": 34770,
+        "thetvdb": 268592,
+        "imdb": "tt2661044"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/257/642675.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/257/642675.jpg"
+      },
+      "summary": "<p>Ninety-seven years ago, nuclear Armageddon decimated planet Earth, destroying civilization. The only survivors were the 400 inhabitants of 12 international space stations that were in orbit at the time. Three generations have been born in space, the survivors now number 4,000, and resources are running out on their dying \"Ark\" - the 12 stations now linked together and repurposed to keep the survivors alive. Draconian measures including capital punishment and population control are the order of the day, as the leaders of the Ark take ruthless steps to ensure their future, including secretly exiling a group of 100 juvenile prisoners to the Earth's surface to test whether it's habitable.</p>",
+      "updated": 1601577688,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/6"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1913280"
+        }
+      }
+    }
+  },
+  {
+    "score": 15.686835,
+    "show": {
+      "id": 36508,
+      "url": "http://www.tvmaze.com/shows/36508/100-ev-100-film",
+      "name": "100 év 100 film",
+      "type": "Documentary",
+      "language": "Hungarian",
+      "genres": [],
+      "status": "Ended",
+      "runtime": 10,
+      "premiered": "2001-01-01",
+      "officialSite": null,
+      "schedule": {
+        "time": "20:00",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 53,
+      "network": {
+        "id": 1558,
+        "name": "Magyar Televízió",
+        "country": {
+          "name": "Hungary",
+          "code": "HU",
+          "timezone": "Europe/Budapest"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": null,
+        "imdb": null
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/185/463666.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/185/463666.jpg"
+      },
+      "summary": null,
+      "updated": 1551116929,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/36508"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1460670"
+        }
+      }
+    }
+  },
+  {
+    "score": 14.737143,
+    "show": {
+      "id": 33159,
+      "url": "http://www.tvmaze.com/shows/33159/100",
+      "name": "100%",
+      "type": "Game Show",
+      "language": "English",
+      "genres": [],
+      "status": "Ended",
+      "runtime": 30,
+      "premiered": "1997-03-31",
+      "officialSite": null,
+      "schedule": {
+        "time": "",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 21,
+      "network": {
+        "id": 135,
+        "name": "Channel 5",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": null,
+        "imdb": "tt0314970"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/133/334997.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/133/334997.jpg"
+      },
+      "summary": "<p><b>100% </b>was a general knowledge quiz show. Three contestants were asked one hundred questions with the choice of three answers. The contestant with the most correct answers at the end of the show would win £100 and be asked back to compete on the next show.</p>",
+      "updated": 1509914592,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/33159"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1350373"
+        }
+      }
+    }
+  },
+  {
+    "score": 14.569222,
+    "show": {
+      "id": 3953,
+      "url": "http://www.tvmaze.com/shows/3953/100-code",
+      "name": "100 Code",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama", "Crime", "Mystery"],
+      "status": "Ended",
+      "runtime": 60,
+      "premiered": "2015-03-11",
+      "officialSite": null,
+      "schedule": {
+        "time": "",
+        "days": ["Wednesday"]
+      },
+      "rating": {
+        "average": 8.4
+      },
+      "weight": 90,
+      "network": {
+        "id": 8,
+        "name": "HBO",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        }
+      },
+      "webChannel": {
+        "id": 173,
+        "name": "Dplay",
+        "country": null
+      },
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 286193,
+        "imdb": "tt3515512"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/155/388120.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/155/388120.jpg"
+      },
+      "summary": "<p>Over the past 16 months, young, blonde, blue-eyed women have been found dead and buried in a field of asphodels. Tracking the killer from New York to Stockholm, NYPD detective Conley is on a special dispensation to observe and advise the Stockholm PD.</p>",
+      "updated": 1598598458,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/3953"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/253253"
+        }
+      }
+    }
+  },
+  {
+    "score": 14.294828,
+    "show": {
+      "id": 46701,
+      "url": "http://www.tvmaze.com/shows/46701/100-humans",
+      "name": "100 Humans",
+      "type": "Documentary",
+      "language": "English",
+      "genres": [],
+      "status": "To Be Determined",
+      "runtime": null,
+      "premiered": "2020-03-13",
+      "officialSite": "https://www.netflix.com/title/80215997",
+      "schedule": {
+        "time": "",
+        "days": []
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 77,
+      "network": null,
+      "webChannel": {
+        "id": 1,
+        "name": "Netflix",
+        "country": null
+      },
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 377732,
+        "imdb": "tt11823088"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/245/614479.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/245/614479.jpg"
+      },
+      "summary": "<p>One hundred hardy souls from diverse backgrounds participate in playful experiments exploring age, sex, happiness and other aspects of being human.</p>",
+      "updated": 1600361093,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/46701"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1816417"
+        }
+      }
+    }
+  },
+  {
+    "score": 12.920948,
+    "show": {
+      "id": 13652,
+      "url": "http://www.tvmaze.com/shows/13652/100-hotter",
+      "name": "100% Hotter",
+      "type": "Reality",
+      "language": "English",
+      "genres": [],
+      "status": "Ended",
+      "runtime": 60,
+      "premiered": "2016-06-08",
+      "officialSite": "http://www.channel5.com/show/100hotter",
+      "schedule": {
+        "time": "20:00",
+        "days": ["Tuesday"]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 63,
+      "network": {
+        "id": 553,
+        "name": "5STAR",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 315767,
+        "imdb": "tt5819414"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/60/151111.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/60/151111.jpg"
+      },
+      "summary": "<p>Entertaining makeunder series in which fashion eyesores are stripped of their excessive make-up and outrageous clothes and transformed by fashion stylist Grace Woodward, hair designer Daniel K Palmer and makeup Melissa Sophia.</p>",
+      "updated": 1590068663,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/13652"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1435186"
+        }
+      }
+    }
+  },
+  {
+    "score": 12.505954,
+    "show": {
+      "id": 49587,
+      "url": "http://www.tvmaze.com/shows/49587/100-days-wild",
+      "name": "100 Days Wild",
+      "type": "Reality",
+      "language": "English",
+      "genres": ["Adventure"],
+      "status": "To Be Determined",
+      "runtime": 60,
+      "premiered": "2020-08-20",
+      "officialSite": "https://www.discovery.com/shows/100-days-wild",
+      "schedule": {
+        "time": "21:00",
+        "days": ["Friday"]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 94,
+      "network": {
+        "id": 66,
+        "name": "Discovery Channel",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 386908,
+        "imdb": "tt12935570"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/269/672554.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/269/672554.jpg"
+      },
+      "summary": "<p>Seven strangers are giving up the comforts of the modern world in an attempt to build a self-sustaining colony in the Alaskan wilderness in the <b>100 Days Wild</b>. The series follows five men and two women as they hone their skills and work together to hunt, gather, and build a shelter over the course of 100 days, before the start of the brutal Alaskan winter.</p><p> </p>",
+      "updated": 1603479459,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/49587"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1932742"
+        }
+      }
+    }
+  },
+  {
+    "score": 11.935085,
+    "show": {
+      "id": 44166,
+      "url": "http://www.tvmaze.com/shows/44166/100-amis",
+      "name": "100 Amis",
+      "type": "Scripted",
+      "language": "French",
+      "genres": ["Comedy"],
+      "status": "Ended",
+      "runtime": 5,
+      "premiered": "2016-03-01",
+      "officialSite": "https://www.youtube.com/playlist?list=PLnhTzP1tKsWg9zLfEKtWdKUIDNCtiyOI1",
+      "schedule": {
+        "time": "",
+        "days": ["Saturday"]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 56,
+      "network": null,
+      "webChannel": {
+        "id": 21,
+        "name": "YouTube",
+        "country": null
+      },
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 322948,
+        "imdb": "tt6939258"
+      },
+      "image": null,
+      "summary": "<p>Yannick is a socially maladaptive young man who discovers he is the heir of his eccentric... and multimillionaire uncle</p><p>The deceased, died without friends and without family ties, does not want his nephew to end like him. To receive the inheritance, it is very simple: Yannick must have \"100 friends\" by the end of the year. Unfortunately, as no one likes, this rule seems impossible to overcome. However, he finds a loophole! Facebook friends count. He currently has 90, so he has only ten left to find.!</p>",
+      "updated": 1570045128,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/44166"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1726281"
+        }
+      }
+    }
+  },
+  {
+    "score": 11.675934,
+    "show": {
+      "id": 36211,
+      "url": "http://www.tvmaze.com/shows/36211/100-days-my-prince",
+      "name": "100 Days My Prince",
+      "type": "Scripted",
+      "language": "Korean",
+      "genres": ["Drama", "Romance", "History"],
+      "status": "Ended",
+      "runtime": 70,
+      "premiered": "2018-09-10",
+      "officialSite": "http://program.tving.com/tvn/100daysmyprince/",
+      "schedule": {
+        "time": "21:30",
+        "days": ["Monday", "Tuesday"]
+      },
+      "rating": {
+        "average": 7
+      },
+      "weight": 53,
+      "network": {
+        "id": 280,
+        "name": "tvN",
+        "country": {
+          "name": "Korea, Republic of",
+          "code": "KR",
+          "timezone": "Asia/Seoul"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 344815,
+        "imdb": "tt8199972"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/165/412951.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/165/412951.jpg"
+      },
+      "summary": "<p>Lee Yool is the Crown Prince, but he suddenly disappears. He comes back to the palace one hundred days later. What happened to the Crown Prince for the past one hundred days?</p><p>Meanwhile, Hong Shim is smart and runs the first private detective agency in Joseon.</p>",
+      "updated": 1573384146,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/36211"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1528715"
+        }
+      }
+    }
+  },
+  {
+    "score": 11.626045,
+    "show": {
+      "id": 18260,
+      "url": "http://www.tvmaze.com/shows/18260/mob-psycho-100",
+      "name": "Mob Psycho 100",
+      "type": "Animation",
+      "language": "Japanese",
+      "genres": ["Comedy", "Action", "Anime", "Horror"],
+      "status": "Running",
+      "runtime": 30,
+      "premiered": "2016-07-12",
+      "officialSite": "http://mobpsycho100.com/",
+      "schedule": {
+        "time": "23:00",
+        "days": ["Monday"]
+      },
+      "rating": {
+        "average": 8.3
+      },
+      "weight": 63,
+      "network": {
+        "id": 132,
+        "name": "Tokyo MX",
+        "country": {
+          "name": "Japan",
+          "code": "JP",
+          "timezone": "Asia/Tokyo"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 307375,
+        "imdb": "tt5897304"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/67/168235.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/67/168235.jpg"
+      },
+      "summary": "<p>Kageyama Shigeo (a.k.a. \"Mob\") is a 8th grader with psychic abilities. He could bend spoons and lift objects with his mind from a young age, but he slowly began to withhold from using his abilities in public due to the negative attention he kept receiving. Now, the only thing he wants is to become friends with a girl in his class, Tsubomi. With his psychic \"mentor\" (who has no psychic powers), he continues his daily life, attempting to realize his purpose in life.</p>",
+      "updated": 1600615767,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/18260"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/1625530"
+        }
+      }
+    }
+  }
+]
