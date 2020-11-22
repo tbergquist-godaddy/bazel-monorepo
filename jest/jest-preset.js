@@ -3,6 +3,7 @@
 const path = require('path');
 
 const TESTS_GLOB = '__tests__/**/?(*.)+(spec|test).js';
+global.__DEV__ = true;
 
 module.exports = {
   transform: {

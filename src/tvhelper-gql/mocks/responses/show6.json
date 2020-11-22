@@ -1,0 +1,3073 @@
+{
+  "id": 6,
+  "url": "http://www.tvmaze.com/shows/6/the-100",
+  "name": "The 100",
+  "type": "Scripted",
+  "language": "English",
+  "genres": ["Action", "Adventure", "Science-Fiction"],
+  "status": "Ended",
+  "runtime": 60,
+  "premiered": "2014-03-19",
+  "officialSite": "http://www.cwtv.com/shows/the-100/",
+  "schedule": {
+    "time": "20:00",
+    "days": ["Wednesday"]
+  },
+  "rating": {
+    "average": 7.7
+  },
+  "weight": 100,
+  "network": {
+    "id": 5,
+    "name": "The CW",
+    "country": {
+      "name": "United States",
+      "code": "US",
+      "timezone": "America/New_York"
+    }
+  },
+  "webChannel": null,
+  "externals": {
+    "tvrage": 34770,
+    "thetvdb": 268592,
+    "imdb": "tt2661044"
+  },
+  "image": {
+    "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/257/642675.jpg",
+    "original": "http://static.tvmaze.com/uploads/images/original_untouched/257/642675.jpg"
+  },
+  "summary": "<p>Ninety-seven years ago, nuclear Armageddon decimated planet Earth, destroying civilization. The only survivors were the 400 inhabitants of 12 international space stations that were in orbit at the time. Three generations have been born in space, the survivors now number 4,000, and resources are running out on their dying \"Ark\" - the 12 stations now linked together and repurposed to keep the survivors alive. Draconian measures including capital punishment and population control are the order of the day, as the leaders of the Ark take ruthless steps to ensure their future, including secretly exiling a group of 100 juvenile prisoners to the Earth's surface to test whether it's habitable.</p>",
+  "updated": 1601577688,
+  "_links": {
+    "self": {
+      "href": "http://api.tvmaze.com/shows/6"
+    },
+    "previousepisode": {
+      "href": "http://api.tvmaze.com/episodes/1913280"
+    }
+  },
+  "_embedded": {
+    "episodes": [
+      {
+        "id": 175,
+        "url": "http://www.tvmaze.com/episodes/175/the-100-1x01-pilot",
+        "name": "Pilot",
+        "season": 1,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2014-03-19",
+        "airtime": "21:00",
+        "airstamp": "2014-03-20T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10673.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10673.jpg"
+        },
+        "summary": "<p>Ninety-seven years ago, nuclear Armageddon decimated planet Earth, destroying civilization. The only survivors were the 400 inhabitants of 12 international space stations that were in orbit at the time. Three generations have been born in space, the survivors now number 4,000, and resources are running out on their dying \"Ark.\" Among the 100 young exiles are Clarke, the bright teenage daughter of the Ark's chief medical officer; the daredevil Finn ; the brother/sister duo of Bellamy and Octavia, whose illegal sibling status has always led them to flaunt the rules, the lighthearted Jasper and the resourceful Monty. Technologically blind to what's happening on the planet below them, the Ark's leaders - Clarke's widowed mother, Abby ; Chancellor Jaha ; and his shadowy second in command, Kane - are faced with difficult decisions about life, death and the continued existence of the human race.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/175"
+          }
+        }
+      },
+      {
+        "id": 176,
+        "url": "http://www.tvmaze.com/episodes/176/the-100-1x02-earth-skills",
+        "name": "Earth Skills",
+        "season": 1,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2014-03-26",
+        "airtime": "21:00",
+        "airstamp": "2014-03-27T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/112/282044.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/112/282044.jpg"
+        },
+        "summary": "<p>Having discovered that Jasper may still be alive, Clarke, Bellamy, Octavia, Finn and Monty set out on a mission to locate their friend and are shocked at what they find. Meanwhile, on the Ark, Abby is determined to get to Earth, and enlists Raven to craft an escape pod.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/176"
+          }
+        }
+      },
+      {
+        "id": 177,
+        "url": "http://www.tvmaze.com/episodes/177/the-100-1x03-earth-kills",
+        "name": "Earth Kills",
+        "season": 1,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2014-04-02",
+        "airtime": "21:00",
+        "airstamp": "2014-04-03T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10675.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10675.jpg"
+        },
+        "summary": "<p>In a desperate attempt to treat Jasper's festering wounds, Clarke, Finn and Wells set out in search of a seaweed antibiotic. Bellamy and his crew go hunting for food, and are joined by Charlotte, a lovable 13-year-old, who feels safe under Bellamy's protection. A thick, acidic fog appears, forcing Clarke, Finn and Wells to seek shelter inside an ancient van. While they are trapped, Clarke confronts Wells on his betrayal that resulted in her father's death.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/177"
+          }
+        }
+      },
+      {
+        "id": 178,
+        "url": "http://www.tvmaze.com/episodes/178/the-100-1x04-murphys-law",
+        "name": "Murphy's Law",
+        "season": 1,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2014-04-09",
+        "airtime": "21:00",
+        "airstamp": "2014-04-10T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10676.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10676.jpg"
+        },
+        "summary": "<p>After the shocking death of one of their own, Clarke and Finn grow closer as they try to figure out a way to communicate with the Ark. Bellamy must keep the group from turning on one another as life on Earth takes a desperate turn. Meanwhile, Abby risks having herself floated in order to give Raven the chance to stow-away in the escape pod bound for Earth.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/178"
+          }
+        }
+      },
+      {
+        "id": 179,
+        "url": "http://www.tvmaze.com/episodes/179/the-100-1x05-twilights-last-gleaming",
+        "name": "Twilight's Last Gleaming",
+        "season": 1,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2014-04-16",
+        "airtime": "21:00",
+        "airstamp": "2014-04-17T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10677.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10677.jpg"
+        },
+        "summary": "<p>Clarke's newfound romance with Finn is threatened. Octavia suffers a blow to the head and wakes up to find a Grounder watching her. On the Ark, Abby exposes Kane's plan to reduce the population of the Ark. Jaha and Abby notice a signal and realize at least some of the 100 must still be alive on Earth.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/179"
+          }
+        }
+      },
+      {
+        "id": 180,
+        "url": "http://www.tvmaze.com/episodes/180/the-100-1x06-his-sisters-keeper",
+        "name": "His Sister's Keeper",
+        "season": 1,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2014-04-23",
+        "airtime": "21:00",
+        "airstamp": "2014-04-24T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10678.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10678.jpg"
+        },
+        "summary": "<p>Bellamy leads his crew into Grounder territory as they search for Octavia. Raven can't help but notice the deep connection between Finn and Clarke. Meanwhile, flashbacks reveal Bellamy's and Octavia's childhood on the Ark.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/180"
+          }
+        }
+      },
+      {
+        "id": 181,
+        "url": "http://www.tvmaze.com/episodes/181/the-100-1x07-contents-under-pressure",
+        "name": "Contents Under Pressure",
+        "season": 1,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2014-04-30",
+        "airtime": "21:00",
+        "airstamp": "2014-05-01T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10679.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10679.jpg"
+        },
+        "summary": "<p>Clarke and Raven make contact with the Ark, and Abby guides Clarke through a dangerous procedure in a desperate move to save one of their own. Meanwhile, on the Ark, Abby is removed from the council, and former Chancellor Diana Sydney takes her place. Jaha reveals to Abby that there are not enough drop ships for everyone on the Ark to go down to Earth, and Kane begins to deal with his guilt over his recent decision.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/181"
+          }
+        }
+      },
+      {
+        "id": 182,
+        "url": "http://www.tvmaze.com/episodes/182/the-100-1x08-day-trip",
+        "name": "Day Trip",
+        "season": 1,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2014-05-07",
+        "airtime": "21:00",
+        "airstamp": "2014-05-08T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10680.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10680.jpg"
+        },
+        "summary": "<p>Clarke and Bellamy go on a mission to find supplies for approaching winter. Some of the 100 accidentally eat nuts with powerfully hallucinogenic properties and lose their grasp on reality. Meanwhile, Octavia seizes the opportunity to help a friend escape, and a terrifying event brings Clarke and Bellamy closer. On the Ark, Commander Shumway secretly assigns one of the 100 to kill one of his own, and the treacherous actions of Diane Sydney are revealed.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/182"
+          }
+        }
+      },
+      {
+        "id": 183,
+        "url": "http://www.tvmaze.com/episodes/183/the-100-1x09-unity-day",
+        "name": "Unity Day",
+        "season": 1,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2014-05-14",
+        "airtime": "21:00",
+        "airstamp": "2014-05-15T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10681.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10681.jpg"
+        },
+        "summary": "<p>Clarke and Finn attempt to broker peace with the Grounders but all hell breaks loose when Bellamy, Jasper and Raven show up armed and ready for battle. Octavia and Lincoln grow closer. Meanwhile, tragedy strikes during the Unity Day celebration on the Ark.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/183"
+          }
+        }
+      },
+      {
+        "id": 184,
+        "url": "http://www.tvmaze.com/episodes/184/the-100-1x10-i-am-become-death",
+        "name": "I Am Become Death",
+        "season": 1,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2014-05-21",
+        "airtime": "21:00",
+        "airstamp": "2014-05-22T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10682.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10682.jpg"
+        },
+        "summary": "<p>Murphy returns to camp claiming to have been held captive and tortured by the Grounders, and Clarke and Bellamy have very different opinions on how to handle his return. Octavia sneaks away to find Lincoln and returns with a serious warning for the 100. Meanwhile, a mysterious virus strikes camp forcing many to be quarantined, and Jasper pulls off a heroic move.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/184"
+          }
+        }
+      },
+      {
+        "id": 185,
+        "url": "http://www.tvmaze.com/episodes/185/the-100-1x11-the-calm",
+        "name": "The Calm",
+        "season": 1,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2014-05-28",
+        "airtime": "21:00",
+        "airstamp": "2014-05-29T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10683.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10683.jpg"
+        },
+        "summary": "<p>With a low food supply at camp, Clarke and Finn lead a group out to hunt for food and wind up in a compromising position. With Finn's life in danger, Clarke makes a game-changing decision. Meanwhile, Raven makes Bellamy an offer he can't refuse. On the Ark - Kane risks his life and is reunited with Chancellor Jaha and Abby.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/185"
+          }
+        }
+      },
+      {
+        "id": 186,
+        "url": "http://www.tvmaze.com/episodes/186/the-100-1x12-we-are-grounders-part-i",
+        "name": "We Are Grounders - Part I",
+        "season": 1,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2014-06-04",
+        "airtime": "21:00",
+        "airstamp": "2014-06-05T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10684.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10684.jpg"
+        },
+        "summary": "<p>Clarke and Finn escape one dangerous situation only to find themselves faced with a new enemy. Bellamy makes a heroic move to save Jasper. Raven faces a new danger, and Murphy finally gets his revenge. Meanwhile, those remaining on the Ark are coming to terms with the inevitable.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/186"
+          }
+        }
+      },
+      {
+        "id": 187,
+        "url": "http://www.tvmaze.com/episodes/187/the-100-1x13-we-are-grounders-part-ii",
+        "name": "We Are Grounders - Part II",
+        "season": 1,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2014-06-11",
+        "airtime": "21:00",
+        "airstamp": "2014-06-12T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10685.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10685.jpg"
+        },
+        "summary": "<p>Clarke pleads with Bellamy to do the right thing as conflict on the ground comes to a head. Bellamy forces Octavia to make a difficult decision. Raven and Jasper work against time and Finn makes a bold move. Meanwhile, the situation on the Ark comes to a stunning conclusion.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/187"
+          }
+        }
+      },
+      {
+        "id": 188,
+        "url": "http://www.tvmaze.com/episodes/188/the-100-2x01-the-48",
+        "name": "The 48",
+        "season": 2,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2014-10-22",
+        "airtime": "21:00",
+        "airstamp": "2014-10-23T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/2/5146.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/2/5146.jpg"
+        },
+        "summary": "<p>Picking up where the season one finale ended, Clarke is still alone in the white room, frantically trying to make sense of her bizarre surroundings, while the fate of Bellamy, Finn and Raven is still unknown. Lincoln and Octavia's daring plan is thwarted and an enemy returns. Meanwhile, Abby, Kane and the survivors of the Ark must face physical and moral dilemmas in their dangerous and beautiful new world. Finally, Jaha makes a heroic decision.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/188"
+          }
+        }
+      },
+      {
+        "id": 15839,
+        "url": "http://www.tvmaze.com/episodes/15839/the-100-2x02-inclement-weather",
+        "name": "Inclement Weather",
+        "season": 2,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2014-10-29",
+        "airtime": "21:00",
+        "airstamp": "2014-10-30T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/283725.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/283725.jpg"
+        },
+        "summary": "<p>Suspicious Clarke confronts President Dante Wallace and demands answers. Kane interrogates one of The 100, and Abby performs emergency surgery. Meanwhile, Octavia resorts to violence to find Lincoln. Thomas McDonell, Bob Morley, Devon Bostick, Lindsey Morgan, Chris Larkin and Isaiah Washington also star.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/15839"
+          }
+        }
+      },
+      {
+        "id": 15840,
+        "url": "http://www.tvmaze.com/episodes/15840/the-100-2x03-reapercussions",
+        "name": "Reapercussions",
+        "season": 2,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2014-11-05",
+        "airtime": "21:00",
+        "airstamp": "2014-11-06T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/283744.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/283744.jpg"
+        },
+        "summary": "<p>When Clarke discovers a horrifying project being carried out in Mount Weather's medical ward, she joins forces with an unlikely ally. After Abby confesses to committing a crime, Kane issues an order to have her brutally punished. Meanwhile, Monty warns a distracted Jasper that Clarke could be in trouble, and Octavia continues to fight for Lincoln.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/15840"
+          }
+        }
+      },
+      {
+        "id": 32252,
+        "url": "http://www.tvmaze.com/episodes/32252/the-100-2x04-many-happy-returns",
+        "name": "Many Happy Returns",
+        "season": 2,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2014-11-12",
+        "airtime": "21:00",
+        "airstamp": "2014-11-13T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/10516.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/10516.jpg"
+        },
+        "summary": "<p>After being betrayed by someone she thought she could trust, Clarke takes matters into her own hands and proves she's not going down without a flight. Bellamy, Finn and Murphy race against time to save a stranger. Meanwhile, tensions rise between Raven and Wick while working together, and an unexpected reunion occurs.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/32252"
+          }
+        }
+      },
+      {
+        "id": 39623,
+        "url": "http://www.tvmaze.com/episodes/39623/the-100-2x05-human-trials",
+        "name": "Human Trials",
+        "season": 2,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2014-11-19",
+        "airtime": "21:00",
+        "airstamp": "2014-11-20T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/4/11471.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/4/11471.jpg"
+        },
+        "summary": "<p>Kane leads a mission to make peace with the Grounders. Meanwhile, Jasper agrees to participate in a risky experiment, Lincoln enters a world of pain and President Dante Wallace issues a warning. Finally, Finn's search for Clarke takes a violent turn.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/39623"
+          }
+        }
+      },
+      {
+        "id": 45764,
+        "url": "http://www.tvmaze.com/episodes/45764/the-100-2x06-fog-of-war",
+        "name": "Fog of War",
+        "season": 2,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2014-12-03",
+        "airtime": "21:00",
+        "airstamp": "2014-12-04T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/5/13999.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/5/13999.jpg"
+        },
+        "summary": "<p>Tensions run high between Clarke and Finn, while Raven discovers that Mount Weather is interfering with their communication systems. Meanwhile, Jasper and Monty discover the truth about what's going on at Mount Weather and Octavia comes face-to-face with her worst nightmare. Finally, President Dante Wallace is about to be betrayed by those closest to him.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/45764"
+          }
+        }
+      },
+      {
+        "id": 45793,
+        "url": "http://www.tvmaze.com/episodes/45793/the-100-2x07-long-into-an-abyss",
+        "name": "Long Into an Abyss",
+        "season": 2,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2014-12-10",
+        "airtime": "21:00",
+        "airstamp": "2014-12-11T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/5/14910.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/5/14910.jpg"
+        },
+        "summary": "<p>Abby is determined to find a way to protect her people from a coming attack by the Grounders, even if it means heading into unknown territory and leaving some captives behind. A worried Bellamy convinces Clarke to go with him to the drop ship, where he and Octavia reveal a dangerous secret. Clarke comes up with a bold new plan to stop the Grounders' attack, leading Abby to a desperate decision. Meanwhile, at Mount Weather, Jasper and Monty begin to question the motives of their new friends, while Dr. Tsing conducts a deadly experiment to determine how to make use of the captives.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/45793"
+          }
+        }
+      },
+      {
+        "id": 45794,
+        "url": "http://www.tvmaze.com/episodes/45794/the-100-2x08-spacewalker",
+        "name": "Spacewalker",
+        "season": 2,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2014-12-17",
+        "airtime": "21:00",
+        "airstamp": "2014-12-18T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/283818.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/283818.jpg"
+        },
+        "summary": "<p>Clarke returns to Camp Jaha with devastating news. Finn struggles with the aftermath of his actions. Abby gathers information from an unlikely source and prepares for a fight. Meanwhile, flashbacks reveal Finn and Raven's relationship on the Ark. I</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/45794"
+          }
+        }
+      },
+      {
+        "id": 45795,
+        "url": "http://www.tvmaze.com/episodes/45795/the-100-2x09-remember-me",
+        "name": "Remember Me",
+        "season": 2,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2015-01-21",
+        "airtime": "21:00",
+        "airstamp": "2015-01-22T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/283825.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/283825.jpg"
+        },
+        "summary": "<p>Clarke strikes a deal with Lexa and Indra. Abby and Kane begin to realize that decision making powers are out of their hands. A seething Raven is unable to control her emotions. A bold move threatens to destroy the newly formed alliance between the sky people and the Grounders, and a familiar face haunts Clarke. Meanwhile, back at Mount Weather, Monty comes up with a risky plan.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/45795"
+          }
+        }
+      },
+      {
+        "id": 109543,
+        "url": "http://www.tvmaze.com/episodes/109543/the-100-2x10-survival-of-the-fittest",
+        "name": "Survival of the Fittest",
+        "season": 2,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2015-01-28",
+        "airtime": "21:00",
+        "airstamp": "2015-01-29T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/283843.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/283843.jpg"
+        },
+        "summary": "<p>Lives are at risk as Clarke and Lexa encounter a new enemy. Bellamy and Lincoln agree to work together to break into Mount Weather. Murphy helps Jaha confront his past. Meanwhile, Indra makes Octavia an offer she can't refuse.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/109543"
+          }
+        }
+      },
+      {
+        "id": 109544,
+        "url": "http://www.tvmaze.com/episodes/109544/the-100-2x11-coup-de-grace",
+        "name": "Coup de Grâce",
+        "season": 2,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2015-02-04",
+        "airtime": "21:00",
+        "airstamp": "2015-02-05T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/283853.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/283853.jpg"
+        },
+        "summary": "<p>Bellamy and Lincoln's attempt to sneak into Mount Weather has brutal consequences. Abby fights to stay in control as Clarke steps up in her new leadership role. Meanwhile, with Monty and Harper still missing, a desperate Jasper confronts President Wallace and demands answers.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/109544"
+          }
+        }
+      },
+      {
+        "id": 117525,
+        "url": "http://www.tvmaze.com/episodes/117525/the-100-2x12-rubicon",
+        "name": "Rubicon",
+        "season": 2,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2015-02-11",
+        "airtime": "21:00",
+        "airstamp": "2015-02-12T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/8/21580.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/8/21580.jpg"
+        },
+        "summary": "<p>Tensions between Clarke and Abby come to a head after Clarke crosses the line. Raven helps Bellamy navigate Mount Weather. Jaha and Murphy encounter a stranger who may not be what she seems. Octavia is prepared to fight for someone she loves. Meanwhile, things reach a breaking point at Mount Weather.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/117525"
+          }
+        }
+      },
+      {
+        "id": 117526,
+        "url": "http://www.tvmaze.com/episodes/117526/the-100-2x13-resurrection",
+        "name": "Resurrection",
+        "season": 2,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2015-02-18",
+        "airtime": "21:00",
+        "airstamp": "2015-02-19T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/8/21881.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/8/21881.jpg"
+        },
+        "summary": "<p>Clarke begins to question Lexa's leadership decisions. Abby struggles to help an injured Kane. Indra continues to push Octavia. Meanwhile, at Mount Weather, Jasper steps up into the role of leader, and Cage throws Maya into a life threatening situation.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/117526"
+          }
+        }
+      },
+      {
+        "id": 117527,
+        "url": "http://www.tvmaze.com/episodes/117527/the-100-2x14-bodyguard-of-lies",
+        "name": "Bodyguard of Lies",
+        "season": 2,
+        "number": 14,
+        "type": "regular",
+        "airdate": "2015-02-25",
+        "airtime": "21:00",
+        "airstamp": "2015-02-26T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/8/22427.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/8/22427.jpg"
+        },
+        "summary": "<p>While preparing for battle, Clarke and Lexa have a heated discussion. Desperate for help, Raven has Wick summoned to the engineering room. Jaha and Murphy encounter a perilous roadblock. Meanwhile, at Mount Weather, Bellamy is in a race against time.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/117527"
+          }
+        }
+      },
+      {
+        "id": 117591,
+        "url": "http://www.tvmaze.com/episodes/117591/the-100-2x15-blood-must-have-blood-part-one",
+        "name": "Blood Must Have Blood, Part One",
+        "season": 2,
+        "number": 15,
+        "type": "regular",
+        "airdate": "2015-03-04",
+        "airtime": "21:00",
+        "airstamp": "2015-03-05T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/9/22919.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/9/22919.jpg"
+        },
+        "summary": "<p>Clarke and Lexa prepare for battle, while Raven and Wick experience a major setback. Meanwhile, Octavia and Lincoln are each forced to make a difficult decision. At Mount Weather, Jasper and Maya witness a horrible act, Bellamy follows through on a promise and Cage goes public with powerful information.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/117591"
+          }
+        }
+      },
+      {
+        "id": 117592,
+        "url": "http://www.tvmaze.com/episodes/117592/the-100-2x16-blood-must-have-blood-part-two",
+        "name": "Blood Must Have Blood, Part Two",
+        "season": 2,
+        "number": 16,
+        "type": "regular",
+        "airdate": "2015-03-11",
+        "airtime": "21:00",
+        "airstamp": "2015-03-12T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/9/23606.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/9/23606.jpg"
+        },
+        "summary": "<p>The journey to the City of Light continues, and Jaha makes a move that shocks Murphy. Clarke receives help from an unexpected source, a visitor surprises Octavia, and Lincoln gets his revenge. Meanwhile, at Mount Weather, Cage moves forward with his mission and Bellamy and the group struggle to break free.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/117592"
+          }
+        }
+      },
+      {
+        "id": 486839,
+        "url": "http://www.tvmaze.com/episodes/486839/the-100-3x01-wanheda-part-one",
+        "name": "Wanheda: Part One",
+        "season": 3,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2016-01-21",
+        "airtime": "21:00",
+        "airstamp": "2016-01-22T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/39/98754.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/39/98754.jpg"
+        },
+        "summary": "<p>Three months have passed since the tragedy at Mount Weather and our heroes learn that a bounty has been put on Clarke's head. Unbeknownst to Clarke, a team led by Bellamy and Kane journeys deep into Grounder territory to save her. Meanwhile, Murphy finds his way to the mansion and discovers a very different Jaha on a very different mission.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/486839"
+          }
+        }
+      },
+      {
+        "id": 487378,
+        "url": "http://www.tvmaze.com/episodes/487378/the-100-3x02-wanheda-part-two",
+        "name": "Wanheda: Part Two",
+        "season": 3,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2016-01-28",
+        "airtime": "21:00",
+        "airstamp": "2016-01-29T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/42/105656.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/42/105656.jpg"
+        },
+        "summary": "<p>Bellamy and Kane risk life and limb to rescue Clarke. In an attempt to avoid worrying about her daughter, Abby focuses on whether to open Mount Weather as a medical facility. Meanwhile, Murphy plots to betray his former Chancellor.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/487378"
+          }
+        }
+      },
+      {
+        "id": 527216,
+        "url": "http://www.tvmaze.com/episodes/527216/the-100-3x03-ye-who-enter-here",
+        "name": "Ye Who Enter Here",
+        "season": 3,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2016-02-04",
+        "airtime": "21:00",
+        "airstamp": "2016-02-05T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/43/108572.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/43/108572.jpg"
+        },
+        "summary": "<p>Clarke wrestles with a decision. Bellamy learns that something isn't what it seems.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/527216"
+          }
+        }
+      },
+      {
+        "id": 527217,
+        "url": "http://www.tvmaze.com/episodes/527217/the-100-3x04-watch-the-thrones",
+        "name": "Watch the Thrones",
+        "season": 3,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2016-02-11",
+        "airtime": "21:00",
+        "airstamp": "2016-02-12T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/44/111204.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/44/111204.jpg"
+        },
+        "summary": "<p>Clarke discovers the mastermind behind a devious plan. Kane struggles to keep the peace. Meanwhile, Jasper's grief drives him to reckless behavior.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/527217"
+          }
+        }
+      },
+      {
+        "id": 570431,
+        "url": "http://www.tvmaze.com/episodes/570431/the-100-3x05-hakeldama",
+        "name": "Hakeldama",
+        "season": 3,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2016-02-18",
+        "airtime": "21:00",
+        "airstamp": "2016-02-19T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/44/111818.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/44/111818.jpg"
+        },
+        "summary": "<p>Clarke's hope for peace are dashed by a new threat. Raven becomes a target. Meanwhile, Murphy is running a dangerous con.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/570431"
+          }
+        }
+      },
+      {
+        "id": 600639,
+        "url": "http://www.tvmaze.com/episodes/600639/the-100-3x06-bitter-harvest",
+        "name": "Bitter Harvest",
+        "season": 3,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2016-02-25",
+        "airtime": "21:00",
+        "airstamp": "2016-02-26T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/46/116100.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/46/116100.jpg"
+        },
+        "summary": "<p>Clarke is torn between vengeance and mercy. Meanwhile, Kane and Octavia work together to avert a disaster, and Abby continues to worry about Raven.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/600639"
+          }
+        }
+      },
+      {
+        "id": 611567,
+        "url": "http://www.tvmaze.com/episodes/611567/the-100-3x07-thirteen",
+        "name": "Thirteen",
+        "season": 3,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2016-03-03",
+        "airtime": "21:00",
+        "airstamp": "2016-03-04T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/47/118677.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/47/118677.jpg"
+        },
+        "summary": "<p>Lexa tries to maintain peace within the clans; Clarke discovers an unusual and game-changing truth; flashbacks reveal a dark chapter of humanity's past.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/611567"
+          }
+        }
+      },
+      {
+        "id": 621909,
+        "url": "http://www.tvmaze.com/episodes/621909/the-100-3x08-terms-and-conditions",
+        "name": "Terms and Conditions",
+        "season": 3,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2016-03-10",
+        "airtime": "21:00",
+        "airstamp": "2016-03-11T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/47/119397.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/47/119397.jpg"
+        },
+        "summary": "<p>Kane is searching for a peaceful way to handle things but soon realizes he may be forced to resort to drastic measures. Meanwhile, Pike suspects that there may be a leak within the walls of Arkadia. Lastly, Raven has a plan and reaches out to Jasper for help.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/621909"
+          }
+        }
+      },
+      {
+        "id": 646906,
+        "url": "http://www.tvmaze.com/episodes/646906/the-100-3x09-stealing-fire",
+        "name": "Stealing Fire",
+        "season": 3,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2016-03-31",
+        "airtime": "21:00",
+        "airstamp": "2016-04-01T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/48/121130.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/48/121130.jpg"
+        },
+        "summary": "<p>Clarke discovers a shocking truth, and Octavia is forced to make a decision that could have devastating consequences. Meanwhile, Kane and Abby share a moment.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/646906"
+          }
+        }
+      },
+      {
+        "id": 647374,
+        "url": "http://www.tvmaze.com/episodes/647374/the-100-3x10-fallen",
+        "name": "Fallen",
+        "season": 3,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2016-04-07",
+        "airtime": "21:00",
+        "airstamp": "2016-04-08T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/51/128407.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/51/128407.jpg"
+        },
+        "summary": "<p>Jaha employs a terrifying new method to convince Abby to join his cause, Kane is on a mission, and Bellamy is hit with a hard truth. Meanwhile, Monty finds himself in a precarious situation, and Jasper rushes to save one of his own.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647374"
+          }
+        }
+      },
+      {
+        "id": 647375,
+        "url": "http://www.tvmaze.com/episodes/647375/the-100-3x11-nevermore",
+        "name": "Nevermore",
+        "season": 3,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2016-04-14",
+        "airtime": "21:00",
+        "airstamp": "2016-04-15T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/53/132881.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/53/132881.jpg"
+        },
+        "summary": "<p>Alie forces Raven's dark side to come out, and Jasper's anger continues to grow. Meanwhile, Octavia wrestles with her place in the world, and Monty is forced to make a split second decision.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647375"
+          }
+        }
+      },
+      {
+        "id": 647376,
+        "url": "http://www.tvmaze.com/episodes/647376/the-100-3x12-demons",
+        "name": "Demons",
+        "season": 3,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2016-04-21",
+        "airtime": "21:00",
+        "airstamp": "2016-04-22T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/54/135790.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/54/135790.jpg"
+        },
+        "summary": "<p>Jaha returns to Polis, and Murphy has a surprise encounter. Meanwhile, Octavia uncovers a clue.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647376"
+          }
+        }
+      },
+      {
+        "id": 647377,
+        "url": "http://www.tvmaze.com/episodes/647377/the-100-3x13-join-or-die",
+        "name": "Join or Die",
+        "season": 3,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2016-04-28",
+        "airtime": "21:00",
+        "airstamp": "2016-04-29T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/54/135793.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/54/135793.jpg"
+        },
+        "summary": "<p>Clarke is on a mission that could change everything. Meanwhile, Murphy gains insight that might prove useful in ensuring his survival. Lastly, Kane reaches a breaking point.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647377"
+          }
+        }
+      },
+      {
+        "id": 647378,
+        "url": "http://www.tvmaze.com/episodes/647378/the-100-3x14-red-sky-at-morning",
+        "name": "Red Sky at Morning",
+        "season": 3,
+        "number": 14,
+        "type": "regular",
+        "airdate": "2016-05-05",
+        "airtime": "21:00",
+        "airstamp": "2016-05-06T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/55/137946.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/55/137946.jpg"
+        },
+        "summary": "<p>Clarke, Bellamy, Octavia and Jasper hit a tragic roadblock. Meanwhile, Raven and Monty make an important discovery.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647378"
+          }
+        }
+      },
+      {
+        "id": 647379,
+        "url": "http://www.tvmaze.com/episodes/647379/the-100-3x15-perverse-instantiation-part-one",
+        "name": "Perverse Instantiation - Part One",
+        "season": 3,
+        "number": 15,
+        "type": "regular",
+        "airdate": "2016-05-12",
+        "airtime": "21:00",
+        "airstamp": "2016-05-13T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/57/144074.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/57/144074.jpg"
+        },
+        "summary": "<p>Clarke finds hope in the most unlikely place. Meanwhile, Alie's master plan comes together.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647379"
+          }
+        }
+      },
+      {
+        "id": 647380,
+        "url": "http://www.tvmaze.com/episodes/647380/the-100-3x16-perverse-instantiation-part-two",
+        "name": "Perverse Instantiation - Part Two",
+        "season": 3,
+        "number": 16,
+        "type": "regular",
+        "airdate": "2016-05-19",
+        "airtime": "21:00",
+        "airstamp": "2016-05-20T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/59/148272.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/59/148272.jpg"
+        },
+        "summary": "<p>In the season's epic and mind-bending conclusion, our heroes begin to face the reality of their tragic situation. Everyone prepares for a final showdown.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/647380"
+          }
+        }
+      },
+      {
+        "id": 921709,
+        "url": "http://www.tvmaze.com/episodes/921709/the-100-4x01-echoes",
+        "name": "Echoes",
+        "season": 4,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2017-02-01",
+        "airtime": "21:00",
+        "airstamp": "2017-02-02T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/96/240471.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/96/240471.jpg"
+        },
+        "summary": "<p>Clarke and her friends struggle with how to proceed after the fate of the world is revealed.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/921709"
+          }
+        }
+      },
+      {
+        "id": 1033946,
+        "url": "http://www.tvmaze.com/episodes/1033946/the-100-4x02-heavy-lies-the-crown",
+        "name": "Heavy Lies the Crown",
+        "season": 4,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2017-02-08",
+        "airtime": "21:00",
+        "airstamp": "2017-02-09T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/97/243911.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/97/243911.jpg"
+        },
+        "summary": "<p>The burden of leading weights heavily upon Clarke and Bellamy when different challenges force them to determine who will live and die.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1033946"
+          }
+        }
+      },
+      {
+        "id": 1033947,
+        "url": "http://www.tvmaze.com/episodes/1033947/the-100-4x03-the-four-horsemen",
+        "name": "The Four Horsemen",
+        "season": 4,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2017-02-15",
+        "airtime": "21:00",
+        "airstamp": "2017-02-16T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/98/246799.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/98/246799.jpg"
+        },
+        "summary": "<p>Jaha leads Clarke and Bellamy down a road to possible salvation while tension rise in Arcadia and Polis.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1033947"
+          }
+        }
+      },
+      {
+        "id": 1047344,
+        "url": "http://www.tvmaze.com/episodes/1047344/the-100-4x04-a-lie-guarded",
+        "name": "A Lie Guarded",
+        "season": 4,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2017-02-22",
+        "airtime": "21:00",
+        "airstamp": "2017-02-23T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/99/249243.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/99/249243.jpg"
+        },
+        "summary": "<p>Continued struggles with leadership and trust in Arkadia and Polis take violent turns while Abby leads a team to a distant location hoping to find answers.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1047344"
+          }
+        }
+      },
+      {
+        "id": 1049489,
+        "url": "http://www.tvmaze.com/episodes/1049489/the-100-4x05-the-tinder-box",
+        "name": "The Tinder Box",
+        "season": 4,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2017-03-01",
+        "airtime": "21:00",
+        "airstamp": "2017-03-02T02:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/112/281729.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/112/281729.jpg"
+        },
+        "summary": "<p>Clarke makes a desperate plea with a former allied force in an attempt to avoid a war and ensure the survival of her people.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1049489"
+          }
+        }
+      },
+      {
+        "id": 1048222,
+        "url": "http://www.tvmaze.com/episodes/1048222/the-100-4x06-we-will-rise",
+        "name": "We Will Rise",
+        "season": 4,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2017-03-15",
+        "airtime": "21:00",
+        "airstamp": "2017-03-16T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/102/255796.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/102/255796.jpg"
+        },
+        "summary": "<p>Clarke and Roan must work together in hostile territory in order to deliver an invaluable asset to Abby and her team.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1048222"
+          }
+        }
+      },
+      {
+        "id": 1085452,
+        "url": "http://www.tvmaze.com/episodes/1085452/the-100-4x07-gimme-shelter",
+        "name": "Gimme Shelter",
+        "season": 4,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2017-03-22",
+        "airtime": "21:00",
+        "airstamp": "2017-03-23T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/103/258551.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/103/258551.jpg"
+        },
+        "summary": "<p>Clarke's arrival on the island quickly takes a turn for the worse. Meanwhile, Bellamy tries to avoid further tragedy in Arkadia.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1085452"
+          }
+        }
+      },
+      {
+        "id": 1088338,
+        "url": "http://www.tvmaze.com/episodes/1088338/the-100-4x08-god-complex",
+        "name": "God Complex",
+        "season": 4,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2017-03-29",
+        "airtime": "21:00",
+        "airstamp": "2017-03-30T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/104/261681.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/104/261681.jpg"
+        },
+        "summary": "<p>After a disappointing discovery, Clarke and Abby question how far they're willing to go. Meanwhile, Jaha finds a lead to the mysterious Second Dawn.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1088338"
+          }
+        }
+      },
+      {
+        "id": 1106146,
+        "url": "http://www.tvmaze.com/episodes/1106146/the-100-4x09-dnr",
+        "name": "DNR",
+        "season": 4,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2017-04-26",
+        "airtime": "21:00",
+        "airstamp": "2017-04-27T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/108/272466.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/108/272466.jpg"
+        },
+        "summary": "<p>Jasper and Bellamy go on a quest. Meanwhile, Clarke struggles to keep the peace after word of Jaha's discovery spreads.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1106146"
+          }
+        }
+      },
+      {
+        "id": 1106147,
+        "url": "http://www.tvmaze.com/episodes/1106147/the-100-4x10-die-all-die-merrily",
+        "name": "Die All, Die Merrily",
+        "season": 4,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2017-05-03",
+        "airtime": "21:00",
+        "airstamp": "2017-05-04T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/110/275809.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/110/275809.jpg"
+        },
+        "summary": "<p>Octavia fights in the final battle for her people's survival, but not everyone is willing to play fair.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1106147"
+          }
+        }
+      },
+      {
+        "id": 1106148,
+        "url": "http://www.tvmaze.com/episodes/1106148/the-100-4x11-the-other-side",
+        "name": "The Other Side",
+        "season": 4,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2017-05-10",
+        "airtime": "21:00",
+        "airstamp": "2017-05-11T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/111/278156.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/111/278156.jpg"
+        },
+        "summary": "<p>Clarke faces the consequences of her fateful choice.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1106148"
+          }
+        }
+      },
+      {
+        "id": 1049248,
+        "url": "http://www.tvmaze.com/episodes/1049248/the-100-4x12-the-chosen",
+        "name": "The Chosen",
+        "season": 4,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2017-05-17",
+        "airtime": "21:00",
+        "airstamp": "2017-05-18T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/112/280891.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/112/280891.jpg"
+        },
+        "summary": "<p>Jaha and Kane disagree over how to handle their grim reality. Meanwhile, Clarke leads a group to save a friend.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1049248"
+          }
+        }
+      },
+      {
+        "id": 1076269,
+        "url": "http://www.tvmaze.com/episodes/1076269/the-100-4x13-praimfaya",
+        "name": "Praimfaya",
+        "season": 4,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2017-05-24",
+        "airtime": "21:00",
+        "airstamp": "2017-05-25T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/113/284153.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/284153.jpg"
+        },
+        "summary": "<p>It's a race against the end of the world as Praimfaya arrives forcing our heroes to make impossible decisions to ensure their survival.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1076269"
+          }
+        }
+      },
+      {
+        "id": 1260726,
+        "url": "http://www.tvmaze.com/episodes/1260726/the-100-5x01-eden",
+        "name": "Eden",
+        "season": 5,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2018-04-24",
+        "airtime": "21:00",
+        "airstamp": "2018-04-25T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/154/385068.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/154/385068.jpg"
+        },
+        "summary": "<p>Clarke struggles to survive on a desolate, scorched earth while her friends in space come across a long-awaited beacon of hope.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1260726"
+          }
+        }
+      },
+      {
+        "id": 1274837,
+        "url": "http://www.tvmaze.com/episodes/1274837/the-100-5x02-red-queen",
+        "name": "Red Queen",
+        "season": 5,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2018-05-01",
+        "airtime": "21:00",
+        "airstamp": "2018-05-02T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/154/386558.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/154/386558.jpg"
+        },
+        "summary": "<p>Octavia is forced to take guidance from an unlikely ally when the future of the bunker and all those inside it is jeopardized.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1274837"
+          }
+        }
+      },
+      {
+        "id": 1270509,
+        "url": "http://www.tvmaze.com/episodes/1270509/the-100-5x03-sleeping-giants",
+        "name": "Sleeping Giants",
+        "season": 5,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2018-05-08",
+        "airtime": "21:00",
+        "airstamp": "2018-05-09T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/155/387953.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/155/387953.jpg"
+        },
+        "summary": "<p>Bellamy leads the charge investigating a potential way home. Meanwhile, Clarke and Madi deal with the new, uncertain threat to their home.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1270509"
+          }
+        }
+      },
+      {
+        "id": 1285341,
+        "url": "http://www.tvmaze.com/episodes/1285341/the-100-5x04-pandoras-box",
+        "name": "Pandora's Box",
+        "season": 5,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2018-05-15",
+        "airtime": "21:00",
+        "airstamp": "2018-05-16T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/155/389567.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/155/389567.jpg"
+        },
+        "summary": "<p>Our heroes are forced to rely on the help of Shallow Valley's dangerous new inhabitants in order to save some of their own, with surprising results.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1285341"
+          }
+        }
+      },
+      {
+        "id": 1302908,
+        "url": "http://www.tvmaze.com/episodes/1302908/the-100-5x05-shifting-sands",
+        "name": "Shifting Sands",
+        "season": 5,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2018-05-22",
+        "airtime": "21:00",
+        "airstamp": "2018-05-23T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/156/391121.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/156/391121.jpg"
+        },
+        "summary": "<p>Octavia leads her people towards Shallow Valley against the advice of Clarke and Bellamy. Meanwhile, Kane and Abby adjust to a new set of challenges.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1302908"
+          }
+        }
+      },
+      {
+        "id": 1311532,
+        "url": "http://www.tvmaze.com/episodes/1311532/the-100-5x06-exit-wounds",
+        "name": "Exit Wounds",
+        "season": 5,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2018-06-05",
+        "airtime": "21:00",
+        "airstamp": "2018-06-06T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/157/394257.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/157/394257.jpg"
+        },
+        "summary": "<p>Kane's attempt to prove himself useful tests Wonkru's allegiance to Octavia. Madi faces an unexpected threat inside Wonkru, forcing Clarke to make an unlikely ally.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1311532"
+          }
+        }
+      },
+      {
+        "id": 1351933,
+        "url": "http://www.tvmaze.com/episodes/1351933/the-100-5x07-acceptable-losses",
+        "name": "Acceptable Losses",
+        "season": 5,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2018-06-19",
+        "airtime": "21:00",
+        "airstamp": "2018-06-20T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/159/398229.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/159/398229.jpg"
+        },
+        "summary": "<p>Clarke and Bellamy make a startling discovery about Wonkru's battle plans as Echo risks her friendship with Raven to complete her mission.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1351933"
+          }
+        }
+      },
+      {
+        "id": 1351934,
+        "url": "http://www.tvmaze.com/episodes/1351934/the-100-5x08-how-we-get-to-peace",
+        "name": "How We Get to Peace",
+        "season": 5,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2018-06-26",
+        "airtime": "21:00",
+        "airstamp": "2018-06-27T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/158/397254.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/158/397254.jpg"
+        },
+        "summary": "<p>Clarke's determination to protect Madi puts Bellamy in an impossible position.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1351934"
+          }
+        }
+      },
+      {
+        "id": 1360941,
+        "url": "http://www.tvmaze.com/episodes/1360941/the-100-5x09-sic-semper-tyrannis",
+        "name": "Sic Semper Tyrannis",
+        "season": 5,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2018-07-10",
+        "airtime": "20:00",
+        "airstamp": "2018-07-11T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/160/401654.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/160/401654.jpg"
+        },
+        "summary": "<p>The growing fractures in Wonkru threaten to explode once and for all. Meanwhile, in Shadow Valley, Murphy starts a fire, unleashing catastrophic results.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1360941"
+          }
+        }
+      },
+      {
+        "id": 1360942,
+        "url": "http://www.tvmaze.com/episodes/1360942/the-100-5x10-the-warriors-will",
+        "name": "The Warriors Will",
+        "season": 5,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2018-07-17",
+        "airtime": "20:00",
+        "airstamp": "2018-07-18T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/161/403572.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/161/403572.jpg"
+        },
+        "summary": "<p>Monty strives to show Wonkru an alternative to war, and to the valley itself. Meanwhile, Abby's health continues to deteriorate, along with McCreary's patience.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1360942"
+          }
+        }
+      },
+      {
+        "id": 1389961,
+        "url": "http://www.tvmaze.com/episodes/1389961/the-100-5x11-the-dark-year",
+        "name": "The Dark Year",
+        "season": 5,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2018-07-24",
+        "airtime": "20:00",
+        "airstamp": "2018-07-25T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/162/405588.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/162/405588.jpg"
+        },
+        "summary": "<p>As Clarke races to save Abby, she learns more about the trials and tribulations Wonkru faced in the bunker, and the impossible decisions they were forced to make in the dark year.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1389961"
+          }
+        }
+      },
+      {
+        "id": 1389963,
+        "url": "http://www.tvmaze.com/episodes/1389963/the-100-5x12-damocles-part-one",
+        "name": "Damocles - Part One",
+        "season": 5,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2018-07-31",
+        "airtime": "20:00",
+        "airstamp": "2018-08-01T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/163/407819.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/163/407819.jpg"
+        },
+        "summary": "<p>Octavia leads her people into war. While behind enemy lines, our heroes must overcome their differences to save Wonkru from extinction.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1389963"
+          }
+        }
+      },
+      {
+        "id": 1471697,
+        "url": "http://www.tvmaze.com/episodes/1471697/the-100-5x13-damocles-part-two",
+        "name": "Damocles - Part Two",
+        "season": 5,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2018-08-07",
+        "airtime": "20:00",
+        "airstamp": "2018-08-08T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/163/409348.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/163/409348.jpg"
+        },
+        "summary": "<p>Clarke and her friends must risk everything to fight one last battle for survival, only to glimpse an even darker threat to the last living valley on Earth.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1471697"
+          }
+        }
+      },
+      {
+        "id": 1513965,
+        "url": "http://www.tvmaze.com/episodes/1513965/the-100-6x01-sanctum",
+        "name": "Sanctum",
+        "season": 6,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2019-04-30",
+        "airtime": "21:00",
+        "airstamp": "2019-05-01T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/194/485562.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/194/485562.jpg"
+        },
+        "summary": "<p>Still reeling after receiving Monty's message, a small group goes down to explore the mysterious new planet. Back on the Mothership, several members of Wonkru face the consequences of their decisions.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1513965"
+          }
+        }
+      },
+      {
+        "id": 1513966,
+        "url": "http://www.tvmaze.com/episodes/1513966/the-100-6x02-red-sun-rising",
+        "name": "Red Sun Rising",
+        "season": 6,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2019-05-07",
+        "airtime": "21:00",
+        "airstamp": "2019-05-08T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/196/492153.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/196/492153.jpg"
+        },
+        "summary": "<p>The team on the ground flights to survive the threat they face on the new planet. Meanwhile, Raven must join forces with an unlikely ally to save everyone on board the Mothership.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1513966"
+          }
+        }
+      },
+      {
+        "id": 1641811,
+        "url": "http://www.tvmaze.com/episodes/1641811/the-100-6x03-the-children-of-gabriel",
+        "name": "The Children of Gabriel",
+        "season": 6,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2019-05-14",
+        "airtime": "21:00",
+        "airstamp": "2019-05-15T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/197/492894.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/197/492894.jpg"
+        },
+        "summary": "<p>Clarke tries to win over the leaders of Sanctum in order to let her people stay. Meanwhile, Bellamy, Echo and Octavia discover a new threat while on a mission to retrieve the transport ship. </p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1641811"
+          }
+        }
+      },
+      {
+        "id": 1651341,
+        "url": "http://www.tvmaze.com/episodes/1651341/the-100-6x04-the-face-behind-the-glass",
+        "name": "The Face Behind the Glass",
+        "season": 6,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2019-05-21",
+        "airtime": "21:00",
+        "airstamp": "2019-05-22T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/198/496616.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/198/496616.jpg"
+        },
+        "summary": "<p>Clarke embraces the traditions of Sanctum and tries to make amends for her past actions.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1651341"
+          }
+        }
+      },
+      {
+        "id": 1654722,
+        "url": "http://www.tvmaze.com/episodes/1654722/the-100-6x05-the-gospel-of-josephine",
+        "name": "The Gospel of Josephine",
+        "season": 6,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2019-05-28",
+        "airtime": "21:00",
+        "airstamp": "2019-05-29T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/199/499634.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/199/499634.jpg"
+        },
+        "summary": "<p>Jordan investigates Sanctum. Meanwhile, Octavia and Diyoza discover the threats of the new planet firsthand. Lastly, Bellamy and Clarke butt heads.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1654722"
+          }
+        }
+      },
+      {
+        "id": 1660325,
+        "url": "http://www.tvmaze.com/episodes/1660325/the-100-6x06-memento-mori",
+        "name": "Memento Mori",
+        "season": 6,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2019-06-11",
+        "airtime": "21:00",
+        "airstamp": "2019-06-12T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/201/504493.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/201/504493.jpg"
+        },
+        "summary": "<p>Diyoza learns more about the mysterious Children of Gabriel while Abby continues searching for a way to save Kane.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1660325"
+          }
+        }
+      },
+      {
+        "id": 1663312,
+        "url": "http://www.tvmaze.com/episodes/1663312/the-100-6x07-nevermind",
+        "name": "Nevermind",
+        "season": 6,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2019-06-18",
+        "airtime": "21:00",
+        "airstamp": "2019-06-19T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/202/506003.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/202/506003.jpg"
+        },
+        "summary": "<p>Clarke's past catches up to her.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1663312"
+          }
+        }
+      },
+      {
+        "id": 1664975,
+        "url": "http://www.tvmaze.com/episodes/1664975/the-100-6x08-the-old-man-and-the-anomaly",
+        "name": "The Old Man and the Anomaly",
+        "season": 6,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2019-06-25",
+        "airtime": "21:00",
+        "airstamp": "2019-06-26T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/203/508259.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/203/508259.jpg"
+        },
+        "summary": "<p>Octavia and Diyoza make their way to the mysterious anomaly in search of the Old Man. Meanwhile, Murphy has an offer for Emori.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1664975"
+          }
+        }
+      },
+      {
+        "id": 1664976,
+        "url": "http://www.tvmaze.com/episodes/1664976/the-100-6x09-what-you-take-with-you",
+        "name": "What You Take With You",
+        "season": 6,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2019-07-09",
+        "airtime": "21:00",
+        "airstamp": "2019-07-10T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/204/512006.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/204/512006.jpg"
+        },
+        "summary": "<p>Bellamy must venture into enemy territory with an unlikely companion. Meanwhile, Octavia is forced to confront her past.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1664976"
+          }
+        }
+      },
+      {
+        "id": 1664977,
+        "url": "http://www.tvmaze.com/episodes/1664977/the-100-6x10-matryoshka",
+        "name": "Matryoshka",
+        "season": 6,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2019-07-16",
+        "airtime": "21:00",
+        "airstamp": "2019-07-17T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/205/514788.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/205/514788.jpg"
+        },
+        "summary": "<p>Russell seeks justice. Meanwhile, Gabriel must make a difficult choice. Lastly, the Blake siblings reunite.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1664977"
+          }
+        }
+      },
+      {
+        "id": 1664978,
+        "url": "http://www.tvmaze.com/episodes/1664978/the-100-6x11-ashes-to-ashes",
+        "name": "Ashes to Ashes",
+        "season": 6,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2019-07-23",
+        "airtime": "21:00",
+        "airstamp": "2019-07-24T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/206/515426.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/206/515426.jpg"
+        },
+        "summary": "<p>Bellamy and Octavia must work together to save their friends. Echo is forced to face her past.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1664978"
+          }
+        }
+      },
+      {
+        "id": 1664979,
+        "url": "http://www.tvmaze.com/episodes/1664979/the-100-6x12-adjustment-protocol",
+        "name": "Adjustment Protocol",
+        "season": 6,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2019-07-30",
+        "airtime": "21:00",
+        "airstamp": "2019-07-31T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/206/517407.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/206/517407.jpg"
+        },
+        "summary": "<p>A special Naming Day changes everything in Sanctum. Gabriel comes face to face with an old friend.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1664979"
+          }
+        }
+      },
+      {
+        "id": 1664980,
+        "url": "http://www.tvmaze.com/episodes/1664980/the-100-6x13-the-blood-of-sanctum",
+        "name": "The Blood of Sanctum",
+        "season": 6,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2019-08-06",
+        "airtime": "21:00",
+        "airstamp": "2019-08-07T01:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/207/519028.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/207/519028.jpg"
+        },
+        "summary": "<p>Sanctum becomes a battleground between the devout and the non-believers. The mystery of the anomaly deepens.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1664980"
+          }
+        }
+      },
+      {
+        "id": 1812363,
+        "url": "http://www.tvmaze.com/episodes/1812363/the-100-7x01-from-the-ashes",
+        "name": "From the Ashes",
+        "season": 7,
+        "number": 1,
+        "type": "regular",
+        "airdate": "2020-05-20",
+        "airtime": "20:00",
+        "airstamp": "2020-05-21T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/259/648857.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/259/648857.jpg"
+        },
+        "summary": "<p>Clarke and her friends attempt to rebuild Sanctum as a new threat rises in the woods.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1812363"
+          }
+        }
+      },
+      {
+        "id": 1837819,
+        "url": "http://www.tvmaze.com/episodes/1837819/the-100-7x02-the-garden",
+        "name": "The Garden",
+        "season": 7,
+        "number": 2,
+        "type": "regular",
+        "airdate": "2020-05-27",
+        "airtime": "20:00",
+        "airstamp": "2020-05-28T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/259/648899.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/259/648899.jpg"
+        },
+        "summary": "<p>Echo and Gabriel learn more about Hope and her mysterious past.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837819"
+          }
+        }
+      },
+      {
+        "id": 1837820,
+        "url": "http://www.tvmaze.com/episodes/1837820/the-100-7x03-false-gods",
+        "name": "False Gods",
+        "season": 7,
+        "number": 3,
+        "type": "regular",
+        "airdate": "2020-06-03",
+        "airtime": "20:00",
+        "airstamp": "2020-06-04T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/259/647625.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/259/647625.jpg"
+        },
+        "summary": "<p>As Raven faces an unexpected threat, Clarke must keep the peace among opposing factions in Sanctum.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837820"
+          }
+        }
+      },
+      {
+        "id": 1837821,
+        "url": "http://www.tvmaze.com/episodes/1837821/the-100-7x04-hesperides",
+        "name": "Hesperides",
+        "season": 7,
+        "number": 4,
+        "type": "regular",
+        "airdate": "2020-06-10",
+        "airtime": "20:00",
+        "airstamp": "2020-06-11T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/260/652365.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/260/652365.jpg"
+        },
+        "summary": "<p>Mysterious outsiders arrive with news of Clarke's missing people.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837821"
+          }
+        }
+      },
+      {
+        "id": 1837822,
+        "url": "http://www.tvmaze.com/episodes/1837822/the-100-7x05-welcome-to-bardo",
+        "name": "Welcome to Bardo",
+        "season": 7,
+        "number": 5,
+        "type": "regular",
+        "airdate": "2020-06-17",
+        "airtime": "20:00",
+        "airstamp": "2020-06-18T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/261/652851.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/261/652851.jpg"
+        },
+        "summary": "<p>Octavia gets to know a whole new world. Meanwhile, Murphy and Emori play make believe.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837822"
+          }
+        }
+      },
+      {
+        "id": 1837823,
+        "url": "http://www.tvmaze.com/episodes/1837823/the-100-7x06-nakara",
+        "name": "Nakara",
+        "season": 7,
+        "number": 6,
+        "type": "regular",
+        "airdate": "2020-06-24",
+        "airtime": "20:00",
+        "airstamp": "2020-06-25T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/262/655156.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/262/655156.jpg"
+        },
+        "summary": "<p>Clarke and her friends find themselves on a planet that is not what it seems.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837823"
+          }
+        }
+      },
+      {
+        "id": 1837824,
+        "url": "http://www.tvmaze.com/episodes/1837824/the-100-7x07-the-queens-gambit",
+        "name": "The Queen's Gambit",
+        "season": 7,
+        "number": 7,
+        "type": "regular",
+        "airdate": "2020-07-01",
+        "airtime": "20:00",
+        "airstamp": "2020-07-02T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/263/659205.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/263/659205.jpg"
+        },
+        "summary": "<p>Emori tries to heal Sanctum's old familial wounds while Echo, Octavia and Diyoza struggle with new ones.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837824"
+          }
+        }
+      },
+      {
+        "id": 1837825,
+        "url": "http://www.tvmaze.com/episodes/1837825/the-100-7x08-anaconda",
+        "name": "Anaconda",
+        "season": 7,
+        "number": 8,
+        "type": "regular",
+        "airdate": "2020-07-08",
+        "airtime": "20:00",
+        "airstamp": "2020-07-09T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/264/661650.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/264/661650.jpg"
+        },
+        "summary": "<p>Clarke confronts a new adversary. A surprising connection takes us back to the past and the nuclear apocalypse that destroyed the Earth.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837825"
+          }
+        }
+      },
+      {
+        "id": 1837826,
+        "url": "http://www.tvmaze.com/episodes/1837826/the-100-7x09-the-flock",
+        "name": "The Flock",
+        "season": 7,
+        "number": 9,
+        "type": "regular",
+        "airdate": "2020-07-15",
+        "airtime": "20:00",
+        "airstamp": "2020-07-16T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/264/662125.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/264/662125.jpg"
+        },
+        "summary": "<p>Murphy and Indra must defuse a tense situation. Meanwhile, old friends make new allegiances.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1837826"
+          }
+        }
+      },
+      {
+        "id": 1902790,
+        "url": "http://www.tvmaze.com/episodes/1902790/the-100-7x10-a-little-sacrifice",
+        "name": "A Little Sacrifice",
+        "season": 7,
+        "number": 10,
+        "type": "regular",
+        "airdate": "2020-08-05",
+        "airtime": "20:00",
+        "airstamp": "2020-08-06T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/267/668290.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/267/668290.jpg"
+        },
+        "summary": "<p>Sheidheda makes his move. Meanwhile, a Disciple goes rogue.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1902790"
+          }
+        }
+      },
+      {
+        "id": 1905323,
+        "url": "http://www.tvmaze.com/episodes/1905323/the-100-7x11-etherea",
+        "name": "Etherea",
+        "season": 7,
+        "number": 11,
+        "type": "regular",
+        "airdate": "2020-08-12",
+        "airtime": "20:00",
+        "airstamp": "2020-08-13T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/267/668627.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/267/668627.jpg"
+        },
+        "summary": "<p>Where in the universe is Bellamy Blake?</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1905323"
+          }
+        }
+      },
+      {
+        "id": 1908139,
+        "url": "http://www.tvmaze.com/episodes/1908139/the-100-7x12-the-stranger",
+        "name": "The Stranger",
+        "season": 7,
+        "number": 12,
+        "type": "regular",
+        "airdate": "2020-08-19",
+        "airtime": "20:00",
+        "airstamp": "2020-08-20T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/268/670579.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/268/670579.jpg"
+        },
+        "summary": "<p>It's a new day in Sanctum. Clarke, Octavia, Raven and Echo struggle with a new foe.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1908139"
+          }
+        }
+      },
+      {
+        "id": 1913277,
+        "url": "http://www.tvmaze.com/episodes/1913277/the-100-7x13-blood-giant",
+        "name": "Blood Giant",
+        "season": 7,
+        "number": 13,
+        "type": "regular",
+        "airdate": "2020-09-09",
+        "airtime": "20:00",
+        "airstamp": "2020-09-10T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/271/678044.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/271/678044.jpg"
+        },
+        "summary": "<p>The red sun derails Clarke's plans.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1913277"
+          }
+        }
+      },
+      {
+        "id": 1913278,
+        "url": "http://www.tvmaze.com/episodes/1913278/the-100-7x14-a-sort-of-homecoming",
+        "name": "A Sort of Homecoming",
+        "season": 7,
+        "number": 14,
+        "type": "regular",
+        "airdate": "2020-09-16",
+        "airtime": "20:00",
+        "airstamp": "2020-09-17T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/272/682161.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/272/682161.jpg"
+        },
+        "summary": "<p>Clarke and her friends reckon with all that has happened only to find an unexpected threat looming.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1913278"
+          }
+        }
+      },
+      {
+        "id": 1913279,
+        "url": "http://www.tvmaze.com/episodes/1913279/the-100-7x15-the-dying-of-the-light",
+        "name": "The Dying of the Light",
+        "season": 7,
+        "number": 15,
+        "type": "regular",
+        "airdate": "2020-09-23",
+        "airtime": "20:00",
+        "airstamp": "2020-09-24T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/273/684782.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/273/684782.jpg"
+        },
+        "summary": "<p>Clarke and Octavia mount a desperate rescue mission as the Disciples close in on what they want.</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1913279"
+          }
+        }
+      },
+      {
+        "id": 1913280,
+        "url": "http://www.tvmaze.com/episodes/1913280/the-100-7x16-the-last-war",
+        "name": "The Last War",
+        "season": 7,
+        "number": 16,
+        "type": "regular",
+        "airdate": "2020-09-30",
+        "airtime": "20:00",
+        "airstamp": "2020-10-01T00:00:00+00:00",
+        "runtime": 60,
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/274/687437.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/274/687437.jpg"
+        },
+        "summary": "<p>After all the fighting and loss, Clarke and her friends have reached the final battle. But is humanity worthy of something greater?</p>",
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/episodes/1913280"
+          }
+        }
+      }
+    ],
+    "previousepisode": {
+      "id": 1913280,
+      "url": "http://www.tvmaze.com/episodes/1913280/the-100-7x16-the-last-war",
+      "name": "The Last War",
+      "season": 7,
+      "number": 16,
+      "type": "regular",
+      "airdate": "2020-09-30",
+      "airtime": "20:00",
+      "airstamp": "2020-10-01T00:00:00+00:00",
+      "runtime": 60,
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/274/687437.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/274/687437.jpg"
+      },
+      "summary": "<p>After all the fighting and loss, Clarke and her friends have reached the final battle. But is humanity worthy of something greater?</p>",
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1913280"
+        }
+      }
+    },
+    "cast": [
+      {
+        "person": {
+          "id": 781,
+          "url": "http://www.tvmaze.com/people/781/eliza-taylor-cotter",
+          "name": "Eliza Taylor-Cotter",
+          "country": {
+            "name": "Australia",
+            "code": "AU",
+            "timezone": "Australia/Sydney"
+          },
+          "birthday": "1989-10-24",
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/205/514170.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/205/514170.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/781"
+            }
+          }
+        },
+        "character": {
+          "id": 661,
+          "url": "http://www.tvmaze.com/characters/661/the-100-clarke-griffin",
+          "name": "Clarke Griffin",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/190/475419.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/190/475419.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/661"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 784,
+          "url": "http://www.tvmaze.com/people/784/marie-avgeropoulos",
+          "name": "Marie Avgeropoulos",
+          "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+          },
+          "birthday": "1986-06-17",
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/149/372647.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/149/372647.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/784"
+            }
+          }
+        },
+        "character": {
+          "id": 664,
+          "url": "http://www.tvmaze.com/characters/664/the-100-octavia-blake",
+          "name": "Octavia Blake",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/190/475420.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/190/475420.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/664"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 785,
+          "url": "http://www.tvmaze.com/people/785/bob-morley",
+          "name": "Bob Morley",
+          "country": {
+            "name": "Australia",
+            "code": "AU",
+            "timezone": "Australia/Sydney"
+          },
+          "birthday": "1984-12-20",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/264/660072.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/264/660072.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/785"
+            }
+          }
+        },
+        "character": {
+          "id": 665,
+          "url": "http://www.tvmaze.com/characters/665/the-100-bellamy-blake",
+          "name": "Bellamy Blake",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/190/475417.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/190/475417.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/665"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 790,
+          "url": "http://www.tvmaze.com/people/790/lindsey-morgan",
+          "name": "Lindsey Morgan",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          },
+          "birthday": "1990-02-27",
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/1068.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/1068.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/790"
+            }
+          }
+        },
+        "character": {
+          "id": 670,
+          "url": "http://www.tvmaze.com/characters/670/the-100-raven-reyes",
+          "name": "Raven Reyes",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/190/475421.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/190/475421.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/670"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 806,
+          "url": "http://www.tvmaze.com/people/806/richard-harmon",
+          "name": "Richard Harmon",
+          "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+          },
+          "birthday": "1991-08-18",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/88/222265.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/88/222265.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/806"
+            }
+          }
+        },
+        "character": {
+          "id": 675,
+          "url": "http://www.tvmaze.com/characters/675/the-100-jonathan-murphy",
+          "name": "Jonathan Murphy",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/206/515274.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/206/515274.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/675"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 782,
+          "url": "http://www.tvmaze.com/people/782/paige-turco",
+          "name": "Paige Turco",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          },
+          "birthday": "1965-05-17",
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/3/7617.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/3/7617.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/782"
+            }
+          }
+        },
+        "character": {
+          "id": 662,
+          "url": "http://www.tvmaze.com/characters/662/the-100-abigail-griffin",
+          "name": "Abigail Griffin",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/190/475416.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/190/475416.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/662"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 789,
+          "url": "http://www.tvmaze.com/people/789/henry-ian-cusick",
+          "name": "Henry Ian Cusick",
+          "country": {
+            "name": "Peru",
+            "code": "PE",
+            "timezone": "America/Lima"
+          },
+          "birthday": "1967-04-17",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/150/376197.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/150/376197.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/789"
+            }
+          }
+        },
+        "character": {
+          "id": 669,
+          "url": "http://www.tvmaze.com/characters/669/the-100-marcus-kane",
+          "name": "Marcus Kane",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/1054.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/1054.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/669"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 786,
+          "url": "http://www.tvmaze.com/people/786/christopher-larkin",
+          "name": "Christopher Larkin",
+          "country": {
+            "name": "Korea, Republic of",
+            "code": "KR",
+            "timezone": "Asia/Seoul"
+          },
+          "birthday": "1987-10-02",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/3/7620.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/3/7620.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/786"
+            }
+          }
+        },
+        "character": {
+          "id": 666,
+          "url": "http://www.tvmaze.com/characters/666/the-100-monty-green",
+          "name": "Monty Green",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/71.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/71.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/666"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 6893,
+          "url": "http://www.tvmaze.com/people/6893/tasya-teles",
+          "name": "Tasya Teles",
+          "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+          },
+          "birthday": null,
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/205/514187.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/205/514187.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/6893"
+            }
+          }
+        },
+        "character": {
+          "id": 100220,
+          "url": "http://www.tvmaze.com/characters/100220/the-100-echo",
+          "name": "Echo",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/54/135431.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/54/135431.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/100220"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 788,
+          "url": "http://www.tvmaze.com/people/788/isaiah-washington",
+          "name": "Isaiah Washington",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          },
+          "birthday": "1963-08-03",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/3/7592.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/3/7592.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/788"
+            }
+          }
+        },
+        "character": {
+          "id": 668,
+          "url": "http://www.tvmaze.com/characters/668/the-100-thelonious-jaha",
+          "name": "Thelonious Jaha",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/1058.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/1058.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/668"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 787,
+          "url": "http://www.tvmaze.com/people/787/devon-bostick",
+          "name": "Devon Bostick",
+          "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+          },
+          "birthday": "1991-11-13",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/250/627295.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/250/627295.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/787"
+            }
+          }
+        },
+        "character": {
+          "id": 667,
+          "url": "http://www.tvmaze.com/characters/667/the-100-jasper-jordan",
+          "name": "Jasper Jordan",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/190/475418.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/190/475418.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/667"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 791,
+          "url": "http://www.tvmaze.com/people/791/ricky-whittle",
+          "name": "Ricky Whittle",
+          "country": {
+            "name": "United Kingdom",
+            "code": "GB",
+            "timezone": "Europe/London"
+          },
+          "birthday": "1981-12-31",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/1/4823.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/1/4823.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/791"
+            }
+          }
+        },
+        "character": {
+          "id": 671,
+          "url": "http://www.tvmaze.com/characters/671/the-100-lincoln",
+          "name": "Lincoln",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/51/128628.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/51/128628.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/671"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 783,
+          "url": "http://www.tvmaze.com/people/783/thomas-mcdonell",
+          "name": "Thomas McDonell",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          },
+          "birthday": "1986-05-02",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/3/7618.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/3/7618.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/783"
+            }
+          }
+        },
+        "character": {
+          "id": 663,
+          "url": "http://www.tvmaze.com/characters/663/the-100-finn-collins",
+          "name": "Finn Collins",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/66.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/66.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/663"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 128953,
+          "url": "http://www.tvmaze.com/people/128953/chuku-modu",
+          "name": "Chuku Modu",
+          "country": {
+            "name": "United Kingdom",
+            "code": "GB",
+            "timezone": "Europe/London"
+          },
+          "birthday": "1990-06-19",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/108/271352.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/108/271352.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/128953"
+            }
+          }
+        },
+        "character": {
+          "id": 626499,
+          "url": "http://www.tvmaze.com/characters/626499/the-100-xavier",
+          "name": "Xavier",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/198/496574.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/198/496574.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/626499"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 1331,
+          "url": "http://www.tvmaze.com/people/1331/jr-bourne",
+          "name": "J.R. Bourne",
+          "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+          },
+          "birthday": "1970-04-08",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/19/48439.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/19/48439.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/1331"
+            }
+          }
+        },
+        "character": {
+          "id": 626339,
+          "url": "http://www.tvmaze.com/characters/626339/the-100-russell-lightbourne-vii",
+          "name": "Russell Lightbourne VII",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/196/492379.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/196/492379.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/626339"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 86519,
+          "url": "http://www.tvmaze.com/people/86519/shannon-kook",
+          "name": "Shannon Kook",
+          "country": {
+            "name": "South Africa",
+            "code": "ZA",
+            "timezone": "Africa/Johannesburg"
+          },
+          "birthday": "1987-02-09",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/19/49529.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/19/49529.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/86519"
+            }
+          }
+        },
+        "character": {
+          "id": 548233,
+          "url": "http://www.tvmaze.com/characters/548233/the-100-jordan-jasper-green",
+          "name": "Jordan Jasper Green",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/163/409351.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/163/409351.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/548233"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 28315,
+          "url": "http://www.tvmaze.com/people/28315/zach-mcgowan",
+          "name": "Zach McGowan",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          },
+          "birthday": "1981-10-25",
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/254/637257.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/254/637257.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/28315"
+            }
+          }
+        },
+        "character": {
+          "id": 233422,
+          "url": "http://www.tvmaze.com/characters/233422/the-100-roan",
+          "name": "Roan",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/96/240599.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/96/240599.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/233422"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 242820,
+          "url": "http://www.tvmaze.com/people/242820/shelby-flannery",
+          "name": "Shelby Flannery",
+          "country": null,
+          "birthday": null,
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/215/539492.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/215/539492.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/242820"
+            }
+          }
+        },
+        "character": {
+          "id": 649173,
+          "url": "http://www.tvmaze.com/characters/649173/the-100-hope-diyoza",
+          "name": "Hope Diyoza",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/207/519018.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/207/519018.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/649173"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 792,
+          "url": "http://www.tvmaze.com/people/792/eli-goree",
+          "name": "Eli Goree",
+          "country": {
+            "name": "Canada",
+            "code": "CA",
+            "timezone": "America/Halifax"
+          },
+          "birthday": null,
+          "deathday": null,
+          "gender": "Male",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/3/7627.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/3/7627.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/792"
+            }
+          }
+        },
+        "character": {
+          "id": 672,
+          "url": "http://www.tvmaze.com/characters/672/the-100-wells-jaha",
+          "name": "Wells Jaha",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/68.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/68.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/672"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      },
+      {
+        "person": {
+          "id": 316,
+          "url": "http://www.tvmaze.com/people/316/kelly-hu",
+          "name": "Kelly Hu",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          },
+          "birthday": "1968-02-13",
+          "deathday": null,
+          "gender": "Female",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/1067.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/1067.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/people/316"
+            }
+          }
+        },
+        "character": {
+          "id": 673,
+          "url": "http://www.tvmaze.com/characters/673/the-100-callie-cartwig",
+          "name": "Callie Cartwig",
+          "image": {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/157/393673.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/157/393673.jpg"
+          },
+          "_links": {
+            "self": {
+              "href": "http://api.tvmaze.com/characters/673"
+            }
+          }
+        },
+        "self": false,
+        "voice": false
+      }
+    ]
+  }
+}

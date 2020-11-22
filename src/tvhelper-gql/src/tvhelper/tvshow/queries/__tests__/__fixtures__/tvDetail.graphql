@@ -1,0 +1,31 @@
+query detail {
+  node(id:"VHZTaG93OjY=") {
+    ... on TvShow {
+      id
+      name
+      status
+      premiered
+      rating
+      image {
+        original
+      }
+      summary
+      withoutTags: summary(stripTags: false)
+      cast {
+        person {
+          name
+        }
+        character {
+          name
+        }
+      }
+      episodes {
+        id
+        seasonAndNumber
+        airdate
+      }
+      nextEpisode
+      previousEpisode
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "tbergq-graphql",
+  "scope": "tbergq",
+  "builds": [
+    { "src": "lib/index.js", "use": "@now/node-server", "config": { "maxLambdaSize": "50mb" } }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "DB_URL":"@db_url",
+    "JWT_SECRET": "@jwt_secret",
+    "TV_HELPER_PASS": "@tv_helper_pass",
+    "GRAPHQL_DB_URL": "@graphql_db_url",
+    "TJA_DB_URL":"@tja_db_url"
+  },
+  "alias": "tbergq-graphql.now.sh",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/lib"
+    }
+  ]
+}

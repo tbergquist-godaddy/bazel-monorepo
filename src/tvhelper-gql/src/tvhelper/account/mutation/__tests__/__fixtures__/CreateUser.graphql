@@ -1,0 +1,5 @@
+mutation createUser {
+  createUser(username: "lol", password:"lol", email: "lol@lol.lol") {
+    success
+  }
+}

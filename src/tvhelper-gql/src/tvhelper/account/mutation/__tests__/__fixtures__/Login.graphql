@@ -1,0 +1,6 @@
+mutation login {
+  tvHelperLogin(username:"username", password:"password") {
+    token
+    success
+  }
+}

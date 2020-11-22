@@ -7,3 +7,4 @@ node_modules/
 .DS_Store	
 .flow.saved_state
 .flow.saved_state_file_changes
+.env

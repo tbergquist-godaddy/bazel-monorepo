@@ -26,6 +26,7 @@ module.exports = {
         devDependencies: [
           '**/*.test.js',
           '**/scripts/**/*.js',
+          '**/mocks/**/*.js',
           '**/*.stories.js',
           'src/app1/webpack.config.js',
         ],

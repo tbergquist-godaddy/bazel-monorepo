@@ -1,0 +1,16 @@
+query {
+  searchTvShow(query:"the 100", first: 2) {
+    edges {
+      node {
+        id
+        name
+        episodes {
+          id
+          name
+        }
+        nextEpisode
+        previousEpisode
+      }
+    }
+  }
+}
