@@ -23,4 +23,5 @@ def get_deps():
         "@npm//ramda",
         "@npm//password-hash",
         "@npm//@adeira/fetch",
+        "//src/redis-client:redis_client",
     ]

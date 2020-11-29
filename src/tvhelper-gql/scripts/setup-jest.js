@@ -5,6 +5,8 @@ import server from '../mocks/server';
 
 const opts = { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true };
 
+jest.mock('../src/services/redis');
+
 beforeAll(async () => {
   await tvHelperConnection.openUri('mongodb://127.0.0.1:27017/tvhelper_test', opts);
   await tvHelperConnection.dropDatabase();
