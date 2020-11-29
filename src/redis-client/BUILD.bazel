@@ -1,0 +1,68 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "pkg_npm")
+load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
+load("@npm//@babel/cli:index.bzl", "babel")
+load("//:eslint/eslint.bzl", "eslint")
+
+babel(
+    name = "lib",
+    args = [
+        "./src/redis-client/src",
+        "--out-dir",
+        "$(@D)",
+        "--copy-files",
+        "--root-mode",
+        "upward",
+    ],
+    data = [
+        ":package.json",
+        ":src",
+        "//:babel.config.js",
+        "//:package.json",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
+    output_dir = True,
+)
+
+babel(
+    name = "esm",
+    args = [
+        "./src/redis-client/src",
+        "--out-dir",
+        "$(@D)",
+        "--root-mode",
+        "upward",
+        "--out-file-extension",
+        ".mjs",
+    ],
+    data = [
+        ":package.json",
+        ":src",
+        "//:babel.config.js",
+        "//:package.json",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
+    output_dir = True,
+)
+
+js_library(
+    name = "redis_client",
+    package_name = "@tbergq/redis-client",
+    srcs = ["package.json"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":esm",
+        ":lib",
+    ],
+)
+
+eslint(
+    name = "lint",
+    data = [":src"],
+    entry = ":src",
+)
+
+pkg_npm(
+    name = "redis_client_npm",
+    srcs = ["package.json"],
+    deps = [":redis_client"],
+)

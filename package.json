@@ -80,6 +80,7 @@
     "react-router-dom": "0.0.0-experimental-ffd8c7d0",
     "react-transition-group": "^4.4.1",
     "recoil": "^0.0.10",
+    "redis": "^3.0.2",
     "relay-runtime": "^10.1.0",
     "shortid": "^2.2.15",
     "striptags": "^3.1.1",
