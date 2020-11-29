@@ -45,9 +45,7 @@ function createGraphqlServer(request: Request) {
 
 // $FlowExpectedError[incompatible-call]
 app.use('/', attachUserToRequest, getPersistedQuery(), (request: $Request, response: $Response) => {
-  // $FlowExpectedError[prop-missing] graphqlHTTP uses types from node http module
-  // $FlowExpectedError[incompatible-call]
-  // $FlowExpectedError[incompatible-exact]
+  // $FlowExpectedError[prop-missing]
   return createGraphqlServer(request)(request, response);
 });
 

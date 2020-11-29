@@ -43,8 +43,6 @@ app.use(compression());
 app.use(morgan('dev'));
 
 app.use('/', attachUserToRequest, (request: $Request, response: $Response) => {
-  // $FlowExpectedError[incompatible-exact]: graphqlHTTP uses types from node http module
-  // $FlowExpectedError[incompatible-call]: graphqlHTTP uses types from node http module
   return createGraphqlServer(request)(request, response);
 });
 
