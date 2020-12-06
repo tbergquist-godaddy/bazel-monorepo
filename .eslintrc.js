@@ -17,6 +17,7 @@ module.exports = {
     es6: true,
   },
   rules: {
+    'adeira/relay-import-no-values': OFF,
     'sx/no-unused-stylesheet': ERROR,
     'react/react-in-jsx-scope': OFF,
     'import/no-unresolved': OFF,

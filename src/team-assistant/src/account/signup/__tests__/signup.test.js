@@ -4,14 +4,15 @@ import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import { createMockEnvironment } from 'relay-test-utils';
 import { screen, waitFor, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import router from 'react-router-dom';
+// $FlowFixMe[missing-export]
+import router from '@tbergq/router';
 
 import Signup from '../signup';
 import render from '../../../utils/test-renderer';
 
 let environment;
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock('@tbergq/router', () => ({
+  ...jest.requireActual('@tbergq/router'),
   useNavigate: () => jest.fn(),
 }));
 
@@ -62,7 +63,7 @@ it('validates form', async () => {
 
 it('submits the form', async () => {
   const navigate = jest.fn();
-  jest.spyOn(router, 'useNavigate').mockImplementation(() => navigate);
+  jest.spyOn(router, 'useNavigate').mockReturnValue(navigate);
   render(<TestRenderer />);
 
   const button = screen.getByRole('button');
@@ -88,5 +89,6 @@ it('submits the form', async () => {
   });
 
   await waitFor(() => expect(button).not.toBeDisabled());
+
   expect(navigate).toHaveBeenCalledWith('/login');
 });

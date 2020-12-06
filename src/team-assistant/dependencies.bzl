@@ -19,7 +19,6 @@ def get_deps():
         "@npm//recoil",
         "@npm//yup",
         "@npm//relay-runtime",
-        "@npm//react-router-dom",
         "@npm//react-relay",
         "@npm//react-hook-form",
         "@npm//fbt",
@@ -32,6 +31,7 @@ def get_deps():
         "@npm//@babel/plugin-syntax-dynamic-import",
         "@npm//jest",
         "//src/components:components",
+        "//src/router:router",
         "@npm//copy-webpack-plugin",
         "@npm//react-icons",
     ]

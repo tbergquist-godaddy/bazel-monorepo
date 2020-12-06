@@ -7,7 +7,7 @@ import { graphql, useMutation } from 'react-relay/hooks';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string, ref } from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tbergq/router';
 
 import type { signupMutation as SignupMutation } from './__generated__/signupMutation.graphql';
 import AccountFormContainer from '../components/account-form-container';
