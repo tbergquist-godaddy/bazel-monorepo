@@ -1,0 +1,13 @@
+@keyframes RouterRenderer__makeVisible {
+  to {
+    visibility: visible;
+  }
+}
+
+.RouterRenderer__loading {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  visibility: hidden;
+  animation: 0s linear 0.5s forwards RouterRenderer__makeVisible;
+}
