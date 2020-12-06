@@ -1,0 +1,17 @@
+{
+  "name": "@tbergq/router",
+  "version": "0.2.0",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "private": true,
+  "dependencies": {
+    "react-router-config": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router": "^5.2.0",
+    "history": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
+  }
+}
