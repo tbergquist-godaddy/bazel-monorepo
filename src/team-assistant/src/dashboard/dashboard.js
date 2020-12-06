@@ -2,7 +2,8 @@
 
 import { type Node } from 'react';
 import { usePreloadedQuery, graphql } from 'react-relay/hooks';
-import { Heading } from '@tbergq/components';
+import { Heading, Card } from '@tbergq/components';
+import { create } from '@adeira/sx';
 
 import useIsLoggedIn from '../components/use-is-logged-in';
 import Teams from './teams/teams';
@@ -19,8 +20,8 @@ const query = graphql`
 `;
 
 type Props = {
-  prepared: {
-    query: any,
+  +prepared: {
+    +query: any,
   },
 };
 
@@ -33,9 +34,21 @@ function Dashboard({ prepared }: Props): Node {
       <Heading align="center" level="h1">
         My dashboard
       </Heading>
-      <Teams user={data.viewer} />
+      <div className={styles('grid')}>
+        <Teams user={data.viewer} />
+        <Card>TODO attendance</Card>
+        <Card>TODO stats</Card>
+      </div>
     </>
   );
 }
+
+const styles = create({
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+    gap: 'var(--space-large)',
+  },
+});
 
 export default Dashboard;
