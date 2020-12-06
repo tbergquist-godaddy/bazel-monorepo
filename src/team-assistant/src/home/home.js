@@ -1,15 +1,15 @@
 // @flow
 
-import { type AbstractComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { type Node } from 'react';
+import { Link } from '@tbergq/router';
 import fbt from 'fbt';
 import { usePreloadedQuery, graphql } from 'react-relay/hooks';
 import { Heading } from '@tbergq/components';
+import { type GraphQLTaggedNode } from 'relay-runtime';
 
-import type { homeQuery } from './__generated__/homeQuery.graphql';
-import withUseQuery, { type QueryReference } from '../relay/with-use-query';
+import { type homeQuery } from './__generated__/homeQuery.graphql';
 
-const query = graphql`
+export const query: GraphQLTaggedNode = graphql`
   query homeQuery {
     test(id: "1") {
       id
@@ -20,14 +20,19 @@ const query = graphql`
 `;
 
 type Props = {
-  +queryReference?: QueryReference<any, any>,
+  prepared: {
+    query: any,
+  },
 };
 
-function Home({ queryReference = null }: Props) {
-  const data = usePreloadedQuery<homeQuery>(query, queryReference);
+function Home({ prepared }: Props): Node {
+  const data = usePreloadedQuery<homeQuery>(query, prepared.query);
 
   return (
     <div>
+      <Heading level="h1">
+        <fbt desc="Todo text">Home TODO</fbt>
+      </Heading>
       <Link to="/login">Go login</Link>
       <div>{data.test?.id}</div>
       <div>{data.test?.firstName}</div>
@@ -37,11 +42,12 @@ function Home({ queryReference = null }: Props) {
   );
 }
 
-export default (withUseQuery(Home, {
-  query,
-  persistentChildren: (
-    <Heading level="h1">
-      <fbt desc="Todo text">Home TODO</fbt>
-    </Heading>
-  ),
-}): AbstractComponent<Props>);
+export default Home;
+// (withUseQuery(Home, {
+//   query,
+//   persistentChildren: (
+//     <Heading level="h1">
+//       <fbt desc="Todo text">Home TODO</fbt>
+//     </Heading>
+//   ),
+// }): AbstractComponent<Props>);

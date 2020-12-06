@@ -4,13 +4,14 @@ import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 import { screen, waitFor, act } from '@testing-library/react';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import userEvent from '@testing-library/user-event';
-import router from 'react-router-dom';
+// $FlowFixMe[missing-export]
+import router from '@tbergq/router';
 
 import render from '../../../utils/test-renderer';
 import LoginForm from '../login-form';
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock('@tbergq/router', () => ({
+  ...jest.requireActual('@tbergq/router'),
   useNavigate: () => jest.fn(),
 }));
 
@@ -72,7 +73,7 @@ it('validates inputs', async () => {
 
 it('redirects after login', async () => {
   const navigate = jest.fn();
-  jest.spyOn(router, 'useNavigate').mockImplementation(() => navigate);
+  jest.spyOn(router, 'useNavigate').mockReturnValue(navigate);
   render(<TestRenderer />);
 
   const emailInput = screen.getByLabelText('email');

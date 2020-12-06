@@ -1,16 +1,14 @@
 // @flow
 
 import type { Node } from 'react';
-import { useHref } from 'react-router-dom';
 import fbt from 'fbt';
-import { Heading, Link, Text } from '@tbergq/components';
+import { Heading, Text } from '@tbergq/components';
+import { Link } from '@tbergq/router';
 
 import LoginForm from './login-form';
 import AccountFormContainer from '../components/account-form-container';
 
 export default function Login(): Node {
-  const href = useHref('/signup');
-
   return (
     <AccountFormContainer>
       <Heading level="h1">
@@ -21,7 +19,7 @@ export default function Login(): Node {
         <Text>
           <fbt desc="signup description">Don&apos;t have an account?</fbt>
         </Text>{' '}
-        <Link href={href}>
+        <Link to="/signup">
           <fbt desc="Signup link">Sign up</fbt>
         </Link>
       </div>

@@ -47,5 +47,6 @@ module.ignore_non_literal_requires=true
 module.name_mapper='^@tbergq/components' -> '<PROJECT_ROOT>/src/components/src'
 module.name_mapper='^@tbergq/components/lib/theme.css' -> '<PROJECT_ROOT>/src/components/src/theme.css'
 module.name_mapper='^@tbergq/redis-client' -> '<PROJECT_ROOT>/src/redis-client/src'
+module.name_mapper='^@tbergq/router' -> '<PROJECT_ROOT>/src/router/src'
 
 experimental.const_params=true

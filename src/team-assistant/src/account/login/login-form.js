@@ -7,7 +7,7 @@ import { object, string } from 'yup';
 import { Input, FormGroup, Button, useShowToast } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { graphql, useMutation } from 'react-relay/hooks';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tbergq/router';
 
 import type { loginFormMutation } from './__generated__/loginFormMutation.graphql';
 import { AUTH_KEY } from '../../utils/consts';

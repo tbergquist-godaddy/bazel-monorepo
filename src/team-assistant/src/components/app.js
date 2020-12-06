@@ -1,18 +1,21 @@
 // @flow
 
 import { useEffect, type Node } from 'react';
-import { HashRouter as Router } from 'react-router-dom';
 import * as sx from '@adeira/sx';
-import { Navbar, breakpoints, Toast } from '@tbergq/components';
+import { Navbar, breakpoints, Toast, Spinner } from '@tbergq/components';
 import { init, IntlVariations } from 'fbt';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import { RecoilRoot } from 'recoil';
+import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
+import { createHashHistory } from 'history';
 
 import translations from '../../translatedFbts.json';
 import Routes from './router';
 import environment from '../relay/environment';
 import getLanguage from './get-language';
 import './yup-locale';
+
+const router = createRouter(Routes, createHashHistory());
 
 export default function App(): Node {
   useEffect(() => {
@@ -31,13 +34,13 @@ export default function App(): Node {
   return (
     <RelayEnvironmentProvider environment={environment}>
       <RecoilRoot>
-        <Router>
+        <RoutingContext.Provider value={router.context}>
           <Navbar brand="Team assistant" />
           <main data-testid="app" className={styles('container')}>
-            <Routes />
+            <RouterRenderer loader={<Spinner />} />
             <Toast />
           </main>
-        </Router>
+        </RoutingContext.Provider>
       </RecoilRoot>
     </RelayEnvironmentProvider>
   );
