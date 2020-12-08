@@ -1,18 +1,10 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "pkg_npm")
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
-load("@npm//@babel/cli:index.bzl", "babel")
+load("//:babel/babel.bzl", "babel_build")
 load("//:eslint/eslint.bzl", "eslint")
 
-babel(
+babel_build(
     name = "lib",
-    args = [
-        "./src/redis-client/src",
-        "--out-dir",
-        "$(@D)",
-        "--copy-files",
-        "--root-mode",
-        "upward",
-    ],
     data = [
         ":package.json",
         ":src",
@@ -20,28 +12,7 @@ babel(
         "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
     ],
-    output_dir = True,
-)
-
-babel(
-    name = "esm",
-    args = [
-        "./src/redis-client/src",
-        "--out-dir",
-        "$(@D)",
-        "--root-mode",
-        "upward",
-        "--out-file-extension",
-        ".mjs",
-    ],
-    data = [
-        ":package.json",
-        ":src",
-        "//:babel.config.js",
-        "//:package.json",
-        "@npm//@adeira/babel-preset-adeira",
-    ],
-    output_dir = True,
+    file_path = "./src/redis-client/src",
 )
 
 js_library(

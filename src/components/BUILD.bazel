@@ -1,19 +1,11 @@
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
-load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//@storybook/react:index.bzl", "start_storybook")
+load("//:babel/babel.bzl", "babel_build")
 load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 
-babel(
-    name = "lib",
-    args = [
-        "./src/components/src",
-        "--out-dir",
-        "$(@D)",
-        "--copy-files",
-        "--root-mode",
-        "upward",
-    ],
+babel_build(
+    name = "compile",
     data = [
         ":package.json",
         ":src",
@@ -22,29 +14,7 @@ babel(
         "@npm//@adeira/babel-preset-adeira",
         "@npm//react-transition-group",
     ],
-    output_dir = True,
-)
-
-babel(
-    name = "esm",
-    args = [
-        "./src/components/src",
-        "--out-dir",
-        "$(@D)",
-        "--root-mode",
-        "upward",
-        "--out-file-extension",
-        ".mjs",
-    ],
-    data = [
-        ":package.json",
-        ":src",
-        "//:babel.config.js",
-        "//:package.json",
-        "@npm//@adeira/babel-preset-adeira",
-        "@npm//react-transition-group",
-    ],
-    output_dir = True,
+    file_path = "./src/components/src",
 )
 
 js_library(

@@ -1,28 +1,20 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin", "nodejs_binary", "nodejs_test")
-load("@npm//@babel/cli:index.bzl", "babel")
 load("@npm//@babel/node:index.bzl", "babel_node")
 load("@npm//vercel:index.bzl", "vercel")
+load("//:babel/babel.bzl", "build_cjs")
 load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
 
-babel(
+build_cjs(
     name = "lib",
-    args = [
-        "./src/tvhelper-gql/src",
-        "--out-dir",
-        "$(@D)",
-        "--root-mode",
-        "upward",
-        "--copy-files",
-    ],
     data = glob(["src/**/*"]) + [
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
         "@npm//@adeira/babel-preset-adeira",
     ],
-    output_dir = True,
+    file_path = "./src/tvhelper-gql/src",
 )
 
 eslint(

@@ -1,17 +1,9 @@
 load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
-load("@npm//@babel/cli:index.bzl", "babel")
+load("//:babel/babel.bzl", "babel_build")
 load("//:eslint/eslint.bzl", "eslint")
 
-babel(
+babel_build(
     name = "lib",
-    args = [
-        "./src/router/src",
-        "--out-dir",
-        "$(@D)",
-        "--copy-files",
-        "--root-mode",
-        "upward",
-    ],
     data = glob([
         "src/**/*.js",
         "src/**/*.css",
@@ -21,31 +13,7 @@ babel(
         "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
     ],
-    output_dir = True,
-)
-
-babel(
-    name = "esm",
-    args = [
-        "./src/router/src",
-        "--out-dir",
-        "$(@D)",
-        "--copy-files",
-        "--root-mode",
-        "upward",
-        "--out-file-extension",
-        ".mjs",
-    ],
-    data = glob([
-        "src/**/*.js",
-        "src/**/*.css",
-    ]) + [
-        ":package.json",
-        "//:babel.config.js",
-        "//:package.json",
-        "@npm//@adeira/babel-preset-adeira",
-    ],
-    output_dir = True,
+    file_path = "./src/router/src",
 )
 
 js_library(
