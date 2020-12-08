@@ -48,5 +48,6 @@ module.name_mapper='^@tbergq/components' -> '<PROJECT_ROOT>/src/components/src'
 module.name_mapper='^@tbergq/components/lib/theme.css' -> '<PROJECT_ROOT>/src/components/src/theme.css'
 module.name_mapper='^@tbergq/redis-client' -> '<PROJECT_ROOT>/src/redis-client/src'
 module.name_mapper='^@tbergq/router' -> '<PROJECT_ROOT>/src/router/src'
+module.name_mapper='^@tbergq/graphql-test-utils' -> '<PROJECT_ROOT>/src/graphql-test-utils/src'
 
 experimental.const_params=true
