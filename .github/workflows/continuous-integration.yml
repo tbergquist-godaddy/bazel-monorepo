@@ -21,6 +21,8 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
+      - uses: actions/download-artifact@v2
+
       # TODO: cache, google storage bucket 🤔 https://docs.bazel.build/versions/master/remote-caching.html
       - name: Install bazelisk
         run: |
@@ -52,3 +54,11 @@ jobs:
       - name: Test
         run: |
           "${GITHUB_WORKSPACE}/bin/bazel" test '...'
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bazel
+          path: |
+            ~/.cache/bazel-disk
+            ~/.cache/bazel-repo
+
