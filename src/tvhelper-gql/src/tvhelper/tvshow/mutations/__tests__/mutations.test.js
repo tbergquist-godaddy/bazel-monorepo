@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import { tvHelperConnection } from '../../../../database/connections';
 import UserRepository from '../../../../database/models/user';
@@ -23,24 +23,20 @@ describe('AddFavorite', () => {
     await tvHelperConnection.collection('users').drop();
   });
   it('adds a favorite', async () => {
-    const res = await request(app)
-      .post('/graphql')
-      .send({
-        query: `mutation addFavorite {
-          addFavorite(serieId: "dHZzaG93OjY=") {
-            success
-            tvShow {
-              node {
-                name
-                status
-              }
-            }
+    const res = await executeTestQuery({
+      app,
+      query: `mutation addFavorite {
+      addFavorite(serieId: "dHZzaG93OjY=") {
+        success
+        tvShow {
+          node {
+            name
+            status
           }
-        }`,
-        variables: {},
-      })
-      .set('content-type', 'application/json')
-      .set('Authorization', signToken({ id: userId, username: 'lol' }));
+        }
+      }
+    }`,
+    }).set('Authorization', signToken({ id: userId, username: 'lol' }));
 
     expect(res.body.data).toMatchInlineSnapshot(`
       Object {

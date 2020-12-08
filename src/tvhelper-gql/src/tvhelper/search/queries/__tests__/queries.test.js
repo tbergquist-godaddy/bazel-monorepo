@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../../app';
 
@@ -22,13 +22,7 @@ const query = `query {
 }`;
 
 it('gets a tvshow', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query,
-      variables: {},
-    })
-    .set('content-type', 'application/json');
+  const res = await executeTestQuery({ app, query });
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {
       "searchTvShow": Object {

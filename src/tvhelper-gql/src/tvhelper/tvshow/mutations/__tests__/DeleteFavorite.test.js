@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import { tvHelperConnection } from '../../../../database/connections';
 import UserRepository from '../../../../database/models/user';
@@ -29,53 +29,41 @@ describe('DeleteFavorite', () => {
   );
 
   it('returns success false for wrong user', async () => {
-    const res = await request(app)
-      .post('/graphql')
-      .send({
-        query: `mutation deleteFavorite {
+    const res = await executeTestQuery({
+      app,
+      query: `mutation deleteFavorite {
       deleteFavorite(serieId: "dHZzaG93OjY=") {
         success
       }
     }`,
-        variables: {},
-      })
-      .set('content-type', 'application/json')
-      .set('Authorization', signToken({ id: 'lol', username: 'fail' }));
+    }).set('Authorization', signToken({ id: 'lol', username: 'fail' }));
 
     expect(res.body.data.deleteFavorite.success).toBe(false);
   });
 
   it('returns success false for wrong serieId', async () => {
-    const res = await request(app)
-      .post('/graphql')
-      .send({
-        query: `mutation deleteFavorite {
-          deleteFavorite(serieId: "dHZzaG93OjY2") {
-            success
-          }
-        }`,
-        variables: {},
-      })
-      .set('content-type', 'application/json')
-      .set('Authorization', signToken({ id: createdUserId, username: 'lol' }));
+    const res = await executeTestQuery({
+      app,
+      query: `mutation deleteFavorite {
+      deleteFavorite(serieId: "dHZzaG93OjY2") {
+        success
+      }
+    }`,
+    }).set('Authorization', signToken({ id: createdUserId, username: 'lol' }));
 
     expect(res.body.data.deleteFavorite.success).toBe(false);
   });
 
   it('works with existing favorite', async () => {
-    const res = await request(app)
-      .post('/graphql')
-      .send({
-        query: `mutation deleteFavorite {
-          deleteFavorite(serieId: "dHZzaG93OjY=") {
-            success
-            id
-          }
-        }`,
-        variables: {},
-      })
-      .set('content-type', 'application/json')
-      .set('Authorization', signToken({ id: createdUserId, username: 'lol' }));
+    const res = await executeTestQuery({
+      app,
+      query: `mutation deleteFavorite {
+      deleteFavorite(serieId: "dHZzaG93OjY=") {
+        success
+        id
+      }
+    }`,
+    }).set('Authorization', signToken({ id: createdUserId, username: 'lol' }));
 
     expect(res.body.data).toMatchInlineSnapshot(`
       Object {

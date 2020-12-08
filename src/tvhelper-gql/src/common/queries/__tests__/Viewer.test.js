@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../app';
 import UserModel from '../../../database/models/user';
@@ -22,18 +22,14 @@ afterEach(async () => {
   await tvHelperConnection.collection('users').drop();
 });
 it('renders Unauthorized type', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query Viewer {
-      viewer {
-        __typename
-      }
+  const res = await executeTestQuery({
+    app,
+    query: `query Viewer {
+    viewer {
+      __typename
+    }
 }`,
-      variables: {},
-    })
-    .set('content-type', 'application/json');
-
+  });
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {
       "viewer": Object {
@@ -44,21 +40,17 @@ it('renders Unauthorized type', async () => {
 });
 
 it('renders TVHViewer type', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query Viewer {
-        viewer {
-          __typename
-          ... on TvHelperViewer {
-            username
-          }
-        }
-  }`,
-      variables: {},
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ id: userId, username: 'lol' }));
+  const res = await executeTestQuery({
+    app,
+    query: `query Viewer {
+    viewer {
+      __typename
+      ... on TvHelperViewer {
+        username
+      }
+    }
+}`,
+  }).set('Authorization', signToken({ id: userId, username: 'lol' }));
 
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {

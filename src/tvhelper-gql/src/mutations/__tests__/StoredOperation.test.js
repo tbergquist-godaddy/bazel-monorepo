@@ -1,7 +1,7 @@
 // @flow
 
 import path from 'path';
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 import fs from 'fs';
 
 import app from '../../app';
@@ -12,14 +12,7 @@ const query = fs.readFileSync(
   'utf-8',
 );
 it('adds stored operations', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query,
-      variables: {},
-    })
-    .set('content-type', 'application/json');
-
+  const res = await executeTestQuery({ app, query });
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {
       "createdStoredOperations": Object {

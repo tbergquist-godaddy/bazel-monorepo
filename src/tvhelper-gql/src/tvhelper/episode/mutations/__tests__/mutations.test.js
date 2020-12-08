@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import { tvHelperConnection } from '../../../../database/connections';
 import UserRepository from '../../../../database/models/user';
@@ -27,21 +27,18 @@ describe('episode mutations', () => {
   });
 
   it('marks an episode as watched', async () => {
-    const res = await request(app)
-      .post('/graphql')
-      .send({
-        query: `mutation mark($id: ID!) {
-          markAsWatched(episodeId: $id) {
-            success
-            episode {
-              id
-            }
-          }
-        }`,
-        variables: { id: 'ZXBpc29kZToz' },
-      })
-      .set('content-type', 'application/json')
-      .set('Authorization', signToken({ id: userId, username: 'lol' }));
+    const res = await executeTestQuery({
+      app,
+      query: `mutation mark($id: ID!) {
+      markAsWatched(episodeId: $id) {
+        success
+        episode {
+          id
+        }
+      }
+    }`,
+      variables: { id: 'ZXBpc29kZToz' },
+    }).set('Authorization', signToken({ id: userId, username: 'lol' }));
 
     expect(res.body.data).toMatchInlineSnapshot(`
       Object {
@@ -56,21 +53,17 @@ describe('episode mutations', () => {
   });
 
   it('deletes an episode', async () => {
-    const res = await request(app)
-      .post('/graphql')
-      .send({
-        query: `mutation {
-          deleteWatchedEpisode(episodeId: "ZXBpc29kZTo2") {
-            success
-            episode {
-              id
-            }
-          }
-        }`,
-        variables: {},
-      })
-      .set('content-type', 'application/json')
-      .set('Authorization', signToken({ id: userId, username: 'lol' }));
+    const res = await executeTestQuery({
+      app,
+      query: `mutation {
+      deleteWatchedEpisode(episodeId: "ZXBpc29kZTo2") {
+        success
+        episode {
+          id
+        }
+      }
+    }`,
+    }).set('Authorization', signToken({ id: userId, username: 'lol' }));
 
     expect(res.body.data).toMatchInlineSnapshot(`
       Object {
