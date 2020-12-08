@@ -1,22 +1,20 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../app';
 
 it('works', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query testQuery($id: String!) {
+  const res = await executeTestQuery({
+    app,
+    query: `query testQuery($id: String!) {
     test(id: $id) {
       firstName
       lastName
     }
   }`,
-      variables: { id: '123' },
-    })
-    .set('content-type', 'application/json');
+    variables: { id: '123' },
+  });
 
   expect(res.body).toEqual({
     data: {

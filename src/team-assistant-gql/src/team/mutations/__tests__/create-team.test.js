@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../app';
 import connection from '../../../database/connection';
@@ -39,13 +39,7 @@ const query = `mutation createTeamMutation($name: String!) {
 }`;
 
 it('returns null when not logged in', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query,
-      variables: { name: 'Stor Laget' },
-    })
-    .set('content-type', 'application/json');
+  const res = await executeTestQuery({ app, query, variables: { name: 'Stor Laget' } });
 
   expect(res.body.data.createTeam).toBeNull();
   expect(res.body.errors).toMatchInlineSnapshot(`
@@ -67,26 +61,18 @@ it('returns null when not logged in', async () => {
 });
 
 it('returns error when name is empty string', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query,
-      variables: { name: '' },
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ email, id: userId }));
+  const res = await executeTestQuery({ app, query, variables: { name: '' } }).set(
+    'Authorization',
+    signToken({ email, id: userId }),
+  );
   expect(res.body.data.createTeam.reason).toBe('NAME_MISSING');
 });
 
 it('creates a team', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query,
-      variables: { name: 'My team' },
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ email, id: userId }));
+  const res = await executeTestQuery({ app, query, variables: { name: 'My team' } }).set(
+    'Authorization',
+    signToken({ email, id: userId }),
+  );
   expect(res.body.data.createTeam.teamEdge.node.name).toBe('My team');
 
   await connection.collection('teams').drop();

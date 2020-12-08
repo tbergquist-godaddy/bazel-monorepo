@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../app';
 import connection from '../../../database/connection';
@@ -22,36 +22,30 @@ afterEach(async () => {
 });
 
 it('returns unauthorized for not logged in user', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query viewerQuery {
-        viewer {
-          __typename
-        }
-      }`,
-    })
-    .set('content-type', 'application/json');
-
+  const res = await executeTestQuery({
+    app,
+    query: `query viewerQuery {
+    viewer {
+      __typename
+    }
+  }`,
+  });
   expect(res.body.data.viewer.__typename).toBe('Unauthorized');
 });
 
 it('returns user for logged in user', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query viewerQuery {
-        viewer {
-          ... on User {
-            identity {
-              email
-            }
-          }
+  const res = await executeTestQuery({
+    app,
+    query: `query viewerQuery {
+    viewer {
+      ... on User {
+        identity {
+          email
         }
-      }`,
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ email: 'test@test.no', id: userId }));
+      }
+    }
+  }`,
+  }).set('Authorization', signToken({ email: 'test@test.no', id: userId }));
 
   expect(res.body.data.viewer.identity.email).toBe('test@test.no');
 });

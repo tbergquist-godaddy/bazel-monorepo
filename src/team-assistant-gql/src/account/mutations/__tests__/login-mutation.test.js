@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../app';
 import connection from '../../../database/connection';
@@ -18,35 +18,29 @@ afterEach(async () => {
 });
 
 it('returns null for not existing user', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `mutation login($email: String!, $password: String!) {
-        login(email:$email, password:$password) {
-          token
-        }
-      }`,
-      variables: { email: 'test1@test.no', password: '123456' },
-    })
-    .set('content-type', 'application/json');
-
+  const res = await executeTestQuery({
+    app,
+    query: `mutation login($email: String!, $password: String!) {
+    login(email:$email, password:$password) {
+      token
+    }
+  }`,
+    variables: { email: 'test1@test.no', password: '123456' },
+  });
   expect(res.body.data.login).toEqual({
     token: null,
   });
 });
 
 it('returns a token existing user', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `mutation login($email: String!, $password: String!) {
-        login(email:$email, password:$password) {
-          token
-        }
-      }`,
-      variables: { email: 'test@test.no', password: '123456' },
-    })
-    .set('content-type', 'application/json');
-
+  const res = await executeTestQuery({
+    app,
+    query: `mutation login($email: String!, $password: String!) {
+    login(email:$email, password:$password) {
+      token
+    }
+  }`,
+    variables: { email: 'test@test.no', password: '123456' },
+  });
   expect(res.body.data.login).not.toBeNull();
 });

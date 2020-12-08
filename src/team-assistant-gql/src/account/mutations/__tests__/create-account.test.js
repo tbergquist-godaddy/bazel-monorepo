@@ -1,24 +1,22 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../app';
 import connection from '../../../database/connection';
 
 it('works', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `mutation createAccountMutation($email: String!, $password: String!) {
-    createAccount(email: $email, password: $password) {
-      ... on Identity {
-        email
+  const res = await executeTestQuery({
+    app,
+    variables: { email: 'test@test.no', password: '123456' },
+    query: `mutation createAccountMutation($email: String!, $password: String!) {
+      createAccount(email: $email, password: $password) {
+        ... on Identity {
+          email
+        }
       }
-    }
-  }`,
-      variables: { email: 'test@test.no', password: '123456' },
-    })
-    .set('content-type', 'application/json');
+    }`,
+  });
 
   expect(res.body).toEqual({
     data: {
@@ -31,10 +29,9 @@ it('works', async () => {
 });
 
 it('gives error for incorrect email', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `mutation createAccountMutation($email: String!, $password: String!) {
+  const res = await executeTestQuery({
+    app,
+    query: `mutation createAccountMutation($email: String!, $password: String!) {
     createAccount(email: $email, password: $password) {
       ... on CreateAccountError {
        reason
@@ -42,9 +39,8 @@ it('gives error for incorrect email', async () => {
       }
     }
   }`,
-      variables: { email: 'test', password: '123456' },
-    })
-    .set('content-type', 'application/json');
+    variables: { email: 'test', password: '123456' },
+  });
 
   expect(res.body).toEqual({
     data: {
@@ -57,10 +53,9 @@ it('gives error for incorrect email', async () => {
 });
 
 it('gives error for missing password', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `mutation createAccountMutation($email: String!, $password: String!) {
+  const res = await executeTestQuery({
+    app,
+    query: `mutation createAccountMutation($email: String!, $password: String!) {
     createAccount(email: $email, password: $password) {
       ... on CreateAccountError {
        reason
@@ -68,9 +63,8 @@ it('gives error for missing password', async () => {
       }
     }
   }`,
-      variables: { email: 'test@test.no', password: '' },
-    })
-    .set('content-type', 'application/json');
+    variables: { email: 'test@test.no', password: '' },
+  });
 
   expect(res.body).toEqual({
     data: {
