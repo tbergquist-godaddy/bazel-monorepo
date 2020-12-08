@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import app from '../../../app';
 import connection from '../../../database/connection';
@@ -23,25 +23,22 @@ afterEach(async () => {
 });
 
 it('works for users with no teams', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query viewerQuery {
-        viewer {
-          ... on User {
-            teams {
-              edges {
-                node {
-                  name
-                }
-              }
+  const res = await executeTestQuery({
+    app,
+    query: `query viewerQuery {
+    viewer {
+      ... on User {
+        teams {
+          edges {
+            node {
+              name
             }
           }
         }
-      }`,
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ email: 'test@test.no', id: userId }));
+      }
+    }
+  }`,
+  }).set('Authorization', signToken({ email: 'test@test.no', id: userId }));
 
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {
@@ -56,25 +53,22 @@ it('works for users with no teams', async () => {
 
 it('returns teams', async () => {
   await TeamModel.createTeam({ userId, name: 'Test team' });
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query: `query viewerQuery {
-        viewer {
-          ... on User {
-            teams {
-              edges {
-                node {
-                  name
-                }
-              }
+  const res = await executeTestQuery({
+    app,
+    query: `query viewerQuery {
+    viewer {
+      ... on User {
+        teams {
+          edges {
+            node {
+              name
             }
           }
         }
-      }`,
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ email: 'test@test.no', id: userId }));
+      }
+    }
+  }`,
+  }).set('Authorization', signToken({ email: 'test@test.no', id: userId }));
 
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {

@@ -51,8 +51,8 @@ jest_test(
     jest_config = ":jest.config.js",
     deps = get_deps() + [
         "@npm//mongodb-memory-server",
-        "@npm//supertest",
         "@npm//@babel/runtime",
+        "//src/graphql-test-utils:graphql_test_utils",
     ],
 )
 
