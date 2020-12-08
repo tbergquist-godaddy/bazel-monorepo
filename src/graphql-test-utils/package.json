@@ -1,0 +1,15 @@
+{
+  "name": "@tbergq/graphql-test-utils",
+  "version": "0.1.1",
+  "private": true,
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "supertest": "^6.0.1"
+  },
+  "peerDependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,33 @@
+load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
+load("//:babel/babel.bzl", "babel_build")
+load("//:eslint/eslint.bzl", "eslint")
+
+babel_build(
+    name = "lib",
+    data = [
+        ":package.json",
+        ":src",
+        "//:babel.config.js",
+        "//:package.json",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
+    file_path = "./src/graphql-test-utils/src",
+)
+
+js_library(
+    name = "graphql_test_utils",
+    package_name = "@tbergq/graphql-test-utils",
+    srcs = ["package.json"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":esm",
+        ":lib",
+        "@npm//supertest",
+    ],
+)
+
+eslint(
+    name = "lint",
+    data = [":src"],
+    entry = ":src",
+)
