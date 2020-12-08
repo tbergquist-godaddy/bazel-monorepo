@@ -1,6 +1,6 @@
 // @flow
 
-import request from 'supertest';
+import { executeTestQuery } from '@tbergq/graphql-test-utils';
 
 import { tvHelperConnection } from '../../../../../database/connections';
 import UserRepository from '../../../../../database/models/user';
@@ -41,14 +41,10 @@ afterEach(async () => {
 });
 
 it('renders TJViewer type', async () => {
-  const res = await request(app)
-    .post('/graphql')
-    .send({
-      query,
-      variables: {},
-    })
-    .set('content-type', 'application/json')
-    .set('Authorization', signToken({ id: userId, username: 'tito' }));
+  const res = await executeTestQuery({ app, query }).set(
+    'Authorization',
+    signToken({ id: userId, username: 'tito' }),
+  );
 
   expect(res.body.data).toMatchInlineSnapshot(`
     Object {

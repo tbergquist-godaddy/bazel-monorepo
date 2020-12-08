@@ -78,7 +78,7 @@ jest_test(
         "@npm//mongodb-memory-server",
         "@npm//@babel/runtime",
         "@npm//mockdate",
-        "@npm//supertest",
+        "//src/graphql-test-utils:graphql_test_utils",
         "@npm//msw",
     ],
 )

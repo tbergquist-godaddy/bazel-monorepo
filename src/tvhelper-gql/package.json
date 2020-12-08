@@ -43,8 +43,10 @@
     "rimraf": "^3.0.2",
     "mongodb-memory-server": "^6.9.2",
     "@babel/register": "^7.11.5",
-    "supertest": "^6.0.1",
     "msw": "^0.24.1",
     "@adeira/murmur-hash": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@tbergq/graphql-test-utils": "*"
   }
 }
