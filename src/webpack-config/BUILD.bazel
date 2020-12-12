@@ -1,0 +1,12 @@
+load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_library")
+
+js_library(
+    name = "webpack_config",
+    package_name = "@tbergq/webpack-config",
+    srcs = [
+        "package.json",
+        ":src/index.js",
+        ":src/webpack.base.js",
+    ],
+    visibility = ["//visibility:public"],
+)
