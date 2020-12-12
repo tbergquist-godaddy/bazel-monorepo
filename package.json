@@ -96,6 +96,11 @@
     "build": "bazel build '...'",
     "test": "bazel test '...'",
     "lint": "yarn eslint . --fix --report-unused-disable-directives",
-    "typecheck": "adeira-flow-bin"
+    "typecheck": "adeira-flow-bin",
+    "translate": "fbt-translate",
+    "tj-manifest": "fbt-manifest --src src/trainingjournal/src --src-manifest src/trainingjournal/.src_manifest.json --enum-manifest src/trainingjournal/.enum_manifest.json",
+    "tj-collect": "fbt-collect --pretty --manifest < src/trainingjournal/.src_manifest.json > src/trainingjournal/.source_strings.json",
+    "tj-translate": "fbt-translate --translations src/trainingjournal/translations/*.json --jenkins > src/trainingjournal/translatedFbts.json --source-strings src/trainingjournal/.source_strings.json",
+    "tj-fbt": "yarn tj-manifest && yarn tj-collect && yarn tj-translate"
   }
 }

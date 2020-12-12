@@ -1,0 +1,34 @@
+load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
+load("//:eslint/eslint.bzl", "eslint")
+load(":dependencies.bzl", "get_deps")
+
+webpack_dev_server(
+    name = "dev_server",
+    args = [
+        "--entry",
+        "./src/trainingjournal/src/index.js",
+        "--config",
+        "$(execpath webpack.config.js)",
+        "--port",
+        "8001",
+        "--hot",
+        "--watch-poll",
+    ],
+    data = glob([
+        "**/*.js",
+        "**/*.json",
+        "**/*.ico",
+    ]) + get_deps() + [
+        ":src/app.css",
+        "//:babel.config.js",
+        ":.babelrc.js",
+    ],
+)
+
+eslint(
+    name = "lint",
+    data = [
+        ":src",
+    ],
+    entry = ":src",
+)

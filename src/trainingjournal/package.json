@@ -1,0 +1,20 @@
+{
+  "name": "@tbergq/trainingjournal",
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-router-config": "^5.1.1",
+    "history": "^5.0.0",
+    "@tbergq/router": "*",
+    "@tbergq/components": "*",
+    "fbt": "^0.16.0",
+    "@adeira/sx": "^0.22.0",
+    "yup": "^0.32.8",
+    "@hookform/resolvers": "^1.1.2",
+    "react-hook-form": "^6.13.0"
+  },
+  "scripts": {
+    "manifest": "fbt-manifest --src src"
+  }
+}
