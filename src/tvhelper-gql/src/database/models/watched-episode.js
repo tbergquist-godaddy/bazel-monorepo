@@ -43,6 +43,7 @@ class WatchedEpisodeModel extends Model {
     userId: ?string,
     episodeIds: $ReadOnlyArray<number>,
   ): Promise<$ReadOnlyArray<this | null>> {
+    // $FlowExpectedError[incompatible-call]
     const episodes = await this.find({ userId, episodeId: { $in: episodeIds } });
 
     return episodes.map((episode) => (episode == null ? null : new WatchedEpisode(episode)));
