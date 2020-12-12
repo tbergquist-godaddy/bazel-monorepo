@@ -1,4 +1,7 @@
 {
   "name": "@tbergq/team-assistant",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "@tbergq/webpack-config": "*"
+  }
 }

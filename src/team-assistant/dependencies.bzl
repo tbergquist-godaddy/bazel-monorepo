@@ -32,6 +32,7 @@ def get_deps():
         "@npm//jest",
         "//src/components:components",
         "//src/router:router",
+        "//src/webpack-config:webpack_config",
         "@npm//copy-webpack-plugin",
         "@npm//react-icons",
     ]
