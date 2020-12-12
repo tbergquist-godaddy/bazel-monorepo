@@ -1,0 +1,61 @@
+{
+ "phrases": [
+  {
+   "hashToText": {
+    "4FxwqVoBHQRtxrXDvWzBCg==": "Email"
+   },
+   "filepath": "src/trainingjournal/src/login/login-form.js",
+   "line_beg": 10,
+   "col_beg": 14,
+   "line_end": 10,
+   "col_end": 46,
+   "desc": "email form label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Email"
+  },
+  {
+   "hashToText": {
+    "b1T19vW9/DoBPue7cIGh3Q==": "Password"
+   },
+   "filepath": "src/trainingjournal/src/login/login-form.js",
+   "line_beg": 11,
+   "col_beg": 17,
+   "line_end": 11,
+   "col_end": 55,
+   "desc": "password form label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Password"
+  },
+  {
+   "hashToText": {
+    "F3p8DbdliugG4CTKslAYqA==": "Login"
+   },
+   "filepath": "src/trainingjournal/src/login/login-form.js",
+   "line_beg": 46,
+   "col_beg": 10,
+   "line_end": 46,
+   "col_end": 46,
+   "desc": "Login button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Login"
+  },
+  {
+   "hashToText": {
+    "EJiqPfRrsYhNdA4eGTqcjQ==": "Trainingjournal login"
+   },
+   "filepath": "src/trainingjournal/src/login/login.js",
+   "line_beg": 14,
+   "col_beg": 8,
+   "line_end": 14,
+   "col_end": 66,
+   "desc": "login page heading",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Trainingjournal login"
+  }
+ ],
+ "childParentMappings": {}
+}
