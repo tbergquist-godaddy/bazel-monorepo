@@ -24,6 +24,8 @@ if (__DEV__) {
   Promise.all([import('react-dom'), import('@axe-core/react')]).then(([reactDom, reactAxe]) => {
     const axe = reactAxe.default;
     const reactDOM = reactDom.default;
-    axe(React, reactDOM, 1000);
+    setTimeout(() => {
+      axe(React, reactDOM, 1000, {});
+    }, 2000);
   });
 }
