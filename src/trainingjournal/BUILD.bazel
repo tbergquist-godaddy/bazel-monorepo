@@ -19,6 +19,7 @@ webpack_dev_server(
         "**/*.json",
         "**/*.ico",
     ]) + get_deps() + [
+        ":.env",
         ":src/app.css",
         "//:babel.config.js",
         ":.babelrc.js",

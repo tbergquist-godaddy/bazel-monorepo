@@ -4,6 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpackBase = require('@tbergq/webpack-config');
+const webpack = require('webpack');
+const { config } = require('dotenv');
+const path = require('path');
+
+config({ path: path.join(__dirname, '.env')});
 
 const templateContent = `<!DOCTYPE html>
 <html lang="en">
@@ -35,6 +40,9 @@ module.exports = {
     }) /*: Object */),
     (new CopyPlugin({
       patterns: [{ from: './src/trainingjournal/src/favicon.ico', to: 'favicon.ico' }],
+    }) /*: Object */),
+    (new webpack.DefinePlugin({
+      'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
     }) /*: Object */),
   ],
 };

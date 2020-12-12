@@ -8,6 +8,7 @@ def get_deps():
         "@npm//clean-webpack-plugin",
         "@npm//babel-loader",
         "@npm//@adeira/babel-preset-adeira",
+        "@npm//@adeira/fetch",
         "@npm//react",
         "@npm//react-dom",
         "@npm//style-loader",

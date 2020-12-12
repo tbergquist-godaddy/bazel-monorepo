@@ -5,31 +5,53 @@ import { fbt } from 'fbt';
 import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { Input, FormGroup, Button } from '@tbergq/components';
+import { Input, FormGroup, Button, useShowToast } from '@tbergq/components';
+import { useMutation } from 'react-query';
+import { useNavigate } from '@tbergq/router';
 
-const email = fbt('Email', 'email form label');
+import { login } from './api';
+import { TOKEN_KEY } from '../constants';
+
+const username = fbt('Username', 'username form label');
 const password = fbt('Password', 'password form label');
+const loginErrorMessage = fbt('Wrong username or password', 'Login error message');
 
 const schema = object().shape({
   password: string().required().label(password),
-  email: string().required().email().label(email),
+  username: string().required().label(username),
 });
 
 export default function LoginForm(): Node {
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
+  const navigate = useNavigate();
+  const showToast = useShowToast();
 
-  const onSubmit = () => {};
+  const [mutate, { isLoading }] = useMutation(login, {
+    onSuccess: (data) => {
+      if (data.token) {
+        localStorage.setItem(TOKEN_KEY, data.token);
+        navigate('/home');
+      }
+    },
+    onError: () => {
+      showToast({ text: loginErrorMessage, type: 'danger' });
+    },
+  });
+
+  const onSubmit = (formData) => {
+    mutate(formData);
+  };
   return (
     <form noValidate onSubmit={handleSubmit(onSubmit)}>
       <FormGroup>
         <Input
-          error={errors.email?.message}
+          error={errors.username?.message}
           ref={register}
-          name="email"
-          type="email"
-          label={email}
+          name="username"
+          type="text"
+          label={username}
         />
       </FormGroup>
       <FormGroup>
@@ -42,7 +64,7 @@ export default function LoginForm(): Node {
         />
       </FormGroup>
       <FormGroup align="right">
-        <Button type="submit">
+        <Button isLoading={isLoading} type="submit">
           <fbt desc="Login button">Login</fbt>
         </Button>
       </FormGroup>
