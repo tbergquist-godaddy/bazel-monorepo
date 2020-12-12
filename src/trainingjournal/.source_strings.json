@@ -2,26 +2,26 @@
  "phrases": [
   {
    "hashToText": {
-    "4FxwqVoBHQRtxrXDvWzBCg==": "Email"
+    "a2At0ljNpkm4ytwYDdtS0g==": "Username"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 10,
-   "col_beg": 14,
-   "line_end": 10,
-   "col_end": 46,
-   "desc": "email form label",
+   "line_beg": 15,
+   "col_beg": 17,
+   "line_end": 15,
+   "col_end": 55,
+   "desc": "username form label",
    "project": "",
    "type": "text",
-   "jsfbt": "Email"
+   "jsfbt": "Username"
   },
   {
    "hashToText": {
     "b1T19vW9/DoBPue7cIGh3Q==": "Password"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 11,
+   "line_beg": 16,
    "col_beg": 17,
-   "line_end": 11,
+   "line_end": 16,
    "col_end": 55,
    "desc": "password form label",
    "project": "",
@@ -30,12 +30,26 @@
   },
   {
    "hashToText": {
+    "CBsKATgppv4k6y046G9MRQ==": "Wrong username or password"
+   },
+   "filepath": "src/trainingjournal/src/login/login-form.js",
+   "line_beg": 17,
+   "col_beg": 26,
+   "line_end": 17,
+   "col_end": 82,
+   "desc": "Login error message",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Wrong username or password"
+  },
+  {
+   "hashToText": {
     "F3p8DbdliugG4CTKslAYqA==": "Login"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 46,
+   "line_beg": 68,
    "col_beg": 10,
-   "line_end": 46,
+   "line_end": 68,
    "col_end": 46,
    "desc": "Login button",
    "project": "",

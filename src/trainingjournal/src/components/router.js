@@ -9,6 +9,18 @@ const routes: RouteConfig[] = [
     path: '/',
     exact: true,
   },
+  {
+    component: JSResource('Home', () => import('../home/home')),
+    path: '/home',
+    exact: true,
+    prepare: () => {
+      return {
+        prepared: {
+          data: 'lol',
+        },
+      };
+    },
+  },
 ];
 
 export default routes;

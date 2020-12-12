@@ -76,6 +76,7 @@
     "react-dom": "^0.0.0-experimental-4ead6b530",
     "react-hook-form": "^6.13.0",
     "react-icons": "^4.1.0",
+    "react-query": "^2.26.4",
     "react-relay": "^0.0.0-experimental-4ebe0514",
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",

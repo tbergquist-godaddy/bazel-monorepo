@@ -12,7 +12,10 @@
     "@adeira/sx": "^0.22.0",
     "yup": "^0.32.8",
     "@hookform/resolvers": "^1.1.2",
-    "react-hook-form": "^6.13.0"
+    "react-hook-form": "^6.13.0",
+    "react-query": "^2.26.4",
+    "@adeira/fetch": "^1.0.4",
+    "recoil": "*"
   },
   "scripts": {
     "manifest": "fbt-manifest --src src"
