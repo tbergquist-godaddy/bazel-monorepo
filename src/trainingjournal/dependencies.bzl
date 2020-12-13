@@ -28,4 +28,5 @@ def get_deps():
         "@npm//yup",
         "@npm//@hookform/resolvers",
         "@npm//react-query",
+        "@npm//react-icons",
     ]

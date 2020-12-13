@@ -2,13 +2,22 @@
 
 import fetch from '../../services/fetch';
 
-type Programs = {
+type Program = {
   +id: number,
   +name: string,
 };
 
-export function fetchPrograms(): Promise<Programs[]> {
-  return fetch('/Program/programs/');
+const url = '/Program/programs/';
+export function fetchPrograms(): Promise<Program[]> {
+  return fetch(url);
 }
 
 export const FETCH_PROGRAMS_KEY = 'FETCH_PROGRAMS';
+export const CREATE_PROGRAM_KEY = 'CREATE_PROGRAM';
+
+export function createProgram(name: string): Promise<Program> {
+  return fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({ name }),
+  });
+}

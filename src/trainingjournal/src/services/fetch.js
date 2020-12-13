@@ -17,7 +17,11 @@ type FetchOptions = {|
 
 export default async function fetch<P>(url: string, options?: $Exact<FetchOptions>): Promise<P> {
   const token = localStorage.getItem(TOKEN_KEY);
-  const headers = { ...options?.headers };
+  // $FlowExpectedError[cannot-spread-inexact]
+  const headers = {
+    'content-type': 'application/json',
+    ...options?.headers,
+  };
   if (token != null) {
     // $FlowExpectedError[prop-missing]
     headers.Authorization = `Token ${token}`;
