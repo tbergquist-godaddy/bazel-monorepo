@@ -79,7 +79,7 @@ jest_test(
         "@npm//@babel/runtime",
         "@npm//mockdate",
         "//src/graphql-test-utils:graphql_test_utils",
-        "@npm//msw",
+        "//src/mock-server:mock_server",
     ],
 )
 
