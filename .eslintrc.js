@@ -30,6 +30,7 @@ module.exports = {
           '**/mocks/**/*.js',
           '**/*.stories.js',
           'src/app1/webpack.config.js',
+          '**/test-utils/**/*.js',
         ],
       },
     ],

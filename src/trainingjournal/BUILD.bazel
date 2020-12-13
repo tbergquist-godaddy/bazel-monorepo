@@ -1,5 +1,6 @@
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
 load("//:eslint/eslint.bzl", "eslint")
+load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
 
 webpack_dev_server(
@@ -18,8 +19,8 @@ webpack_dev_server(
         "**/*.js",
         "**/*.json",
         "**/*.ico",
+        "**/.env",
     ]) + get_deps() + [
-        ":.env",
         ":src/app.css",
         "//:babel.config.js",
         ":.babelrc.js",
@@ -32,4 +33,34 @@ eslint(
         ":src",
     ],
     entry = ":src",
+)
+
+jest_test(
+    name = "test",
+    srcs = [
+        "//:babel.config.js",
+        ":.babelrc.js",
+    ] + glob([
+        "src/**/*.js",
+        "mocks/**/*.js",
+        "scripts/**/*.js",
+        "test-utils/**/*.js",
+        "**/*.json",
+    ]),
+    jest_config = ":jest.config.js",
+    tags = [
+        # Need to set the pwd to avoid jest needing a runfiles helper
+        # Windows users with permissions can use --enable_runfiles
+        # to make this test work
+        "no-bazelci-windows",
+        # TODO: why does this fail almost all the time, but pass on local Mac?
+        "no-bazelci-mac",
+    ],
+    deps = get_deps() + [
+        "@npm//@testing-library/react",
+        "@npm//@testing-library/user-event",
+        "@npm//@testing-library/jest-dom",
+        "//jest:preset",
+        "@npm//msw",
+    ],
 )
