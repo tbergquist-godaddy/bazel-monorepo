@@ -1,7 +1,48 @@
+load("@npm//http-server:index.bzl", "http_server")
+load("@npm//vercel:index.bzl", "vercel")
+load("@npm//webpack-cli:index.bzl", "webpack_cli")
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
 load("//:eslint/eslint.bzl", "eslint")
 load("//jest:jest.bzl", "jest_test")
 load(":dependencies.bzl", "get_deps")
+
+webpack_cli(
+    name = "public",
+    args = [
+        "$(execpath src/index.js)",
+        "--config",
+        "$(execpath webpack.config.js)",
+        "--output-path",
+        "$(@D)",
+        "--mode",
+        "production",
+    ],
+    data = glob([
+        "**/*.js",
+        "**/*.json",
+        "**/*.ico",
+        "**/.env",
+    ]) + get_deps() + [
+        ":src/app.css",
+        "//:babel.config.js",
+        ":.babelrc.js",
+        "@npm//dotenv",
+    ],
+    output_dir = True,
+)
+
+vercel(
+    name = "deploy",
+    args = [
+        "./src/trainingjournal",
+        "--prod",
+        "--confirm",
+    ],
+    data = [
+        ":public",
+        ":vercel.json",
+    ],
+)
 
 webpack_dev_server(
     name = "dev_server",
@@ -62,5 +103,18 @@ jest_test(
         "@npm//@testing-library/jest-dom",
         "//jest:preset",
         "//src/mock-server:mock_server",
+    ],
+)
+
+http_server(
+    name = "server",
+    args = [
+        "src/trainingjournal/public/",
+        "-o",
+        "-p",
+        "8001",
+    ],
+    data = [
+        ":public",
     ],
 )
