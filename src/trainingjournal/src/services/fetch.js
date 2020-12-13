@@ -15,16 +15,23 @@ type FetchOptions = {|
   +retryDelays?: $ReadOnlyArray<number>,
 |};
 
+type Headers = {
+  'Content-Type'?: string,
+  'Authorization'?: string,
+  ...
+};
+
 export default async function fetch<P>(url: string, options?: $Exact<FetchOptions>): Promise<P> {
   const token = localStorage.getItem(TOKEN_KEY);
-  // $FlowExpectedError[cannot-spread-inexact]
-  const headers = {
-    'content-type': 'application/json',
+
+  const headers: Headers = {
     ...options?.headers,
   };
   if (token != null) {
-    // $FlowExpectedError[prop-missing]
     headers.Authorization = `Token ${token}`;
+  }
+  if (headers['Content-Type'] == null) {
+    headers['Content-Type'] = 'application/json';
   }
 
   const res = await adeiraFetch(`${BASE_URL}${url}`, {
