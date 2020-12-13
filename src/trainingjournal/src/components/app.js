@@ -2,18 +2,18 @@
 
 import { type Node, useEffect } from 'react';
 import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
-import { Spinner, Navbar, Toast } from '@tbergq/components';
+import { Spinner, Navbar, Toast, breakpoints } from '@tbergq/components';
 import { createHashHistory } from 'history';
 import { init, IntlVariations } from 'fbt';
-import { QueryCache, ReactQueryCacheProvider } from 'react-query';
+import { ReactQueryCacheProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
+import { create } from '@adeira/sx';
 
-import Routes from './router';
+import Routes, { cache as queryCache } from './router';
 import getLanguage from './get-language';
 import translations from '../../translatedFbts.json';
 
 const router = createRouter(Routes, createHashHistory());
-const queryCache = new QueryCache();
 
 export default function App(): Node {
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function App(): Node {
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
           <Navbar brand="Trainingjournal" />
-          <main>
+          <main className={styles('container')}>
             <RouterRenderer loader={<Spinner />} />
             <Toast />
           </main>
@@ -43,3 +43,19 @@ export default function App(): Node {
     </ReactQueryCacheProvider>
   );
 }
+
+const styles = create({
+  container: {
+    padding: 'var(--space-large)',
+    margin: '0 auto',
+    [breakpoints.tablet]: {
+      width: '750px',
+    },
+    [breakpoints.desktop]: {
+      width: '970px',
+    },
+    [breakpoints.largeDesktop]: {
+      width: '1170px',
+    },
+  },
+});

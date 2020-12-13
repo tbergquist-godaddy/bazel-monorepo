@@ -1,13 +1,10 @@
 // @flow
 
-import type { Node } from 'react';
+import type { ComponentType } from 'react';
+import { Link } from '@tbergq/router';
 
-type Props = {
-  +prepared: {
-    +lol: string,
-  },
-};
+type Props = {};
 
-export default function Home({ prepared }: Props): Node {
-  return `welcome home ${JSON.stringify(prepared)}`;
-}
+export default (function Home() {
+  return <Link to="/programs">programs</Link>;
+}: ComponentType<Props>);
