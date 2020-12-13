@@ -52,7 +52,6 @@ jest_test(
         ":scripts/setup-jest.js",
     ] + glob([
         "src/**/*.js",
-        "mocks/*.js",
         "**/*.json",
     ]),
     jest_config = ":jest.config.js",
