@@ -3,7 +3,7 @@ load("@build_bazel_rules_nodejs//internal/js_library:js_library.bzl", "js_librar
 js_library(
     name = "preset",
     package_name = "@tbergq/jest-preset",
-    srcs = [
+    srcs = glob(["mocks/**/*.js"]) + [
         "jest-preset.js",
         "package.json",
         "setup-jest.js",
