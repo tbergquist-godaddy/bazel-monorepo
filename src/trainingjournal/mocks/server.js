@@ -1,9 +1,9 @@
 // @flow
 
-import { setupServer } from 'msw/node';
+import { createMockServer, type MockServer } from '@tbergq/mock-server';
 
 import handlers from './handlers';
 
-const server: $FlowFixMe = setupServer(...handlers);
+const server: MockServer = createMockServer(handlers);
 
 export default server;

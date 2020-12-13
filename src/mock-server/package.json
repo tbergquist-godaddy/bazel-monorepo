@@ -1,0 +1,12 @@
+{
+  "name": "@tbergq/mock-server",
+  "version": "0.1.1",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "msw": "^0.24.2"
+  }
+}
