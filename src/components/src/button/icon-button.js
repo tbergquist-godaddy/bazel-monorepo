@@ -8,11 +8,12 @@ type Props = {
   +'children': Element<any>,
   +'onClick'?: () => void,
   +'aria-label': string,
+  +'size'?: 'normal' | 'large',
 };
 
-export default function IconButton({ children, ...rest }: Props): Node {
+export default function IconButton({ children, size = 'normal', ...rest }: Props): Node {
   return (
-    <button {...rest} type="button" className={styles('button', 'primary', 'normal')}>
+    <button {...rest} type="button" className={styles('button', 'primary', size)}>
       {cloneElement(children, { className: styles('icon') })}
     </button>
   );
@@ -42,9 +43,14 @@ const styles = create({
     },
   },
   normal: {
-    fontSize: '1.6rem',
+    fontSize: '2rem',
     height: '4rem',
     width: '4rem',
+  },
+  large: {
+    fontSize: '3rem',
+    height: '6rem',
+    width: '6rem',
   },
   icon: {
     position: 'absolute',

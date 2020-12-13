@@ -1,6 +1,7 @@
 // @flow
 
 export { default as Alert } from './alert';
+export { default as Box } from './box/box';
 export { default as breakpoints } from './breakpoints';
 export { default as Button } from './button/button';
 export { default as Card } from './card/card';
