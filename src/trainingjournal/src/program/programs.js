@@ -7,8 +7,10 @@ import fbt from 'fbt';
 
 import { FETCH_PROGRAMS_KEY, fetchPrograms } from './api/fetch-programs';
 import ProgramsList from './programs-list/programs-list';
+import useIsLoggedIn from '../services/use-is-logged-in';
 
 export default function Programs(): Node {
+  useIsLoggedIn();
   const { data } = useQuery(FETCH_PROGRAMS_KEY, fetchPrograms, {
     suspense: true,
     refetchOnWindowFocus: false,
