@@ -50,5 +50,6 @@ module.name_mapper='^@tbergq/redis-client' -> '<PROJECT_ROOT>/src/redis-client/s
 module.name_mapper='^@tbergq/router' -> '<PROJECT_ROOT>/src/router/src'
 module.name_mapper='^@tbergq/graphql-test-utils' -> '<PROJECT_ROOT>/src/graphql-test-utils/src'
 module.name_mapper='^@tbergq/webpack-config' -> '<PROJECT_ROOT>/src/webpack-config/src'
+module.name_mapper='^@tbergq/mock-server' -> '<PROJECT_ROOT>/src/mock-server/src'
 
 experimental.const_params=true

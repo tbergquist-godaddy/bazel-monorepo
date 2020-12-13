@@ -14,160 +14,23 @@
  */
 
 declare module 'msw' {
-  declare module.exports: any;
-}
-
-/**
- * We include stubs for each file inside this npm package in case you need to
- * require those files directly. Feel free to delete any files that aren't
- * needed.
- */
-declare module 'msw/cli' {
-  declare module.exports: any;
-}
-
-declare module 'msw/cli/init' {
-  declare module.exports: any;
-}
-
-declare module 'msw/cli/invariant' {
-  declare module.exports: any;
-}
-
-declare module 'msw/config/constants' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/errors-deps' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/fetch-deps' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/getCallFrame-deps' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/graphql' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/index-deps' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/index2' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/mockServiceWorker' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/rest-deps' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/rest' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/esm/xml-deps' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/umd' {
-  declare module.exports: any;
-}
-
-declare module 'msw/lib/umd/mockServiceWorker' {
-  declare module.exports: any;
-}
-
-declare module 'msw/native' {
-  declare module.exports: any;
+  declare type RequestHandler = $FlowFixMe;
+  declare export type Handler = (req: any, res: any, ctx: any) => $FlowFixMe;
+  declare type HandlerFunction = (url: string, handler: Handler) => RequestHandler;
+  declare type Rest = {
+    get: HandlerFunction,
+    post: HandlerFunction
+  }
+  declare export var rest: Rest;
 }
 
 declare module 'msw/node' {
-  declare module.exports: any;
-}
+  import type { RequestHandler } from 'msw';
+  declare export type Server = {
+    listen: () => Promise<void>,
+    resetHandlers: () => Promise<void>,
+    close: () => Promise<void>,
 
-// Filename aliases
-declare module 'msw/cli/index' {
-  declare module.exports: $Exports<'msw/cli'>;
-}
-declare module 'msw/cli/index.js' {
-  declare module.exports: $Exports<'msw/cli'>;
-}
-declare module 'msw/cli/init.js' {
-  declare module.exports: $Exports<'msw/cli/init'>;
-}
-declare module 'msw/cli/invariant.js' {
-  declare module.exports: $Exports<'msw/cli/invariant'>;
-}
-declare module 'msw/config/constants.js' {
-  declare module.exports: $Exports<'msw/config/constants'>;
-}
-declare module 'msw/lib/esm/errors-deps.js' {
-  declare module.exports: $Exports<'msw/lib/esm/errors-deps'>;
-}
-declare module 'msw/lib/esm/fetch-deps.js' {
-  declare module.exports: $Exports<'msw/lib/esm/fetch-deps'>;
-}
-declare module 'msw/lib/esm/getCallFrame-deps.js' {
-  declare module.exports: $Exports<'msw/lib/esm/getCallFrame-deps'>;
-}
-declare module 'msw/lib/esm/graphql.js' {
-  declare module.exports: $Exports<'msw/lib/esm/graphql'>;
-}
-declare module 'msw/lib/esm/index-deps.js' {
-  declare module.exports: $Exports<'msw/lib/esm/index-deps'>;
-}
-declare module 'msw/lib/esm/index' {
-  declare module.exports: $Exports<'msw/lib/esm'>;
-}
-declare module 'msw/lib/esm/index.js' {
-  declare module.exports: $Exports<'msw/lib/esm'>;
-}
-declare module 'msw/lib/esm/index2.js' {
-  declare module.exports: $Exports<'msw/lib/esm/index2'>;
-}
-declare module 'msw/lib/esm/mockServiceWorker.js' {
-  declare module.exports: $Exports<'msw/lib/esm/mockServiceWorker'>;
-}
-declare module 'msw/lib/esm/rest-deps.js' {
-  declare module.exports: $Exports<'msw/lib/esm/rest-deps'>;
-}
-declare module 'msw/lib/esm/rest.js' {
-  declare module.exports: $Exports<'msw/lib/esm/rest'>;
-}
-declare module 'msw/lib/esm/xml-deps.js' {
-  declare module.exports: $Exports<'msw/lib/esm/xml-deps'>;
-}
-declare module 'msw/lib/umd/index' {
-  declare module.exports: $Exports<'msw/lib/umd'>;
-}
-declare module 'msw/lib/umd/index.js' {
-  declare module.exports: $Exports<'msw/lib/umd'>;
-}
-declare module 'msw/lib/umd/mockServiceWorker.js' {
-  declare module.exports: $Exports<'msw/lib/umd/mockServiceWorker'>;
-}
-declare module 'msw/native/index' {
-  declare module.exports: $Exports<'msw/native'>;
-}
-declare module 'msw/native/index.js' {
-  declare module.exports: $Exports<'msw/native'>;
-}
-declare module 'msw/node/index' {
-  declare module.exports: $Exports<'msw/node'>;
-}
-declare module 'msw/node/index.js' {
-  declare module.exports: $Exports<'msw/node'>;
+  };
+  declare export var setupServer: any;
 }
