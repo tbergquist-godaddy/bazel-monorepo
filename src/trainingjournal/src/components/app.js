@@ -1,7 +1,7 @@
 // @flow
 
 import { type Node, useEffect } from 'react';
-import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
+import { RouterRenderer, RoutingContext, createRouter, Link } from '@tbergq/router';
 import { Spinner, Navbar, Toast, breakpoints } from '@tbergq/components';
 import { createHashHistory } from 'history';
 import { init, IntlVariations } from 'fbt';
@@ -33,7 +33,9 @@ export default function App(): Node {
     <ReactQueryCacheProvider queryCache={queryCache}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
-          <Navbar brand="Trainingjournal" />
+          <header>
+            <Navbar brand={<Link to="/">Trainingjournal</Link>} />
+          </header>
           <main className={styles('container')}>
             <RouterRenderer loader={<Spinner />} />
             <Toast />

@@ -6,7 +6,7 @@ import { Navbar, breakpoints, Toast, Spinner } from '@tbergq/components';
 import { init, IntlVariations } from 'fbt';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import { RecoilRoot } from 'recoil';
-import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
+import { RouterRenderer, RoutingContext, createRouter, Link } from '@tbergq/router';
 import { createHashHistory } from 'history';
 
 import translations from '../../translatedFbts.json';
@@ -35,7 +35,9 @@ export default function App(): Node {
     <RelayEnvironmentProvider environment={environment}>
       <RecoilRoot>
         <RoutingContext.Provider value={router.context}>
-          <Navbar brand="Team assistant" />
+          <header>
+            <Navbar brand={<Link to="/">Team assistant</Link>} />
+          </header>
           <main data-testid="app" className={styles('container')}>
             <RouterRenderer loader={<Spinner />} />
             <Toast />
