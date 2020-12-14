@@ -11,7 +11,7 @@ export { default as IconButton } from './button/icon-button';
 export { default as Input } from './input/input';
 export { default as Link } from './link';
 export { default as Modal } from './modal/modal';
-export { default as Navbar } from './navbar';
+export { default as Navbar } from './navbar/navbar';
 export { default as Spinner } from './spinner/spinner';
 export { default as Text } from './text';
 export { default as Toast } from './toast/toast';

@@ -1,0 +1,4 @@
+.Navbar a {
+  color: var(--color-white);
+  text-decoration: none;
+}
