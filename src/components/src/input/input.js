@@ -49,6 +49,7 @@ const styles = create({
     ':focus': {
       boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
     },
+    'fontSize': 'inherit',
   },
   inputError: {
     'border': '1px solid var(--color-error)',
