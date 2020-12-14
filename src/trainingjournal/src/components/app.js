@@ -1,8 +1,8 @@
 // @flow
 
-import { type Node, useEffect } from 'react';
-import { RouterRenderer, RoutingContext, createRouter, Link } from '@tbergq/router';
-import { Spinner, Navbar, Toast, breakpoints } from '@tbergq/components';
+import { type Node, useEffect, lazy, Suspense } from 'react';
+import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
+import { Spinner, Toast, breakpoints } from '@tbergq/components';
 import { createHashHistory } from 'history';
 import { init, IntlVariations } from 'fbt';
 import { ReactQueryCacheProvider } from 'react-query';
@@ -13,6 +13,7 @@ import Routes, { cache as queryCache } from './router';
 import getLanguage from './get-language';
 import translations from '../../translatedFbts.json';
 
+const Navbar = lazy(() => import('./navbar'));
 const router = createRouter(Routes, createHashHistory());
 
 export default function App(): Node {
@@ -34,7 +35,9 @@ export default function App(): Node {
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
           <header>
-            <Navbar brand={<Link to="/">Trainingjournal</Link>} />
+            <Suspense fallback="">
+              <Navbar />
+            </Suspense>
           </header>
           <main className={styles('container')}>
             <RouterRenderer loader={<Spinner />} />

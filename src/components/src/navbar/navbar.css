@@ -2,3 +2,9 @@
   color: var(--color-white);
   text-decoration: none;
 }
+
+.Navbar a:hover,
+.Navbar a:focus {
+  text-decoration: underline;
+  outline: none;
+}

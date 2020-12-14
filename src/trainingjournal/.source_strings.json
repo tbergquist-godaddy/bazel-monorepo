@@ -2,6 +2,20 @@
  "phrases": [
   {
    "hashToText": {
+    "ah/Fb+6cIA7oSPMwHmBq9w==": "Home"
+   },
+   "filepath": "src/trainingjournal/src/components/navbar.js",
+   "line_beg": 17,
+   "col_beg": 12,
+   "line_end": 17,
+   "col_end": 51,
+   "desc": "Home navbar link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Home"
+  },
+  {
+   "hashToText": {
     "a2At0ljNpkm4ytwYDdtS0g==": "Username"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
@@ -69,6 +83,104 @@
    "project": "",
    "type": "text",
    "jsfbt": "Trainingjournal login"
+  },
+  {
+   "hashToText": {
+    "vzV2WPwTKeFrgBiAWtJ9zw==": "Name"
+   },
+   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
+   "line_beg": 13,
+   "col_beg": 13,
+   "line_end": 13,
+   "col_end": 55,
+   "desc": "add program form name label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Name"
+  },
+  {
+   "hashToText": {
+    "H0c1z95VDXyDCnqI4JUy6w==": "Program was successfully created"
+   },
+   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
+   "line_beg": 32,
+   "col_beg": 24,
+   "line_end": 32,
+   "col_end": 88,
+   "desc": "program created toast",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Program was successfully created"
+  },
+  {
+   "hashToText": {
+    "+scs8Zi3pFK1MZqhQc/SmA==": "Failed to create program"
+   },
+   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
+   "line_beg": 36,
+   "col_beg": 24,
+   "line_end": 36,
+   "col_end": 78,
+   "desc": "program error toast",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Failed to create program"
+  },
+  {
+   "hashToText": {
+    "IB6QrXcNHRBgJLTtvDm09w==": "Create program"
+   },
+   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
+   "line_beg": 47,
+   "col_beg": 10,
+   "line_end": 47,
+   "col_end": 65,
+   "desc": "create program heading",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Create program"
+  },
+  {
+   "hashToText": {
+    "9T5ateRdTlFus1C1kY9Nxw==": "Create team"
+   },
+   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
+   "line_beg": 56,
+   "col_beg": 12,
+   "line_end": 56,
+   "col_end": 60,
+   "desc": "create team button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Create team"
+  },
+  {
+   "hashToText": {
+    "vhwfjPHP63tTgROVlkfhEQ==": "Add program"
+   },
+   "filepath": "src/trainingjournal/src/program/components/add-button.js",
+   "line_beg": 14,
+   "col_beg": 46,
+   "line_end": 14,
+   "col_end": 90,
+   "desc": "Add program aria label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Add program"
+  },
+  {
+   "hashToText": {
+    "+UKbni7VmCF89HHKuxmAzQ==": "Programs"
+   },
+   "filepath": "src/trainingjournal/src/program/programs.js",
+   "line_beg": 25,
+   "col_beg": 10,
+   "line_end": 25,
+   "col_end": 53,
+   "desc": "programs heading",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Programs"
   }
  ],
  "childParentMappings": {}

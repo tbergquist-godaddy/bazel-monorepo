@@ -46,6 +46,7 @@ const styles = create({
     'fontFamily': 'inherit',
     'transition': 'transform .3s',
     'cursor': 'pointer',
+    'fontSize': 'inherit',
     ':hover': {
       transform: 'translateY(-3px)',
     },
