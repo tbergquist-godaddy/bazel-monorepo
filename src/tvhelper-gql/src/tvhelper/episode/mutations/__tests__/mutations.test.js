@@ -15,7 +15,7 @@ describe('episode mutations', () => {
     const user = await UserRepository.createUser({
       password: 'lol',
       username: 'lol',
-      email: 'lol',
+      email: 'lol1@lol.no',
     });
     userId = user._id;
     await WatchedEpisodeRepository.markAsWatched(user._id, 6);

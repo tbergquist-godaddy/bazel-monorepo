@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import { fbt } from 'fbt';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useMutation, useQueryCache } from 'react-query';
+import { useMutation, useQueryClient } from 'react-query';
 
 import { createProgram, FETCH_PROGRAMS_KEY } from '../api/fetch-programs';
 
@@ -22,11 +22,11 @@ type Props = {
 
 export default function AddProgramForm({ closeModal }: Props): Node {
   const showToast = useShowToast();
-  const cache = useQueryCache();
+  const cache = useQueryClient();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
-  const [mutate, { isLoading }] = useMutation(createProgram, {
+  const { mutate, isLoading } = useMutation(createProgram, {
     onSuccess: () => {
       cache.invalidateQueries(FETCH_PROGRAMS_KEY);
       showToast({ text: fbt('Program was successfully created', 'program created toast') });
