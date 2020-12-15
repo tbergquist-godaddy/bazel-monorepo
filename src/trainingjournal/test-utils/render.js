@@ -5,15 +5,15 @@ import { RecoilRoot } from 'recoil';
 import { RoutingContext, createRouter } from '@tbergq/router';
 import { createHashHistory } from 'history';
 import { Toast } from '@tbergq/components';
-import { ReactQueryCacheProvider } from 'react-query';
+import { QueryClientProvider } from 'react-query';
 
-import Routes, { cache } from '../src/components/router';
+import Routes, { queryClient } from '../src/components/router';
 
 const router = createRouter(Routes, createHashHistory());
 
 export default function render(ui: any): RenderResult<> {
   return originalRender(
-    <ReactQueryCacheProvider queryCache={cache}>
+    <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
           <>
@@ -22,6 +22,6 @@ export default function render(ui: any): RenderResult<> {
           </>
         </RecoilRoot>
       </RoutingContext.Provider>
-    </ReactQueryCacheProvider>,
+    </QueryClientProvider>,
   );
 }

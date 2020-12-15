@@ -18,6 +18,7 @@ export default function Programs(): Node {
     suspense: true,
     refetchOnWindowFocus: false,
   });
+
   return (
     <>
       <Box flex={true} alignItems="center" justifyContent="space-between">

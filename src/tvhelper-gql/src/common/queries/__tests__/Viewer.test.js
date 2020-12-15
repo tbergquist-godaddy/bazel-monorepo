@@ -13,7 +13,7 @@ beforeEach(async () => {
   const user = await UserModel.createUser({
     password: 'lol',
     username: 'lol',
-    email: 'lol',
+    email: 'lol2@lol.no',
   });
   userId = user._id;
 });

@@ -28,7 +28,7 @@ export default function LoginForm(): Node {
   const navigate = useNavigate();
   const showToast = useShowToast();
 
-  const [mutate, { isLoading }] = useMutation(login, {
+  const { mutate, isLoading } = useMutation(login, {
     onSuccess: (data) => {
       if (data.token) {
         localStorage.setItem(TOKEN_KEY, data.token);

@@ -5,11 +5,11 @@ import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
 import { Spinner, Toast, breakpoints } from '@tbergq/components';
 import { createHashHistory } from 'history';
 import { init, IntlVariations } from 'fbt';
-import { ReactQueryCacheProvider } from 'react-query';
+import { QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
 import { create } from '@adeira/sx';
 
-import Routes, { cache as queryCache } from './router';
+import Routes, { queryClient } from './router';
 import getLanguage from './get-language';
 import translations from '../../translatedFbts.json';
 
@@ -31,7 +31,7 @@ export default function App(): Node {
     });
   }, []);
   return (
-    <ReactQueryCacheProvider queryCache={queryCache}>
+    <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
           <header>
@@ -45,7 +45,7 @@ export default function App(): Node {
           </main>
         </RecoilRoot>
       </RoutingContext.Provider>
-    </ReactQueryCacheProvider>
+    </QueryClientProvider>
   );
 }
 
