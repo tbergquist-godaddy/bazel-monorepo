@@ -18,7 +18,10 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          path: node_modules
+          path: |
+            node_modules
+            ~/.cache/bazel-repo
+            ~/.cache/bazel-disk
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
       # TODO: cache, google storage bucket 🤔 https://docs.bazel.build/versions/master/remote-caching.html
