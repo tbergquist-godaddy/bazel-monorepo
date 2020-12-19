@@ -6,7 +6,15 @@ import { QueryClient } from 'react-query';
 
 import { FETCH_PROGRAMS_KEY, fetchPrograms } from '../program/api/fetch-programs';
 
-export const queryClient: QueryClient = new QueryClient();
+export const queryClient: QueryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Infinity,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
 const routes: RouteConfig[] = [
   {
     component: JSResource('Login', () => import('../login/login')),

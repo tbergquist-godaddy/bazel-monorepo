@@ -6,9 +6,9 @@
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
    "line_beg": 17,
-   "col_beg": 12,
+   "col_beg": 6,
    "line_end": 17,
-   "col_end": 51,
+   "col_end": 45,
    "desc": "Home navbar link",
    "project": "",
    "type": "text",
@@ -16,12 +16,26 @@
   },
   {
    "hashToText": {
+    "83QnOu6ehUkb+Lgc8RdJog==": "Hi {username}"
+   },
+   "filepath": "src/trainingjournal/src/components/navbar.js",
+   "line_beg": 25,
+   "col_beg": 15,
+   "line_end": 25,
+   "col_end": 76,
+   "desc": "user greeting",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Hi {username}"
+  },
+  {
+   "hashToText": {
     "a2At0ljNpkm4ytwYDdtS0g==": "Username"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 15,
+   "line_beg": 16,
    "col_beg": 17,
-   "line_end": 15,
+   "line_end": 16,
    "col_end": 55,
    "desc": "username form label",
    "project": "",
@@ -33,9 +47,9 @@
     "b1T19vW9/DoBPue7cIGh3Q==": "Password"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 16,
+   "line_beg": 17,
    "col_beg": 17,
-   "line_end": 16,
+   "line_end": 17,
    "col_end": 55,
    "desc": "password form label",
    "project": "",
@@ -47,9 +61,9 @@
     "CBsKATgppv4k6y046G9MRQ==": "Wrong username or password"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 17,
+   "line_beg": 18,
    "col_beg": 26,
-   "line_end": 17,
+   "line_end": 18,
    "col_end": 82,
    "desc": "Login error message",
    "project": "",
@@ -61,9 +75,9 @@
     "F3p8DbdliugG4CTKslAYqA==": "Login"
    },
    "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 68,
+   "line_beg": 71,
    "col_beg": 10,
-   "line_end": 68,
+   "line_end": 71,
    "col_end": 46,
    "desc": "Login button",
    "project": "",
@@ -173,9 +187,9 @@
     "+UKbni7VmCF89HHKuxmAzQ==": "Programs"
    },
    "filepath": "src/trainingjournal/src/program/programs.js",
-   "line_beg": 25,
+   "line_beg": 26,
    "col_beg": 10,
-   "line_end": 25,
+   "line_end": 26,
    "col_end": 53,
    "desc": "programs heading",
    "project": "",

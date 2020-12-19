@@ -6,11 +6,12 @@ import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { Input, FormGroup, Button, useShowToast } from '@tbergq/components';
-import { useMutation } from 'react-query';
+import { useMutation, useQueryClient } from 'react-query';
 import { useNavigate } from '@tbergq/router';
 
 import { login } from './api';
 import { TOKEN_KEY } from '../constants';
+import { FETCH_USER_DETAILS_KEY } from '../account/api/fetch-user-details';
 
 const username = fbt('Username', 'username form label');
 const password = fbt('Password', 'password form label');
@@ -22,6 +23,7 @@ const schema = object().shape({
 });
 
 export default function LoginForm(): Node {
+  const cache = useQueryClient();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
@@ -32,6 +34,7 @@ export default function LoginForm(): Node {
     onSuccess: (data) => {
       if (data.token) {
         localStorage.setItem(TOKEN_KEY, data.token);
+        cache.invalidateQueries(FETCH_USER_DETAILS_KEY);
         navigate('/home');
       }
     },

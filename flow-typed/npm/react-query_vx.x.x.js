@@ -14,11 +14,21 @@
  */
 
 declare module 'react-query' {
-  declare type QueryConfig = { ... };
   declare type FetchFunction = Function;
+  declare type QueryConfig = {
+    staleTime?: number,
+    refetchOnWindowFocus?: boolean,
+    suspense?: boolean,
+  }
+  declare type QueryClientConfig = {
+    defaultOptions?: {
+      queries?: QueryConfig,
+      ...
+    }
+  }
 
   declare export class QueryClient {
-    constructor(): this;
+    constructor(config?: QueryClientConfig): this;
     prefetchQuery: (key: string, fetchFn: FetchFunction, config: QueryConfig) => void;
     invalidateQueries: (key: string) => void;
   }

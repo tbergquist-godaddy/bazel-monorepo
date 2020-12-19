@@ -8,8 +8,6 @@ import environment from '../relay/environment';
 import HomeQuery from '../home/__generated__/homeQuery.graphql';
 import DashboardQuery from '../dashboard/__generated__/dashboardQuery.graphql';
 
-const queryLoader = loadQuery.loadQuery;
-
 const routes: RouteConfig[] = [
   {
     component: JSResource('Home', () => import('../home/home')),
@@ -17,7 +15,7 @@ const routes: RouteConfig[] = [
     exact: true,
     prepare: () => {
       return {
-        query: queryLoader(
+        query: loadQuery(
           environment,
           HomeQuery,
           {},
@@ -44,7 +42,7 @@ const routes: RouteConfig[] = [
     exact: true,
     prepare: () => {
       return {
-        query: queryLoader(
+        query: loadQuery(
           environment,
           DashboardQuery,
           {},
