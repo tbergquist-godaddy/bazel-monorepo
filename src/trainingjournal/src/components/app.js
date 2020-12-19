@@ -15,6 +15,7 @@ import translations from '../../translatedFbts.json';
 
 const Navbar = lazy(() => import('./navbar'));
 const router = createRouter(Routes, createHashHistory());
+const ReactQueryDevtoolsPanel = lazy(() => import('./react-query-devtools'));
 
 export default function App(): Node {
   useEffect(() => {
@@ -42,6 +43,11 @@ export default function App(): Node {
           <main className={styles('container')}>
             <RouterRenderer loader={<Spinner />} />
             <Toast />
+            {__DEV__ && (
+              <Suspense fallback="">
+                <ReactQueryDevtoolsPanel />
+              </Suspense>
+            )}
           </main>
         </RecoilRoot>
       </RoutingContext.Provider>
