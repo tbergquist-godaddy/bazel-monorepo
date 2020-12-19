@@ -27,10 +27,12 @@ declare module 'react-query' {
     }
   }
 
+  declare type CacheKey = string | [string, string | number];
+
   declare export class QueryClient {
     constructor(config?: QueryClientConfig): this;
-    prefetchQuery: (key: string, fetchFn: FetchFunction, config: QueryConfig) => void;
-    invalidateQueries: (key: string) => void;
+    prefetchQuery: (key: CacheKey, fetchFn: FetchFunction, config: QueryConfig) => void;
+    invalidateQueries: (key: CacheKey) => void;
   }
 
   declare export var QueryClientProvider: React$ComponentType<{
@@ -39,7 +41,7 @@ declare module 'react-query' {
   }>;
 
   declare export function useQuery<T>(
-    key: string,
+    key: CacheKey,
     fn: FetchFunction,
     config: QueryConfig,
   ): { data: T };
