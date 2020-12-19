@@ -38,7 +38,7 @@ const styles = create({
   },
   h4: {
     fontSize: '2.5rem',
-    margin: 'var(--space-medium) 0',
+    margin: 'var(--space-normal) 0',
   },
   h5: {
     fontSize: '2rem',

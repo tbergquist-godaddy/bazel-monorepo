@@ -2,6 +2,7 @@
 
 import type { Node } from 'react';
 import { create } from '@adeira/sx';
+import { Link } from '@tbergq/router';
 
 type Props = {
   +programs: $ReadOnlyArray<{
@@ -12,17 +13,20 @@ type Props = {
 
 export default function ProgramsList({ programs }: Props): Node {
   return (
-    <div>
+    <ul className={styles('list')}>
       {programs.map((program) => (
-        <div className={styles('listItem')} key={program.id}>
-          {program.name}
-        </div>
+        <li className={styles('listItem')} key={program.id}>
+          <Link to={`/programs/${program.id}`}>{program.name}</Link>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
 const styles = create({
+  list: {
+    listStyle: 'none',
+  },
   listItem: {
     'padding': 'var(--space-large)',
     ':not(:last-of-type)': {

@@ -4,7 +4,12 @@ import { JSResource } from '@tbergq/router';
 import { type RouteConfig } from 'react-router-config';
 import { QueryClient } from 'react-query';
 
-import { FETCH_PROGRAMS_KEY, fetchPrograms } from '../program/api/fetch-programs';
+import {
+  FETCH_PROGRAMS_KEY,
+  fetchPrograms,
+  fetchProgram,
+  FETCH_PROGRAM_KEY,
+} from '../program/api/fetch-programs';
 
 export const queryClient: QueryClient = new QueryClient({
   defaultOptions: {
@@ -32,6 +37,17 @@ const routes: RouteConfig[] = [
     exact: true,
     prepare: () => {
       queryClient.prefetchQuery(FETCH_PROGRAMS_KEY, fetchPrograms, { suspense: true });
+      return {};
+    },
+  },
+  {
+    component: JSResource('Program', () => import('../program/program')),
+    path: '/programs/:id',
+    exact: true,
+    prepare: (data) => {
+      queryClient.prefetchQuery([FETCH_PROGRAM_KEY, data.id], () => fetchProgram(data.id), {
+        suspense: true,
+      });
       return {};
     },
   },

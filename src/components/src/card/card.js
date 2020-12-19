@@ -13,7 +13,7 @@ export default function Card({ children }: Props): Node {
 
 const styles = create({
   card: {
-    borderRadius: 'var(--border-radius-normal)',
+    borderRadius: 'var(--border-radius-large)',
     boxShadow: '0 0.5rem 1rem rgba(0,0,0, 0.2)',
     padding: 'var(--space-normal)',
   },
