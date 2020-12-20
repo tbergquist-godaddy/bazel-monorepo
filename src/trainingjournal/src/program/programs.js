@@ -10,6 +10,7 @@ import ProgramsList from './programs-list/programs-list';
 import useIsLoggedIn from '../services/use-is-logged-in';
 import AddButton from './components/add-button';
 import AddProgram from './add-program/add-program';
+import BackButton from '../components/back-button';
 
 export default function Programs(): Node {
   const [showAddProgram, setShowAddProgram] = useState(false);
@@ -30,6 +31,9 @@ export default function Programs(): Node {
       <ProgramsList programs={data} />
 
       <AddProgram isVisible={showAddProgram} onClose={() => setShowAddProgram(false)} />
+      <Box marginTop="normal">
+        <BackButton to="/home" />
+      </Box>
     </>
   );
 }
