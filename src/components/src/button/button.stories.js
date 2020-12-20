@@ -19,6 +19,12 @@ export const small = (): Node => (
   </Button>
 );
 
+export const white = (): Node => (
+  <Button variant="white" onClick={action('click')}>
+    White
+  </Button>
+);
+
 export default {
   component: Button,
   title: 'Button',

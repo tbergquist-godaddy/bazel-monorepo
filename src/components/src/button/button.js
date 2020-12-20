@@ -7,7 +7,7 @@ import Spinner from '../spinner/spinner';
 
 type Props = {
   +'children': Node,
-  +'variant'?: 'primary' | 'secondary',
+  +'variant'?: 'primary' | 'secondary' | 'white',
   +'type'?: 'button' | 'submit',
   +'onClick'?: () => void,
   +'isLoading'?: boolean,
@@ -70,6 +70,15 @@ const styles = create({
     'backgroundColor': 'var(--color-secondary)',
     ':focus': {
       boxShadow: 'var(--color-secondary-focus) 0px 0px 0px 0.2rem',
+    },
+  },
+  white: {
+    'backgroundColor': 'var(--color-white)',
+    'color': 'var(--color-black)',
+    'border': '1px solid var(--color-gray-light)',
+    ':focus': {
+      boxShadow: 'var(--color-gray-light-focus) 0px 0px 0px 0.2rem',
+      border: 'none',
     },
   },
 });
