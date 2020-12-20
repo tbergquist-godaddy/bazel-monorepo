@@ -8,3 +8,15 @@
   text-decoration: underline;
   outline: none;
 }
+
+.Navbar .Navbar__expanded .Navbar__expanded-link-wrapper {
+  padding: var(--space-normal) 0;
+}
+
+.Navbar .Navbar__expanded .Navbar__expanded-link-wrapper:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.Navbar .Navbar__Burger-wrapper button:focus {
+  background-color: rgba(0,0,0, .2);
+}
