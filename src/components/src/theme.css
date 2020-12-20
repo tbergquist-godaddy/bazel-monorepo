@@ -27,6 +27,9 @@
   --text-size-normal: 1.6rem;
   --text-size-small: 1.4rem;
 
+  --transition-duration-normal: .3s;
+  --transition-duration-slow: .5s;
+
   --z-index-on-top: 900;
   --z-index-modal: 800;
 }
