@@ -2,10 +2,13 @@
 
 import { type Node } from 'react';
 import { useQuery } from 'react-query';
-import { Heading } from '@tbergq/components';
+import { Heading, Box } from '@tbergq/components';
 
 import { FETCH_PROGRAM_KEY, fetchProgram } from './api/fetch-programs';
 import WeekList from './week/week-list';
+import AddWeek from './week/add-week';
+import BackButton from '../components/back-button';
+import type { Program as ProgramResponse } from './types';
 
 type Props = {
   +routeData: {
@@ -17,11 +20,20 @@ type Props = {
 
 export default function Program({ routeData }: Props): Node {
   const id = routeData.params.id;
-  const { data } = useQuery([FETCH_PROGRAM_KEY, id], () => fetchProgram(id), { suspense: true });
+  const { data } = useQuery<ProgramResponse>([FETCH_PROGRAM_KEY, id], () => fetchProgram(id), {
+    suspense: true,
+  });
+
   return (
-    <div>
+    <>
       <Heading level="h1">{data.name}</Heading>
       <WeekList weeks={data.weeks} />
-    </div>
+      <Box flex={true} marginTop="normal">
+        <Box marginRight="normal">
+          <BackButton to="/programs" />
+        </Box>
+        <AddWeek programId={id} weekCount={data.weeks.length} />
+      </Box>
+    </>
   );
 }

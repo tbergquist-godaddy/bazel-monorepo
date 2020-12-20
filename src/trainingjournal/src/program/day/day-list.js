@@ -2,9 +2,8 @@
 
 import { type Node } from 'react';
 
-import DayItem, { type DayType } from './day';
-
-export type Day = DayType;
+import DayItem from './day';
+import type { Day } from '../types';
 
 type Props = {
   +days: $ReadOnlyArray<Day>,

@@ -4,21 +4,7 @@ import { type Node } from 'react';
 import { Heading, Card, Box } from '@tbergq/components';
 import { create } from '@adeira/sx';
 
-type Exercise = {
-  +id: number,
-  +set: string,
-  +reps: string,
-  +break_time: string,
-  +base_exercise: {
-    +name: string,
-  },
-};
-
-export type DayType = {
-  +id: number,
-  +name: string,
-  +exercises: $ReadOnlyArray<Exercise>,
-};
+import type { Day as DayType } from '../types';
 
 type Props = {
   +day: DayType,
@@ -44,7 +30,7 @@ export default function Day({ day }: Props): Node {
           <Box>{exercise.base_exercise.name}</Box>
           <Box flex={true}>
             <Box>{exercise.set}</Box>
-            <Box>&nbsp;x&nbsp;</Box>
+            <Box>&nbsp;&times;&nbsp;</Box>
             <Box>{exercise.reps}</Box>
           </Box>
         </Box>

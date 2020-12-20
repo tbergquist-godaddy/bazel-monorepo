@@ -22,8 +22,8 @@ webpack_cli(
         "**/*.json",
         "**/*.ico",
         "**/.env",
+        "**/*.css",
     ]) + get_deps() + [
-        ":src/app.css",
         "//:babel.config.js",
         ":.babelrc.js",
         "@npm//dotenv",
@@ -60,9 +60,9 @@ webpack_dev_server(
         "**/*.js",
         "**/*.json",
         "**/*.ico",
+        "**/*.css",
         "**/.env",
     ]) + get_deps() + [
-        ":src/app.css",
         "//:babel.config.js",
         ":.babelrc.js",
     ],
