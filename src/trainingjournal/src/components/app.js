@@ -35,7 +35,7 @@ export default function App(): Node {
     <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
-          <header>
+          <header className={styles('header')}>
             <Suspense fallback="">
               <Navbar />
             </Suspense>
@@ -68,5 +68,9 @@ const styles = create({
     [breakpoints.largeDesktop]: {
       width: '1170px',
     },
+  },
+  header: {
+    position: 'sticky',
+    top: 0,
   },
 });
