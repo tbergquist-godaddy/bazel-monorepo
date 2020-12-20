@@ -17,12 +17,14 @@
     "@adeira/fetch": "^1.0.4",
     "recoil": "*",
     "@adeira/js": "^1.3.0",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.1.6",
-    "@tbergq/mock-server": "*"
+    "@tbergq/mock-server": "*",
+    "shortid": "^2.2.16"
   },
   "scripts": {
     "manifest": "fbt-manifest --src src"

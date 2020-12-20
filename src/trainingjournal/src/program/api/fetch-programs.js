@@ -1,11 +1,7 @@
 // @flow
 
 import fetch from '../../services/fetch';
-
-type ProgramList = {
-  +id: number,
-  +name: string,
-};
+import type { ProgramList, Program } from '../types';
 
 const url = '/Program/programs/';
 export function fetchPrograms(): Promise<ProgramList[]> {
@@ -22,28 +18,6 @@ export function createProgram(name: string): Promise<ProgramList> {
     body: JSON.stringify({ name }),
   });
 }
-
-type Program = $ReadOnly<{
-  ...ProgramList,
-  +weeks: $ReadOnlyArray<{
-    +id: number,
-    +name: string,
-    +days: $ReadOnlyArray<{
-      +id: number,
-      +name: string,
-      +exercises: $ReadOnlyArray<{
-        +id: number,
-        +set: string,
-        +reps: string,
-        +break_time: string,
-        +base_exercise: {
-          +id: number,
-          +name: string,
-        },
-      }>,
-    }>,
-  }>,
-}>;
 
 export function fetchProgram(id: number | string): Promise<Program> {
   return fetch(`${url}${id.toString()}/`);

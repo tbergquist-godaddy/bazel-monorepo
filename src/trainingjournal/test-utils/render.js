@@ -1,5 +1,6 @@
 // @flow
 
+import { Suspense } from 'react';
 import { render as originalRender, type RenderResult } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 import { RoutingContext, createRouter } from '@tbergq/router';
@@ -16,10 +17,10 @@ export default function render(ui: any): RenderResult<> {
     <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
-          <>
+          <Suspense fallback="loading">
             {ui}
             <Toast />
-          </>
+          </Suspense>
         </RecoilRoot>
       </RoutingContext.Provider>
     </QueryClientProvider>,
