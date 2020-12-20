@@ -14,6 +14,7 @@
   --color-white: #fff;
   --color-primary-focus: rgba(0, 109, 119, 0.5);
   --color-secondary-focus: rgba(226, 149, 120, 0.5);
+  --color-gray-light-focus: rgba(221, 218, 218, 0.5);
   --color-error: #d62828;
 
   --space-x-small: .4rem;
