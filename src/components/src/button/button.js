@@ -1,6 +1,6 @@
 // @flow
 
-import type { Node } from 'react';
+import type { Node, ComponentType } from 'react';
 import { create } from '@adeira/sx';
 
 import Spinner from '../spinner/spinner';
@@ -13,6 +13,7 @@ type Props = {
   +'isLoading'?: boolean,
   +'size'?: 'small' | 'normal',
   +'aria-label'?: string,
+  +'as'?: ComponentType<any> | string,
 };
 
 export default function Button({
@@ -21,18 +22,19 @@ export default function Button({
   type = 'button',
   size = 'normal',
   isLoading,
+  as = 'button',
   ...rest
 }: Props): Node {
+  const Component = as;
   return (
-    <button
+    <Component
       disabled={isLoading}
-      // eslint-disable-next-line react/button-has-type
       type={type}
       className={styles('button', variant, size)}
       {...rest}
     >
       {isLoading === true ? <Spinner size="small" color="white" /> : children}
-    </button>
+    </Component>
   );
 }
 
@@ -44,7 +46,7 @@ const styles = create({
     'outline': 'none',
     'fontWeight': 500,
     'fontFamily': 'inherit',
-    'transition': 'transform .3s',
+    'transition': 'transform var(--transition-duration-normal)',
     'cursor': 'pointer',
     'fontSize': 'inherit',
     ':hover': {
@@ -59,6 +61,7 @@ const styles = create({
   },
   small: {
     padding: 'var(--space-small) var(--space-large)',
+    fontSize: '1.4rem',
   },
   primary: {
     'backgroundColor': 'var(--color-primary)',

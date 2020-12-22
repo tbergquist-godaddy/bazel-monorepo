@@ -15,17 +15,17 @@
 
 declare module 'react-query' {
   declare type FetchFunction = Function;
-  declare type QueryConfig = {
+  declare export type QueryConfig = {
     staleTime?: number,
     refetchOnWindowFocus?: boolean,
     suspense?: boolean,
-  }
+  };
   declare type QueryClientConfig = {
     defaultOptions?: {
       queries?: QueryConfig,
       ...
-    }
-  }
+    },
+  };
 
   declare type CacheKey = string | [string, string | number];
 
@@ -41,11 +41,15 @@ declare module 'react-query' {
     children: React$Node,
   }>;
 
+  declare export type UseQueryResponse<T> = {
+    data: T,
+  };
+
   declare export function useQuery<T>(
     key: CacheKey,
     fn: FetchFunction,
     config: QueryConfig,
-  ): { data: T };
+  ): UseQueryResponse<T>;
 
   declare export function useQueryClient(): QueryClient;
 

@@ -1,6 +1,6 @@
 // @flow
 
-import { type Node, type Element, cloneElement } from 'react';
+import { type Node, type Element, cloneElement, type ComponentType } from 'react';
 import { create } from '@adeira/sx';
 
 // TODO: Allow more types and sizes
@@ -9,13 +9,25 @@ type Props = {
   +'onClick'?: () => void,
   +'aria-label': string,
   +'size'?: 'normal' | 'large',
+  +'as'?: ComponentType<any> | 'string',
+  +'to'?: string,
 };
 
-export default function IconButton({ children, size = 'normal', ...rest }: Props): Node {
+export default function IconButton({
+  children,
+  size = 'normal',
+  as = 'button',
+  ...rest
+}: Props): Node {
+  const Component = as;
   return (
-    <button {...rest} type="button" className={styles('button', 'primary', size)}>
+    <Component
+      {...rest}
+      type={as === 'button' ? 'button' : null}
+      className={styles('button', 'primary', size)}
+    >
       {cloneElement(children, { className: styles('icon') })}
-    </button>
+    </Component>
   );
 }
 
@@ -27,7 +39,7 @@ const styles = create({
     'borderRadius': '50%',
     'outline': 'none',
     'fontFamily': 'inherit',
-    'transition': 'transform .3s',
+    'transition': 'transform var(--transition-duration-normal)',
     'cursor': 'pointer',
     ':hover': {
       transform: 'translateY(-3px)',
