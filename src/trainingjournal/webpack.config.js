@@ -11,7 +11,14 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 config({ path: path.join(__dirname, '.env') });
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDevelopment = (() => {
+  for (let i = 0; i < process.argv.length; i++) {
+    if (process.argv[i] === '--mode' && process.argv[i + 1] === 'production') {
+      return false;
+    }
+  }
+  return true;
+})();
 
 const templateContent = `<!DOCTYPE html>
 <html lang="en">
