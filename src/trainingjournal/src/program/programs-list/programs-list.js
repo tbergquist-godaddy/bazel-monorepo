@@ -16,7 +16,9 @@ export default function ProgramsList({ programs }: Props): Node {
     <ul className={styles('list')}>
       {programs.map((program) => (
         <li className={styles('listItem')} key={program.id}>
-          <Link to={`/programs/${program.id}`}>{program.name}</Link>
+          <Link className={styles('link')} to={`/programs/${program.id}`}>
+            {program.name}
+          </Link>
         </li>
       ))}
     </ul>
@@ -28,11 +30,24 @@ const styles = create({
     listStyle: 'none',
   },
   listItem: {
-    'padding': 'var(--space-large)',
     ':not(:last-of-type)': {
       borderBottomWidth: '1px',
       borderBottomStyle: 'solid',
       borderBottomColor: 'var(--color-gray-light)',
     },
+  },
+  link: {
+    'transition': 'background-color var(--transition-duration-normal)',
+    ':hover': {
+      backgroundColor: 'var(--color-gray-light)',
+      textDecoration: 'none',
+    },
+    ':focus': {
+      backgroundColor: 'var(--color-gray-light)',
+      textDecoration: 'none',
+    },
+    'backgroundColor': 'var(--color-white)',
+    'display': 'block',
+    'padding': 'var(--space-large)',
   },
 });
