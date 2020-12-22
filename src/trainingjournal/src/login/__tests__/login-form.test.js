@@ -36,10 +36,7 @@ it('logs the user in and navigates to home', async () => {
   const submit = getButton();
   userEvent.click(submit);
 
-  await waitFor(() => expect(submit).toBeDisabled());
-  await waitFor(() => expect(submit).not.toBeDisabled());
-
-  expect(navigate).toHaveBeenCalledWith('/home');
+  await waitFor(() => expect(navigate).toHaveBeenCalledWith('/home'));
 });
 
 it('requires both inputs', async () => {
