@@ -5,6 +5,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpackBase = require('@tbergq/webpack-config');
 
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 const templateContent = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,8 +25,8 @@ const templateContent = `<!DOCTYPE html>
 </html>
 `;
 
-module.exports = {
-  ...webpackBase,
+const webpackConfig /* :Object */ = {
+  ...webpackBase(isDevelopment),
   plugins: [
     (new CleanWebpackPlugin() /*: Object */),
     (new HtmlWebpackPlugin({
@@ -38,3 +40,5 @@ module.exports = {
     }) /*: Object */),
   ],
 };
+
+module.exports = webpackConfig;

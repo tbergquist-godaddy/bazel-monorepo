@@ -31,8 +31,8 @@ const templateContent = `<!DOCTYPE html>
 </html>
 `;
 
-module.exports = {
-  ...webpackBase,
+const webpackConfig /* :Object */ = {
+  ...webpackBase(isDevelopment),
   plugins: ([
     (new CleanWebpackPlugin() /*: Object */),
     (new HtmlWebpackPlugin({
@@ -50,3 +50,5 @@ module.exports = {
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean) /*: any[] */),
 };
+
+module.exports = webpackConfig;
