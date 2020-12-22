@@ -1,5 +1,7 @@
 // @flow
 
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 module.exports = {
   output: {
     filename: '[hash].bundle.js',
@@ -40,6 +42,9 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             sourceType: 'unambiguous',
+            plugins: ([isDevelopment && require.resolve('react-refresh/babel')].filter(
+              Boolean,
+            ) /*: any[]  */),
           },
         },
       },

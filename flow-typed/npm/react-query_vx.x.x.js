@@ -33,6 +33,7 @@ declare module 'react-query' {
     constructor(config?: QueryClientConfig): this;
     prefetchQuery: (key: CacheKey, fetchFn: FetchFunction, config: QueryConfig) => void;
     invalidateQueries: (key: CacheKey) => void;
+    clear: () => void;
   }
 
   declare export var QueryClientProvider: React$ComponentType<{

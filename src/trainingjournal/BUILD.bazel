@@ -27,6 +27,8 @@ webpack_cli(
         "//:babel.config.js",
         ":.babelrc.js",
         "@npm//dotenv",
+        "@npm//react-refresh",
+        "@npm//@pmmmwh/react-refresh-webpack-plugin",
     ],
     output_dir = True,
 )

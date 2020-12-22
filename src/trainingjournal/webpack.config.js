@@ -7,8 +7,11 @@ const webpackBase = require('@tbergq/webpack-config');
 const webpack = require('webpack');
 const { config } = require('dotenv');
 const path = require('path');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-config({ path: path.join(__dirname, '.env')});
+config({ path: path.join(__dirname, '.env') });
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 const templateContent = `<!DOCTYPE html>
 <html lang="en">
@@ -30,7 +33,7 @@ const templateContent = `<!DOCTYPE html>
 
 module.exports = {
   ...webpackBase,
-  plugins: [
+  plugins: ([
     (new CleanWebpackPlugin() /*: Object */),
     (new HtmlWebpackPlugin({
       title: 'Trainingjournal',
@@ -44,5 +47,6 @@ module.exports = {
     (new webpack.DefinePlugin({
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
     }) /*: Object */),
-  ],
+    isDevelopment && new ReactRefreshWebpackPlugin(),
+  ].filter(Boolean) /*: any[] */),
 };
