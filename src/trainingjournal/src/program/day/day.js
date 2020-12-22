@@ -1,8 +1,11 @@
 // @flow
 
 import { type Node } from 'react';
-import { Heading, Card, Box } from '@tbergq/components';
+import { Heading, Card, Box, IconButton } from '@tbergq/components';
 import { create } from '@adeira/sx';
+import { MdEdit } from 'react-icons/md';
+import { Link, useHistory } from '@tbergq/router';
+import { fbt } from 'fbt';
 
 import type { Day as DayType } from '../types';
 
@@ -11,12 +14,23 @@ type Props = {
 };
 
 export default function Day({ day }: Props): Node {
-  const { name, exercises } = day;
+  const { location } = useHistory();
+  const { name, exercises, id } = day;
+
   return (
     <Card>
-      <Heading level="h3" as="h6">
-        {name}
-      </Heading>
+      <Box justifyContent="space-between" alignItems="center" flex={true}>
+        <Heading level="h3" as="h6">
+          {name}
+        </Heading>
+        <IconButton
+          aria-label={fbt('Edit day', 'edit day button aria-label')}
+          to={`${location.pathname}/day/${id}`}
+          as={Link}
+        >
+          <MdEdit />
+        </IconButton>
+      </Box>
       {exercises.map((exercise) => (
         <Box
           marginTop="normal"

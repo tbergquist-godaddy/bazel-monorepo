@@ -10,6 +10,7 @@ import {
   fetchProgram,
   FETCH_PROGRAM_KEY,
 } from '../program/api/fetch-programs';
+import { FETCH_DAY_KEY, fetchDay } from '../program/api/fetch-days';
 
 export const queryClient: QueryClient = new QueryClient({
   defaultOptions: {
@@ -46,6 +47,17 @@ const routes: RouteConfig[] = [
     exact: true,
     prepare: (data) => {
       queryClient.prefetchQuery([FETCH_PROGRAM_KEY, data.id], () => fetchProgram(data.id), {
+        suspense: true,
+      });
+      return {};
+    },
+  },
+  {
+    component: JSResource('DayDetail', () => import('../program/day/day-detail')),
+    path: '/programs/:programId/day/:dayId',
+    exact: true,
+    prepare: (data) => {
+      queryClient.prefetchQuery([FETCH_DAY_KEY, data.dayId], () => fetchDay(data.dayId), {
         suspense: true,
       });
       return {};
