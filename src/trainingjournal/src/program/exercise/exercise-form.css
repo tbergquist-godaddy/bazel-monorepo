@@ -1,0 +1,17 @@
+.ExerciseForm .ExerciseForm__fade-container-enter{
+    opacity: 0;
+ }
+ .ExerciseForm .ExerciseForm__fade-container-exit{
+    opacity: 1;
+ }
+ .ExerciseForm .ExerciseForm__fade-container-enter-active{
+    opacity: 1;
+ }
+ .ExerciseForm .ExerciseForm__fade-container-exit-active{
+    opacity: 0;
+ }
+ .ExerciseForm .ExerciseForm__fade-container-enter-active,
+ .ExerciseForm .ExerciseForm__fade-container-exit-active{
+    transition: opacity var(--transition-duration-normal);
+    min-height: 407px;
+ }

@@ -48,7 +48,7 @@ declare module 'react-query' {
   declare export function useQuery<T>(
     key: CacheKey,
     fn: FetchFunction,
-    config: QueryConfig,
+    config?: QueryConfig,
   ): UseQueryResponse<T>;
 
   declare export function useQueryClient(): QueryClient;
