@@ -8,15 +8,17 @@ type Props = {
   +'children': Element<any>,
   +'onClick'?: () => void,
   +'aria-label': string,
-  +'size'?: 'normal' | 'large',
+  +'size'?: 'normal' | 'large' | 'small',
   +'as'?: ComponentType<any> | 'string',
   +'to'?: string,
+  +'variant'?: 'primary' | 'danger',
 };
 
 export default function IconButton({
   children,
   size = 'normal',
   as = 'button',
+  variant = 'primary',
   ...rest
 }: Props): Node {
   const Component = as;
@@ -24,7 +26,7 @@ export default function IconButton({
     <Component
       {...rest}
       type={as === 'button' ? 'button' : null}
-      className={styles('button', 'primary', size)}
+      className={styles('button', variant, size)}
     >
       {cloneElement(children, { className: styles('icon') })}
     </Component>
@@ -53,6 +55,17 @@ const styles = create({
     ':focus': {
       boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
     },
+  },
+  danger: {
+    'backgroundColor': 'var(--color-error)',
+    ':focus': {
+      boxShadow: 'var(--color-error-focus) 0px 0px 0px 0.2rem',
+    },
+  },
+  small: {
+    fontSize: '1.5rem',
+    height: '3rem',
+    width: '3rem',
   },
   normal: {
     fontSize: '2rem',
