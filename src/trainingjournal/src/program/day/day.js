@@ -11,25 +11,32 @@ import type { Day as DayType } from '../types';
 
 type Props = {
   +day: DayType,
+  +showActions?: boolean,
+  +headingLevel?: 'h2' | 'h3',
 };
 
-export default function Day({ day }: Props): Node {
+/**
+ * TODO: Split out the exercise list, and rather re-use that
+ */
+export default function Day({ day, showActions = true, headingLevel = 'h3' }: Props): Node {
   const { location } = useHistory();
   const { name, exercises, id } = day;
 
   return (
     <Card>
       <Box justifyContent="space-between" alignItems="center" flex={true}>
-        <Heading level="h3" as="h6">
+        <Heading level={headingLevel} as="h6">
           {name}
         </Heading>
-        <IconButton
-          aria-label={fbt('Edit day', 'edit day button aria-label')}
-          to={`${location.pathname}/day/${id}`}
-          as={Link}
-        >
-          <MdEdit />
-        </IconButton>
+        {showActions && (
+          <IconButton
+            aria-label={fbt('Edit day', 'edit day button aria-label')}
+            to={`${location.pathname}/day/${id}`}
+            as={Link}
+          >
+            <MdEdit />
+          </IconButton>
+        )}
       </Box>
       {exercises.map((exercise) => (
         <Box
@@ -46,6 +53,7 @@ export default function Day({ day }: Props): Node {
             <Box>{exercise.set}</Box>
             <Box>&nbsp;&times;&nbsp;</Box>
             <Box>{exercise.reps}</Box>
+            <Box>&nbsp;- {exercise.break_time} min</Box>
           </Box>
         </Box>
       ))}

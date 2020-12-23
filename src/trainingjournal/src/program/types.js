@@ -27,6 +27,11 @@ export type Exercise = {
 export type BaseExercise = {
   +id: number,
   +name: string,
+  +muscle_group: MuscleGroup,
+};
+export type MuscleGroup = {
+  +id: number,
+  +name: string,
 };
 export type Program = $ReadOnly<{
   ...ProgramList,
