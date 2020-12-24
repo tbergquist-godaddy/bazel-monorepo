@@ -15,7 +15,7 @@ export default function WeekList({ weeks }: Props): Node {
   return (
     <TransitionGroup className="Program__week-list">
       {weeks.map((week) => (
-        <CSSTransition key={week.id} timeout={500} classNames="item">
+        <CSSTransition key={week.id} timeout={500} classNames="Program__week-list--item">
           <Week week={week} />
         </CSSTransition>
       ))}

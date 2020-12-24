@@ -1,12 +1,12 @@
 // @flow
 
 import { type Node } from 'react';
-import { Heading, Box } from '@tbergq/components';
+import { Heading, Box, Card } from '@tbergq/components';
 
 import BackButton from '../../components/back-button';
 import { useFetchDay } from '../api/fetch-days';
-import Day from './day';
 import AddExercise from '../exercise/add-exercise';
+import DayExerciseList from './day-exercise-list';
 
 type Props = {
   +routeData: {
@@ -25,10 +25,12 @@ export default function DayDetail({ routeData }: Props): Node {
     <div>
       <Box flex={true} alignItems="center" justifyContent="space-between">
         <Heading level="h1">{data.name}</Heading>
-        <AddExercise dayId={dayId} />
+        <AddExercise programId={programId} dayId={dayId} />
       </Box>
       <Box marginBottom="normal">
-        <Day headingLevel="h2" day={data} showActions={false} />
+        <Card>
+          <DayExerciseList exercises={data.exercises} />
+        </Card>
       </Box>
       <BackButton to={`/programs/${programId}`} />
     </div>

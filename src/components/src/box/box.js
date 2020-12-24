@@ -4,7 +4,7 @@ import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
 type AlignItems = 'center';
-type JustifyContent = 'space-between';
+type JustifyContent = 'space-between' | 'flex-end';
 type Spacing = 'xs' | 's' | 'normal' | 'l' | 'xl' | 'xxl';
 
 type Props = {
@@ -48,6 +48,8 @@ const getJustifyContent = (justifyContent: ?JustifyContent) => {
   switch (justifyContent) {
     case 'space-between':
       return 'justifyContentSB';
+    case 'flex-end':
+      return 'justifyContentFE';
     default:
       return null;
   }
@@ -90,6 +92,9 @@ const styles = create({
   },
   justifyContentSB: {
     justifyContent: 'space-between',
+  },
+  justifyContentFE: {
+    justifyContent: 'flex-end',
   },
   mrNormal: {
     marginRight: 'var(--space-normal)',

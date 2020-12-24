@@ -20,27 +20,6 @@ const isDevelopment = (() => {
   return true;
 })();
 
-const fontUrl = 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&display=swap';
-const templateContent = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Trainingjournal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/favicon.ico"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="${fontUrl}">
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="${fontUrl}">
-    <noscript>
-      <link rel="stylesheet" href="${fontUrl}">
-    </noscript>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
-`;
-
 const webpackConfig /* :Object */ = {
   ...webpackBase(isDevelopment),
   plugins: ([
@@ -49,7 +28,7 @@ const webpackConfig /* :Object */ = {
       title: 'Trainingjournal',
       hash: true,
       scriptLoading: 'defer',
-      templateContent,
+      template: './src/trainingjournal/src/index.html',
     }) /*: Object */),
     (new CopyPlugin({
       patterns: [{ from: './src/trainingjournal/src/favicon.ico', to: 'favicon.ico' }],
