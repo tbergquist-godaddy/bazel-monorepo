@@ -8,9 +8,10 @@ const ExerciseForm = lazy(() => import('./exercise-form'));
 
 type Props = {
   +dayId: string,
+  +programId: string,
 };
 
-export default function AddExercise({ dayId }: Props): Node {
+export default function AddExercise({ dayId, programId }: Props): Node {
   const [showModal, setShowModal] = useState(false);
   return (
     <div>
@@ -28,7 +29,11 @@ export default function AddExercise({ dayId }: Props): Node {
         closeLabel={fbt('close', 'close modal label')}
       >
         <Suspense fallback={<Spinner />}>
-          <ExerciseForm dayId={dayId} closeModal={() => setShowModal(false)} />
+          <ExerciseForm
+            programId={programId}
+            dayId={dayId}
+            closeModal={() => setShowModal(false)}
+          />
         </Suspense>
       </Modal>
     </div>

@@ -23,6 +23,7 @@ webpack_cli(
         "**/*.ico",
         "**/.env",
         "**/*.css",
+        "**/*.html",
     ]) + get_deps() + [
         "//:babel.config.js",
         ":.babelrc.js",
@@ -64,6 +65,7 @@ webpack_dev_server(
         "**/*.ico",
         "**/*.css",
         "**/.env",
+        "**/*.html",
     ]) + get_deps() + [
         "//:babel.config.js",
         ":.babelrc.js",

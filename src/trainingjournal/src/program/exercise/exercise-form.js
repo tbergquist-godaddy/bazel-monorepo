@@ -13,13 +13,15 @@ import ExerciseList from './exercise-list';
 import './exercise-form.css';
 import { createExercise } from '../api/fetch-exercises';
 import { FETCH_DAY_KEY } from '../api/fetch-days';
+import { FETCH_PROGRAM_KEY } from '../api/fetch-programs';
 
 type Props = {
   +closeModal: () => void,
   +dayId: string,
+  +programId: string,
 };
 
-export default function ExerciseForm({ closeModal, dayId }: Props): Node {
+export default function ExerciseForm({ closeModal, dayId, programId }: Props): Node {
   const cache = useQueryClient();
   const [exercise, setExercise] = useState();
   const showToast = useShowToast();
@@ -38,6 +40,7 @@ export default function ExerciseForm({ closeModal, dayId }: Props): Node {
     onSuccess: () => {
       closeModal();
       cache.invalidateQueries([FETCH_DAY_KEY, dayId]);
+      cache.invalidateQueries([FETCH_PROGRAM_KEY, programId]);
     },
   });
 

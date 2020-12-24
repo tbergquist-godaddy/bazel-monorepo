@@ -14,7 +14,7 @@ jest.mock('react-transition-group', () => {
 
 it('creates a new exercise', async () => {
   const closeModal = jest.fn();
-  render(<ExerciseForm dayId="2" closeModal={closeModal} />);
+  render(<ExerciseForm programId="1" dayId="2" closeModal={closeModal} />);
 
   const button = await waitFor(() => screen.getByRole('button', { name: /squats/i }));
   expect(button).toBeInTheDocument();
