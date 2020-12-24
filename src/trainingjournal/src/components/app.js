@@ -72,5 +72,7 @@ const styles = create({
   header: {
     position: 'sticky',
     top: 0,
+    // $FlowExpectedError[incompatible-call]
+    zIndex: 'var(--z-index-sticky)',
   },
 });

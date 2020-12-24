@@ -31,6 +31,7 @@
   --transition-duration-normal: .3s;
   --transition-duration-slow: .5s;
 
-  --z-index-on-top: 900;
+  --z-index-sticky: 100;
   --z-index-modal: 800;
+  --z-index-on-top: 900;
 }
