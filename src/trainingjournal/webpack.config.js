@@ -20,6 +20,7 @@ const isDevelopment = (() => {
   return true;
 })();
 
+const fontUrl = 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&display=swap';
 const templateContent = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,10 +28,12 @@ const templateContent = `<!DOCTYPE html>
     <title>Trainingjournal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.ico"/>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="${fontUrl}">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="${fontUrl}">
+    <noscript>
+      <link rel="stylesheet" href="${fontUrl}">
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
