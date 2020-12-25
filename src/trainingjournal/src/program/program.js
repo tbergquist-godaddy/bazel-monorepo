@@ -3,6 +3,7 @@
 import { type Node } from 'react';
 import { useQuery } from 'react-query';
 import { Heading, Box } from '@tbergq/components';
+import { Helmet } from 'react-helmet';
 
 import { FETCH_PROGRAM_KEY, fetchProgram } from './api/fetch-programs';
 import WeekList from './week/week-list';
@@ -26,6 +27,9 @@ export default function Program({ routeData }: Props): Node {
 
   return (
     <>
+      <Helmet>
+        <title>Trainingjournal | {data.name}</title>
+      </Helmet>
       <Heading level="h1">{data.name}</Heading>
       <WeekList weeks={data.weeks} />
       <Box flex={true} marginTop="normal">

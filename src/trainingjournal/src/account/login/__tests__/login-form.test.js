@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 // $FlowFixMe[missing-export]
 import router from '@tbergq/router';
 
-import render from '../../../test-utils/render';
+import render from '../../../../test-utils/render';
 import LoginForm from '../login-form';
 
 jest.mock('@tbergq/router', () => ({
@@ -66,7 +66,5 @@ it('shows an error toast when login fails', async () => {
   const submit = getButton();
   userEvent.click(submit);
 
-  await waitFor(() => expect(submit).toBeDisabled());
-  await waitFor(() => expect(submit).not.toBeDisabled());
   await waitFor(() => expect(screen.getByText('Wrong username or password')).toBeInTheDocument());
 });

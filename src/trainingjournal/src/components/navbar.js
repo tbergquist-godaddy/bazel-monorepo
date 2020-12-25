@@ -20,14 +20,17 @@ function NavLeft({ isLoggedIn }): Node {
 }
 function NavRight({ isLoggedIn, username }): Node {
   if (!isLoggedIn) {
-    return null;
+    return (
+      <Link to="/account/login">
+        <fbt desc="Login navbar link">Login</fbt>
+      </Link>
+    );
   }
   return <div>{fbt(`Hi ${fbt.param('username', username)}`, 'user greeting')}</div>;
 }
 export default function Navbar(): Node {
   const { data } = useQuery(FETCH_USER_DETAILS_KEY, fetchUserDetails, {
     suspense: false,
-    staleTime: Infinity,
   });
 
   return (

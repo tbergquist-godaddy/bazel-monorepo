@@ -10,8 +10,8 @@ import { useMutation, useQueryClient } from 'react-query';
 import { useNavigate } from '@tbergq/router';
 
 import { login } from './api';
-import { TOKEN_KEY } from '../constants';
-import { FETCH_USER_DETAILS_KEY } from '../account/api/fetch-user-details';
+import { TOKEN_KEY } from '../../constants';
+import { FETCH_USER_DETAILS_KEY } from '../api/fetch-user-details';
 
 const username = fbt('Username', 'username form label');
 const password = fbt('Password', 'password form label');
