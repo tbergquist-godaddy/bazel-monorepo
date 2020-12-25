@@ -53,15 +53,22 @@ declare module 'react-query' {
 
   declare export function useQueryClient(): QueryClient;
 
-  declare type MutateConfig<T> = {
+  declare export type MutateConfig<T> = {
     onSuccess: (data: T) => void,
     onError: () => void,
     ...
   };
+
+  declare export type MutationResponse = {
+    mutate: Function, 
+    isLoading: boolean,
+    ...
+  }
+
   declare export function useMutation<T>(
     fn: FetchFunction,
     config: MutateConfig<T>,
-  ): { mutate: Function, isLoading: boolean };
+  ): MutationResponse;
 }
 
 /**

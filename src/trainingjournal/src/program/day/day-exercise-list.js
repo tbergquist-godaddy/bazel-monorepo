@@ -51,8 +51,16 @@ export default function DayExerciseList({ exercises }: Props): Node {
               flex={true}
               className={styles('underline')}
             >
-              <Box>{exercise.base_exercise.name}</Box>
-              <Box flex={true}>
+              <Box title={exercise.base_exercise.name} ellipsisContainer={true}>
+                {exercise.base_exercise.name}
+              </Box>
+              <Box
+                justifyContent="flex-end"
+                ellipsisContainer={true}
+                flexGrow="1"
+                flexShrink="0"
+                flex={true}
+              >
                 <Box>{exercise.set}</Box>
                 <Box>&nbsp;&times;&nbsp;</Box>
                 <Box>{exercise.reps}</Box>
