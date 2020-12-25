@@ -170,17 +170,17 @@
   },
   {
    "hashToText": {
-    "9T5ateRdTlFus1C1kY9Nxw==": "Create team"
+    "JdA/dvhUFZtC7TjleQBP9g==": "Create program"
    },
    "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
    "line_beg": 56,
    "col_beg": 12,
    "line_end": 56,
-   "col_end": 60,
-   "desc": "create team button",
+   "col_end": 66,
+   "desc": "create program button",
    "project": "",
    "type": "text",
-   "jsfbt": "Create team"
+   "jsfbt": "Create program"
   },
   {
    "hashToText": {
@@ -523,9 +523,9 @@
     "8unkVGWu2qY+RVdpoDK5Zg==": "Failed to delete week"
    },
    "filepath": "src/trainingjournal/src/program/week/delete-week.js",
-   "line_beg": 23,
+   "line_beg": 25,
    "col_beg": 14,
-   "line_end": 23,
+   "line_end": 25,
    "col_end": 78,
    "desc": "Delete week failed error message",
    "project": "",
@@ -537,9 +537,9 @@
     "JKltWpQMCVAv6+HfC8ghww==": "Delete week"
    },
    "filepath": "src/trainingjournal/src/program/week/delete-week.js",
-   "line_beg": 38,
+   "line_beg": 40,
    "col_beg": 6,
-   "line_end": 38,
+   "line_end": 40,
    "col_end": 54,
    "desc": "Delete week button",
    "project": "",

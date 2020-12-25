@@ -1,15 +1,395 @@
 {
-  "fb-locale": "nb_NO",
-  "translations": {
-    "a2At0ljNpkm4ytwYDdtS0g==": {
-      "tokens": [],
-      "types": [],
-      "translations": [
-        {
-          "translation": "Brukernavn",
-          "variations": []
+    "fb-locale": "nb_NO",
+    "translations": {
+        "Uw7EZQvvvSHh2CBENQMxjw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Tilbake",
+                    "variations": []
+                }
+            ]
+        },
+        "ah\/Fb+6cIA7oSPMwHmBq9w==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Hjem",
+                    "variations": []
+                }
+            ]
+        },
+        "83QnOu6ehUkb+Lgc8RdJog==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Hei {username}",
+                    "variations": []
+                }
+            ]
+        },
+        "a2At0ljNpkm4ytwYDdtS0g==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Brukernavn",
+                    "variations": []
+                }
+            ]
+        },
+        "b1T19vW9\/DoBPue7cIGh3Q==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Passord",
+                    "variations": []
+                }
+            ]
+        },
+        "CBsKATgppv4k6y046G9MRQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Feil brukernavn eller passord",
+                    "variations": []
+                }
+            ]
+        },
+        "F3p8DbdliugG4CTKslAYqA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Logg inn",
+                    "variations": []
+                }
+            ]
+        },
+        "EJiqPfRrsYhNdA4eGTqcjQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Trainingjournal logg inn",
+                    "variations": []
+                }
+            ]
+        },
+        "vzV2WPwTKeFrgBiAWtJ9zw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Navn",
+                    "variations": []
+                }
+            ]
+        },
+        "H0c1z95VDXyDCnqI4JUy6w==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Programmet ble opprettet",
+                    "variations": []
+                }
+            ]
+        },
+        "+scs8Zi3pFK1MZqhQc\/SmA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Mislyktes i å opprette program",
+                    "variations": []
+                }
+            ]
+        },
+        "IB6QrXcNHRBgJLTtvDm09w==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Opprett program",
+                    "variations": []
+                }
+            ]
+        },
+        "JdA\/dvhUFZtC7TjleQBP9g==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Opprett program",
+                    "variations": []
+                }
+            ]
+        },
+        "vhwfjPHP63tTgROVlkfhEQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til program",
+                    "variations": []
+                }
+            ]
+        },
+        "xxfG+NJn7tJ295C+6OCcKA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "7gOorhm2oBIbkzjTdZQorw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Sets",
+                    "variations": []
+                }
+            ]
+        },
+        "z+i1KJMuJ+8LQ4fZrJqALw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Reps",
+                    "variations": []
+                }
+            ]
+        },
+        "XKVZdd5y1la9twfwrN0bCA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Pause",
+                    "variations": []
+                }
+            ]
+        },
+        "BCVdhFu82TA6nG1fkM+zRQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "min",
+                    "variations": []
+                }
+            ]
+        },
+        "8kHDfF6aCyjD3WWkjiNeMw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Rediger dag",
+                    "variations": []
+                }
+            ]
+        },
+        "zhSC80FRkOcYfCJMVQcmQQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "mtAd4U53LMO7gI0NaiEOdA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "lukk",
+                    "variations": []
+                }
+            ]
+        },
+        "kA\/Kvrtb8Vfk0vo2vIIX1g==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Mislyktes i å opprette øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "LRcLTpkaI7oO4aeAGMrwEw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "Vqo700WdAkrjHCBKyzG16A==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Avbryt",
+                    "variations": []
+                }
+            ]
+        },
+        "tqgLDHnFHSb9eNMccl8ynA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "cHNAKNna06a\/j80gYNNAGg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Set",
+                    "variations": []
+                }
+            ]
+        },
+        "K6FsKy7tyLiS8\/16pbyi6A==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Reps",
+                    "variations": []
+                }
+            ]
+        },
+        "Zz5hL\/4pNrCW1hQIXoBgjg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Beskrivelse (valgfri)",
+                    "variations": []
+                }
+            ]
+        },
+        "F2UaBX5H3lY\/h7sjhJWnmg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Pause",
+                    "variations": []
+                }
+            ]
+        },
+        "fso3q\/2TDn52wKYvqSKKxA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Fjern øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "+UKbni7VmCF89HHKuxmAzQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Programmer",
+                    "variations": []
+                }
+            ]
+        },
+        "gImJcbWLpwsQO38plM2WvQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Mislyktes i å opprette dag",
+                    "variations": []
+                }
+            ]
+        },
+        "55dXvhuwAhv54aXQcQqfEQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til dag",
+                    "variations": []
+                }
+            ]
+        },
+        "2\/jtZpvAtg\/8tqnzsLeTRQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Uken ble opprettet",
+                    "variations": []
+                }
+            ]
+        },
+        "0Y54+qtTf2dIuNvzAmQSsw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Mislyktes i å opprette ny uke, vennligst prøv igjen",
+                    "variations": []
+                }
+            ]
+        },
+        "I9UfPDxGNmxmQirpSBYjNg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til uke",
+                    "variations": []
+                }
+            ]
+        },
+        "8unkVGWu2qY+RVdpoDK5Zg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Sletting av uke feilet",
+                    "variations": []
+                }
+            ]
+        },
+        "JKltWpQMCVAv6+HfC8ghww==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Slett uke",
+                    "variations": []
+                }
+            ]
         }
-      ]
     }
-  }
 }
