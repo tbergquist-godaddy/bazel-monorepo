@@ -5,6 +5,7 @@ export { default as Box } from './box/box';
 export { default as breakpoints } from './breakpoints';
 export { default as Button } from './button/button';
 export { default as Card } from './card/card';
+export { default as Confirm } from './confirm/confirm';
 export { default as FormGroup } from './form-group';
 export { default as Heading } from './heading/heading';
 export { default as IconButton } from './button/icon-button';

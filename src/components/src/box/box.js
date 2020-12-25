@@ -7,6 +7,7 @@ type AlignItems = 'center';
 type JustifyContent = 'space-between' | 'flex-end';
 type Spacing = 'xs' | 'small' | 'normal' | 'l' | 'xl' | 'xxl';
 type FlexValues = '0' | '1';
+type TextAlign = 'right';
 
 type Props = {
   +children: Node,
@@ -22,6 +23,7 @@ type Props = {
   +flexGrow?: FlexValues,
   +flexShrink?: FlexValues,
   +title?: string,
+  +textAlign?: TextAlign,
 };
 
 type SpacingKey = 'mr' | 'mt' | 'mb' | 'pb';
@@ -84,28 +86,41 @@ export default function Box({
   flexGrow,
   flexShrink,
   title,
+  textAlign,
 }: Props): Node {
   return (
     <div
       title={title} // TODO: Replace with tooltip
-      className={`Box ${styles(
-        flex && 'flex',
-        getAlignItems(alignItems),
-        getJustifyContent(justifyContent),
-        getMr(marginRight),
-        getMt(marginTop),
-        getMb(marginBottom),
-        getPb(paddingBottom),
-        ellipsisContainer && 'ellipsisContainer',
-        getFlexValue('Grow')(flexGrow),
-        getFlexValue('Shrink')(flexShrink),
-      )}${className != null ? ` ${className}` : ''}`}
+      className={[
+        'Box',
+        styles(
+          flex && 'flex',
+          getAlignItems(alignItems),
+          getJustifyContent(justifyContent),
+          getMr(marginRight),
+          getMt(marginTop),
+          getMb(marginBottom),
+          getPb(paddingBottom),
+          ellipsisContainer && 'ellipsisContainer',
+          getFlexValue('Grow')(flexGrow),
+          getFlexValue('Shrink')(flexShrink),
+        ),
+        taStyles(textAlign),
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
       {children}
     </div>
   );
 }
 
+const taStyles = create({
+  right: {
+    textAlign: 'right',
+  },
+});
 const styles = create({
   flex: {
     display: 'flex',
