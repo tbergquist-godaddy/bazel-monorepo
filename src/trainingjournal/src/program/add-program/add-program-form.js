@@ -53,7 +53,7 @@ export default function AddProgramForm({ closeModal }: Props): Node {
         </FormGroup>
         <FormGroup align="right">
           <Button isLoading={isLoading} type="submit">
-            <fbt desc="create team button">Create team</fbt>
+            <fbt desc="create program button">Create program</fbt>
           </Button>
         </FormGroup>
       </form>

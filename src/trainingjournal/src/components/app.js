@@ -1,6 +1,6 @@
 // @flow
 
-import { type Node, useEffect, lazy, Suspense } from 'react';
+import { type Node, useEffect, lazy, Suspense, useRef } from 'react';
 import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
 import { Spinner, Toast, breakpoints } from '@tbergq/components';
 import { createHashHistory } from 'history';
@@ -18,19 +18,24 @@ const router = createRouter(Routes, createHashHistory());
 const ReactQueryDevtoolsPanel = lazy(() => import('./react-query-devtools'));
 
 export default function App(): Node {
+  const locale = getLanguage();
+  const htmlRef = useRef(document.querySelector('html'));
   useEffect(() => {
     init({
       translations,
       hooks: {
         getViewerContext: () => {
           return {
-            locale: getLanguage(),
+            locale,
             GENDER: IntlVariations.GENDER_UNKNOWN,
           };
         },
       },
     });
-  }, []);
+    if (htmlRef.current != null) {
+      htmlRef.current.setAttribute('lang', locale.substring(0, 2));
+    }
+  }, [locale]);
   return (
     <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
