@@ -7,7 +7,7 @@ import { create } from '@adeira/sx';
 import DayList from '../day/day-list';
 import type { Week } from '../types';
 import './week-list.css';
-import DeleteWeek from './delete-week';
+import DeleteWeek from './delete-week/delete-week';
 import AddDay from './add-day';
 
 type Props = {
@@ -23,7 +23,7 @@ export default function WeekList({ week }: Props): Node {
         </Heading>
         <Box flex={true}>
           <Box marginRight="small">
-            <DeleteWeek programId={week.program.toString()} weekId={week.id} />
+            <DeleteWeek weekName={week.name} programId={week.program.toString()} weekId={week.id} />
           </Box>
           <Box>
             <AddDay

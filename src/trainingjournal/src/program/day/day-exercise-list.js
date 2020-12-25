@@ -14,6 +14,9 @@ type Props = {
 };
 
 export default function DayExerciseList({ exercises }: Props): Node {
+  if (exercises.length === 0) {
+    return null; // TODO: some text maybe?
+  }
   return (
     <>
       <Box
