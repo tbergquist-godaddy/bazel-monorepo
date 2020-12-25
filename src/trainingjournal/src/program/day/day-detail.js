@@ -2,6 +2,7 @@
 
 import { type Node } from 'react';
 import { Heading, Box, Card } from '@tbergq/components';
+import { Helmet } from 'react-helmet';
 
 import BackButton from '../../components/back-button';
 import { useFetchDay } from '../api/fetch-days';
@@ -23,6 +24,9 @@ export default function DayDetail({ routeData }: Props): Node {
 
   return (
     <div>
+      <Helmet>
+        <title>Trainingjournal | {data.name}</title>
+      </Helmet>
       <Box flex={true} alignItems="center" justifyContent="space-between">
         <Heading level="h1">{data.name}</Heading>
         <AddExercise programId={programId} dayId={dayId} />

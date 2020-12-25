@@ -4,6 +4,7 @@ import { type Node, useState } from 'react';
 import { useQuery } from 'react-query';
 import { Heading, Box } from '@tbergq/components';
 import fbt from 'fbt';
+import { Helmet } from 'react-helmet';
 
 import { FETCH_PROGRAMS_KEY, fetchPrograms } from './api/fetch-programs';
 import ProgramsList from './programs-list/programs-list';
@@ -22,6 +23,9 @@ export default function Programs(): Node {
 
   return (
     <>
+      <Helmet>
+        <title>Trainingjournal | programs</title>
+      </Helmet>
       <Box flex={true} alignItems="center" justifyContent="space-between">
         <Heading level="h1">
           <fbt desc="programs heading">Programs</fbt>

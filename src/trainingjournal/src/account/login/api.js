@@ -1,6 +1,6 @@
 // @flow
 
-import fetch from '../services/fetch';
+import fetch from '../../services/fetch';
 
 type Input = {
   +username: string,

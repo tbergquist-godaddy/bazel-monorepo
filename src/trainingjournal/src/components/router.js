@@ -23,8 +23,13 @@ export const queryClient: QueryClient = new QueryClient({
 
 const routes: RouteConfig[] = [
   {
-    component: JSResource('Login', () => import('../login/login')),
+    component: JSResource('LandingPage', () => import('../landing/landing-page')),
     path: '/',
+    exact: true,
+  },
+  {
+    component: JSResource('Login', () => import('../account/login/login')),
+    path: '/account/login',
     exact: true,
   },
   {
