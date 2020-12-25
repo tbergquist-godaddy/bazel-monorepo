@@ -5,7 +5,8 @@ import { create } from '@adeira/sx';
 
 type AlignItems = 'center';
 type JustifyContent = 'space-between' | 'flex-end';
-type Spacing = 'xs' | 's' | 'normal' | 'l' | 'xl' | 'xxl';
+type Spacing = 'xs' | 'small' | 'normal' | 'l' | 'xl' | 'xxl';
+type FlexValues = '0' | '1';
 
 type Props = {
   +children: Node,
@@ -17,6 +18,10 @@ type Props = {
   +marginBottom?: Spacing,
   +paddingBottom?: Spacing,
   +className?: string,
+  +ellipsisContainer?: boolean,
+  +flexGrow?: FlexValues,
+  +flexShrink?: FlexValues,
+  +title?: string,
 };
 
 type SpacingKey = 'mr' | 'mt' | 'mb' | 'pb';
@@ -25,6 +30,8 @@ const getSpacing = (space: ?Spacing, key: SpacingKey) => {
   switch (space) {
     case 'normal':
       return `${key}Normal`;
+    case 'small':
+      return `${key}Small`;
     default:
       return false;
   }
@@ -55,6 +62,14 @@ const getJustifyContent = (justifyContent: ?JustifyContent) => {
   }
 };
 
+const getFlexValue = (key: 'Grow' | 'Shrink') => (flexValue: ?FlexValues): $FlowFixMe => {
+  if (flexValue == null) {
+    return false;
+  }
+
+  return `flex${key}${flexValue}`;
+};
+
 export default function Box({
   children,
   flex = false,
@@ -65,10 +80,15 @@ export default function Box({
   marginTop,
   className,
   paddingBottom,
+  ellipsisContainer = false,
+  flexGrow,
+  flexShrink,
+  title,
 }: Props): Node {
   return (
     <div
-      className={`${styles(
+      title={title} // TODO: Replace with tooltip
+      className={`Box ${styles(
         flex && 'flex',
         getAlignItems(alignItems),
         getJustifyContent(justifyContent),
@@ -76,7 +96,10 @@ export default function Box({
         getMt(marginTop),
         getMb(marginBottom),
         getPb(paddingBottom),
-      )} ${className ?? ''}`}
+        ellipsisContainer && 'ellipsisContainer',
+        getFlexValue('Grow')(flexGrow),
+        getFlexValue('Shrink')(flexShrink),
+      )}${className != null ? ` ${className}` : ''}`}
     >
       {children}
     </div>
@@ -96,6 +119,9 @@ const styles = create({
   justifyContentFE: {
     justifyContent: 'flex-end',
   },
+  mrSmall: {
+    marginRight: 'var(--space-small)',
+  },
   mrNormal: {
     marginRight: 'var(--space-normal)',
   },
@@ -107,5 +133,22 @@ const styles = create({
   },
   pbNormal: {
     paddingBottom: 'var(--space-normal)',
+  },
+  ellipsisContainer: {
+    overflowX: 'hidden',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+  },
+  flexGrow0: {
+    flexGrow: 0,
+  },
+  flexGrow1: {
+    flexGrow: 1,
+  },
+  flexShrink0: {
+    flexShrink: 0,
+  },
+  flexShrink1: {
+    flexShrink: 1,
   },
 });

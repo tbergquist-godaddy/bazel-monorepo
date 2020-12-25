@@ -17,3 +17,9 @@ export function createWeek(program: number | string, name: string): Promise<Crea
     body: JSON.stringify({ program, name }),
   });
 }
+
+export function deleteWeek(id: string): Promise<void> {
+  return fetch(`${url}${id}/`, {
+    method: 'DELETE',
+  });
+}

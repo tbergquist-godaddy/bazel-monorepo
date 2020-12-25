@@ -38,5 +38,10 @@ export default async function fetch<P>(url: string, options?: $Exact<FetchOption
     ...options,
     headers,
   });
+
+  if (res.status === 204 && res.ok) {
+    // $FlowExpectedError[incompatible-return]
+    return undefined;
+  }
   return res.json();
 }

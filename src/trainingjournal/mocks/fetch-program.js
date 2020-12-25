@@ -7,7 +7,7 @@ const url = `${process.env.BASE_URL ?? ''}/Program/programs/:programId/`;
 const programMock = {
   id: 1,
   name: 'mock_program',
-  weeks: [{ id: 1, name: 'Week 1', days: [] }],
+  weeks: [{ id: 1, name: 'Week 1', program: 1, days: [] }],
 };
 
 const fetchProgramsHandler: Handler = new Handler({

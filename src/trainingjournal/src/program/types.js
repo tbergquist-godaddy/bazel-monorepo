@@ -9,6 +9,7 @@ export type Week = {
   +id: number,
   +name: string,
   +days: $ReadOnlyArray<Day>,
+  +program: number,
 };
 
 export type Day = {
