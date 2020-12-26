@@ -17,6 +17,7 @@ config();
 
 const { JWT_SECRET } = process.env;
 
+// just for testing
 passport.use(
   new passportJwt.Strategy(
     {
