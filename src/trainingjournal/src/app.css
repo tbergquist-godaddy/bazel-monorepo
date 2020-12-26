@@ -29,3 +29,8 @@ a:hover {
   outline: none;
   text-decoration: underline;
 }
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+}

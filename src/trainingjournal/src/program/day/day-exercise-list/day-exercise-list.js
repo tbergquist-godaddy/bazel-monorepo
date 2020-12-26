@@ -6,8 +6,9 @@ import { create } from '@adeira/sx';
 import { fbt } from 'fbt';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import type { Exercise } from '../types';
+import type { Exercise } from '../../types';
 import './day-exercise-list.css';
+import DayExercise from './day-exercise';
 
 type Props = {
   +exercises: $ReadOnlyArray<Exercise>,
@@ -46,32 +47,7 @@ export default function DayExerciseList({ exercises }: Props): Node {
       <TransitionGroup className="Day__exercise-list">
         {exercises.map((exercise) => (
           <CSSTransition key={exercise.id} timeout={500} classNames="Day__exercise-list--item">
-            <Box
-              marginTop="normal"
-              marginBottom="normal"
-              paddingBottom="normal"
-              justifyContent="space-between"
-              flex={true}
-              className={styles('underline')}
-            >
-              <Box title={exercise.base_exercise.name} ellipsisContainer={true}>
-                {exercise.base_exercise.name}
-              </Box>
-              <Box
-                justifyContent="flex-end"
-                ellipsisContainer={true}
-                flexGrow="1"
-                flexShrink="0"
-                flex={true}
-              >
-                <Box>{exercise.set}</Box>
-                <Box>&nbsp;&times;&nbsp;</Box>
-                <Box>{exercise.reps}</Box>
-                <Box>
-                  &nbsp;-&nbsp;{exercise.break_time} <fbt desc="minute abbreviation">min</fbt>
-                </Box>
-              </Box>
-            </Box>
+            <DayExercise exercise={exercise} />
           </CSSTransition>
         ))}
       </TransitionGroup>
