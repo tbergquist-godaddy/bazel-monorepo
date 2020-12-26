@@ -1,64 +1,44 @@
 // @flow
 
 import { type Node, useState } from 'react';
-import { Heading, Button, FormGroup, Box, useShowToast } from '@tbergq/components';
+import { Button, FormGroup, Box } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { useForm } from 'react-hook-form';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useMutation, useQueryClient } from 'react-query';
 
 import ExerciseInputs, { schema } from './exercise-inputs';
 import ExerciseList from './exercise-list';
 import './exercise-form.css';
-import { createExercise } from '../api/fetch-exercises';
-import { FETCH_DAY_KEY } from '../api/fetch-days';
-import { FETCH_PROGRAM_KEY } from '../api/fetch-programs';
+
+type FormValues = $ReadOnly<{
+  base_exercise: number,
+  break_time: string,
+  description: string,
+  reps: string,
+  set: string,
+}>;
 
 type Props = {
   +closeModal: () => void,
-  +dayId: string,
-  +programId: string,
+  +onSubmit: (FormValues) => void,
+  +isLoading: boolean,
 };
 
-export default function ExerciseForm({ closeModal, dayId, programId }: Props): Node {
-  const cache = useQueryClient();
+export default function ExerciseForm({ closeModal, onSubmit, isLoading }: Props): Node {
   const [exercise, setExercise] = useState();
-  const showToast = useShowToast();
-
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const { mutate, isLoading } = useMutation(createExercise, {
-    onError: () => {
-      showToast({
-        text: fbt('Failed to create exercise', 'Exercise failed toast'),
-        type: 'danger',
-      });
-    },
-    onSuccess: () => {
-      closeModal();
-      cache.invalidateQueries([FETCH_DAY_KEY, dayId]);
-      cache.invalidateQueries([FETCH_PROGRAM_KEY, programId]);
-    },
-  });
-
-  const onSubmit = (values) => {
-    if (exercise != null) {
-      mutate({
-        ...values,
-        base_exercise: exercise.id,
-        day: dayId,
-      });
-    }
+  const submit = (values) => {
+    onSubmit({
+      ...values,
+      base_exercise: exercise?.id,
+    });
   };
-
   return (
     <div className="ExerciseForm">
-      <Heading level="h1">
-        <fbt desc="Add exercise header">Add exercise</fbt>
-      </Heading>
       <SwitchTransition>
         <CSSTransition
           key={exercise != null ? 'SelectExercise' : 'InputStuff'}
@@ -67,7 +47,7 @@ export default function ExerciseForm({ closeModal, dayId, programId }: Props): N
         >
           <div>
             {exercise != null ? (
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit(submit)}>
                 <ExerciseInputs
                   clearExercise={() => setExercise(null)}
                   exerciseName={exercise.name}

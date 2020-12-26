@@ -3,7 +3,7 @@
 import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import render from '../../../../test-utils/render';
+import render from '../../../../../test-utils/render';
 import ExerciseForm from '../exercise-form';
 
 jest.mock('react-transition-group', () => {
@@ -14,7 +14,8 @@ jest.mock('react-transition-group', () => {
 
 it('creates a new exercise', async () => {
   const closeModal = jest.fn();
-  render(<ExerciseForm programId="1" dayId="2" closeModal={closeModal} />);
+  const onSubmit = jest.fn();
+  render(<ExerciseForm onSubmit={onSubmit} isLoading={false} closeModal={closeModal} />);
 
   const button = await waitFor(() => screen.getByRole('button', { name: /squats/i }));
   expect(button).toBeInTheDocument();
@@ -39,5 +40,13 @@ it('creates a new exercise', async () => {
   await waitFor(() => expect(breakTimeInput).toHaveValue('2'));
   userEvent.click(submitButton);
 
-  await waitFor(() => expect(closeModal).toHaveBeenCalledWith());
+  await waitFor(() =>
+    expect(onSubmit).toHaveBeenCalledWith({
+      base_exercise: 1,
+      break_time: '2',
+      description: '',
+      reps: '2',
+      set: '2',
+    }),
+  );
 });

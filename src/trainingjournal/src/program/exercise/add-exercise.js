@@ -4,7 +4,7 @@ import { type Node, useState, lazy, Suspense } from 'react';
 import { Button, Modal, Spinner } from '@tbergq/components';
 import { fbt } from 'fbt';
 
-const ExerciseForm = lazy(() => import('./exercise-form'));
+const AddExerciseForm = lazy(() => import('./add-exercise-form'));
 
 type Props = {
   +dayId: string,
@@ -30,7 +30,7 @@ export default function AddExercise({ dayId, programId }: Props): Node {
         closeLabel={fbt('close', 'close modal label')}
       >
         <Suspense fallback={<Spinner />}>
-          <ExerciseForm
+          <AddExerciseForm
             programId={programId}
             dayId={dayId}
             closeModal={() => setShowModal(false)}
