@@ -13,6 +13,16 @@ const mock = [
     name: 'Bench press',
     muscle_group: { name: 'Breast' },
   },
+  {
+    id: 3,
+    name: 'Arnold press',
+    muscle_group: { name: 'Shoulder' },
+  },
+  {
+    id: 4,
+    name: 'Bulgarsk utfall',
+    muscle_group: { name: 'Quads' },
+  },
 ];
 const handler: Handler = new Handler({
   url: `${process.env.BASE_URL ?? ''}/Program/baseExercises/`,

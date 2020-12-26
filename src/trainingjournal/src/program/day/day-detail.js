@@ -3,6 +3,8 @@
 import { type Node } from 'react';
 import { Heading, Box, Card } from '@tbergq/components';
 import { Helmet } from 'react-helmet';
+import { fbt } from 'fbt';
+import { create } from '@adeira/sx';
 
 import BackButton from '../../components/back-button';
 import { useFetchDay } from '../api/fetch-days';
@@ -32,11 +34,25 @@ export default function DayDetail({ routeData }: Props): Node {
         <AddExercise programId={programId} dayId={dayId} />
       </Box>
       <Box marginBottom="normal">
-        <Card>
-          <DayExerciseList exercises={data.exercises} />
-        </Card>
+        {data.exercises.length > 0 ? (
+          <Card className={styles('card')}>
+            <DayExerciseList exercises={data.exercises} />
+          </Card>
+        ) : (
+          <p>
+            <fbt desc="no exercises text">
+              No exercises registered on this day. Click the button above to add one
+            </fbt>
+          </p>
+        )}
       </Box>
       <BackButton to={`/programs/${programId}`} />
     </div>
   );
 }
+
+const styles = create({
+  card: {
+    overflow: 'hidden',
+  },
+});

@@ -24,6 +24,7 @@ type Props = {
   +flexShrink?: FlexValues,
   +title?: string,
   +textAlign?: TextAlign,
+  +overflow?: 'hidden',
 };
 
 type SpacingKey = 'mr' | 'mt' | 'mb' | 'pb';
@@ -87,6 +88,7 @@ export default function Box({
   flexShrink,
   title,
   textAlign,
+  overflow,
 }: Props): Node {
   return (
     <div
@@ -106,6 +108,7 @@ export default function Box({
           getFlexValue('Shrink')(flexShrink),
         ),
         taStyles(textAlign),
+        overflowStyles(overflow),
         className,
       ]
         .filter(Boolean)
@@ -116,6 +119,11 @@ export default function Box({
   );
 }
 
+const overflowStyles = create({
+  hidden: {
+    overflow: 'hidden',
+  },
+});
 const taStyles = create({
   right: {
     textAlign: 'right',

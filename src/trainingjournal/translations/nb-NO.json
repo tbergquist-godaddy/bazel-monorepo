@@ -1,36 +1,6 @@
 {
     "fb-locale": "nb_NO",
     "translations": {
-        "Uw7EZQvvvSHh2CBENQMxjw==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Tilbake",
-                    "variations": []
-                }
-            ]
-        },
-        "ah\/Fb+6cIA7oSPMwHmBq9w==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Hjem",
-                    "variations": []
-                }
-            ]
-        },
-        "83QnOu6ehUkb+Lgc8RdJog==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Hei {username}",
-                    "variations": []
-                }
-            ]
-        },
         "a2At0ljNpkm4ytwYDdtS0g==": {
             "tokens": [],
             "types": [],
@@ -77,6 +47,76 @@
             "translations": [
                 {
                     "translation": "Trainingjournal logg inn",
+                    "variations": []
+                }
+            ]
+        },
+        "Uw7EZQvvvSHh2CBENQMxjw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Tilbake",
+                    "variations": []
+                }
+            ]
+        },
+        "ah\/Fb+6cIA7oSPMwHmBq9w==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Hjem",
+                    "variations": []
+                }
+            ]
+        },
+        "T22O0HU1PdWV1bUoQSfC1w==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Log inn",
+                    "variations": []
+                }
+            ]
+        },
+        "83QnOu6ehUkb+Lgc8RdJog==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Hei {username}",
+                    "variations": []
+                }
+            ]
+        },
+        "XIZaZxNnXVPWXcQN3wf\/UA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Traningjournal",
+                    "variations": []
+                }
+            ]
+        },
+        "s5+AAIcxBGz1qHaGVLIcuQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Er du lei av å føre treningsdagbok i en god gammeldags kladdebok? Det er vi også! Her kan du føre treningsdagboken din på nett istedenfor, og du vil alltid ha en backup i skyen.",
+                    "variations": []
+                }
+            ]
+        },
+        "U5Pbh5TLhR7Zfa3P5fQ4Hg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "For å komme i gang kan du lage en konto, opprette dine øvelse og lage ditt første program. Deretter tar du bare med deg mobilen din til treningssenteret og fører opp øvelsene mens du holder på. Vi forteller deg hva du løftet forrige gang du gjorde samme øvelser",
                     "variations": []
                 }
             ]
@@ -137,6 +177,16 @@
             "translations": [
                 {
                     "translation": "Legg til program",
+                    "variations": []
+                }
+            ]
+        },
+        "g3Smhe+yopKvqw\/HJ+JfHQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Ingen øvelser registrert på denne dagen. Klikk knappen over for å legge til en",
                     "variations": []
                 }
             ]
@@ -311,6 +361,16 @@
                 }
             ]
         },
+        "BAGrzH+XQ7tY6AzkRbgQeA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Filtrer øvelser",
+                    "variations": []
+                }
+            ]
+        },
         "+UKbni7VmCF89HHKuxmAzQ==": {
             "tokens": [],
             "types": [],
@@ -367,6 +427,46 @@
             "translations": [
                 {
                     "translation": "Legg til uke",
+                    "variations": []
+                }
+            ]
+        },
+        "9rs14J307Ouge8\/kEoedCg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Slett uke",
+                    "variations": []
+                }
+            ]
+        },
+        "w6gghnc0vSDPqSrQp2+h0g==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Avbryt",
+                    "variations": []
+                }
+            ]
+        },
+        "nY0EgsOzOQeU5Fiql7cJew==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Bekreft sletting av uke",
+                    "variations": []
+                }
+            ]
+        },
+        "xOHNxe6JAu\/j23QGJ4N2dg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Er du sikker på at du ønsker å slette {weekName}",
                     "variations": []
                 }
             ]

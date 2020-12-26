@@ -4,7 +4,7 @@ import { type Node } from 'react';
 import { FormGroup, Input, Box, IconButton } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { MdClear } from 'react-icons/md';
-import { object, string, number } from 'yup';
+import { object, string } from 'yup';
 import { type ObjectSchema } from 'yup/lib/object';
 
 type Props = {
@@ -22,13 +22,13 @@ const breakTimeLabel = fbt('Break time', 'Break time label');
 type Values = {
   set: string,
   reps: string,
-  break_time: number,
+  break_time: string,
 };
 
 export const schema: ObjectSchema<Values> = object().shape({
   set: string().required().label(setLabel),
   reps: string().required().label(repsLabel),
-  break_time: number().required().label(breakTimeLabel),
+  break_time: string().required().label(breakTimeLabel),
 });
 
 export default function ExerciseInput({
