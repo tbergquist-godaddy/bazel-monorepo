@@ -6,8 +6,8 @@ import { create } from '@adeira/sx';
 import { useDebounce } from 'use-debounce';
 import { fbt } from 'fbt';
 
-import { useBaseExercises } from '../api/fetch-base-exercises';
-import type { BaseExercise } from '../types';
+import { useBaseExercises } from '../../api/fetch-base-exercises';
+import type { BaseExercise } from '../../types';
 
 type Props = {
   +onSelect: (exercise: BaseExercise) => void,
