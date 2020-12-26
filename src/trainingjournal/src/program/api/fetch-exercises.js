@@ -16,9 +16,22 @@ type CreateExerciseInput = $ReadOnly<{
   set: string,
 }>;
 
-export function createExercise(input: CreateExerciseInput): Promise<$ReadOnlyArray<Exercise>> {
+export function createExercise(input: CreateExerciseInput): Promise<Exercise> {
   return fetch(url, {
     method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
+
+type EditExerciseInput = $ReadOnly<{
+  ...CreateExerciseInput,
+  id: number,
+  day: number,
+}>;
+
+export function editExercise(input: EditExerciseInput): Promise<Exercise> {
+  return fetch(`${url}${input.id}/`, {
+    method: 'PUT',
     body: JSON.stringify(input),
   });
 }

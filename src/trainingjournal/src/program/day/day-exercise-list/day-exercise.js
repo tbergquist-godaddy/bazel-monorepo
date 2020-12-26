@@ -9,11 +9,12 @@ import type { Exercise } from '../../types';
 
 type Props = {
   +exercise: Exercise,
+  +onClick: (Exercise) => void,
 };
 
-export default function DayExercise({ exercise }: Props): Node {
+export default function DayExercise({ exercise, onClick }: Props): Node {
   return (
-    <button type="button" className={styles('button')}>
+    <button onClick={() => onClick(exercise)} type="button" className={styles('button')}>
       <Box title={exercise.base_exercise.name} ellipsisContainer={true}>
         {exercise.base_exercise.name}
       </Box>
