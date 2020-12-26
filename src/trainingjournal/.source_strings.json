@@ -270,10 +270,10 @@
    "hashToText": {
     "xxfG+NJn7tJ295C+6OCcKA==": "Exercise"
    },
-   "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 31,
+   "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
+   "line_beg": 38,
    "col_beg": 10,
-   "line_end": 31,
+   "line_end": 38,
    "col_end": 57,
    "desc": "Exercise description",
    "project": "",
@@ -284,10 +284,10 @@
    "hashToText": {
     "7gOorhm2oBIbkzjTdZQorw==": "Sets"
    },
-   "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 35,
+   "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
+   "line_beg": 42,
    "col_beg": 12,
-   "line_end": 35,
+   "line_end": 42,
    "col_end": 51,
    "desc": "Sets description",
    "project": "",
@@ -298,10 +298,10 @@
    "hashToText": {
     "z+i1KJMuJ+8LQ4fZrJqALw==": "Reps"
    },
-   "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 39,
+   "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
+   "line_beg": 46,
    "col_beg": 12,
-   "line_end": 39,
+   "line_end": 46,
    "col_end": 51,
    "desc": "Reps description",
    "project": "",
@@ -312,10 +312,10 @@
    "hashToText": {
     "XKVZdd5y1la9twfwrN0bCA==": "Break"
    },
-   "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 42,
+   "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
+   "line_beg": 49,
    "col_beg": 25,
-   "line_end": 42,
+   "line_end": 49,
    "col_end": 66,
    "desc": "Break description",
    "project": "",
@@ -326,11 +326,11 @@
    "hashToText": {
     "BCVdhFu82TA6nG1fkM+zRQ==": "min"
    },
-   "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 71,
-   "col_beg": 53,
-   "line_end": 71,
-   "col_end": 94,
+   "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise.js",
+   "line_beg": 32,
+   "col_beg": 45,
+   "line_end": 32,
+   "col_end": 86,
    "desc": "minute abbreviation",
    "project": "",
    "type": "text",
@@ -341,9 +341,9 @@
     "8kHDfF6aCyjD3WWkjiNeMw==": "Edit day"
    },
    "filepath": "src/trainingjournal/src/program/day/day.js",
-   "line_beg": 29,
+   "line_beg": 30,
    "col_beg": 22,
-   "line_end": 29,
+   "line_end": 30,
    "col_end": 67,
    "desc": "edit day button aria-label",
    "project": "",
@@ -352,12 +352,54 @@
   },
   {
    "hashToText": {
+    "kA/Kvrtb8Vfk0vo2vIIX1g==": "Failed to create exercise"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/add-exercise-form.js",
+   "line_beg": 26,
+   "col_beg": 14,
+   "line_end": 26,
+   "col_end": 71,
+   "desc": "Exercise failed toast",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Failed to create exercise"
+  },
+  {
+   "hashToText": {
+    "LRcLTpkaI7oO4aeAGMrwEw==": "Add exercise"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/add-exercise-form.js",
+   "line_beg": 47,
+   "col_beg": 8,
+   "line_end": 47,
+   "col_end": 58,
+   "desc": "Add exercise header",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Add exercise"
+  },
+  {
+   "hashToText": {
+    "tqgLDHnFHSb9eNMccl8ynA==": "Add exercise"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/add-exercise-form.js",
+   "line_beg": 50,
+   "col_beg": 20,
+   "line_end": 50,
+   "col_end": 72,
+   "desc": "Create exercise submit button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Add exercise"
+  },
+  {
+   "hashToText": {
     "zhSC80FRkOcYfCJMVQcmQQ==": "Add exercise"
    },
    "filepath": "src/trainingjournal/src/program/exercise/add-exercise.js",
-   "line_beg": 24,
+   "line_beg": 25,
    "col_beg": 8,
-   "line_end": 24,
+   "line_end": 25,
    "col_end": 63,
    "desc": "add exercise button text",
    "project": "",
@@ -369,9 +411,9 @@
     "mtAd4U53LMO7gI0NaiEOdA==": "close"
    },
    "filepath": "src/trainingjournal/src/program/exercise/add-exercise.js",
-   "line_beg": 29,
+   "line_beg": 30,
    "col_beg": 20,
-   "line_end": 29,
+   "line_end": 30,
    "col_end": 53,
    "desc": "close modal label",
    "project": "",
@@ -380,40 +422,54 @@
   },
   {
    "hashToText": {
-    "kA/Kvrtb8Vfk0vo2vIIX1g==": "Failed to create exercise"
+    "8W/Y1I0Z7JChAoz8dVqgrg==": "Failed to edit exercise"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-form.js",
-   "line_beg": 36,
+   "filepath": "src/trainingjournal/src/program/exercise/edit-exercise-form.js",
+   "line_beg": 28,
    "col_beg": 14,
-   "line_end": 36,
-   "col_end": 71,
-   "desc": "Exercise failed toast",
+   "line_end": 28,
+   "col_end": 74,
+   "desc": "Edit exercise failed toast",
    "project": "",
    "type": "text",
-   "jsfbt": "Failed to create exercise"
+   "jsfbt": "Failed to edit exercise"
   },
   {
    "hashToText": {
-    "LRcLTpkaI7oO4aeAGMrwEw==": "Add exercise"
+    "1FKKJV+XOWbmwSbQyn5xHg==": "Edit exercise"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-form.js",
-   "line_beg": 60,
+   "filepath": "src/trainingjournal/src/program/exercise/edit-exercise-form.js",
+   "line_beg": 46,
    "col_beg": 8,
-   "line_end": 60,
-   "col_end": 58,
-   "desc": "Add exercise header",
+   "line_end": 46,
+   "col_end": 60,
+   "desc": "Edit exercise header",
    "project": "",
    "type": "text",
-   "jsfbt": "Add exercise"
+   "jsfbt": "Edit exercise"
+  },
+  {
+   "hashToText": {
+    "JMXSKiuMK9wLVjXU0SrMqw==": "Save exercise"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/edit-exercise-form.js",
+   "line_beg": 49,
+   "col_beg": 20,
+   "line_end": 49,
+   "col_end": 71,
+   "desc": "Edit exercise submit button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Save exercise"
   },
   {
    "hashToText": {
     "Vqo700WdAkrjHCBKyzG16A==": "Cancel"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-form.js",
-   "line_beg": 80,
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-form.js",
+   "line_beg": 76,
    "col_beg": 22,
-   "line_end": 80,
+   "line_end": 76,
    "col_end": 76,
    "desc": "cancel create exercise button",
    "project": "",
@@ -422,23 +478,9 @@
   },
   {
    "hashToText": {
-    "tqgLDHnFHSb9eNMccl8ynA==": "Add exercise"
-   },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-form.js",
-   "line_beg": 84,
-   "col_beg": 20,
-   "line_end": 84,
-   "col_end": 80,
-   "desc": "Create exercise submit button",
-   "project": "",
-   "type": "text",
-   "jsfbt": "Add exercise"
-  },
-  {
-   "hashToText": {
     "cHNAKNna06a/j80gYNNAGg==": "Set"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-inputs.js",
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-inputs.js",
    "line_beg": 17,
    "col_beg": 17,
    "line_end": 17,
@@ -452,7 +494,7 @@
    "hashToText": {
     "K6FsKy7tyLiS8/16pbyi6A==": "Reps"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-inputs.js",
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-inputs.js",
    "line_beg": 18,
    "col_beg": 18,
    "line_end": 18,
@@ -466,7 +508,7 @@
    "hashToText": {
     "Zz5hL/4pNrCW1hQIXoBgjg==": "Description (Optional)"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-inputs.js",
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-inputs.js",
    "line_beg": 19,
    "col_beg": 25,
    "line_end": 19,
@@ -480,7 +522,7 @@
    "hashToText": {
     "F2UaBX5H3lY/h7sjhJWnmg==": "Break time"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-inputs.js",
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-inputs.js",
    "line_beg": 20,
    "col_beg": 23,
    "line_end": 20,
@@ -494,7 +536,7 @@
    "hashToText": {
     "fso3q/2TDn52wKYvqSKKxA==": "Remove exercise"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-inputs.js",
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-inputs.js",
    "line_beg": 49,
    "col_beg": 22,
    "line_end": 49,
@@ -508,7 +550,7 @@
    "hashToText": {
     "BAGrzH+XQ7tY6AzkRbgQeA==": "Filter exercises"
    },
-   "filepath": "src/trainingjournal/src/program/exercise/exercise-list.js",
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-list.js",
    "line_beg": 28,
    "col_beg": 15,
    "line_end": 28,

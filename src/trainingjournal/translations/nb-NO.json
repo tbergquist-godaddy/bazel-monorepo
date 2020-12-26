@@ -251,26 +251,6 @@
                 }
             ]
         },
-        "zhSC80FRkOcYfCJMVQcmQQ==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Legg til øvelse",
-                    "variations": []
-                }
-            ]
-        },
-        "mtAd4U53LMO7gI0NaiEOdA==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "lukk",
-                    "variations": []
-                }
-            ]
-        },
         "kA\/Kvrtb8Vfk0vo2vIIX1g==": {
             "tokens": [],
             "types": [],
@@ -291,22 +271,72 @@
                 }
             ]
         },
-        "Vqo700WdAkrjHCBKyzG16A==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Avbryt",
-                    "variations": []
-                }
-            ]
-        },
         "tqgLDHnFHSb9eNMccl8ynA==": {
             "tokens": [],
             "types": [],
             "translations": [
                 {
                     "translation": "Legg til øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "zhSC80FRkOcYfCJMVQcmQQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Legg til øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "mtAd4U53LMO7gI0NaiEOdA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "lukk",
+                    "variations": []
+                }
+            ]
+        },
+        "8W\/Y1I0Z7JChAoz8dVqgrg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Mislyktes i å redigere øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "1FKKJV+XOWbmwSbQyn5xHg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Rediger øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "JMXSKiuMK9wLVjXU0SrMqw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Lagre øvelse",
+                    "variations": []
+                }
+            ]
+        },
+        "Vqo700WdAkrjHCBKyzG16A==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Avbryt",
                     "variations": []
                 }
             ]
