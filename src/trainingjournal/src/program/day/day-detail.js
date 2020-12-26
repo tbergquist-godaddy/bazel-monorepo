@@ -9,7 +9,7 @@ import { create } from '@adeira/sx';
 import BackButton from '../../components/back-button';
 import { useFetchDay } from '../api/fetch-days';
 import AddExercise from '../exercise/add-exercise';
-import DayExerciseList from './day-exercise-list';
+import DayExerciseList from './day-exercise-list/day-exercise-list';
 
 type Props = {
   +routeData: {

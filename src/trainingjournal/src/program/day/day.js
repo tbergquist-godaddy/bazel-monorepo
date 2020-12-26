@@ -8,7 +8,7 @@ import { fbt } from 'fbt';
 import { create } from '@adeira/sx';
 
 import type { Day as DayType } from '../types';
-import DayExerciseList from './day-exercise-list';
+import DayExerciseList from './day-exercise-list/day-exercise-list';
 
 type Props = {
   +day: DayType,
