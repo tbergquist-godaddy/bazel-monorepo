@@ -5,6 +5,7 @@ import { Heading, Card, Box, IconButton } from '@tbergq/components';
 import { MdEdit } from 'react-icons/md';
 import { Link, useHistory } from '@tbergq/router';
 import { fbt } from 'fbt';
+import { create } from '@adeira/sx';
 
 import type { Day as DayType } from '../types';
 import DayExerciseList from './day-exercise-list';
@@ -18,7 +19,7 @@ export default function Day({ day }: Props): Node {
   const { name, exercises, id } = day;
 
   return (
-    <Card>
+    <Card className={styles('card')}>
       <Box justifyContent="space-between" alignItems="center" flex={true}>
         <Heading level="h3" as="h6">
           {name}
@@ -36,3 +37,9 @@ export default function Day({ day }: Props): Node {
     </Card>
   );
 }
+
+const styles = create({
+  card: {
+    overflow: 'hidden',
+  },
+});

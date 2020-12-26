@@ -5,7 +5,7 @@ import { create } from '@adeira/sx';
 
 type Props = {
   +value?: string,
-  +onChange?: (SyntheticEvent<HTMLInputElement>) => void,
+  +onChange?: (SyntheticInputEvent<HTMLInputElement>) => void,
   +label: Node,
   +type?: 'text' | 'password' | 'email',
   +inputMode?: ?'email' | 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'url',

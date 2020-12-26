@@ -2,6 +2,76 @@
  "phrases": [
   {
    "hashToText": {
+    "a2At0ljNpkm4ytwYDdtS0g==": "Username"
+   },
+   "filepath": "src/trainingjournal/src/account/login/login-form.js",
+   "line_beg": 16,
+   "col_beg": 17,
+   "line_end": 16,
+   "col_end": 55,
+   "desc": "username form label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Username"
+  },
+  {
+   "hashToText": {
+    "b1T19vW9/DoBPue7cIGh3Q==": "Password"
+   },
+   "filepath": "src/trainingjournal/src/account/login/login-form.js",
+   "line_beg": 17,
+   "col_beg": 17,
+   "line_end": 17,
+   "col_end": 55,
+   "desc": "password form label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Password"
+  },
+  {
+   "hashToText": {
+    "CBsKATgppv4k6y046G9MRQ==": "Wrong username or password"
+   },
+   "filepath": "src/trainingjournal/src/account/login/login-form.js",
+   "line_beg": 18,
+   "col_beg": 26,
+   "line_end": 18,
+   "col_end": 82,
+   "desc": "Login error message",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Wrong username or password"
+  },
+  {
+   "hashToText": {
+    "F3p8DbdliugG4CTKslAYqA==": "Login"
+   },
+   "filepath": "src/trainingjournal/src/account/login/login-form.js",
+   "line_beg": 71,
+   "col_beg": 10,
+   "line_end": 71,
+   "col_end": 46,
+   "desc": "Login button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Login"
+  },
+  {
+   "hashToText": {
+    "EJiqPfRrsYhNdA4eGTqcjQ==": "Trainingjournal login"
+   },
+   "filepath": "src/trainingjournal/src/account/login/login.js",
+   "line_beg": 19,
+   "col_beg": 10,
+   "line_end": 19,
+   "col_end": 68,
+   "desc": "login page heading",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Trainingjournal login"
+  },
+  {
+   "hashToText": {
     "Uw7EZQvvvSHh2CBENQMxjw==": "Back"
    },
    "filepath": "src/trainingjournal/src/components/back-button.js",
@@ -30,12 +100,26 @@
   },
   {
    "hashToText": {
-    "83QnOu6ehUkb+Lgc8RdJog==": "Hi {username}"
+    "T22O0HU1PdWV1bUoQSfC1w==": "Login"
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
    "line_beg": 25,
-   "col_beg": 15,
+   "col_beg": 8,
    "line_end": 25,
+   "col_end": 49,
+   "desc": "Login navbar link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Login"
+  },
+  {
+   "hashToText": {
+    "83QnOu6ehUkb+Lgc8RdJog==": "Hi {username}"
+   },
+   "filepath": "src/trainingjournal/src/components/navbar.js",
+   "line_beg": 29,
+   "col_beg": 15,
+   "line_end": 29,
    "col_end": 76,
    "desc": "user greeting",
    "project": "",
@@ -44,73 +128,45 @@
   },
   {
    "hashToText": {
-    "a2At0ljNpkm4ytwYDdtS0g==": "Username"
+    "XIZaZxNnXVPWXcQN3wf/UA==": "Traningjournal"
    },
-   "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 16,
-   "col_beg": 17,
-   "line_end": 16,
-   "col_end": 55,
-   "desc": "username form label",
-   "project": "",
-   "type": "text",
-   "jsfbt": "Username"
-  },
-  {
-   "hashToText": {
-    "b1T19vW9/DoBPue7cIGh3Q==": "Password"
-   },
-   "filepath": "src/trainingjournal/src/login/login-form.js",
+   "filepath": "src/trainingjournal/src/landing/landing-page.js",
    "line_beg": 17,
-   "col_beg": 17,
-   "line_end": 17,
-   "col_end": 55,
-   "desc": "password form label",
-   "project": "",
-   "type": "text",
-   "jsfbt": "Password"
-  },
-  {
-   "hashToText": {
-    "CBsKATgppv4k6y046G9MRQ==": "Wrong username or password"
-   },
-   "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 18,
-   "col_beg": 26,
-   "line_end": 18,
-   "col_end": 82,
-   "desc": "Login error message",
-   "project": "",
-   "type": "text",
-   "jsfbt": "Wrong username or password"
-  },
-  {
-   "hashToText": {
-    "F3p8DbdliugG4CTKslAYqA==": "Login"
-   },
-   "filepath": "src/trainingjournal/src/login/login-form.js",
-   "line_beg": 71,
    "col_beg": 10,
-   "line_end": 71,
-   "col_end": 46,
-   "desc": "Login button",
+   "line_end": 17,
+   "col_end": 63,
+   "desc": "landing page heading",
    "project": "",
    "type": "text",
-   "jsfbt": "Login"
+   "jsfbt": "Traningjournal"
   },
   {
    "hashToText": {
-    "EJiqPfRrsYhNdA4eGTqcjQ==": "Trainingjournal login"
+    "s5+AAIcxBGz1qHaGVLIcuQ==": "Are you tired of keeping your training journal in a notebook? So are we! Here you can keep your training journal online instead, and always have it backed up in the cloud."
    },
-   "filepath": "src/trainingjournal/src/login/login.js",
-   "line_beg": 14,
-   "col_beg": 8,
-   "line_end": 14,
-   "col_end": 66,
-   "desc": "login page heading",
+   "filepath": "src/trainingjournal/src/landing/landing-page.js",
+   "line_beg": 20,
+   "col_beg": 10,
+   "line_end": 23,
+   "col_end": 16,
+   "desc": "landing page info text",
    "project": "",
    "type": "text",
-   "jsfbt": "Trainingjournal login"
+   "jsfbt": "Are you tired of keeping your training journal in a notebook? So are we! Here you can keep your training journal online instead, and always have it backed up in the cloud."
+  },
+  {
+   "hashToText": {
+    "U5Pbh5TLhR7Zfa3P5fQ4Hg==": "To get started, just create your account, create your exercises, and then create your first program. Then bring your phone to the gym and just register your exercises as you go. We will tell you how much you lifted the last time you did your current exercise"
+   },
+   "filepath": "src/trainingjournal/src/landing/landing-page.js",
+   "line_beg": 28,
+   "col_beg": 10,
+   "line_end": 32,
+   "col_end": 16,
+   "desc": "landing page info text2",
+   "project": "",
+   "type": "text",
+   "jsfbt": "To get started, just create your account, create your exercises, and then create your first program. Then bring your phone to the gym and just register your exercises as you go. We will tell you how much you lifted the last time you did your current exercise"
   },
   {
    "hashToText": {
@@ -198,12 +254,26 @@
   },
   {
    "hashToText": {
+    "g3Smhe+yopKvqw/HJ+JfHQ==": "No exercises registered on this day. Click the button above to add one"
+   },
+   "filepath": "src/trainingjournal/src/program/day/day-detail.js",
+   "line_beg": 43,
+   "col_beg": 12,
+   "line_end": 45,
+   "col_end": 18,
+   "desc": "no exercises text",
+   "project": "",
+   "type": "text",
+   "jsfbt": "No exercises registered on this day. Click the button above to add one"
+  },
+  {
+   "hashToText": {
     "xxfG+NJn7tJ295C+6OCcKA==": "Exercise"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 28,
+   "line_beg": 31,
    "col_beg": 10,
-   "line_end": 28,
+   "line_end": 31,
    "col_end": 57,
    "desc": "Exercise description",
    "project": "",
@@ -215,9 +285,9 @@
     "7gOorhm2oBIbkzjTdZQorw==": "Sets"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 32,
+   "line_beg": 35,
    "col_beg": 12,
-   "line_end": 32,
+   "line_end": 35,
    "col_end": 51,
    "desc": "Sets description",
    "project": "",
@@ -229,9 +299,9 @@
     "z+i1KJMuJ+8LQ4fZrJqALw==": "Reps"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 36,
+   "line_beg": 39,
    "col_beg": 12,
-   "line_end": 36,
+   "line_end": 39,
    "col_end": 51,
    "desc": "Reps description",
    "project": "",
@@ -243,9 +313,9 @@
     "XKVZdd5y1la9twfwrN0bCA==": "Break"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 39,
+   "line_beg": 42,
    "col_beg": 25,
-   "line_end": 39,
+   "line_end": 42,
    "col_end": 66,
    "desc": "Break description",
    "project": "",
@@ -257,9 +327,9 @@
     "BCVdhFu82TA6nG1fkM+zRQ==": "min"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list.js",
-   "line_beg": 68,
+   "line_beg": 71,
    "col_beg": 53,
-   "line_end": 68,
+   "line_end": 71,
    "col_end": 94,
    "desc": "minute abbreviation",
    "project": "",
@@ -271,9 +341,9 @@
     "8kHDfF6aCyjD3WWkjiNeMw==": "Edit day"
    },
    "filepath": "src/trainingjournal/src/program/day/day.js",
-   "line_beg": 28,
+   "line_beg": 29,
    "col_beg": 22,
-   "line_end": 28,
+   "line_end": 29,
    "col_end": 67,
    "desc": "edit day button aria-label",
    "project": "",
@@ -436,12 +506,26 @@
   },
   {
    "hashToText": {
+    "BAGrzH+XQ7tY6AzkRbgQeA==": "Filter exercises"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/exercise-list.js",
+   "line_beg": 28,
+   "col_beg": 15,
+   "line_end": 28,
+   "col_end": 60,
+   "desc": "filter input label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Filter exercises"
+  },
+  {
+   "hashToText": {
     "+UKbni7VmCF89HHKuxmAzQ==": "Programs"
    },
    "filepath": "src/trainingjournal/src/program/programs.js",
-   "line_beg": 27,
+   "line_beg": 31,
    "col_beg": 10,
-   "line_end": 27,
+   "line_end": 31,
    "col_end": 53,
    "desc": "programs heading",
    "project": "",
@@ -520,12 +604,68 @@
   },
   {
    "hashToText": {
+    "9rs14J307Ouge8/kEoedCg==": "Delete week"
+   },
+   "filepath": "src/trainingjournal/src/program/week/delete-week/confirm-delete-week.js",
+   "line_beg": 21,
+   "col_beg": 25,
+   "line_end": 21,
+   "col_end": 72,
+   "desc": "Delete week action button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete week"
+  },
+  {
+   "hashToText": {
+    "w6gghnc0vSDPqSrQp2+h0g==": "Cancel"
+   },
+   "filepath": "src/trainingjournal/src/program/week/delete-week/confirm-delete-week.js",
+   "line_beg": 22,
+   "col_beg": 24,
+   "line_end": 22,
+   "col_end": 73,
+   "desc": "Cancel delete week action button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Cancel"
+  },
+  {
+   "hashToText": {
+    "nY0EgsOzOQeU5Fiql7cJew==": "Confirm delete week"
+   },
+   "filepath": "src/trainingjournal/src/program/week/delete-week/confirm-delete-week.js",
+   "line_beg": 23,
+   "col_beg": 13,
+   "line_end": 23,
+   "col_end": 68,
+   "desc": "Confirm delete week title",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Confirm delete week"
+  },
+  {
+   "hashToText": {
+    "xOHNxe6JAu/j23QGJ4N2dg==": "Are you sure you want to delete {weekName}"
+   },
+   "filepath": "src/trainingjournal/src/program/week/delete-week/confirm-delete-week.js",
+   "line_beg": 24,
+   "col_beg": 19,
+   "line_end": 27,
+   "col_end": 7,
+   "desc": "Confirm delete week text",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Are you sure you want to delete {weekName}"
+  },
+  {
+   "hashToText": {
     "8unkVGWu2qY+RVdpoDK5Zg==": "Failed to delete week"
    },
-   "filepath": "src/trainingjournal/src/program/week/delete-week.js",
-   "line_beg": 25,
+   "filepath": "src/trainingjournal/src/program/week/delete-week/delete-week.js",
+   "line_beg": 27,
    "col_beg": 14,
-   "line_end": 25,
+   "line_end": 27,
    "col_end": 78,
    "desc": "Delete week failed error message",
    "project": "",
@@ -536,11 +676,11 @@
    "hashToText": {
     "JKltWpQMCVAv6+HfC8ghww==": "Delete week"
    },
-   "filepath": "src/trainingjournal/src/program/week/delete-week.js",
-   "line_beg": 40,
-   "col_beg": 6,
-   "line_end": 40,
-   "col_end": 54,
+   "filepath": "src/trainingjournal/src/program/week/delete-week/delete-week.js",
+   "line_beg": 48,
+   "col_beg": 8,
+   "line_end": 48,
+   "col_end": 56,
    "desc": "Delete week button",
    "project": "",
    "type": "text",
