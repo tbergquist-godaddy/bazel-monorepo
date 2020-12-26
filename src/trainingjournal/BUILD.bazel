@@ -1,5 +1,5 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm//http-server:index.bzl", "http_server")
-load("@npm//vercel:index.bzl", "vercel")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
 load("//:eslint/eslint.bzl", "eslint")
@@ -32,19 +32,6 @@ webpack_cli(
         "@npm//@pmmmwh/react-refresh-webpack-plugin",
     ],
     output_dir = True,
-)
-
-vercel(
-    name = "deploy",
-    args = [
-        "./src/trainingjournal",
-        "--prod",
-        "--confirm",
-    ],
-    data = [
-        ":public",
-        ":vercel.json",
-    ],
 )
 
 webpack_dev_server(
@@ -120,5 +107,21 @@ http_server(
     ],
     data = [
         ":public",
+    ],
+)
+
+nodejs_binary(
+    name = "deploy",
+    data = [
+        ":public",
+        ":vercel.json",
+    ],
+    entry_point = "@npm//:node_modules/vercel/dist/index.js",
+    templated_args = [
+        "./src/trainingjournal",
+        "--confirm",
+        "--prod",
+        "--token",
+        "$$ZEIT_TOKEN",
     ],
 )

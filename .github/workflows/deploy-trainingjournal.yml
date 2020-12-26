@@ -1,15 +1,20 @@
-name: Continuous Integration
+name: Deploy Trainingjournal
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'src/trainingjournal/**'
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [15.x]
-        mongodb-version: [4.2]
+
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,7 +29,6 @@ jobs:
             ~/.cache/bazel-disk
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
-      # TODO: cache, google storage bucket 🤔 https://docs.bazel.build/versions/master/remote-caching.html
       - name: Install bazelisk
         run: |
           curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64"
@@ -36,25 +40,10 @@ jobs:
         run: |
           yarn install
 
-      - name: Typecheck
-        run: yarn typecheck
-
-      - name: Run Buldifier lint
-        run: |
-          "${GITHUB_WORKSPACE}/bin/bazel" run --build_tag_filters=manual //:buildifier.lint
-
-      - name: Start MongoDB v${{ matrix.mongodb-version }}
-        uses: supercharge/mongodb-github-action@1.2.0
-        with:
-          mongodb-version: ${{ matrix.mongodb-version }}
-
-      - name: Build
+      - name: Deploy trainingjournal
         run: |
           echo BASE_URL=$BASE_URL >> src/trainingjournal/.env
-          "${GITHUB_WORKSPACE}/bin/bazel" build '...'
+          "${GITHUB_WORKSPACE}/bin/bazel" run //src/trainingjournal:deploy
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
-
-      - name: Test
-        run: |
-          "${GITHUB_WORKSPACE}/bin/bazel" test '...'
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}

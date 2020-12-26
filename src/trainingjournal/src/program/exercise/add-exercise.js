@@ -13,6 +13,7 @@ type Props = {
 
 export default function AddExercise({ dayId, programId }: Props): Node {
   const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <Button
