@@ -12,9 +12,10 @@ import DayExerciseList from './day-exercise-list/day-exercise-list';
 
 type Props = {
   +day: DayType,
+  +programId: string,
 };
 
-export default function Day({ day }: Props): Node {
+export default function Day({ day, programId }: Props): Node {
   const { location } = useHistory();
   const { name, exercises, id } = day;
 
@@ -33,7 +34,7 @@ export default function Day({ day }: Props): Node {
           <MdEdit />
         </IconButton>
       </Box>
-      <DayExerciseList exercises={exercises} />
+      <DayExerciseList programId={programId} dayId={id.toString()} exercises={exercises} />
     </Card>
   );
 }

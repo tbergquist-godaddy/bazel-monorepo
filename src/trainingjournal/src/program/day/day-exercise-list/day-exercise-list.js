@@ -1,7 +1,7 @@
 // @flow
 
-import { type Node } from 'react';
-import { Box } from '@tbergq/components';
+import { type Node, useState, Suspense, lazy } from 'react';
+import { Box, Spinner, Modal } from '@tbergq/components';
 import { create } from '@adeira/sx';
 import { fbt } from 'fbt';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -10,11 +10,17 @@ import type { Exercise } from '../../types';
 import './day-exercise-list.css';
 import DayExercise from './day-exercise';
 
+const EditExercise = lazy(() => import('../../exercise/edit-exercise-form'));
+
 type Props = {
   +exercises: $ReadOnlyArray<Exercise>,
+  +dayId: string,
+  +programId: string,
 };
 
-export default function DayExerciseList({ exercises }: Props): Node {
+export default function DayExerciseList({ exercises, ...rest }: Props): Node {
+  const [selectedExercise, setExercise] = useState(null);
+  const onClose = () => setExercise(null);
   if (exercises.length === 0) {
     return null; // TODO: some text maybe?
   }
@@ -47,10 +53,17 @@ export default function DayExerciseList({ exercises }: Props): Node {
       <TransitionGroup className="Day__exercise-list">
         {exercises.map((exercise) => (
           <CSSTransition key={exercise.id} timeout={500} classNames="Day__exercise-list--item">
-            <DayExercise exercise={exercise} />
+            <DayExercise onClick={setExercise} exercise={exercise} />
           </CSSTransition>
         ))}
       </TransitionGroup>
+      <Modal isVisible={selectedExercise != null} onClose={onClose}>
+        {selectedExercise != null ? (
+          <Suspense fallback={<Spinner />}>
+            <EditExercise {...rest} closeModal={onClose} exercise={selectedExercise} />
+          </Suspense>
+        ) : null}
+      </Modal>
     </>
   );
 }

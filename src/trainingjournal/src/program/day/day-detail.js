@@ -36,7 +36,7 @@ export default function DayDetail({ routeData }: Props): Node {
       <Box marginBottom="normal">
         {data.exercises.length > 0 ? (
           <Card className={styles('card')}>
-            <DayExerciseList exercises={data.exercises} />
+            <DayExerciseList dayId={dayId} programId={programId} exercises={data.exercises} />
           </Card>
         ) : (
           <p>

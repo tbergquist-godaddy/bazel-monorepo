@@ -10,6 +10,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import ExerciseInputs, { schema } from './exercise-inputs';
 import ExerciseList from './exercise-list';
 import './exercise-form.css';
+import type { Exercise } from '../../types';
 
 type FormValues = $ReadOnly<{
   base_exercise: number,
@@ -23,12 +24,27 @@ type Props = {
   +closeModal: () => void,
   +onSubmit: (FormValues) => void,
   +isLoading: boolean,
+  +initialExercise?: Exercise,
+  +submitText: string,
 };
 
-export default function ExerciseForm({ closeModal, onSubmit, isLoading }: Props): Node {
-  const [exercise, setExercise] = useState();
+export default function ExerciseForm({
+  closeModal,
+  onSubmit,
+  isLoading,
+  initialExercise = null,
+  submitText,
+}: Props): Node {
+  const [exercise, setExercise] = useState(() => {
+    if (initialExercise != null) {
+      return initialExercise.base_exercise;
+    }
+    return null;
+  });
+
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
+    defaultValues: initialExercise ?? {},
   });
 
   const submit = (values) => {
@@ -61,7 +77,7 @@ export default function ExerciseForm({ closeModal, onSubmit, isLoading }: Props)
                     </Button>
                   </Box>
                   <Button isLoading={isLoading} type="submit">
-                    <fbt desc="Create exercise submit button">Add exercise</fbt>
+                    {submitText}
                   </Button>
                 </FormGroup>
               </form>

@@ -35,7 +35,7 @@ export default function WeekList({ week }: Props): Node {
         </Box>
       </Box>
       <div className={styles('grid')}>
-        <DayList days={week.days} />
+        <DayList programId={week.program.toString()} days={week.days} />
       </div>
     </div>
   );
