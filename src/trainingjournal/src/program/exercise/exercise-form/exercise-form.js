@@ -26,6 +26,7 @@ type Props = {
   +isLoading: boolean,
   +initialExercise?: Exercise,
   +submitText: string,
+  +extraAction?: Node,
 };
 
 export default function ExerciseForm({
@@ -34,6 +35,7 @@ export default function ExerciseForm({
   isLoading,
   initialExercise = null,
   submitText,
+  extraAction,
 }: Props): Node {
   const [exercise, setExercise] = useState(() => {
     if (initialExercise != null) {
@@ -71,6 +73,7 @@ export default function ExerciseForm({
                   register={register}
                 />
                 <FormGroup align="right">
+                  {extraAction}
                   <Box marginRight="normal">
                     <Button variant="white" onClick={closeModal}>
                       <fbt desc="cancel create exercise button">Cancel</fbt>

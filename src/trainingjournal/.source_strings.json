@@ -422,12 +422,96 @@
   },
   {
    "hashToText": {
+    "ia+11uAsU71UnJ2dDSisiQ==": "failed to delete exercise, please try again"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/delete-exercise.js",
+   "line_beg": 29,
+   "col_beg": 14,
+   "line_end": 29,
+   "col_end": 97,
+   "desc": "Delete exercise failure toast",
+   "project": "",
+   "type": "text",
+   "jsfbt": "failed to delete exercise, please try again"
+  },
+  {
+   "hashToText": {
+    "IanRcwBQy7n075NEVwNjIA==": "Delete exercise"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/delete-exercise.js",
+   "line_beg": 38,
+   "col_beg": 8,
+   "line_end": 38,
+   "col_end": 64,
+   "desc": "delete exercise button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete exercise"
+  },
+  {
+   "hashToText": {
+    "GL8pTf8mPQufNQb7QykEmA==": "Cancel"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/delete-exercise.js",
+   "line_beg": 41,
+   "col_beg": 26,
+   "line_end": 41,
+   "col_end": 63,
+   "desc": "Cancel delete button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Cancel"
+  },
+  {
+   "hashToText": {
+    "BP3ODqUpHktjmu1S0EVFhA==": "Are you sure you want to delete {exerciseName}?"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/delete-exercise.js",
+   "line_beg": 42,
+   "col_beg": 21,
+   "line_end": 45,
+   "col_end": 9,
+   "desc": "Confirm delete exercise text",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Are you sure you want to delete {exerciseName}?"
+  },
+  {
+   "hashToText": {
+    "K01X1vlYPXVPuqmwRKUESQ==": "Delete exercise"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/delete-exercise.js",
+   "line_beg": 47,
+   "col_beg": 27,
+   "line_end": 47,
+   "col_end": 74,
+   "desc": "Confirm delete button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete exercise"
+  },
+  {
+   "hashToText": {
+    "HgECWZ5/H66+JJPdtG3ekw==": "Confirm delete"
+   },
+   "filepath": "src/trainingjournal/src/program/exercise/delete-exercise.js",
+   "line_beg": 48,
+   "col_beg": 15,
+   "line_end": 48,
+   "col_end": 60,
+   "desc": "Confirm delete title",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Confirm delete"
+  },
+  {
+   "hashToText": {
     "8W/Y1I0Z7JChAoz8dVqgrg==": "Failed to edit exercise"
    },
    "filepath": "src/trainingjournal/src/program/exercise/edit-exercise-form.js",
-   "line_beg": 28,
+   "line_beg": 35,
    "col_beg": 14,
-   "line_end": 28,
+   "line_end": 35,
    "col_end": 74,
    "desc": "Edit exercise failed toast",
    "project": "",
@@ -439,9 +523,9 @@
     "1FKKJV+XOWbmwSbQyn5xHg==": "Edit exercise"
    },
    "filepath": "src/trainingjournal/src/program/exercise/edit-exercise-form.js",
-   "line_beg": 46,
+   "line_beg": 49,
    "col_beg": 8,
-   "line_end": 46,
+   "line_end": 49,
    "col_end": 60,
    "desc": "Edit exercise header",
    "project": "",
@@ -453,9 +537,9 @@
     "JMXSKiuMK9wLVjXU0SrMqw==": "Save exercise"
    },
    "filepath": "src/trainingjournal/src/program/exercise/edit-exercise-form.js",
-   "line_beg": 49,
+   "line_beg": 52,
    "col_beg": 20,
-   "line_end": 49,
+   "line_end": 52,
    "col_end": 71,
    "desc": "Edit exercise submit button",
    "project": "",
@@ -467,9 +551,9 @@
     "Vqo700WdAkrjHCBKyzG16A==": "Cancel"
    },
    "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-form.js",
-   "line_beg": 76,
+   "line_beg": 79,
    "col_beg": 22,
-   "line_end": 76,
+   "line_end": 79,
    "col_end": 76,
    "desc": "cancel create exercise button",
    "project": "",

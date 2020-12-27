@@ -19,7 +19,9 @@ declare module 'msw' {
   declare type HandlerFunction = (url: string, handler: Handler) => RequestHandler;
   declare type Rest = {
     get: HandlerFunction,
-    post: HandlerFunction
+    post: HandlerFunction,
+    put: HandlerFunction,
+    delete: HandlerFunction,
   }
   declare export var rest: Rest;
 }

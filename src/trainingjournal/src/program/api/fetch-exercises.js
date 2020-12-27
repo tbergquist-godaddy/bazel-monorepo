@@ -35,3 +35,9 @@ export function editExercise(input: EditExerciseInput): Promise<Exercise> {
     body: JSON.stringify(input),
   });
 }
+
+export function deleteExercise(exerciseId: string): Promise<void> {
+  return fetch(`${url}${exerciseId}/`, {
+    method: 'DELETE',
+  });
+}
