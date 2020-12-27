@@ -6,15 +6,18 @@ import { RecoilRoot } from 'recoil';
 import { RoutingContext, createRouter } from '@tbergq/router';
 import { createHashHistory } from 'history';
 import { Toast } from '@tbergq/components';
-import { QueryClientProvider } from 'react-query';
+import { QueryClientProvider, QueryClient } from 'react-query';
 
 import Routes, { queryClient } from '../src/components/router';
 
 const router = createRouter(Routes, createHashHistory());
 
-export default function render(ui: any): RenderResult<> {
+type Config = {
+  +queryClient?: QueryClient,
+};
+export default function render(ui: any, config?: Config): RenderResult<> {
   return originalRender(
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={config?.queryClient ?? queryClient}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
           <Suspense fallback="loading">

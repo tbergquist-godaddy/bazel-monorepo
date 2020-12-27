@@ -1,7 +1,7 @@
 // @flow
 
 import { type Node } from 'react';
-import { Heading, useShowToast } from '@tbergq/components';
+import { Heading, useShowToast, Box } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { useMutation, useQueryClient } from 'react-query';
 
@@ -10,6 +10,7 @@ import { FETCH_DAY_KEY } from '../api/fetch-days';
 import { FETCH_PROGRAM_KEY } from '../api/fetch-programs';
 import { editExercise } from '../api/fetch-exercises';
 import type { Exercise } from '../types';
+import DeleteExercise from './delete-exercise';
 
 type Props = {
   +closeModal: () => void,
@@ -22,6 +23,12 @@ export default function EditExerciseForm({ closeModal, exercise, dayId, programI
   const cache = useQueryClient();
   const showToast = useShowToast();
 
+  const onMutationSuccess = () => {
+    closeModal();
+    cache.invalidateQueries([FETCH_DAY_KEY, dayId]);
+    cache.invalidateQueries([FETCH_PROGRAM_KEY, programId]);
+  };
+
   const { mutate, isLoading } = useMutation(editExercise, {
     onError: () => {
       showToast({
@@ -29,11 +36,7 @@ export default function EditExerciseForm({ closeModal, exercise, dayId, programI
         type: 'danger',
       });
     },
-    onSuccess: () => {
-      closeModal();
-      cache.invalidateQueries([FETCH_DAY_KEY, dayId]);
-      cache.invalidateQueries([FETCH_PROGRAM_KEY, programId]);
-    },
+    onSuccess: onMutationSuccess,
   });
 
   const onSubmit = (values) => {
@@ -51,6 +54,15 @@ export default function EditExerciseForm({ closeModal, exercise, dayId, programI
         onSubmit={onSubmit}
         closeModal={closeModal}
         isLoading={isLoading}
+        extraAction={
+          <Box marginRight="normal">
+            <DeleteExercise
+              onMutationSuccess={onMutationSuccess}
+              exerciseId={exercise.id.toString()}
+              exerciseName={exercise.base_exercise.name}
+            />
+          </Box>
+        }
       />
     </>
   );

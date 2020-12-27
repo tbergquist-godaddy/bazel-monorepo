@@ -2,7 +2,7 @@
 
 import type { Handler as HandlerFunction } from 'msw';
 
-type Type = 'post' | 'get';
+type Type = 'post' | 'get' | 'put' | 'delete';
 
 type Args = {
   +url: string,
