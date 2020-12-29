@@ -33,3 +33,9 @@ export function fetchDay(id: string | number): Promise<Day> {
 export function useFetchDay(id: string | number, config: QueryConfig): UseQueryResponse<Day> {
   return useQuery([FETCH_DAY_KEY, id], () => fetchDay(id), config);
 }
+
+export function deleteDay(id: string | number): Promise<void> {
+  return fetch(`${url}${id}/`, {
+    method: 'DELETE',
+  });
+}
