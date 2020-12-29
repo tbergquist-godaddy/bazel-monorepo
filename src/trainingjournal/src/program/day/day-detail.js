@@ -10,6 +10,7 @@ import BackButton from '../../components/back-button';
 import { useFetchDay } from '../api/fetch-days';
 import AddExercise from '../exercise/add-exercise';
 import DayExerciseList from './day-exercise-list/day-exercise-list';
+import DeleteDay from './delete-day';
 
 type Props = {
   +routeData: {
@@ -46,7 +47,12 @@ export default function DayDetail({ routeData }: Props): Node {
           </p>
         )}
       </Box>
-      <BackButton to={`/programs/${programId}`} />
+      <Box flex={true}>
+        <Box marginRight="normal">
+          <BackButton to={`/programs/${programId}`} />
+        </Box>
+        <DeleteDay dayName={data.name} programId={programId} dayId={dayId} />
+      </Box>
     </div>
   );
 }

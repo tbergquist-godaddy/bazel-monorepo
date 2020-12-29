@@ -257,9 +257,9 @@
     "g3Smhe+yopKvqw/HJ+JfHQ==": "No exercises registered on this day. Click the button above to add one"
    },
    "filepath": "src/trainingjournal/src/program/day/day-detail.js",
-   "line_beg": 43,
+   "line_beg": 44,
    "col_beg": 12,
-   "line_end": 45,
+   "line_end": 46,
    "col_end": 18,
    "desc": "no exercises text",
    "project": "",
@@ -349,6 +349,76 @@
    "project": "",
    "type": "text",
    "jsfbt": "Edit day"
+  },
+  {
+   "hashToText": {
+    "YydP9G3/i1t6gYsrA1yKCw==": "Delete day"
+   },
+   "filepath": "src/trainingjournal/src/program/day/delete-day.js",
+   "line_beg": 34,
+   "col_beg": 8,
+   "line_end": 34,
+   "col_end": 54,
+   "desc": "Delete day button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete day"
+  },
+  {
+   "hashToText": {
+    "0K+dPVYHM+a7DCNE3gazxA==": "Confirm delete"
+   },
+   "filepath": "src/trainingjournal/src/program/day/delete-day.js",
+   "line_beg": 39,
+   "col_beg": 15,
+   "line_end": 39,
+   "col_end": 64,
+   "desc": "Confirm delete day title",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Confirm delete"
+  },
+  {
+   "hashToText": {
+    "aYlH25IXmymz2D78cM/R3A==": "Are you sure you want to delete {dayName}?"
+   },
+   "filepath": "src/trainingjournal/src/program/day/delete-day.js",
+   "line_beg": 41,
+   "col_beg": 21,
+   "line_end": 44,
+   "col_end": 9,
+   "desc": "Delete day text",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Are you sure you want to delete {dayName}?"
+  },
+  {
+   "hashToText": {
+    "YydP9G3/i1t6gYsrA1yKCw==": "Delete day"
+   },
+   "filepath": "src/trainingjournal/src/program/day/delete-day.js",
+   "line_beg": 45,
+   "col_beg": 27,
+   "line_end": 45,
+   "col_end": 65,
+   "desc": "Delete day button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete day"
+  },
+  {
+   "hashToText": {
+    "WQ+f/YEXcqh89XzHy5XvnA==": "Cancel"
+   },
+   "filepath": "src/trainingjournal/src/program/day/delete-day.js",
+   "line_beg": 46,
+   "col_beg": 26,
+   "line_end": 46,
+   "col_end": 56,
+   "desc": "cancel delete",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Cancel"
   },
   {
    "hashToText": {
