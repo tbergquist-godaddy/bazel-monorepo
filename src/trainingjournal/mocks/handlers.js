@@ -3,18 +3,16 @@
 import { Handler } from '@tbergq/mock-server';
 
 import loginHandler from './login-handler';
-import createProgram from './create-program';
-import fetchProgram from './fetch-program';
 import createWeek from './create-week';
 import fetchBaseExercises from './fetch-base-exercises';
 import exerciseHandlers from './exercise';
+import programHandlers from './program';
 
 const handlers: Handler[] = [
   ...exerciseHandlers,
+  ...programHandlers,
   fetchBaseExercises,
   loginHandler,
-  createProgram,
-  fetchProgram,
   createWeek,
 ];
 
