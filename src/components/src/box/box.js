@@ -3,15 +3,16 @@
 import type { Node } from 'react';
 import { create } from '@adeira/sx';
 
+import getDisplayStyles, { type Display } from './styles/display';
+import { getMargin, getPadding, type Spacing } from './styles/spacing';
+
 type AlignItems = 'center';
 type JustifyContent = 'space-between' | 'flex-end';
-type Spacing = 'xs' | 'small' | 'normal' | 'l' | 'xl' | 'xxl';
 type FlexValues = '0' | '1';
 type TextAlign = 'right';
 
 type Props = {
   +children: Node,
-  +flex?: boolean,
   +alignItems?: AlignItems,
   +justifyContent?: JustifyContent,
   +marginRight?: Spacing,
@@ -25,25 +26,8 @@ type Props = {
   +title?: string,
   +textAlign?: TextAlign,
   +overflow?: 'hidden',
+  +display?: Display,
 };
-
-type SpacingKey = 'mr' | 'mt' | 'mb' | 'pb';
-
-const getSpacing = (space: ?Spacing, key: SpacingKey) => {
-  switch (space) {
-    case 'normal':
-      return `${key}Normal`;
-    case 'small':
-      return `${key}Small`;
-    default:
-      return false;
-  }
-};
-
-const getMr = (space: ?Spacing): $FlowFixMe => getSpacing(space, 'mr');
-const getMt = (space: ?Spacing): $FlowFixMe => getSpacing(space, 'mt');
-const getMb = (space: ?Spacing): $FlowFixMe => getSpacing(space, 'mb');
-const getPb = (space: ?Spacing): $FlowFixMe => getSpacing(space, 'pb');
 
 const getAlignItems = (alignItems: ?AlignItems) => {
   switch (alignItems) {
@@ -75,7 +59,6 @@ const getFlexValue = (key: 'Grow' | 'Shrink') => (flexValue: ?FlexValues): $Flow
 
 export default function Box({
   children,
-  flex = false,
   alignItems,
   justifyContent,
   marginRight,
@@ -89,6 +72,7 @@ export default function Box({
   title,
   textAlign,
   overflow,
+  display,
 }: Props): Node {
   return (
     <div
@@ -96,19 +80,19 @@ export default function Box({
       className={[
         'Box',
         styles(
-          flex && 'flex',
           getAlignItems(alignItems),
           getJustifyContent(justifyContent),
-          getMr(marginRight),
-          getMt(marginTop),
-          getMb(marginBottom),
-          getPb(paddingBottom),
           ellipsisContainer && 'ellipsisContainer',
           getFlexValue('Grow')(flexGrow),
           getFlexValue('Shrink')(flexShrink),
         ),
         taStyles(textAlign),
         overflowStyles(overflow),
+        getDisplayStyles(display),
+        getMargin(marginRight, 'right'),
+        getMargin(marginTop, 'top'),
+        getMargin(marginBottom, 'bottom'),
+        getPadding(paddingBottom, 'bottom'),
         className,
       ]
         .filter(Boolean)
@@ -130,9 +114,6 @@ const taStyles = create({
   },
 });
 const styles = create({
-  flex: {
-    display: 'flex',
-  },
   alignItemsCenter: {
     alignItems: 'center',
   },

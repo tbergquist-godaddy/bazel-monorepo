@@ -39,7 +39,7 @@ export default function ExerciseInput({
 }: Props): Node {
   return (
     <>
-      <Box alignItems="center" marginBottom="normal" flex={true}>
+      <Box alignItems="center" marginBottom="normal" display="flex">
         <Box marginRight="normal">
           <strong>{exerciseName}</strong>
         </Box>

@@ -21,7 +21,7 @@ export default function Day({ day, programId }: Props): Node {
 
   return (
     <Card className={styles('card')}>
-      <Box justifyContent="space-between" alignItems="center" flex={true}>
+      <Box justifyContent="space-between" alignItems="center" display="flex">
         <Heading level="h3" as="h6">
           {name}
         </Heading>

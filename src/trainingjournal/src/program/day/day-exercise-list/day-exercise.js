@@ -23,7 +23,7 @@ export default function DayExercise({ exercise, onClick }: Props): Node {
         ellipsisContainer={true}
         flexGrow="1"
         flexShrink="0"
-        flex={true}
+        display="flex"
       >
         <Box>{exercise.set}</Box>
         <Box>&nbsp;&times;&nbsp;</Box>

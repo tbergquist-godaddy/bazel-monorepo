@@ -17,11 +17,11 @@ type Props = {
 export default function WeekList({ week }: Props): Node {
   return (
     <div id={`week-${week.id}`} className={styles('week')}>
-      <Box justifyContent="space-between" alignItems="center" flex={true} marginBottom="normal">
+      <Box justifyContent="space-between" alignItems="center" display="flex" marginBottom="normal">
         <Heading level="h2" as="h4">
           {week.name}
         </Heading>
-        <Box flex={true}>
+        <Box display="flex">
           <Box marginRight="small">
             <DeleteWeek weekName={week.name} programId={week.program.toString()} weekId={week.id} />
           </Box>

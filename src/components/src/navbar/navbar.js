@@ -38,8 +38,8 @@ export default function Navbar({ brand, left, right, menuAriaLabel = 'Menu' }: P
   useMatchMedia(breakpoints.desktop, onMatchMediaChange);
   return (
     <nav className={`Navbar ${styles('header', isExpanded && 'headerExpanded')}`}>
-      <Box flex={true} alignItems="center" justifyContent="space-between">
-        <Box flex={true} alignItems="center">
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <Box display="flex" alignItems="center">
           <div className={`Navbar__brand ${styles('brand')}`}>{brand}</div>
           {isDesktop && <div>{left}</div>}
         </Box>

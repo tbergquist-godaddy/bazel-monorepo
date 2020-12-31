@@ -1,12 +1,14 @@
 // @flow
 
 import { type Node } from 'react';
-import { Navbar as NavbarComponent } from '@tbergq/components';
-import { Link } from '@tbergq/router';
+import { Navbar as NavbarComponent, Box } from '@tbergq/components';
+import { Link, useNavigate } from '@tbergq/router';
 import { fbt } from 'fbt';
-import { useQuery } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 
 import fetchUserDetails, { FETCH_USER_DETAILS_KEY } from '../account/api/fetch-user-details';
+import logout from '../account/api/logout';
+import { TOKEN_KEY } from '../constants';
 
 function NavLeft({ isLoggedIn }): Node {
   if (!isLoggedIn) {
@@ -19,6 +21,16 @@ function NavLeft({ isLoggedIn }): Node {
   );
 }
 function NavRight({ isLoggedIn, username }): Node {
+  const navigate = useNavigate();
+  const cache = useQueryClient();
+  const { mutate } = useMutation(logout, {
+    onError: () => {},
+    onSuccess: () => {
+      localStorage.removeItem(TOKEN_KEY);
+      cache.invalidateQueries(FETCH_USER_DETAILS_KEY);
+      navigate('/');
+    },
+  });
   if (!isLoggedIn) {
     return (
       <Link to="/account/login">
@@ -26,7 +38,24 @@ function NavRight({ isLoggedIn, username }): Node {
       </Link>
     );
   }
-  return <div>{fbt(`Hi ${fbt.param('username', username)}`, 'user greeting')}</div>;
+  return (
+    <Box display={{ _: 'block', desktop: 'flex' }}>
+      <Box marginRight={{ desktop: 'normal' }} marginBottom={{ _: 'normal', desktop: 'none' }}>
+        {fbt(`Hi ${fbt.param('username', username)}`, 'user greeting')}
+      </Box>
+      <Box>
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            mutate();
+          }}
+        >
+          Log ut
+        </a>
+      </Box>
+    </Box>
+  );
 }
 export default function Navbar(): Node {
   const { data } = useQuery(FETCH_USER_DETAILS_KEY, fetchUserDetails, {
