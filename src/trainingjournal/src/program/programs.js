@@ -26,7 +26,7 @@ export default function Programs(): Node {
       <Helmet>
         <title>Trainingjournal | programs</title>
       </Helmet>
-      <Box flex={true} alignItems="center" justifyContent="space-between">
+      <Box display="flex" alignItems="center" justifyContent="space-between">
         <Heading level="h1">
           <fbt desc="programs heading">Programs</fbt>
         </Heading>

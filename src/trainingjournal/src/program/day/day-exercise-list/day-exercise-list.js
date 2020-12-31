@@ -31,13 +31,13 @@ export default function DayExerciseList({ exercises, ...rest }: Props): Node {
         marginTop="normal"
         justifyContent="space-between"
         alignItems="center"
-        flex={true}
+        display="flex"
         className={styles('underline')}
       >
         <Box>
           <fbt desc="Exercise description">Exercise</fbt>
         </Box>
-        <Box alignItems="center" flex={true}>
+        <Box alignItems="center" display="flex">
           <Box>
             <fbt desc="Sets description">Sets</fbt>
           </Box>

@@ -6,6 +6,7 @@ module.exports = {
     '@storybook/addon-actions/register',
     '@storybook/addon-viewport/register',
     '@storybook/addon-a11y',
+    '@storybook/addon-knobs',
   ],
   webpackFinal: (config /* :Object */) /* :Object */ => {
     config.watchOptions = { poll: 1000 };

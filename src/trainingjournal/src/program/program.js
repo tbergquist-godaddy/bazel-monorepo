@@ -32,7 +32,7 @@ export default function Program({ routeData }: Props): Node {
       </Helmet>
       <Heading level="h1">{data.name}</Heading>
       <WeekList weeks={data.weeks} />
-      <Box flex={true} marginTop="normal">
+      <Box display="flex" marginTop="normal">
         <Box marginRight="normal">
           <BackButton to="/programs" />
         </Box>

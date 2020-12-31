@@ -30,7 +30,7 @@ export default function DayDetail({ routeData }: Props): Node {
       <Helmet>
         <title>Trainingjournal | {data.name}</title>
       </Helmet>
-      <Box flex={true} alignItems="center" justifyContent="space-between">
+      <Box display="flex" alignItems="center" justifyContent="space-between">
         <Heading level="h1">{data.name}</Heading>
         <AddExercise programId={programId} dayId={dayId} />
       </Box>
@@ -47,7 +47,7 @@ export default function DayDetail({ routeData }: Props): Node {
           </p>
         )}
       </Box>
-      <Box flex={true}>
+      <Box display="flex">
         <Box marginRight="normal">
           <BackButton to={`/programs/${programId}`} />
         </Box>

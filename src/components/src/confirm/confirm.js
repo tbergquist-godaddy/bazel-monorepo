@@ -37,7 +37,7 @@ export default function Confirm({
       <Box marginBottom="normal" marginTop="normal">
         {confirmText}
       </Box>
-      <Box justifyContent="flex-end" flex={true}>
+      <Box justifyContent="flex-end" display="flex">
         <Box marginRight="normal">
           <Button variant="white" onClick={rest.onClose}>
             {cancelActionText}
