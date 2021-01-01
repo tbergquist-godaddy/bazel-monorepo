@@ -1,6 +1,6 @@
 {
   "name": "@tbergq/components",
-  "version": "0.13.0-beta.4",
+  "version": "0.13.0-beta.6",
   "sideEffects": false,
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -11,7 +11,8 @@
     "recoil": "^0.0.10",
     "shortid": "^2.2.15",
     "react-transition-group": "^4.4.1",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.28",

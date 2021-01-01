@@ -61,6 +61,7 @@
     "@hookform/resolvers": "^1.2.0",
     "@storybook/addon-a11y": "^6.1.11",
     "@storybook/addon-viewport": "^6.1.11",
+    "classnames": "^2.2.6",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dataloader": "^2.0.0",

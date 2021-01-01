@@ -26,6 +26,7 @@ js_library(
         ":esm",
         ":lib",
         "@npm//react-transition-group",
+        "@npm//classnames",
     ],
 )
 
@@ -52,6 +53,7 @@ jest_test(
         "@npm//react-transition-group",
         "@npm//recoil",
         "@npm//shortid",
+        "@npm//classnames",
     ],
 )
 
