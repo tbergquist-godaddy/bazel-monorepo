@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 import Box from '../box';
 
 describe('Box / margin', () => {
-  it('has margin right normal', () => {
+  it('has margin normal classes', () => {
     render(
       <Box
         data-testid="box"
@@ -18,10 +18,9 @@ describe('Box / margin', () => {
       </Box>,
     );
 
-    expect(screen.getByTestId('box')).toHaveStyle('margin-top:var(--space-normal)');
-    expect(screen.getByTestId('box')).toHaveStyle('margin-right:var(--space-normal)');
-    expect(screen.getByTestId('box')).toHaveStyle('margin-bottom:var(--space-normal)');
-    expect(screen.getByTestId('box')).toHaveStyle('margin-left:var(--space-normal)');
+    expect(screen.getByTestId('box')).toHaveClass(
+      'Box u-margin-top-normal u-margin-right-normal u-margin-bottom-normal u-margin-left-normal',
+    );
   });
 
   it('works with media query config object', () => {
@@ -40,7 +39,9 @@ describe('Box / margin', () => {
       </Box>,
     );
 
-    expect(screen.getByTestId('box')).toHaveStyle('margin-right:var(--space-x-small)');
+    expect(screen.getByTestId('box')).toHaveClass(
+      'Box u-margin-right-xs u-margin-right-small-mediumMobile u-margin-right-normal-tablet u-margin-right-l-desktop u-margin-right-xl-largeDesktop',
+    );
   });
 });
 
@@ -51,7 +52,7 @@ describe('Box / display', () => {
         test
       </Box>,
     );
-    expect(screen.getByTestId('box')).toHaveStyle('display:flex');
+    expect(screen.getByTestId('box')).toHaveClass('Box u-display-flex');
   });
 
   it('accepts media query config object', () => {
@@ -63,6 +64,8 @@ describe('Box / display', () => {
         test
       </Box>,
     );
-    expect(screen.getByTestId('box')).toHaveStyle('display:flex');
+    expect(screen.getByTestId('box')).toHaveClass(
+      'Box u-display-flex u-display-block-mediumMobile u-display-inline-block-tablet u-display-inline-desktop',
+    );
   });
 });

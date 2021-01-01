@@ -1,10 +1,12 @@
 // @flow
 
 import type { Node } from 'react';
-import { create } from '@adeira/sx';
 
 import getDisplayStyles, { type Display } from './styles/display';
 import { getMargin, getPadding, type Spacing } from './styles/spacing';
+import '../utilities/ellipsis.css';
+import '../utilities/flex.css';
+import '../utilities/overflow.css';
 
 type AlignItems = 'center';
 type JustifyContent = 'space-between' | 'flex-end';
@@ -37,7 +39,7 @@ type Props = {
 const getAlignItems = (alignItems: ?AlignItems) => {
   switch (alignItems) {
     case 'center':
-      return 'alignItemsCenter';
+      return 'u-align-center';
     default:
       return null;
   }
@@ -46,20 +48,20 @@ const getAlignItems = (alignItems: ?AlignItems) => {
 const getJustifyContent = (justifyContent: ?JustifyContent) => {
   switch (justifyContent) {
     case 'space-between':
-      return 'justifyContentSB';
+      return 'u-space-between';
     case 'flex-end':
-      return 'justifyContentFE';
+      return 'u-justify-flex-end';
     default:
       return null;
   }
 };
 
-const getFlexValue = (key: 'Grow' | 'Shrink') => (flexValue: ?FlexValues): $FlowFixMe => {
+const getFlexValue = (key: 'grow' | 'shrink') => (flexValue: ?FlexValues): $FlowFixMe => {
   if (flexValue == null) {
     return false;
   }
 
-  return `flex${key}${flexValue}`;
+  return `u-flex-${key}-${flexValue}`;
 };
 
 export default function Box({
@@ -90,15 +92,13 @@ export default function Box({
       title={title} // TODO: Replace with tooltip
       className={[
         'Box',
-        styles(
-          getAlignItems(alignItems),
-          getJustifyContent(justifyContent),
-          ellipsisContainer && 'ellipsisContainer',
-          getFlexValue('Grow')(flexGrow),
-          getFlexValue('Shrink')(flexShrink),
-        ),
-        taStyles(textAlign),
-        overflowStyles(overflow),
+        getJustifyContent(justifyContent),
+        getAlignItems(alignItems),
+        ellipsisContainer && 'u-ellipsis-container',
+        getFlexValue('grow')(flexGrow),
+        getFlexValue('shrink')(flexShrink),
+        textAlign && 'u-text-align-right',
+        overflow && 'u-overflow-hidden',
         getDisplayStyles(display),
         getMargin(marginTop, 'top'),
         getMargin(marginRight, 'right'),
@@ -117,57 +117,3 @@ export default function Box({
     </div>
   );
 }
-
-const overflowStyles = create({
-  hidden: {
-    overflow: 'hidden',
-  },
-});
-const taStyles = create({
-  right: {
-    textAlign: 'right',
-  },
-});
-const styles = create({
-  alignItemsCenter: {
-    alignItems: 'center',
-  },
-  justifyContentSB: {
-    justifyContent: 'space-between',
-  },
-  justifyContentFE: {
-    justifyContent: 'flex-end',
-  },
-  mrSmall: {
-    marginRight: 'var(--space-small)',
-  },
-  mrNormal: {
-    marginRight: 'var(--space-normal)',
-  },
-  mtNormal: {
-    marginTop: 'var(--space-normal)',
-  },
-  mbNormal: {
-    marginBottom: 'var(--space-normal)',
-  },
-  pbNormal: {
-    paddingBottom: 'var(--space-normal)',
-  },
-  ellipsisContainer: {
-    overflowX: 'hidden',
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-  },
-  flexGrow0: {
-    flexGrow: 0,
-  },
-  flexGrow1: {
-    flexGrow: 1,
-  },
-  flexShrink0: {
-    flexShrink: 0,
-  },
-  flexShrink1: {
-    flexShrink: 1,
-  },
-});
