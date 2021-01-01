@@ -1,0 +1,29 @@
+.heading {
+  color: var(--color-text-black);
+  font-weight: 500;
+}
+
+.heading--h1 {
+  font-size: 4rem;
+  margin: var(--space-x-large) 0;
+}
+.heading--h2 {
+  font-size: 3.5rem;
+  margin: var(--space-x-large) 0;
+}
+.heading--h3 {
+  font-size: 3rem;
+  margin: var(--space-large) 0;
+}
+.heading--h4 {
+  font-size: 2.5rem;
+  margin: var(--space-normal) 0;
+}
+.heading--h5 {
+  font-size: 2rem;
+  margin: var(--space-small) 0;
+}
+.heading--h6 {
+  font-size: 1.6rem;
+  margin: var(--space-x-small) 0;
+}
