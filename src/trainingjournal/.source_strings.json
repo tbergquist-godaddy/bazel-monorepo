@@ -75,9 +75,9 @@
     "Uw7EZQvvvSHh2CBENQMxjw==": "Back"
    },
    "filepath": "src/trainingjournal/src/components/back-button.js",
-   "line_beg": 19,
+   "line_beg": 20,
    "col_beg": 6,
-   "line_end": 19,
+   "line_end": 20,
    "col_end": 45,
    "desc": "Back button text",
    "project": "",
@@ -89,9 +89,9 @@
     "ah/Fb+6cIA7oSPMwHmBq9w==": "Home"
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
-   "line_beg": 17,
+   "line_beg": 19,
    "col_beg": 6,
-   "line_end": 17,
+   "line_end": 19,
    "col_end": 45,
    "desc": "Home navbar link",
    "project": "",
@@ -103,9 +103,9 @@
     "T22O0HU1PdWV1bUoQSfC1w==": "Login"
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
-   "line_beg": 25,
+   "line_beg": 37,
    "col_beg": 8,
-   "line_end": 25,
+   "line_end": 37,
    "col_end": 49,
    "desc": "Login navbar link",
    "project": "",
@@ -117,10 +117,10 @@
     "83QnOu6ehUkb+Lgc8RdJog==": "Hi {username}"
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
-   "line_beg": 29,
-   "col_beg": 15,
-   "line_end": 29,
-   "col_end": 76,
+   "line_beg": 44,
+   "col_beg": 9,
+   "line_end": 44,
+   "col_end": 70,
    "desc": "user greeting",
    "project": "",
    "type": "text",
@@ -419,6 +419,76 @@
    "project": "",
    "type": "text",
    "jsfbt": "Cancel"
+  },
+  {
+   "hashToText": {
+    "J70A7Kb2C9ScajHalgXPOw==": "Delete program"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 36,
+   "col_beg": 8,
+   "line_end": 36,
+   "col_end": 62,
+   "desc": "delete program button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete program"
+  },
+  {
+   "hashToText": {
+    "lA8j1Qz3N3K4Y1vDq0vT0A==": "Confirm delete program"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 39,
+   "col_beg": 15,
+   "line_end": 39,
+   "col_end": 76,
+   "desc": "Confirm delete program title",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Confirm delete program"
+  },
+  {
+   "hashToText": {
+    "pVmE1D8tDk+E6dVFkFhSww==": "Cancel"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 41,
+   "col_beg": 26,
+   "line_end": 41,
+   "col_end": 63,
+   "desc": "Cancel action button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Cancel"
+  },
+  {
+   "hashToText": {
+    "fNdg05MAa7dU2NSJo1JANw==": "Delete program"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 42,
+   "col_beg": 27,
+   "line_end": 42,
+   "col_end": 72,
+   "desc": "Delete action button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Delete program"
+  },
+  {
+   "hashToText": {
+    "8nW6ELmn4VqPc4PGDUvp+Q==": "Are you sure you want to delete {programName}?"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 43,
+   "col_beg": 21,
+   "line_end": 46,
+   "col_end": 9,
+   "desc": "Confirm delete program text",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Are you sure you want to delete {programName}?"
   },
   {
    "hashToText": {

@@ -22,3 +22,9 @@ export function createProgram(name: string): Promise<ProgramList> {
 export function fetchProgram(id: number | string): Promise<Program> {
   return fetch(`${url}${id.toString()}/`);
 }
+
+export function deleteProgram(id: number | string): Promise<void> {
+  return fetch(`${url}${id.toString()}/`, {
+    method: 'DELETE',
+  });
+}

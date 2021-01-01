@@ -10,6 +10,7 @@ import WeekList from './week/week-list';
 import AddWeek from './week/add-week';
 import BackButton from '../components/back-button';
 import type { Program as ProgramResponse } from './types';
+import DeleteProgram from './delete-program';
 
 type Props = {
   +routeData: {
@@ -32,11 +33,20 @@ export default function Program({ routeData }: Props): Node {
       </Helmet>
       <Heading level="h1">{data.name}</Heading>
       <WeekList weeks={data.weeks} />
-      <Box display="flex" marginTop="normal">
-        <Box marginRight="normal">
-          <BackButton to="/programs" />
+      <Box display={{ _: 'block', mediumMobile: 'flex' }} marginTop="normal">
+        <Box
+          marginRight={{ _: 'none', mediumMobile: 'normal' }}
+          marginBottom={{ _: 'normal', mediumMobile: 'none' }}
+        >
+          <BackButton fullWidth="mediumMobile" to="/programs" />
         </Box>
-        <AddWeek programId={id} weekCount={data.weeks.length} />
+        <Box
+          marginRight={{ _: 'none', mediumMobile: 'normal' }}
+          marginBottom={{ _: 'normal', mediumMobile: 'none' }}
+        >
+          <AddWeek programId={id} weekCount={data.weeks.length} />
+        </Box>
+        <DeleteProgram programName={data.name} programId={id} />
       </Box>
     </>
   );

@@ -291,6 +291,56 @@
                 }
             ]
         },
+        "J70A7Kb2C9ScajHalgXPOw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Slett program",
+                    "variations": []
+                }
+            ]
+        },
+        "lA8j1Qz3N3K4Y1vDq0vT0A==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Bekreft sletting av program",
+                    "variations": []
+                }
+            ]
+        },
+        "pVmE1D8tDk+E6dVFkFhSww==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Avbryt",
+                    "variations": []
+                }
+            ]
+        },
+        "fNdg05MAa7dU2NSJo1JANw==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Slett program",
+                    "variations": []
+                }
+            ]
+        },
+        "8nW6ELmn4VqPc4PGDUvp+Q==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Er du sikker på at du ønsker å slette {programName}?",
+                    "variations": []
+                }
+            ]
+        },
         "kA\/Kvrtb8Vfk0vo2vIIX1g==": {
             "tokens": [],
             "types": [],

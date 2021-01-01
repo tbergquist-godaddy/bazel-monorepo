@@ -34,7 +34,7 @@ export default function Program({ programId, weekCount }: Props): Node {
     },
   });
   return (
-    <Button isLoading={isLoading} onClick={mutate}>
+    <Button fullWidth="mediumMobile" isLoading={isLoading} onClick={mutate}>
       <fbt desc="Add week button">Add week</fbt>
     </Button>
   );

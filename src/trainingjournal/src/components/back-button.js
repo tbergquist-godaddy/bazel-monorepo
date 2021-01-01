@@ -7,15 +7,16 @@ import { fbt } from 'fbt';
 
 type Props = {
   +to: string,
+  +fullWidth?: 'all' | 'mediumMobile',
 };
 
-export default function BackButton({ to }: Props): Node {
+export default function BackButton({ to, ...rest }: Props): Node {
   const navigate = useNavigate();
   const onClick = () => {
     navigate(to);
   };
   return (
-    <Button onClick={onClick} variant="white">
+    <Button {...rest} onClick={onClick} variant="white">
       <fbt desc="Back button text">Back</fbt>
     </Button>
   );

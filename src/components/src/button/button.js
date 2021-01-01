@@ -4,6 +4,7 @@ import type { Node, ComponentType } from 'react';
 import { create } from '@adeira/sx';
 
 import Spinner from '../spinner/spinner';
+import breakpoints from '../breakpoints';
 
 type Props = {
   +'children': Node,
@@ -14,6 +15,7 @@ type Props = {
   +'size'?: 'small' | 'normal',
   +'aria-label'?: string,
   +'as'?: ComponentType<any> | string,
+  +'fullWidth'?: 'all' | 'mediumMobile',
 };
 
 export default function Button({
@@ -23,6 +25,7 @@ export default function Button({
   size = 'normal',
   isLoading,
   as = 'button',
+  fullWidth,
   ...rest
 }: Props): Node {
   const Component = as;
@@ -30,7 +33,13 @@ export default function Button({
     <Component
       disabled={isLoading}
       type={type}
-      className={styles('button', variant, size)}
+      className={styles(
+        'button',
+        variant,
+        size,
+        fullWidth === 'all' && 'fullWidth',
+        fullWidth === 'mediumMobile' && 'fullWidthUntilMediumMobile',
+      )}
       {...rest}
     >
       {isLoading === true ? <Spinner size="small" color="white" /> : children}
@@ -88,6 +97,15 @@ const styles = create({
     ':focus': {
       boxShadow: 'var(--color-gray-light-focus) 0px 0px 0px 0.2rem',
       border: 'none',
+    },
+  },
+  fullWidth: {
+    width: '100%',
+  },
+  fullWidthUntilMediumMobile: {
+    width: '100%',
+    [breakpoints.mediumMobile]: {
+      width: 'unset',
     },
   },
 });
