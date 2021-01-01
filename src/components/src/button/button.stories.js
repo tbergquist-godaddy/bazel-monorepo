@@ -2,6 +2,7 @@
 
 import type { Node } from 'react';
 import { action } from '@storybook/addon-actions';
+import { select } from '@storybook/addon-knobs';
 
 import Button from './button';
 
@@ -24,6 +25,19 @@ export const white = (): Node => (
     White
   </Button>
 );
+
+const fullWidthOptions = {
+  all: 'all',
+  mediumMobile: 'mediumMobile',
+};
+
+export const fullWidth = (): Node => {
+  return (
+    <Button fullWidth={select('fullWidth', fullWidthOptions, 'all')} onClick={action('click')}>
+      Full width
+    </Button>
+  );
+};
 
 export default {
   component: Button,

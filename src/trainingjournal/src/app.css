@@ -34,3 +34,7 @@ button {
   font-size: inherit;
   font-family: inherit;
 }
+
+#root {
+  padding-bottom: 6rem;
+}
