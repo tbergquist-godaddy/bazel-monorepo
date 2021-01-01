@@ -1,0 +1,32 @@
+.TextInput__label {
+  margin-bottom: var(--space-small);
+  color: var(--color-text-black);
+}
+
+.TextInput__input {
+  border-radius: var(--border-radius-normal);
+  padding: var(--space-normal);
+  border: 1px solid var(--color-gray-light);
+  width: 100%;
+  outline: none;
+  color: var(--color-text-black);
+  font-size: inherit;
+}
+
+.TextInput__input:focus {
+  box-shadow: var(--color-primary-focus) 0px 0px 0px 0.2rem;
+}
+
+.TextInput__input--error {
+  border: 1px solid var(--color-error);
+}
+
+.TextInput__input--error:focus {
+  box-shadow: var(--color-error) 0px 0px 0px 0.2rem;
+}
+
+.TextInput__error-text {
+  color: var(--color-error);
+  font-size: var(--text-size-small);
+  line-height: 1.75;
+}
