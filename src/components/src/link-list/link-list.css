@@ -1,0 +1,27 @@
+.LinkList {
+  list-style: none;
+}
+
+.LinkList__list-item:not(:last-of-type) {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-gray-light);
+}
+
+.LinkList__link {
+  transition: background-color var(--transition-duration-normal);
+  outline: none;
+  text-decoration: none;
+  background-color: var(--color-white);
+  display: block;
+  padding: var(--space-large);
+}
+
+.LinkList__link:hover {
+  background-color: var(--color-gray-light);
+  text-decoration: none;
+}
+.LinkList__link:focus {
+  background-color: var(--color-gray-light);
+  text-decoration: none;
+}

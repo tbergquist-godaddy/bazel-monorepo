@@ -1,7 +1,8 @@
 // @flow
 
 import type { Node } from 'react';
-import { create } from '@adeira/sx';
+
+import './link-list.css';
 
 type ItemType = { +id: string | number, ... };
 type Props<T> = {
@@ -11,41 +12,12 @@ type Props<T> = {
 
 export default function LinkList<T: ItemType>({ items, renderItem }: Props<T>): Node {
   return (
-    <ul className={styles('list')}>
+    <ul className="LinkList">
       {items.map((item) => (
-        <li className={styles('listItem')} key={item.id}>
-          {renderItem(styles('link'), item)}
+        <li className="LinkList__list-item" key={item.id}>
+          {renderItem('LinkList__link', item)}
         </li>
       ))}
     </ul>
   );
 }
-
-const styles = create({
-  list: {
-    listStyle: 'none',
-  },
-  listItem: {
-    ':not(:last-of-type)': {
-      borderBottomWidth: '1px',
-      borderBottomStyle: 'solid',
-      borderBottomColor: 'var(--color-gray-light)',
-    },
-  },
-  link: {
-    'transition': 'background-color var(--transition-duration-normal)',
-    'outline': 'none',
-    'textDecoration': 'none',
-    ':hover': {
-      backgroundColor: 'var(--color-gray-light)',
-      textDecoration: 'none',
-    },
-    ':focus': {
-      backgroundColor: 'var(--color-gray-light)',
-      textDecoration: 'none',
-    },
-    'backgroundColor': 'var(--color-white)',
-    'display': 'block',
-    'padding': 'var(--space-large)',
-  },
-});
