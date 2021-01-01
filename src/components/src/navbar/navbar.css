@@ -18,5 +18,34 @@
 }
 
 .Navbar .Navbar__Burger-wrapper button:focus {
-  background-color: rgba(0,0,0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Navbar__header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-normal);
+  max-height: 64px;
+  transition: max-height var(--transition-duration-normal) ease-in;
+  overflow-y: hidden;
+}
+
+.Navbar__header--expanded {
+  max-height: 500px;
+}
+
+.Navbar__brand {
+  font-size: 1.8rem;
+  margin-right: var(--space-large);
+}
+
+.Navbar__expanded-container {
+  opacity: 0;
+  transition: opacity var(--transition-duration-normal) ease-in;
+}
+
+.Navbar__expanded-container--visible {
+  opacity: 1;
 }

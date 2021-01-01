@@ -1,8 +1,8 @@
 // @flow
 
 import { type Node, type Element, useState, useCallback, Children } from 'react';
-import { create } from '@adeira/sx';
 import { MdMenu } from 'react-icons/md';
+import classNames from 'classnames';
 
 import './navbar.css';
 import Box from '../box/box';
@@ -37,10 +37,14 @@ export default function Navbar({ brand, left, right, menuAriaLabel = 'Menu' }: P
 
   useMatchMedia(breakpoints.desktop, onMatchMediaChange);
   return (
-    <nav className={`Navbar ${styles('header', isExpanded && 'headerExpanded')}`}>
+    <nav
+      className={classNames('Navbar Navbar__header', {
+        'Navbar__header--expanded': isExpanded,
+      })}
+    >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Box display="flex" alignItems="center">
-          <div className={`Navbar__brand ${styles('brand')}`}>{brand}</div>
+          <div className={`Navbar__brand`}>{brand}</div>
           {isDesktop && <div>{left}</div>}
         </Box>
         {isDesktop ? (
@@ -53,7 +57,11 @@ export default function Navbar({ brand, left, right, menuAriaLabel = 'Menu' }: P
           </span>
         )}
       </Box>
-      <div className={styles('expanded', isExpanded && 'expandedVisible')}>
+      <div
+        className={classNames('Navbar__expanded-container', {
+          'Navbar__expanded-container--visible': isExpanded,
+        })}
+      >
         {isExpanded && (
           <div className="Navbar__expanded" onClick={onNavLinkClick}>
             <Box>
@@ -70,30 +78,3 @@ export default function Navbar({ brand, left, right, menuAriaLabel = 'Menu' }: P
     </nav>
   );
 }
-
-const styles = create({
-  header: {
-    position: 'sticky',
-    top: 0,
-    backgroundColor: 'var(--color-primary)',
-    color: 'var(--color-white)',
-    padding: 'var(--space-normal)',
-    maxHeight: '64px',
-    transition: 'max-height var(--transition-duration-normal) ease-in',
-    overflowY: 'hidden',
-  },
-  headerExpanded: {
-    maxHeight: '500px',
-  },
-  brand: {
-    fontSize: '1.8rem',
-    marginRight: 'var(--space-large)',
-  },
-  expanded: {
-    opacity: 0,
-    transition: 'opacity var(--transition-duration-normal) ease-in',
-  },
-  expandedVisible: {
-    opacity: 1,
-  },
-});
