@@ -14,7 +14,9 @@ const tablet = `@media only screen and (min-width: ${breakpoints.tablet}px)`;
 const desktop = `@media only screen and (min-width: ${breakpoints.desktop}px)`;
 const largeDesktop = `@media only screen and (min-width: ${breakpoints.largeDesktop}px)`;
 
-export type Breakpoints = $Keys<typeof breakpoints>;
+type Breakpoints = $Keys<typeof breakpoints> | '';
+
+export const breakpointsMap: $ReadOnlyArray<Breakpoints> = ['', ...Object.keys(breakpoints)];
 
 export default {
   mediumMobile,

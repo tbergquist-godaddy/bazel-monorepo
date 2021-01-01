@@ -9,7 +9,7 @@ const displayOptions = {
   'block': 'block',
   'flex': 'flex',
   'inline': 'inline',
-  'inline-block': 'inlineBlock',
+  'inline-block': 'inline-block',
   'block-until-desktop': {
     _: 'block',
     desktop: 'flex',
@@ -28,8 +28,8 @@ const marginRightOptions = {
 
 export const Default = (): Node => (
   <Box
-    marginRight={select('marginRight', marginRightOptions, undefined)}
-    display={select('display', displayOptions, 'none')}
+    marginRight={select('marginRight', marginRightOptions, 'none')}
+    display={select('display', displayOptions, 'block')}
   >
     test
   </Box>

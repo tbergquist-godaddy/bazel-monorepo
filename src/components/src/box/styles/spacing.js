@@ -3,8 +3,8 @@
 
 import { create } from '@adeira/sx';
 
-import breakpoints from '../../breakpoints';
-import type { MediaObjectOr } from './types';
+import breakpoints, { breakpointsMap } from '../../breakpoints';
+import type { MediaObjectOr, CSSSides } from './types';
 
 type SpacingEnum = 'xs' | 'small' | 'normal' | 'l' | 'xl' | 'xxl' | 'none';
 export type Spacing = MediaObjectOr<SpacingEnum>;
@@ -19,28 +19,28 @@ const styleKeys = {
   none: '0',
 };
 
-const sides = ['top', 'right', 'bottom', 'normal'];
-const sizes = ['xs', 'small', 'normal', 'l', 'xl', 'xxl', 'none'];
+const sides: $ReadOnlyArray<CSSSides> = ['top', 'right', 'bottom', 'left'];
+const sizes: $ReadOnlyArray<SpacingEnum> = ['xs', 'small', 'normal', 'l', 'xl', 'xxl', 'none'];
 const spacings = ['margin', 'padding'];
-const breakpointsMap = ['', ...Object.keys(breakpoints)];
 
-const keys = {};
+const spacingConfig = {};
 
 const capitalizeFirst = (word: string): string => {
   return `${word.charAt(0).toUpperCase()}${word.substring(1)}`;
 };
+
 for (const space of spacings) {
-  keys[space] = {};
+  spacingConfig[space] = {};
   for (const bp of breakpointsMap) {
     for (const side of sides) {
       for (const size of sizes) {
+        const styleObjectKey = `${side}${size}${bp}`;
+        const styleObjectValue = { [`${space}${capitalizeFirst(side)}`]: styleKeys[size] };
         if (bp === '') {
-          keys[space][`${side}${size}`] = {
-            [`${space}${capitalizeFirst(side)}`]: styleKeys[size],
-          };
+          spacingConfig[space][styleObjectKey] = styleObjectValue;
         } else {
-          keys[space][`${side}${size}${bp}`] = {
-            [breakpoints[bp]]: { [`${space}${capitalizeFirst(side)}`]: styleKeys[size] },
+          spacingConfig[space][styleObjectKey] = {
+            [breakpoints[bp]]: styleObjectValue,
           };
         }
       }
@@ -48,28 +48,18 @@ for (const space of spacings) {
   }
 }
 
-const margin = create(keys.margin);
-const padding = create(keys.padding);
+const margin = create(spacingConfig.margin);
+const padding = create(spacingConfig.padding);
 
-export function getMargin(
-  space: ?Spacing,
-  side: 'top' | 'right' | 'bottom' | 'normal' | 'none',
-): ?string {
+export function getMargin(space: ?Spacing, side: CSSSides): ?string {
   return getSpace(margin, space, side);
 }
 
-export function getPadding(
-  space: ?Spacing,
-  side: 'top' | 'right' | 'bottom' | 'normal' | 'none',
-): ?string {
+export function getPadding(space: ?Spacing, side: CSSSides): ?string {
   return getSpace(padding, space, side);
 }
 
-function getSpace(
-  style: $FlowFixMe,
-  space: ?Spacing,
-  side: 'top' | 'right' | 'bottom' | 'normal' | 'none',
-): ?string {
+function getSpace(style: $FlowFixMe, space: ?Spacing, side: CSSSides): ?string {
   if (space == null) {
     return null;
   }

@@ -12,21 +12,26 @@ type FlexValues = '0' | '1';
 type TextAlign = 'right';
 
 type Props = {
-  +children: Node,
-  +alignItems?: AlignItems,
-  +justifyContent?: JustifyContent,
-  +marginRight?: Spacing,
-  +marginTop?: Spacing,
-  +marginBottom?: Spacing,
-  +paddingBottom?: Spacing,
-  +className?: string,
-  +ellipsisContainer?: boolean,
-  +flexGrow?: FlexValues,
-  +flexShrink?: FlexValues,
-  +title?: string,
-  +textAlign?: TextAlign,
-  +overflow?: 'hidden',
-  +display?: Display,
+  +'children': Node,
+  +'alignItems'?: AlignItems,
+  +'justifyContent'?: JustifyContent,
+  +'marginRight'?: Spacing,
+  +'marginLeft'?: Spacing,
+  +'marginTop'?: Spacing,
+  +'marginBottom'?: Spacing,
+  +'paddingBottom'?: Spacing,
+  +'paddingRight'?: Spacing,
+  +'paddingLeft'?: Spacing,
+  +'paddingTop'?: Spacing,
+  +'className'?: string,
+  +'ellipsisContainer'?: boolean,
+  +'flexGrow'?: FlexValues,
+  +'flexShrink'?: FlexValues,
+  +'title'?: string,
+  +'textAlign'?: TextAlign,
+  +'overflow'?: 'hidden',
+  +'display'?: Display,
+  +'data-testid'?: string,
 };
 
 const getAlignItems = (alignItems: ?AlignItems) => {
@@ -64,7 +69,11 @@ export default function Box({
   marginRight,
   marginBottom,
   marginTop,
+  marginLeft,
   className,
+  paddingTop,
+  paddingRight,
+  paddingLeft,
   paddingBottom,
   ellipsisContainer = false,
   flexGrow,
@@ -73,9 +82,11 @@ export default function Box({
   textAlign,
   overflow,
   display,
+  ...rest
 }: Props): Node {
   return (
     <div
+      {...rest}
       title={title} // TODO: Replace with tooltip
       className={[
         'Box',
@@ -89,10 +100,14 @@ export default function Box({
         taStyles(textAlign),
         overflowStyles(overflow),
         getDisplayStyles(display),
-        getMargin(marginRight, 'right'),
         getMargin(marginTop, 'top'),
+        getMargin(marginRight, 'right'),
         getMargin(marginBottom, 'bottom'),
+        getMargin(marginLeft, 'left'),
+        getPadding(paddingTop, 'top'),
+        getPadding(paddingRight, 'right'),
         getPadding(paddingBottom, 'bottom'),
+        getPadding(paddingLeft, 'left'),
         className,
       ]
         .filter(Boolean)

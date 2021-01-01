@@ -8,3 +8,5 @@ export type MediaObjectOr<T> =
       ...$ObjMap<typeof breakpoints, () => T>,
     }>
   | T;
+
+export type CSSSides = 'top' | 'right' | 'bottom' | 'left';

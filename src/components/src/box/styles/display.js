@@ -3,34 +3,35 @@
 /* eslint-disable sx/valid-usage */
 import { create } from '@adeira/sx';
 
-import breakpoints from '../../breakpoints';
+import breakpoints, { breakpointsMap } from '../../breakpoints';
 import type { MediaObjectOr } from './types';
 
-export type Display = MediaObjectOr<'block' | 'inline' | 'inlineBlock' | 'flex'>;
+type DisplayEnum = 'block' | 'inline' | 'inline-block' | 'flex';
+export type Display = MediaObjectOr<DisplayEnum>;
 
-const flex = { display: 'flex' };
-const block = { display: 'block' };
-const inlineBlock = { display: 'inline-block' };
-const inline = { display: 'inline' };
+const displayValues: $ReadOnlyArray<DisplayEnum> = ['block', 'inline', 'inline-block', 'flex'];
+const styleMap = {};
 
-const styles = create({
-  flex,
-  block,
-  inlineBlock,
-  inline,
-  mediumMobileinline: {
-    [breakpoints.mediumMobile]: inline,
-  },
-  desktopflex: {
-    [breakpoints.desktop]: flex,
-  },
-});
+for (const bp of breakpointsMap) {
+  for (const value of displayValues) {
+    if (bp === '') {
+      styleMap[`${bp}${value}`] = { display: value };
+    } else {
+      styleMap[`${bp}${value}`] = {
+        [breakpoints[bp]]: { display: value },
+      };
+    }
+  }
+}
+
+const styles = create(styleMap);
 
 export default function getDisplayStyles(display: ?Display): ?string {
   if (display == null) {
     return null;
   }
   if (typeof display === 'string') {
+    // $FlowExpectedError[incompatible-call]
     return styles(display);
   }
   const classes = [];
