@@ -1,4 +1,18 @@
-/* We cannot target child selectors with sx */
-.spinner.spin-white circle {
+.spinner.spinner--white circle {
   stroke: var(--color-white);
+}
+
+.spinner--small {
+  height: 25px;
+  width: 25px;
+}
+
+.spinner--normal {
+  height: 50px;
+  width: 50px;
+}
+
+.spinner--large {
+  height: 100px;
+  width: 100px;
 }

@@ -13,10 +13,8 @@ module.exports = {
 
     // remove svg from existing rule
     config.module.rules = config.module.rules.map((rule) => {
-      if (
-        String(rule.test) ===
-        String(/\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/)
-      ) {
+      if (String(rule.test).includes('svg')) {
+        console.log('removed rule');
         return {
           ...rule,
           test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/,
