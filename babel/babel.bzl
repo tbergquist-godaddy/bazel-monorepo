@@ -24,6 +24,7 @@ def build_esm(name, file_path, data):
         args = [file_path] + [
             "--out-dir",
             "$(@D)",
+            "--copy-files",
             "--root-mode",
             "upward",
             "--out-file-extension",

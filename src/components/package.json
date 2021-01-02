@@ -1,9 +1,9 @@
 {
   "name": "@tbergq/components",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "sideEffects": false,
   "main": "lib/index.js",
-  "module": "esm/index.js",
+  "module": "esm/index.mjs",
   "private": true,
   "license": "MIT",
   "dependencies": {
