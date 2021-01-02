@@ -33,6 +33,9 @@ webpack_cli(
         "@npm//postcss-loader",
         "@npm//postcss-preset-env",
         "@npm//postcss",
+        "@npm//webpack-merge",
+        "@npm//extract-css-chunks-webpack-plugin",
+        "@npm//css-minimizer-webpack-plugin",
     ],
     output_dir = True,
 )

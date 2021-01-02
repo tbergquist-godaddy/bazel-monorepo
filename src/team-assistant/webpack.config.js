@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpackBase = require('@tbergq/webpack-config');
+const { merge } = require('webpack-merge');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -25,8 +26,8 @@ const templateContent = `<!DOCTYPE html>
 </html>
 `;
 
-const webpackConfig /* :Object */ = {
-  ...webpackBase(isDevelopment),
+const baseConfig = webpackBase(isDevelopment);
+const webpackConfig /* :Object */ = merge(baseConfig, {
   plugins: [
     (new CleanWebpackPlugin() /*: Object */),
     (new HtmlWebpackPlugin({
@@ -39,6 +40,6 @@ const webpackConfig /* :Object */ = {
       patterns: [{ from: './src/team-assistant/src/favicon.ico', to: 'favicon.ico' }],
     }) /*: Object */),
   ],
-};
+});
 
 module.exports = webpackConfig;

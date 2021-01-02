@@ -1,12 +1,27 @@
 // @flow
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 module.exports = function (isDevelopment /*: boolean  */) /* : Object */ {
   return {
+    plugins: [
+      isDevelopment && new ReactRefreshWebpackPlugin(),
+      new ExtractCssChunks({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
+        filename: '[name]-[hash].css',
+        chunkFilename: '[name]-[contenthash].css',
+      }),
+    ].filter(Boolean),
     output: {
       filename: '[hash].bundle.js',
       chunkFilename: '[contenthash].bundle.js',
     },
     optimization: {
+      minimize: true,
+      minimizer: [new CssMinimizerPlugin()],
       runtimeChunk: 'single',
       splitChunks: {
         chunks: 'all',
@@ -50,7 +65,9 @@ module.exports = function (isDevelopment /*: boolean  */) /* : Object */ {
         {
           test: (/\.css$/i /*: RegExp  */),
           use: [
-            'style-loader',
+            {
+              loader: ExtractCssChunks.loader,
+            },
             'css-loader',
             {
               loader: 'postcss-loader',
