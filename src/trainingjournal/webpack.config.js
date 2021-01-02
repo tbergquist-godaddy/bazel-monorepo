@@ -7,7 +7,7 @@ const webpackBase = require('@tbergq/webpack-config');
 const webpack = require('webpack');
 const { config } = require('dotenv');
 const path = require('path');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const { merge } = require('webpack-merge');
 
 config({ path: path.join(__dirname, '.env') });
 
@@ -20,8 +20,9 @@ const isDevelopment = (() => {
   return true;
 })();
 
-const webpackConfig /* :Object */ = {
-  ...webpackBase(isDevelopment),
+const baseConfig = webpackBase(isDevelopment);
+
+const finalConfig /* :Object */ = merge(baseConfig, {
   plugins: ([
     (new CleanWebpackPlugin() /*: Object */),
     (new HtmlWebpackPlugin({
@@ -36,8 +37,7 @@ const webpackConfig /* :Object */ = {
     (new webpack.DefinePlugin({
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
     }) /*: Object */),
-    isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean) /*: any[] */),
-};
+});
 
-module.exports = webpackConfig;
+module.exports = finalConfig;
