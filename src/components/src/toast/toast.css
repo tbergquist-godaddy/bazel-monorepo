@@ -1,0 +1,22 @@
+.Toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: var(--z-index-on-top);
+}
+
+.Toast_container {
+  min-width: 200px;
+  transition: all var(--transition-duration-normal);
+  margin-left: var(--space-large);
+}
+
+.Toast_container--hidden {
+  transform: translateX(200px);
+  opacity: 0;
+}
+
+.Toast_container--visible {
+  transform: translateX(0px);
+  opacity: 1;
+}
