@@ -2,12 +2,12 @@
 
 import { type Node, useState, useMemo, useEffect } from 'react';
 import { LinkList, Input, FormGroup } from '@tbergq/components';
-import { create } from '@adeira/sx';
 import { useDebounce } from 'use-debounce';
 import { fbt } from 'fbt';
 
 import { useBaseExercises } from '../../api/fetch-base-exercises';
 import type { BaseExercise } from '../../types';
+import './exercise-list.css';
 
 type Props = {
   +onSelect: (exercise: BaseExercise) => void,
@@ -54,7 +54,7 @@ export default function ExerciseList({ onSelect }: Props): Node {
           <button
             onClick={() => onSelect(item)}
             type="button"
-            className={`${styles('button')} ${className}`}
+            className={`ExerciseList__button ${className}`}
           >
             {item.name} - {item.muscle_group.name}
           </button>
@@ -63,13 +63,3 @@ export default function ExerciseList({ onSelect }: Props): Node {
     </>
   );
 }
-
-const styles = create({
-  button: {
-    border: 'none',
-    cursor: 'pointer',
-    width: '100%',
-    textAlign: 'left',
-    fontSize: 'inherit',
-  },
-});

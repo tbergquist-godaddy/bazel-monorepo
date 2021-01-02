@@ -2,7 +2,6 @@
 
 import { type Node, useState, Suspense, lazy } from 'react';
 import { Box, Spinner, Modal } from '@tbergq/components';
-import { create } from '@adeira/sx';
 import { fbt } from 'fbt';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -32,7 +31,7 @@ export default function DayExerciseList({ exercises, ...rest }: Props): Node {
         justifyContent="space-between"
         alignItems="center"
         display="flex"
-        className={styles('underline')}
+        className="u-border-bottom"
       >
         <Box>
           <fbt desc="Exercise description">Exercise</fbt>
@@ -67,13 +66,3 @@ export default function DayExerciseList({ exercises, ...rest }: Props): Node {
     </>
   );
 }
-
-const styles = create({
-  underline: {
-    ':not(:last-of-type)': {
-      borderBottomWidth: '1px',
-      borderBottomStyle: 'solid',
-      borderBottomColor: 'var(--color-gray-light)',
-    },
-  },
-});

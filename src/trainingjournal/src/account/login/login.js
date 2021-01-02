@@ -3,10 +3,10 @@
 import type { Node } from 'react';
 import fbt from 'fbt';
 import { Heading } from '@tbergq/components';
-import { create } from '@adeira/sx';
 import { Helmet } from 'react-helmet';
 
 import LoginForm from './login-form';
+import './login.css';
 
 export default function Login(): Node {
   return (
@@ -14,7 +14,7 @@ export default function Login(): Node {
       <Helmet>
         <title>Trainingjournal | login</title>
       </Helmet>
-      <div className={styles('container')}>
+      <div className="Login__container">
         <Heading align="center" level="h1">
           <fbt desc="login page heading">Trainingjournal login</fbt>
         </Heading>
@@ -23,11 +23,3 @@ export default function Login(): Node {
     </>
   );
 }
-
-const styles = create({
-  container: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    maxWidth: '600px',
-  },
-});

@@ -1,0 +1,13 @@
+.DayExercise__button {
+  width: 100%;
+  padding: var(--space-normal) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.DayExercise__button:hover,
+.DayExercise__button:focus {
+  background-color: var(--color-gray-light);
+}
