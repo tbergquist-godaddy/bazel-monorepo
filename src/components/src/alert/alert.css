@@ -1,0 +1,13 @@
+.Alert {
+  border-radius: var(--border-radius-normal);
+  padding: var(--space-large);
+  color: var(--color-white);
+}
+
+.Alert--success {
+  background-color: var(--color-primary);
+}
+
+.Alert--danger {
+  background-color: var(--color-error);
+}
