@@ -5,6 +5,9 @@
 .u-justify-flex-end {
   justify-content: flex-end;
 }
+.u-justify-center {
+  justify-content: center;
+}
 
 /* align-items */
 .u-align-center {
