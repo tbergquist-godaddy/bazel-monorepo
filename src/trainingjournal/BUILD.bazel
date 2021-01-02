@@ -30,6 +30,9 @@ webpack_cli(
         "@npm//dotenv",
         "@npm//react-refresh",
         "@npm//@pmmmwh/react-refresh-webpack-plugin",
+        "@npm//autoprefixer",
+        "@npm//postcss-loader",
+        "@npm//postcss-preset-env",
     ],
     output_dir = True,
 )

@@ -29,6 +29,10 @@ webpack_cli(
         ":.babelrc.js",
         "@npm//react-refresh",
         "@npm//@pmmmwh/react-refresh-webpack-plugin",
+        "@npm//autoprefixer",
+        "@npm//postcss-loader",
+        "@npm//postcss-preset-env",
+        "@npm//postcss",
     ],
     output_dir = True,
 )
