@@ -49,7 +49,18 @@ module.exports = function (isDevelopment /*: boolean  */) /* : Object */ {
         },
         {
           test: (/\.css$/i /*: RegExp  */),
-          use: ['style-loader', 'css-loader'],
+          use: [
+            'style-loader',
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [['postcss-preset-env', { browsers: 'last 2 versions' }]],
+                },
+              },
+            },
+          ],
         },
         {
           test: (/\.svg$/ /*: RegExp  */),

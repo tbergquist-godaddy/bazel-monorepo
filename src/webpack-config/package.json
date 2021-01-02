@@ -4,5 +4,11 @@
   "sideEffects": false,
   "main": "src/index.js",
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.2",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0"
+  }
 }

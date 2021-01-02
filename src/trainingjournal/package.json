@@ -26,7 +26,8 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.1.6",
     "@tbergq/mock-server": "*",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "autoprefixer": "^10.1.0"
   },
   "scripts": {
     "manifest": "fbt-manifest --src src"
