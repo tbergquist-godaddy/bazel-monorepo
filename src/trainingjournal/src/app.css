@@ -1,7 +1,4 @@
-@import '@tbergq/components/lib/theme.css';
-@import '@tbergq/components/lib/utilities/underline.css';
-@import '@tbergq/components/lib/utilities/flex.css';
-@import '@tbergq/components/lib/button/button.css';
+@import '@tbergq/components/esm/tbergq-components.css';
 
 html {
   font-size: 62.5%;
