@@ -11,6 +11,9 @@
 .u-display-flex {
   display: flex;
 }
+.u-display-grid {
+  display: grid;
+}
 @media only screen and (min-width: 414px) {
   .u-display-block-mediumMobile {
     display: block;
@@ -29,6 +32,11 @@
 @media only screen and (min-width: 414px) {
   .u-display-flex-mediumMobile {
     display: flex;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .u-display-grid-mediumMobile {
+    display: grid;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -51,6 +59,11 @@
     display: flex;
   }
 }
+@media only screen and (min-width: 576px) {
+  .u-display-grid-largeMobile {
+    display: grid;
+  }
+}
 @media only screen and (min-width: 768px) {
   .u-display-block-tablet {
     display: block;
@@ -69,6 +82,11 @@
 @media only screen and (min-width: 768px) {
   .u-display-flex-tablet {
     display: flex;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .u-display-grid-tablet {
+    display: grid;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -91,6 +109,11 @@
     display: flex;
   }
 }
+@media only screen and (min-width: 992px) {
+  .u-display-grid-desktop {
+    display: grid;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .u-display-block-largeDesktop {
     display: block;
@@ -109,5 +132,10 @@
 @media only screen and (min-width: 1200px) {
   .u-display-flex-largeDesktop {
     display: flex;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .u-display-grid-largeDesktop {
+    display: grid;
   }
 }

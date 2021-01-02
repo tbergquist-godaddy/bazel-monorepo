@@ -2,10 +2,10 @@
 
 import { type Node } from 'react';
 import { Box } from '@tbergq/components';
-import { create } from '@adeira/sx';
 import { fbt } from 'fbt';
 
 import type { Exercise } from '../../types';
+import './day-exercise.css';
 
 type Props = {
   +exercise: Exercise,
@@ -14,7 +14,11 @@ type Props = {
 
 export default function DayExercise({ exercise, onClick }: Props): Node {
   return (
-    <button onClick={() => onClick(exercise)} type="button" className={styles('button')}>
+    <button
+      onClick={() => onClick(exercise)}
+      type="button"
+      className="u-border-bottom u-display-flex DayExercise__button"
+    >
       <Box title={exercise.base_exercise.name} ellipsisContainer={true}>
         {exercise.base_exercise.name}
       </Box>
@@ -35,25 +39,3 @@ export default function DayExercise({ exercise, onClick }: Props): Node {
     </button>
   );
 }
-
-const hoverFocus = {
-  backgroundColor: 'var(--color-gray-light)',
-};
-const styles = create({
-  button: {
-    'background': 'none',
-    'border': 'none',
-    'outline': 'none',
-    'display': 'flex',
-    'width': '100%',
-    'padding': 'var(--space-normal) 0',
-    'cursor': 'pointer',
-    ':hover': hoverFocus,
-    ':focus': hoverFocus,
-    ':not(:last-of-type)': {
-      borderBottomWidth: '1px',
-      borderBottomStyle: 'solid',
-      borderBottomColor: 'var(--color-gray-light)',
-    },
-  },
-});

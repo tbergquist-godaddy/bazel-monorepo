@@ -1,0 +1,28 @@
+.Trainingjournal__header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.Trainingjournal__container {
+  padding: var(--space-large);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .Trainingjournal__container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Trainingjournal__container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Trainingjournal__container {
+    width: 1170px;
+  }
+}

@@ -23,7 +23,6 @@ def get_deps():
         "@npm//babel-plugin-fbt",
         "@npm//babel-plugin-fbt-runtime",
         "@npm//recoil",
-        "@npm//@adeira/sx",
         "@npm//shortid",
         "@npm//yup",
         "@npm//@hookform/resolvers",

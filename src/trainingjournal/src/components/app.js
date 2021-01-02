@@ -2,16 +2,16 @@
 
 import { type Node, useEffect, lazy, Suspense, useRef } from 'react';
 import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
-import { Spinner, Toast, breakpoints } from '@tbergq/components';
+import { Spinner, Toast } from '@tbergq/components';
 import { createHashHistory } from 'history';
 import { init, IntlVariations } from 'fbt';
 import { QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
-import { create } from '@adeira/sx';
 
 import Routes, { queryClient } from './router';
 import getLanguage from './get-language';
 import translations from '../../translatedFbts.json';
+import './app.css';
 
 const Navbar = lazy(() => import('./navbar'));
 const router = createRouter(Routes, createHashHistory());
@@ -40,12 +40,12 @@ export default function App(): Node {
     <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
         <RecoilRoot>
-          <header className={styles('header')}>
+          <header className="Trainingjournal__header">
             <Suspense fallback="">
               <Navbar />
             </Suspense>
           </header>
-          <main className={styles('container')}>
+          <main className="Trainingjournal__container">
             <RouterRenderer loader={<Spinner />} />
             <Toast />
             {__DEV__ && (
@@ -59,25 +59,3 @@ export default function App(): Node {
     </QueryClientProvider>
   );
 }
-
-const styles = create({
-  container: {
-    padding: 'var(--space-large)',
-    margin: '0 auto',
-    [breakpoints.tablet]: {
-      width: '750px',
-    },
-    [breakpoints.desktop]: {
-      width: '970px',
-    },
-    [breakpoints.largeDesktop]: {
-      width: '1170px',
-    },
-  },
-  header: {
-    position: 'sticky',
-    top: 0,
-    // $FlowExpectedError[incompatible-call]
-    zIndex: 'var(--z-index-sticky)',
-  },
-});

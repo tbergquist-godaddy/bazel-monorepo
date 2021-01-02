@@ -1,0 +1,8 @@
+.Week__container {
+  padding: var(--space-large);
+}
+
+.Week__day-list-container {
+  gap: var(--space-large);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

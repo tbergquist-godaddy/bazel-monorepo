@@ -4,7 +4,6 @@ import { type Node } from 'react';
 import { Heading, Box, Card } from '@tbergq/components';
 import { Helmet } from 'react-helmet';
 import { fbt } from 'fbt';
-import { create } from '@adeira/sx';
 
 import BackButton from '../../components/back-button';
 import { useFetchDay } from '../api/fetch-days';
@@ -36,7 +35,7 @@ export default function DayDetail({ routeData }: Props): Node {
       </Box>
       <Box marginBottom="normal">
         {data.exercises.length > 0 ? (
-          <Card className={styles('card')}>
+          <Card className="u-overflow-hidden">
             <DayExerciseList dayId={dayId} programId={programId} exercises={data.exercises} />
           </Card>
         ) : (
@@ -56,9 +55,3 @@ export default function DayDetail({ routeData }: Props): Node {
     </div>
   );
 }
-
-const styles = create({
-  card: {
-    overflow: 'hidden',
-  },
-});

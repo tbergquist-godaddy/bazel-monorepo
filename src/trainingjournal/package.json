@@ -9,7 +9,6 @@
     "@tbergq/router": "*",
     "@tbergq/components": "*",
     "fbt": "^0.16.0",
-    "@adeira/sx": "^0.22.0",
     "yup": "^0.32.8",
     "@hookform/resolvers": "^1.1.2",
     "react-hook-form": "^6.13.0",
