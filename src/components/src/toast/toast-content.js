@@ -1,7 +1,7 @@
 // @flow
 
 import { useRef, useEffect, type Node } from 'react';
-import { create } from '@adeira/sx';
+import classNames from 'classnames';
 
 import { useToastActions } from './toast-list-state';
 import Alert from '../alert';
@@ -39,24 +39,14 @@ export default function ToastContent(props: Props): Node {
     });
   }, [setVisible, toastId]);
   return (
-    <div className={styles('toast', props.isVisible ? 'visible' : 'hidden')} ref={toastRef}>
+    <div
+      className={classNames('Toast_container', {
+        'Toast_container--visible': props.isVisible,
+        'Toast_container--hidden': !props.isVisible,
+      })}
+      ref={toastRef}
+    >
       <Alert type={props.type}>{props.text}</Alert>
     </div>
   );
 }
-
-const styles = create({
-  toast: {
-    minWidth: '200px',
-    transition: 'all 0.3s ease-out',
-    marginLeft: 'var(--space-large)',
-  },
-  visible: {
-    transform: 'translateX(0px)',
-    opacity: 1,
-  },
-  hidden: {
-    transform: 'translateX(200px)',
-    opacity: 0,
-  },
-});
