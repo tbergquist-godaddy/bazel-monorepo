@@ -2,7 +2,7 @@
 
 import type { Node } from 'react';
 import fbt from 'fbt';
-import { Heading, Text } from '@tbergq/components';
+import { Heading } from '@tbergq/components';
 import { Link } from '@tbergq/router';
 
 import LoginForm from './login-form';
@@ -16,9 +16,9 @@ export default function Login(): Node {
       </Heading>
       <LoginForm />
       <div>
-        <Text>
+        <div>
           <fbt desc="signup description">Don&apos;t have an account?</fbt>
-        </Text>{' '}
+        </div>{' '}
         <Link to="/signup">
           <fbt desc="Signup link">Sign up</fbt>
         </Link>
