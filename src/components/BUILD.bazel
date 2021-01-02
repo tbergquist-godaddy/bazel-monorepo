@@ -25,8 +25,8 @@ js_library(
     deps = [
         ":esm",
         ":lib",
-        "@npm//react-transition-group",
         "@npm//classnames",
+        "@npm//react-transition-group",
     ],
 )
 
@@ -41,19 +41,18 @@ jest_test(
     deps = [
         "//jest:preset",
         "@npm//@adeira/babel-preset-adeira",
-        "@npm//@adeira/sx",
         "@npm//@babel/runtime",
         "@npm//@jest/transform",
         "@npm//@testing-library/jest-dom",
         "@npm//@testing-library/react",
         "@npm//@testing-library/user-event",
         "@npm//babel-jest",
+        "@npm//classnames",
         "@npm//react",
         "@npm//react-icons",
         "@npm//react-transition-group",
         "@npm//recoil",
         "@npm//shortid",
-        "@npm//classnames",
     ],
 )
 

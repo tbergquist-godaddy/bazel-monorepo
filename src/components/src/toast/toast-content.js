@@ -4,7 +4,7 @@ import { useRef, useEffect, type Node } from 'react';
 import classNames from 'classnames';
 
 import { useToastActions } from './toast-list-state';
-import Alert from '../alert';
+import Alert from '../alert/alert';
 
 type Props = $ReadOnly<{
   type: 'success' | 'danger',
