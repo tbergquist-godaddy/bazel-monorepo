@@ -34,7 +34,7 @@ export default function DeleteExercise({
   const [isVisible, setIsVisible] = useState(false);
   return (
     <>
-      <Button onClick={() => setIsVisible(true)} variant="danger">
+      <Button fullWidth="mediumMobile" onClick={() => setIsVisible(true)} variant="danger">
         <fbt desc="delete exercise button">Delete exercise</fbt>
       </Button>
       <Confirm
