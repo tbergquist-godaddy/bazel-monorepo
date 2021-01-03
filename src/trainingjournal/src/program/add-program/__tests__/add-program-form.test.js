@@ -17,37 +17,41 @@ function setup() {
   };
 }
 
-it('creates a new program', async () => {
-  const { closeModal, getInput, getButton } = setup();
-  const input = getInput();
+describe('add-program', () => {
+  it('creates a new program', async () => {
+    const { closeModal, getInput, getButton } = setup();
+    const input = getInput();
 
-  userEvent.type(input, 'success');
+    userEvent.type(input, 'success');
 
-  const button = getButton();
-  userEvent.click(button);
+    const button = getButton();
+    userEvent.click(button);
 
-  await waitFor(() =>
-    expect(screen.getByText(/program was successfully created/i)).toBeInTheDocument(),
-  );
-  expect(closeModal).toHaveBeenCalledWith();
-});
+    await waitFor(() =>
+      expect(screen.getByText(/program was successfully created/i)).toBeInTheDocument(),
+    );
+    expect(closeModal).toHaveBeenCalledWith();
+  });
 
-it('requires a program name', async () => {
-  const { getButton } = setup();
-  userEvent.click(getButton());
+  it('requires a program name', async () => {
+    const { getButton } = setup();
+    userEvent.click(getButton());
 
-  await waitFor(() => expect(screen.getByText(/"Name" is a required field/i)).toBeInTheDocument());
-});
+    await waitFor(() =>
+      expect(screen.getByText(/"Name" is a required field/i)).toBeInTheDocument(),
+    );
+  });
 
-it('shows an error when creating a program fails', async () => {
-  const { closeModal, getInput, getButton } = setup();
-  const input = getInput();
+  it('shows an error when creating a program fails', async () => {
+    const { closeModal, getInput, getButton } = setup();
+    const input = getInput();
 
-  userEvent.type(input, 'failure');
+    userEvent.type(input, 'failure');
 
-  const button = getButton();
-  userEvent.click(button);
+    const button = getButton();
+    userEvent.click(button);
 
-  await waitFor(() => expect(screen.getByText(/Failed to create program/i)).toBeInTheDocument());
-  expect(closeModal).not.toHaveBeenCalledWith();
+    await waitFor(() => expect(screen.getByText(/Failed to create program/i)).toBeInTheDocument());
+    expect(closeModal).not.toHaveBeenCalledWith();
+  });
 });

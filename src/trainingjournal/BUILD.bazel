@@ -24,6 +24,8 @@ webpack_cli(
         "**/.env",
         "**/*.css",
         "**/*.html",
+        "**/*.jpg",
+        "**/*.webp",
     ]) + get_deps() + [
         "//:babel.config.js",
         ":.babelrc.js",
@@ -36,6 +38,7 @@ webpack_cli(
         "@npm//webpack-merge",
         "@npm//extract-css-chunks-webpack-plugin",
         "@npm//css-minimizer-webpack-plugin",
+        "@npm//file-loader",
     ],
     output_dir = True,
 )
@@ -59,6 +62,8 @@ webpack_dev_server(
         "**/*.css",
         "**/.env",
         "**/*.html",
+        "**/*.jpg",
+        "**/*.webp",
     ]) + get_deps() + [
         "//:babel.config.js",
         ":.babelrc.js",

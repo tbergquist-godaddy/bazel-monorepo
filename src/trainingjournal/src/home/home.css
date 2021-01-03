@@ -1,0 +1,10 @@
+.Home__links-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-large);
+}
+
+.Home__links-section a:hover,
+.Home__links-section a:focus {
+  text-decoration: none;
+}

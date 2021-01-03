@@ -68,6 +68,11 @@ const routes: RouteConfig[] = [
       return {};
     },
   },
+  {
+    component: JSResource('Exercises', () => import('../exercises/exercises')),
+    path: '/exercises',
+    exact: true,
+  },
 ];
 
 export default routes;

@@ -44,8 +44,8 @@ describe('ExerciseList', () => {
 
     await waitFor(() => expect(getSquatsButton()).toBeInTheDocument());
 
+    await waitFor(() => expect(screen.getAllByRole('button')).toHaveLength(2));
     expect(screen.getByRole('button', { name: /bulgarsk utfall/i })).toBeInTheDocument();
-    expect(screen.getAllByRole('button')).toHaveLength(2);
   });
 
   it('calls the onSelect callback', async () => {
