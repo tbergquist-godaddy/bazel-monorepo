@@ -36,6 +36,7 @@ webpack_cli(
         "@npm//webpack-merge",
         "@npm//extract-css-chunks-webpack-plugin",
         "@npm//css-minimizer-webpack-plugin",
+        "@npm//file-loader",
     ],
     output_dir = True,
 )

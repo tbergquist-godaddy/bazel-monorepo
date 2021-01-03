@@ -83,6 +83,14 @@ module.exports = function (isDevelopment /*: boolean  */) /* : Object */ {
           test: (/\.svg$/ /*: RegExp  */),
           use: ['@svgr/webpack'],
         },
+        {
+          test: (/\.(?:png|jpe?g|gif|webp)$/i /*: RegExp */),
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
       ],
     },
   };
