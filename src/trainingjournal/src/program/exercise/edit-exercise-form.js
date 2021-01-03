@@ -55,7 +55,10 @@ export default function EditExerciseForm({ closeModal, exercise, dayId, programI
         closeModal={closeModal}
         isLoading={isLoading}
         extraAction={
-          <Box marginRight="normal">
+          <Box
+            marginRight={{ _: 'none', mediumMobile: 'normal' }}
+            marginBottom={{ _: 'normal', mediumMobile: 'none' }}
+          >
             <DeleteExercise
               onMutationSuccess={onMutationSuccess}
               exerciseId={exercise.id.toString()}

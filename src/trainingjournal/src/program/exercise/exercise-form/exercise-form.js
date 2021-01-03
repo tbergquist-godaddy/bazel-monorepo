@@ -1,7 +1,7 @@
 // @flow
 
 import { type Node, useState } from 'react';
-import { Button, FormGroup, Box } from '@tbergq/components';
+import { Button, Box } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { useForm } from 'react-hook-form';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
@@ -72,17 +72,20 @@ export default function ExerciseForm({
                   errors={errors}
                   register={register}
                 />
-                <FormGroup align="right">
+                <Box display={{ _: 'block', mediumMobile: 'flex' }} justifyContent="flex-end">
                   {extraAction}
-                  <Box marginRight="normal">
-                    <Button variant="white" onClick={closeModal}>
+                  <Box
+                    marginRight={{ _: 'none', mediumMobile: 'normal' }}
+                    marginBottom={{ _: 'normal', mediumMobile: 'none' }}
+                  >
+                    <Button fullWidth="mediumMobile" variant="white" onClick={closeModal}>
                       <fbt desc="cancel create exercise button">Cancel</fbt>
                     </Button>
                   </Box>
-                  <Button isLoading={isLoading} type="submit">
+                  <Button fullWidth="mediumMobile" isLoading={isLoading} type="submit">
                     {submitText}
                   </Button>
-                </FormGroup>
+                </Box>
               </form>
             ) : (
               <ExerciseList onSelect={setExercise} />
