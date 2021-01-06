@@ -8,6 +8,7 @@ import { fbt } from 'fbt';
 
 import type { Day as DayType } from '../types';
 import DayExerciseList from './day-exercise-list/day-exercise-list';
+import styles from './day.module.css';
 
 type Props = {
   +day: DayType,
@@ -19,7 +20,7 @@ export default function Day({ day, programId }: Props): Node {
   const { name, exercises, id } = day;
 
   return (
-    <Card className="u-overflow-hidden">
+    <Card className={styles.Day__card}>
       <Box justifyContent="space-between" alignItems="center" display="flex">
         <Heading level="h3" as="h6">
           {name}

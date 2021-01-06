@@ -64,11 +64,36 @@ module.exports = function (isDevelopment /*: boolean  */) /* : Object */ {
         },
         {
           test: (/\.css$/i /*: RegExp  */),
+          exclude: (/\.module\.css$/ /*: RegExp */),
           use: [
             {
               loader: ExtractCssChunks.loader,
             },
-            'css-loader',
+            {
+              loader: 'css-loader',
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [['postcss-preset-env', { browsers: 'last 2 versions' }]],
+                },
+              },
+            },
+          ],
+        },
+        {
+          test: (/\.module\.css$/ /*: RegExp */),
+          use: [
+            {
+              loader: ExtractCssChunks.loader,
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+              },
+            },
             {
               loader: 'postcss-loader',
               options: {

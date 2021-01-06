@@ -5,6 +5,7 @@ import classNames from 'classnames';
 
 import { useToastActions } from './toast-list-state';
 import Alert from '../alert/alert';
+import styles from './toast.module.css';
 
 type Props = $ReadOnly<{
   type: 'success' | 'danger',
@@ -40,9 +41,9 @@ export default function ToastContent(props: Props): Node {
   }, [setVisible, toastId]);
   return (
     <div
-      className={classNames('Toast_container', {
-        'Toast_container--visible': props.isVisible,
-        'Toast_container--hidden': !props.isVisible,
+      className={classNames(styles.Toast_container, {
+        [styles['Toast_container--visible']]: props.isVisible,
+        [styles['Toast_container--hidden']]: !props.isVisible,
       })}
       ref={toastRef}
     >

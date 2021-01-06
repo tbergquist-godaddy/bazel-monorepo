@@ -105,6 +105,7 @@ jest_test(
         "@npm//@testing-library/jest-dom",
         "//jest:preset",
         "//src/mock-server:mock_server",
+        "@npm//identity-obj-proxy",
     ],
 )
 

@@ -3,8 +3,10 @@
 import { type Node, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import './modal.css';
-import '../utilities/flex.css';
+import styles from './modal.module.css';
+import flexStyles from '../utilities/flex.module.css';
+import spacingStyles from '../utilities/spacing.module.css';
+import displayStyles from '../utilities/display.module.css';
 
 type Props = {
   +isVisible: boolean,
@@ -43,28 +45,39 @@ export default function Modal({
   };
 
   return (
-    <CSSTransition timeout={100} in={isVisible} unmountOnExit className="modal">
+    <CSSTransition
+      timeout={100}
+      in={isVisible}
+      unmountOnExit
+      className={styles.modal}
+      classNames={{
+        enter: styles.enter,
+        enterActive: styles['enter-active'],
+      }}
+    >
       <div>
         <div
           ref={backdropRef}
           onClick={handleClickOutside}
-          className={`modal__modal-backdrop`}
+          className={styles['modal__modal-backdrop']}
           data-testid="modalBackdrop"
           role="dialog"
         >
-          <div className={`modal__modal-content`}>
-            <div className="u-display-flex u-space-between u-align-center">
+          <div className={styles['modal__modal-content']}>
+            <div
+              className={`${displayStyles['u-display-flex']} ${flexStyles['u-space-between']} ${flexStyles['u-align-center']}`}
+            >
               <div>{title != null ? title : null}</div>
               <button
                 onClick={onClose}
                 aria-label={closeLabel}
-                className={'modal__close-button'}
+                className={styles['modal__close-button']}
                 type="button"
               >
                 &times;
               </button>
             </div>
-            <div className="u-margin-top-normal">{children}</div>
+            <div className={spacingStyles['u-margin-top-normal']}>{children}</div>
           </div>
         </div>
       </div>

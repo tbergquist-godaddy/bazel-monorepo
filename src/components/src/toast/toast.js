@@ -4,7 +4,7 @@ import type { Element, ComponentType } from 'react';
 
 import { useToastListState } from './toast-list-state';
 import ToastContent from './toast-content';
-import './toast.css';
+import styles from './toast.module.css';
 
 type Props = {};
 
@@ -19,7 +19,7 @@ export default (function Toast() {
   const toasts = useToastListState();
 
   return (
-    <div className="Toast">
+    <div className={styles.Toast}>
       {toasts.map((toast) => {
         return (
           <ToastContent

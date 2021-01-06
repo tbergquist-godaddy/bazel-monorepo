@@ -2,7 +2,7 @@
 
 import type { Node } from 'react';
 
-import './alert.css';
+import styles from './alert.module.css';
 
 type Props = {
   +children: Node,
@@ -11,7 +11,7 @@ type Props = {
 
 export default function Alert({ children, type = 'success' }: Props): Node {
   return (
-    <div role="alert" className={`Alert Alert--${type}`}>
+    <div role="alert" className={`${styles.Alert} ${styles[`Alert--${type}`]}`}>
       {children}
     </div>
   );

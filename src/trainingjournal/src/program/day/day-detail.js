@@ -10,6 +10,7 @@ import { useFetchDay } from '../api/fetch-days';
 import AddExercise from '../exercise/add-exercise';
 import DayExerciseList from './day-exercise-list/day-exercise-list';
 import DeleteDay from './delete-day';
+import styles from './day-detail.module.css';
 
 type Props = {
   +routeData: {
@@ -35,7 +36,7 @@ export default function DayDetail({ routeData }: Props): Node {
       </Box>
       <Box marginBottom="normal">
         {data.exercises.length > 0 ? (
-          <Card className="u-overflow-hidden">
+          <Card className={styles.DayDetail__card}>
             <DayExerciseList dayId={dayId} programId={programId} exercises={data.exercises} />
           </Card>
         ) : (

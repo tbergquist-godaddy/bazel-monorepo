@@ -3,8 +3,9 @@
 import type { Node } from 'react';
 import classNames from 'classnames';
 
-import './form-group.css';
-import '../utilities/flex.css';
+import flexStyles from '../utilities/flex.module.css';
+import spacingStyles from '../utilities/spacing.module.css';
+import displayStyles from '../utilities/display.module.css';
 
 type Props = {
   +children: Node,
@@ -14,10 +15,10 @@ type Props = {
 export default function FormGroup({ children, align }: Props): Node {
   return (
     <div
-      className={classNames('u-margin-bottom-small', {
-        'u-display-flex': align != null,
-        'u-justify-flex-end': align === 'right',
-        'u-justify-center': align === 'center',
+      className={classNames(spacingStyles['u-margin-bottom-small'], {
+        [`${displayStyles['u-display-flex']}`]: align != null,
+        [`${flexStyles['u-justify-flex-end']}`]: align === 'right',
+        [`${flexStyles['u-justify-center']}`]: align === 'center',
       })}
     >
       {children}

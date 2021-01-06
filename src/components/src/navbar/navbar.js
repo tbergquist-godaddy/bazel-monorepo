@@ -4,7 +4,7 @@ import { type Node, type Element, useState, useCallback, Children } from 'react'
 import { MdMenu } from 'react-icons/md';
 import classNames from 'classnames';
 
-import './navbar.css';
+import styles from './navbar.module.css';
 import Box from '../box/box';
 import useMatchMedia from '../use-match-media';
 import { breakpoints } from '../breakpoints';
@@ -38,19 +38,19 @@ export default function Navbar({ brand, left, right, menuAriaLabel = 'Menu' }: P
   useMatchMedia(breakpoints.desktop, onMatchMediaChange);
   return (
     <nav
-      className={classNames('Navbar Navbar__header', {
-        'Navbar__header--expanded': isExpanded,
+      className={classNames(styles.Navbar, styles.Navbar__header, {
+        [styles['Navbar__header--expanded']]: isExpanded,
       })}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Box display="flex" alignItems="center">
-          <div className={`Navbar__brand`}>{brand}</div>
+          <div className={styles.Navbar__brand}>{brand}</div>
           {isDesktop && <div>{left}</div>}
         </Box>
         {isDesktop ? (
           <div>{right}</div>
         ) : (
-          <span className="Navbar__Burger-wrapper">
+          <span className={styles['Navbar__Burger-wrapper']}>
             <IconButton aria-label={menuAriaLabel} onClick={() => setIsExpanded((state) => !state)}>
               <MdMenu />
             </IconButton>
@@ -58,18 +58,18 @@ export default function Navbar({ brand, left, right, menuAriaLabel = 'Menu' }: P
         )}
       </Box>
       <div
-        className={classNames('Navbar__expanded-container', {
-          'Navbar__expanded-container--visible': isExpanded,
+        className={classNames(styles['Navbar__expanded-container'], {
+          [styles['Navbar__expanded-container--visible']]: isExpanded,
         })}
       >
         {isExpanded && (
-          <div className="Navbar__expanded" onClick={onNavLinkClick}>
+          <div className={styles.Navbar__expanded} onClick={onNavLinkClick}>
             <Box>
               {Children.map(left, (child) => (
-                <div className="Navbar__expanded-link-wrapper">{child}</div>
+                <div className={styles['Navbar__expanded-link-wrapper']}>{child}</div>
               ))}
               {Children.map(right, (child) => (
-                <div className="Navbar__expanded-link-wrapper">{child}</div>
+                <div className={styles['Navbar__expanded-link-wrapper']}>{child}</div>
               ))}
             </Box>
           </div>

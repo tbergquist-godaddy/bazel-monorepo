@@ -2,7 +2,7 @@
 
 import type { Node } from 'react';
 
-import './link-list.css';
+import styles from './link-list.module.css';
 
 type ItemType = { +id: string | number, ... };
 type Props<T> = {
@@ -12,10 +12,10 @@ type Props<T> = {
 
 export default function LinkList<T: ItemType>({ items, renderItem }: Props<T>): Node {
   return (
-    <ul className="LinkList">
+    <ul className={styles.LinkList}>
       {items.map((item) => (
-        <li className="LinkList__list-item" key={item.id}>
-          {renderItem('LinkList__link', item)}
+        <li className={styles['LinkList__list-item']} key={item.id}>
+          {renderItem(styles.LinkList__link, item)}
         </li>
       ))}
     </ul>
