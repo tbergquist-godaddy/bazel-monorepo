@@ -1,9 +1,7 @@
 {
   "name": "@tbergq/components",
-  "version": "0.17.0",
-  "sideEffects": [
-    "*.css"
-  ],
+  "version": "0.18.0",
+  "sideEffects": false,
   "main": "lib/index.js",
   "module": "esm/index.mjs",
   "private": true,

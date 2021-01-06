@@ -1,7 +1,7 @@
 // @flow
 
 import { type Node, useState, Suspense, lazy } from 'react';
-import { Box, Spinner, Modal } from '@tbergq/components';
+import { Box, Spinner, Modal, borderUnderlineStyles } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -31,7 +31,7 @@ export default function DayExerciseList({ exercises, ...rest }: Props): Node {
         justifyContent="space-between"
         alignItems="center"
         display="flex"
-        className="u-border-bottom"
+        className={borderUnderlineStyles['u-border-bottom']}
       >
         <Box>
           <fbt desc="Exercise description">Exercise</fbt>

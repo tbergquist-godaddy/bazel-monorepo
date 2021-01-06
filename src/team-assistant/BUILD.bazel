@@ -79,6 +79,7 @@ jest_test(
         "@npm//@testing-library/user-event",
         "@npm//@testing-library/jest-dom",
         "//jest:preset",
+        "@npm//identity-obj-proxy",
     ],
 )
 

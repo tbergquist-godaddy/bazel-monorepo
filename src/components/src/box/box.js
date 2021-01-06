@@ -4,9 +4,10 @@ import type { Node } from 'react';
 
 import getDisplayStyles, { type Display } from './styles/display';
 import { getMargin, getPadding, type Spacing } from './styles/spacing';
-import '../utilities/ellipsis.css';
-import '../utilities/flex.css';
-import '../utilities/overflow.css';
+import ellipsisStyles from '../utilities/ellipsis.module.css';
+import flexStyles from '../utilities/flex.module.css';
+import overflowStyles from '../utilities/overflow.module.css';
+import textAlignStyles from '../utilities/text-align.module.css';
 
 type AlignItems = 'center';
 type JustifyContent = 'space-between' | 'flex-end';
@@ -39,7 +40,7 @@ type Props = {
 const getAlignItems = (alignItems: ?AlignItems) => {
   switch (alignItems) {
     case 'center':
-      return 'u-align-center';
+      return flexStyles['u-align-center'];
     default:
       return null;
   }
@@ -48,9 +49,9 @@ const getAlignItems = (alignItems: ?AlignItems) => {
 const getJustifyContent = (justifyContent: ?JustifyContent) => {
   switch (justifyContent) {
     case 'space-between':
-      return 'u-space-between';
+      return flexStyles['u-space-between'];
     case 'flex-end':
-      return 'u-justify-flex-end';
+      return flexStyles['u-justify-flex-end'];
     default:
       return null;
   }
@@ -61,7 +62,7 @@ const getFlexValue = (key: 'grow' | 'shrink') => (flexValue: ?FlexValues): $Flow
     return false;
   }
 
-  return `u-flex-${key}-${flexValue}`;
+  return flexStyles[`u-flex-${key}-${flexValue}`];
 };
 
 export default function Box({
@@ -94,11 +95,11 @@ export default function Box({
         'Box',
         getJustifyContent(justifyContent),
         getAlignItems(alignItems),
-        ellipsisContainer && 'u-ellipsis-container',
+        ellipsisContainer && ellipsisStyles['u-ellipsis-container'],
         getFlexValue('grow')(flexGrow),
         getFlexValue('shrink')(flexShrink),
-        textAlign && 'u-text-align-right',
-        overflow && 'u-overflow-hidden',
+        textAlign && textAlignStyles['u-text-align-right'],
+        overflow && overflowStyles['u-overflow-hidden'],
         getDisplayStyles(display),
         getMargin(marginTop, 'top'),
         getMargin(marginRight, 'right'),

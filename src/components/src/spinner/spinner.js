@@ -1,9 +1,10 @@
-// @flow strict-local
+// @flow
 
 import type { Node } from 'react';
+import classNames from 'classnames';
 
 import Spin from './spinner.svg';
-import './spinner.css';
+import styles from './spinner.module.css';
 
 type Props = {
   +size?: 'small' | 'normal' | 'large',
@@ -11,5 +12,14 @@ type Props = {
 };
 
 export default function Spinner({ size = 'normal', color = 'primary' }: Props): Node {
-  return <Spin data-testid="spinner" className={`spinner spinner--${color} spinner--${size}`} />;
+  return (
+    <Spin
+      data-testid="spinner"
+      className={classNames(
+        styles.spinner,
+        styles[`spinner--${color}`],
+        styles[`spinner--${size}`],
+      )}
+    />
+  );
 }

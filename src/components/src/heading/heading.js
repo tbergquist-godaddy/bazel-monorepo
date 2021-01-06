@@ -3,8 +3,8 @@
 import type { Node } from 'react';
 import classNames from 'classnames';
 
-import './heading.css';
-import '../utilities/text-align.css';
+import styles from './heading.module.css';
+import textAlignStyles from '../utilities/text-align.module.css';
 
 type Levels = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 type Props = {
@@ -18,8 +18,8 @@ export default function Heading({ level, children, align, as = level }: Props): 
   const Component = level;
   return (
     <Component
-      className={classNames(`heading heading--${as}`, {
-        'u-text-align-center': align === 'center',
+      className={classNames(styles.heading, styles[`heading--${as}`], {
+        [`${textAlignStyles['u-text-align-center']}`]: align === 'center',
       })}
     >
       {children}

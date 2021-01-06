@@ -1,7 +1,7 @@
 // @flow
 
 import { type Node } from 'react';
-import { Heading, Box } from '@tbergq/components';
+import { Heading, Box, displayStyles, borderUnderlineStyles } from '@tbergq/components';
 
 import DayList from '../day/day-list';
 import type { Week } from '../types';
@@ -16,7 +16,10 @@ type Props = {
 
 export default function WeekList({ week }: Props): Node {
   return (
-    <div id={`week-${week.id}`} className="Week__container u-border-bottom">
+    <div
+      id={`week-${week.id}`}
+      className={`Week__container ${borderUnderlineStyles['u-border-bottom']}`}
+    >
       <Box justifyContent="space-between" alignItems="center" display="flex" marginBottom="normal">
         <Heading level="h2" as="h4">
           {week.name}
@@ -34,7 +37,7 @@ export default function WeekList({ week }: Props): Node {
           </Box>
         </Box>
       </Box>
-      <div className="u-display-grid Week__day-list-container">
+      <div className={`${displayStyles['u-display-grid']} Week__day-list-container`}>
         <DayList programId={week.program.toString()} days={week.days} />
       </div>
     </div>

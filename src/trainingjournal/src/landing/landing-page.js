@@ -5,7 +5,7 @@ import { Heading } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { Helmet } from 'react-helmet';
 
-import './landing-page.css';
+import * as styles from './landing-page.css';
 
 export default function LandingPage(): Node {
   return (
@@ -13,7 +13,7 @@ export default function LandingPage(): Node {
       <Helmet>
         <title>Trainingjournal | landing</title>
       </Helmet>
-      <section className="LandingPage__section">
+      <section className={styles.LandingPage__section}>
         <Heading level="h1">
           <fbt desc="landing page heading">Traningjournal</fbt>
         </Heading>
@@ -24,8 +24,8 @@ export default function LandingPage(): Node {
           </fbt>
         </p>
       </section>
-      <section className="LandingPage__section">
-        <p className="LandingPage__paragraph">
+      <section className={styles.LandingPage__section}>
+        <p className={styles.LandingPage__paragraph}>
           <fbt desc="landing page info text2">
             To get started, just create your account, create your exercises, and then create your
             first program. Then bring your phone to the gym and just register your exercises as you

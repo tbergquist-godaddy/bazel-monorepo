@@ -1,11 +1,12 @@
 // @flow
 
 import { type Node } from 'react';
-import { Box } from '@tbergq/components';
+import { Box, borderUnderlineStyles, displayStyles } from '@tbergq/components';
 import { fbt } from 'fbt';
+import classNames from 'classnames';
 
 import type { Exercise } from '../../types';
-import './day-exercise.css';
+import styles from './day-exercise.module.css';
 
 type Props = {
   +exercise: Exercise,
@@ -17,7 +18,11 @@ export default function DayExercise({ exercise, onClick }: Props): Node {
     <button
       onClick={() => onClick(exercise)}
       type="button"
-      className="u-border-bottom u-display-flex DayExercise__button"
+      className={classNames(
+        borderUnderlineStyles['u-border-bottom'],
+        displayStyles['u-display-flex'],
+        styles.DayExercise__button,
+      )}
     >
       <Box title={exercise.base_exercise.name} ellipsisContainer={true}>
         {exercise.base_exercise.name}

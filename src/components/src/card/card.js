@@ -1,7 +1,8 @@
 // @flow
 
 import type { Node } from 'react';
-import './card.css';
+
+import styles from './card.module.css';
 
 type Props = {
   +children: Node,
@@ -9,5 +10,5 @@ type Props = {
 };
 
 export default function Card({ children, className }: Props): Node {
-  return <div className={['card', className].filter(Boolean).join(' ')}>{children}</div>;
+  return <div className={[styles.card, className].filter(Boolean).join(' ')}>{children}</div>;
 }

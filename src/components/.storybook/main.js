@@ -7,6 +7,7 @@ module.exports = {
     '@storybook/addon-viewport/register',
     '@storybook/addon-a11y',
     '@storybook/addon-knobs',
+    'storybook-css-modules-preset',
   ],
   webpackFinal: (config /* :Object */) /* :Object */ => {
     config.watchOptions = { poll: 1000 };
@@ -14,7 +15,6 @@ module.exports = {
     // remove svg from existing rule
     config.module.rules = config.module.rules.map((rule) => {
       if (String(rule.test).includes('svg')) {
-        console.log('removed rule');
         return {
           ...rule,
           test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/,

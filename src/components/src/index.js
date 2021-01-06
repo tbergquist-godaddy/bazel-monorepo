@@ -17,3 +17,7 @@ export { default as Navbar } from './navbar/navbar';
 export { default as Spinner } from './spinner/spinner';
 export { default as Toast } from './toast/toast';
 export { useShowToast } from './toast/toast-list-state';
+
+// styles
+export { default as borderUnderlineStyles } from './utilities/underline.module.css';
+export { default as displayStyles } from './utilities/display.module.css';

@@ -1,7 +1,7 @@
 // @flow
 
 import type { MediaObjectOr, CSSSides } from './types';
-import '../../utilities/spacing.css';
+import styles from '../../utilities/spacing.module.css';
 
 type SpacingEnum = 'xs' | 'small' | 'normal' | 'l' | 'xl' | 'xxl' | 'none';
 export type Spacing = MediaObjectOr<SpacingEnum>;
@@ -19,7 +19,7 @@ function getSpace(style: 'margin' | 'padding', space: ?Spacing, side: CSSSides):
     return null;
   }
   if (typeof space === 'string') {
-    return `u-${style}-${side}-${space}`;
+    return styles[`u-${style}-${side}-${space}`];
   }
   const classes = [];
   for (const key of Object.keys(space)) {
@@ -27,9 +27,9 @@ function getSpace(style: 'margin' | 'padding', space: ?Spacing, side: CSSSides):
       continue;
     }
     if (key === '_') {
-      classes.push(`u-${style}-${side}-${space[key]}`);
+      classes.push(styles[`u-${style}-${side}-${space[key]}`]);
     } else {
-      classes.push(`u-${style}-${side}-${space[key]}-${key}`);
+      classes.push(styles[`u-${style}-${side}-${space[key]}-${key}`]);
     }
   }
   return classes.join(' ');

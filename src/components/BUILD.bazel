@@ -48,6 +48,7 @@ jest_test(
         "@npm//@testing-library/user-event",
         "@npm//babel-jest",
         "@npm//classnames",
+        "@npm//identity-obj-proxy",
         "@npm//react",
         "@npm//react-icons",
         "@npm//react-transition-group",

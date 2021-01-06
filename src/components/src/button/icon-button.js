@@ -1,7 +1,8 @@
 // @flow
 
 import { type Node, type Element, cloneElement, type ComponentType } from 'react';
-import './button.css';
+
+import styles from './button.module.css';
 
 // TODO: Allow more types and sizes
 type Props = {
@@ -26,9 +27,11 @@ export default function IconButton({
     <Component
       {...rest}
       type={as === 'button' ? 'button' : null}
-      className={`btn icon-btn btn--${variant} icon-btn--${size}`}
+      className={`${styles.btn} ${styles['icon-btn']} ${styles[`btn--${variant}`]} ${
+        styles[`icon-btn--${size}`]
+      }`}
     >
-      {cloneElement(children, { className: 'icon-btn__icon-container' })}
+      {cloneElement(children, { className: styles['icon-btn__icon-container'] })}
     </Component>
   );
 }
