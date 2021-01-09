@@ -1,6 +1,6 @@
 {
-    "name": "trainingjournal",
-    "version": 2,
-    "scope": "tbergq"
-  }
-  
+  "name": "trainingjournal",
+  "version": 2,
+  "scope": "tbergq",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

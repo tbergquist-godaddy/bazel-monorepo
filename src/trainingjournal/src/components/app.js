@@ -3,7 +3,7 @@
 import { type Node, useEffect, lazy, Suspense, useRef } from 'react';
 import { RouterRenderer, RoutingContext, createRouter } from '@tbergq/router';
 import { Spinner, Toast } from '@tbergq/components';
-import { createHashHistory } from 'history';
+import { createBrowserHistory } from 'history';
 import { init, IntlVariations } from 'fbt';
 import { QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
@@ -14,7 +14,7 @@ import translations from '../../translatedFbts.json';
 import './app.css';
 
 const Navbar = lazy(() => import('./navbar'));
-const router = createRouter(Routes, createHashHistory());
+const router = createRouter(Routes, createBrowserHistory());
 const ReactQueryDevtoolsPanel = lazy(() => import('./react-query-devtools'));
 
 export default function App(): Node {
