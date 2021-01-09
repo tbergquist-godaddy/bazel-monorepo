@@ -25,7 +25,7 @@ export const resolvePreviousEpisode = async (
     }
     return acc;
   }, []);
-  const date = dates.length > 0 ? new Date(Math.max(...dates)) : null;
+  const date = dates.length > 0 ? new Date(Math.max(...dates.map((date) => date.getTime()))) : null;
 
   return date;
 };
@@ -49,7 +49,7 @@ export const resolveNextEpisode = async (
     }
     return acc;
   }, []);
-  const date = dates.length > 0 ? new Date(Math.min(...dates)) : null;
+  const date = dates.length > 0 ? new Date(Math.min(...dates.map((date) => date.getTime()))) : null;
 
   return date;
 };
