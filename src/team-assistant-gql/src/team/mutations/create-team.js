@@ -40,6 +40,7 @@ export default {
       };
     }
     const team = await TeamModel.createTeam({ name, userId: user.id });
+    // $FlowExpectedError[incompatible-return]
     return team;
   },
 };

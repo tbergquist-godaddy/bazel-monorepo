@@ -7,8 +7,10 @@ import type { User as LoggedInUser } from '../../../types';
 import type { EpisodeWatched } from '../Episode';
 
 const loadWatchedEpisode = async (args: $ReadOnlyArray<number>, user: ?LoggedInUser) => {
-  const watchedEpisodes = await await WatchedEpisodeRepository.findEpisodes(user?.id, args);
+  const watchedEpisodes = await WatchedEpisodeRepository.findEpisodes(user?.id, args);
 
+  // $FlowExpectedError[incompatible-call]
+  // $FlowExpectedError[incompatible-use]
   return args.map((arg) => watchedEpisodes.find((episode) => episode.episodeId === arg));
 };
 

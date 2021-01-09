@@ -36,6 +36,7 @@ export default async function fetch<P>(url: string, options?: $Exact<FetchOption
 
   const res = await adeiraFetch(`${BASE_URL}${url}`, {
     ...options,
+    // $FlowExpectedError[incompatible-call]
     headers,
   });
 

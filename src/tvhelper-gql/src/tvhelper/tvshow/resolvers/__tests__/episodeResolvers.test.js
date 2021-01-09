@@ -5,7 +5,7 @@ import Mockdate from 'mockdate';
 import { resolvePreviousEpisode, resolveNextEpisode } from '../episodeResolvers';
 
 Mockdate.set('2019-01-19');
-const dataloader = {
+const dataloader: any = {
   tvhelper: {
     episodes: {
       load: jest.fn(() =>
@@ -25,8 +25,7 @@ const getISOShortFormat = (date: Date) => {
 
 describe('resolvePreviousEpisode', () => {
   it('returns next episode', async () => {
-    // $FlowExpectedError[incompatible-call] Just passing what is needed to test resolver
-    const previousEpisode = await resolvePreviousEpisode(dataloader, 1);
+    const previousEpisode: any = await resolvePreviousEpisode(dataloader, 1);
     expect(getISOShortFormat(previousEpisode)).toEqual('2019-01-10');
   });
 
@@ -43,9 +42,7 @@ describe('resolvePreviousEpisode', () => {
 
 describe('resolveNextEpisode', () => {
   it('returns next episode', async () => {
-    // $FlowExpectedError[incompatible-call] Just passing what is needed to test resolver
-    // $FlowExpectedError[prop-missing]
-    const nextEpisode = await resolveNextEpisode(dataloader, 1);
+    const nextEpisode: any = await resolveNextEpisode(dataloader, 1);
     expect(getISOShortFormat(nextEpisode)).toEqual('2019-01-20');
   });
 

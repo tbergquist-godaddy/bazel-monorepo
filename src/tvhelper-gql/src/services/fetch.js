@@ -25,6 +25,7 @@ const Fetch = async <T>(url: string, options?: FetchOptions): Promise<T> => {
 
     const response = await fetch(url, {
       ...options,
+      // $FlowExpectedError[incompatible-call]
       headers: {
         ...(options?.headers ?? null),
         ...defaultHeaders,
