@@ -43,7 +43,7 @@ jobs:
       - name: Deploy trainingjournal
         run: |
           echo BASE_URL=$BASE_URL >> src/trainingjournal/.env
-          "${GITHUB_WORKSPACE}/bin/bazel" run //src/trainingjournal:deploy
+          "${GITHUB_WORKSPACE}/bin/bazel" run //src/trainingjournal:deploy -- --prod
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}

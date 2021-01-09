@@ -16,6 +16,8 @@ webpack_cli(
         "$(@D)",
         "--mode",
         "production",
+        "--output-public-path",
+        "/",
     ],
     data = glob([
         "**/*.js",
@@ -47,13 +49,16 @@ webpack_dev_server(
     name = "dev_server",
     args = [
         "--entry",
-        "./src/trainingjournal/src/index.js",
+        "./$(execpath src/index.js)",
         "--config",
         "$(execpath webpack.config.js)",
+        "--output-public-path",
+        "/",
         "--port",
         "8001",
         "--hot",
         "--watch-poll",
+        "--history-api-fallback",
     ],
     data = glob([
         "**/*.js",
@@ -132,7 +137,6 @@ nodejs_binary(
     templated_args = [
         "./src/trainingjournal",
         "--confirm",
-        "--prod",
         "--token",
         "$$ZEIT_TOKEN",
     ],
