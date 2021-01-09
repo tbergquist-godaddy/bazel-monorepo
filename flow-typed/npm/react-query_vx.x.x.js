@@ -41,8 +41,10 @@ declare module 'react-query' {
     children: React$Node,
   }>;
 
+  declare type QueryStatus = 'idle' | 'loading' | 'error' | 'success';
   declare export type UseQueryResponse<T> = {
     data: T,
+    status: QueryStatus,
   };
 
   declare export function useQuery<T>(

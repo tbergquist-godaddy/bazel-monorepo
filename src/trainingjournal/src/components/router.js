@@ -11,6 +11,7 @@ import {
   FETCH_PROGRAM_KEY,
 } from '../program/api/fetch-programs';
 import { FETCH_DAY_KEY, fetchDay } from '../program/api/fetch-days';
+import { FETCH_BASE_EXERCISES, fetchBaseExercises } from '../exercises/api/fetch-exercises';
 
 export const queryClient: QueryClient = new QueryClient({
   defaultOptions: {
@@ -72,6 +73,12 @@ const routes: RouteConfig[] = [
     component: JSResource('Exercises', () => import('../exercises/exercises')),
     path: '/exercises',
     exact: true,
+    prepare: () => {
+      queryClient.prefetchQuery(FETCH_BASE_EXERCISES, fetchBaseExercises, {
+        suspense: true,
+      });
+      return {};
+    },
   },
 ];
 

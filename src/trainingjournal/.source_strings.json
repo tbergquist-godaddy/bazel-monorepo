@@ -128,12 +128,82 @@
   },
   {
    "hashToText": {
+    "pqUMZUs4HnKBvyh3k+dlzA==": "Exercises"
+   },
+   "filepath": "src/trainingjournal/src/exercises/exercises.js",
+   "line_beg": 18,
+   "col_beg": 8,
+   "line_end": 18,
+   "col_end": 58,
+   "desc": "base exercises heading",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Exercises"
+  },
+  {
+   "hashToText": {
+    "xsMygmMImBhjqctUDA90eA==": "Video link"
+   },
+   "filepath": "src/trainingjournal/src/exercises/list/base-exercise-item.js",
+   "line_beg": 31,
+   "col_beg": 10,
+   "line_end": 31,
+   "col_end": 49,
+   "desc": "video link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Video link"
+  },
+  {
+   "hashToText": {
+    "JPYLRafx28X2IJ03eowVhg==": "Home"
+   },
+   "filepath": "src/trainingjournal/src/home/home.js",
+   "line_beg": 26,
+   "col_beg": 8,
+   "line_end": 26,
+   "col_end": 43,
+   "desc": "Home heading",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Home"
+  },
+  {
+   "hashToText": {
+    "wxcv8tGuQKil8j78SnKkqg==": "Programs"
+   },
+   "filepath": "src/trainingjournal/src/home/home.js",
+   "line_beg": 32,
+   "col_beg": 16,
+   "line_end": 32,
+   "col_end": 48,
+   "desc": "Programs link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Programs"
+  },
+  {
+   "hashToText": {
+    "Eon0O1utkmTBqqH5iIWgEQ==": "Exercises"
+   },
+   "filepath": "src/trainingjournal/src/home/home.js",
+   "line_beg": 38,
+   "col_beg": 16,
+   "line_end": 38,
+   "col_end": 50,
+   "desc": "Exercises link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Exercises"
+  },
+  {
+   "hashToText": {
     "XIZaZxNnXVPWXcQN3wf/UA==": "Traningjournal"
    },
    "filepath": "src/trainingjournal/src/landing/landing-page.js",
-   "line_beg": 17,
+   "line_beg": 18,
    "col_beg": 10,
-   "line_end": 17,
+   "line_end": 18,
    "col_end": 63,
    "desc": "landing page heading",
    "project": "",
@@ -145,9 +215,9 @@
     "s5+AAIcxBGz1qHaGVLIcuQ==": "Are you tired of keeping your training journal in a notebook? So are we! Here you can keep your training journal online instead, and always have it backed up in the cloud."
    },
    "filepath": "src/trainingjournal/src/landing/landing-page.js",
-   "line_beg": 20,
+   "line_beg": 21,
    "col_beg": 10,
-   "line_end": 23,
+   "line_end": 24,
    "col_end": 16,
    "desc": "landing page info text",
    "project": "",
@@ -159,9 +229,9 @@
     "U5Pbh5TLhR7Zfa3P5fQ4Hg==": "To get started, just create your account, create your exercises, and then create your first program. Then bring your phone to the gym and just register your exercises as you go. We will tell you how much you lifted the last time you did your current exercise"
    },
    "filepath": "src/trainingjournal/src/landing/landing-page.js",
-   "line_beg": 28,
+   "line_beg": 29,
    "col_beg": 10,
-   "line_end": 32,
+   "line_end": 33,
    "col_end": 16,
    "desc": "landing page info text2",
    "project": "",
@@ -271,9 +341,9 @@
     "xxfG+NJn7tJ295C+6OCcKA==": "Exercise"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
-   "line_beg": 38,
+   "line_beg": 37,
    "col_beg": 10,
-   "line_end": 38,
+   "line_end": 37,
    "col_end": 57,
    "desc": "Exercise description",
    "project": "",
@@ -285,9 +355,9 @@
     "7gOorhm2oBIbkzjTdZQorw==": "Sets"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
-   "line_beg": 42,
+   "line_beg": 41,
    "col_beg": 12,
-   "line_end": 42,
+   "line_end": 41,
    "col_end": 51,
    "desc": "Sets description",
    "project": "",
@@ -299,9 +369,9 @@
     "z+i1KJMuJ+8LQ4fZrJqALw==": "Reps"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
-   "line_beg": 46,
+   "line_beg": 45,
    "col_beg": 12,
-   "line_end": 46,
+   "line_end": 45,
    "col_end": 51,
    "desc": "Reps description",
    "project": "",
@@ -313,9 +383,9 @@
     "XKVZdd5y1la9twfwrN0bCA==": "Break"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise-list.js",
-   "line_beg": 49,
+   "line_beg": 48,
    "col_beg": 25,
-   "line_end": 49,
+   "line_end": 48,
    "col_end": 66,
    "desc": "Break description",
    "project": "",
@@ -327,9 +397,9 @@
     "BCVdhFu82TA6nG1fkM+zRQ==": "min"
    },
    "filepath": "src/trainingjournal/src/program/day/day-exercise-list/day-exercise.js",
-   "line_beg": 32,
+   "line_beg": 41,
    "col_beg": 45,
-   "line_end": 32,
+   "line_end": 41,
    "col_end": 86,
    "desc": "minute abbreviation",
    "project": "",
@@ -691,9 +761,9 @@
     "Vqo700WdAkrjHCBKyzG16A==": "Cancel"
    },
    "filepath": "src/trainingjournal/src/program/exercise/exercise-form/exercise-form.js",
-   "line_beg": 79,
+   "line_beg": 82,
    "col_beg": 22,
-   "line_end": 79,
+   "line_end": 82,
    "col_end": 76,
    "desc": "cancel create exercise button",
    "project": "",

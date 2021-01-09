@@ -28,6 +28,8 @@ export type Exercise = {
 export type BaseExercise = {
   +id: number,
   +name: string,
+  +description?: string,
+  +youtube_link?: string,
   +muscle_group: MuscleGroup,
 };
 export type MuscleGroup = {
