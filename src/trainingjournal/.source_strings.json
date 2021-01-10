@@ -187,9 +187,9 @@
     "eXkJ9pWZJ1LhklXqWU6zbA==": "Name"
    },
    "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
-   "line_beg": 12,
+   "line_beg": 17,
    "col_beg": 11,
-   "line_end": 12,
+   "line_end": 17,
    "col_end": 45,
    "desc": "exercise name label",
    "project": "",
@@ -201,9 +201,9 @@
     "heA4AG1AkoZ24CGtPIbM0Q==": "Description"
    },
    "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
-   "line_beg": 15,
+   "line_beg": 20,
    "col_beg": 11,
-   "line_end": 15,
+   "line_end": 20,
    "col_end": 50,
    "desc": "description label",
    "project": "",
@@ -215,14 +215,42 @@
     "k8ImiYXHKq5NTrpxcNI43Q==": "Video url"
    },
    "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
-   "line_beg": 18,
+   "line_beg": 23,
    "col_beg": 11,
-   "line_end": 18,
+   "line_end": 23,
    "col_end": 46,
    "desc": "video url label",
    "project": "",
    "type": "text",
    "jsfbt": "Video url"
+  },
+  {
+   "hashToText": {
+    "Xh9rKsNtsaDLiz7a7KYLvQ==": "--Select--"
+   },
+   "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
+   "line_beg": 52,
+   "col_beg": 21,
+   "line_end": 52,
+   "col_end": 59,
+   "desc": "Select placholder",
+   "project": "",
+   "type": "text",
+   "jsfbt": "--Select--"
+  },
+  {
+   "hashToText": {
+    "OanIHumToG4/jHeKNn2kaA==": "Muscle group"
+   },
+   "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
+   "line_beg": 55,
+   "col_beg": 15,
+   "line_end": 55,
+   "col_end": 56,
+   "desc": "Muscle group label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Muscle group"
   },
   {
    "hashToText": {

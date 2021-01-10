@@ -1,6 +1,6 @@
 // @flow
 
-import { useQuery, type UseQueryResponse } from 'react-query';
+import { useQuery, type UseQueryResponse, type QueryConfig } from 'react-query';
 
 import fetch from '../../services/fetch';
 import type { MuscleGroup } from '../../program/types';
@@ -13,8 +13,9 @@ export function fetchMuscleGroups(): Promise<$ReadOnlyArray<MuscleGroup>> {
   return fetch(url);
 }
 
-export function useMuscleGroups(): UseQueryResponse<$ReadOnlyArray<MuscleGroup>> {
-  return useQuery<$ReadOnlyArray<MuscleGroup>>(FETCH_MUSCLE_GROUPS, fetchMuscleGroups, {
+export function useMuscleGroups<T>(config?: QueryConfig): UseQueryResponse<T> {
+  return useQuery<T>(FETCH_MUSCLE_GROUPS, fetchMuscleGroups, {
     suspense: true,
+    ...config,
   });
 }
