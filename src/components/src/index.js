@@ -14,6 +14,7 @@ export { default as Link } from './link';
 export { default as LinkList } from './link-list/link-list';
 export { default as Modal } from './modal/modal';
 export { default as Navbar } from './navbar/navbar';
+export { default as Select } from './select/select';
 export { default as Spinner } from './spinner/spinner';
 export { default as Toast } from './toast/toast';
 export { useShowToast } from './toast/toast-list-state';
