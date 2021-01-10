@@ -34,7 +34,7 @@
   color: var(--color-text-black);
 }
 
-.Select__label {
+.Select__select-container {
   position: relative;
 }
 
@@ -42,6 +42,6 @@
   position: absolute;
   top: 50%;
   right: 16px;
-  transform: translateY(50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
   font-size: 2rem;
 }
