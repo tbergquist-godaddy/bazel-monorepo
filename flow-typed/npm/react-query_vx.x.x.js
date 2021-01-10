@@ -15,11 +15,12 @@
 
 declare module 'react-query' {
   declare type FetchFunction = Function;
-  declare export type QueryConfig = {
-    staleTime?: number,
-    refetchOnWindowFocus?: boolean,
-    suspense?: boolean,
-  };
+  declare export type QueryConfig = $Shape<{
+    staleTime: number,
+    refetchOnWindowFocus: boolean,
+    suspense: boolean,
+    select: Function,
+  }>;
   declare type QueryClientConfig = {
     defaultOptions?: {
       queries?: QueryConfig,
