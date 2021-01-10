@@ -128,13 +128,111 @@
   },
   {
    "hashToText": {
+    "8bFieGZT54JvD5FeTg6WKg==": "Cancel"
+   },
+   "filepath": "src/trainingjournal/src/exercises/add-base-exercise/add-base-exercise.js",
+   "line_beg": 29,
+   "col_beg": 14,
+   "line_end": 29,
+   "col_end": 52,
+   "desc": "cancel button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Cancel"
+  },
+  {
+   "hashToText": {
+    "nKBO4+GC+3axAzPJJP2uiA==": "Create exercise"
+   },
+   "filepath": "src/trainingjournal/src/exercises/add-base-exercise/add-base-exercise.js",
+   "line_beg": 33,
+   "col_beg": 12,
+   "line_end": 33,
+   "col_end": 68,
+   "desc": "Submit exercise button",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Create exercise"
+  },
+  {
+   "hashToText": {
+    "LDeF4pAt0tAxBN7ZXLUwdw==": "Add exercise"
+   },
+   "filepath": "src/trainingjournal/src/exercises/add-base-exercise/add-button.js",
+   "line_beg": 16,
+   "col_beg": 20,
+   "line_end": 16,
+   "col_end": 73,
+   "desc": "add exercise button aria label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Add exercise"
+  },
+  {
+   "hashToText": {
+    "U+stpiBRLhGQKof7Yoq6DQ==": "Add exercise"
+   },
+   "filepath": "src/trainingjournal/src/exercises/add-base-exercise/add-button.js",
+   "line_beg": 24,
+   "col_beg": 12,
+   "line_end": 24,
+   "col_end": 72,
+   "desc": "add base exercise modal title",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Add exercise"
+  },
+  {
+   "hashToText": {
+    "eXkJ9pWZJ1LhklXqWU6zbA==": "Name"
+   },
+   "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
+   "line_beg": 12,
+   "col_beg": 11,
+   "line_end": 12,
+   "col_end": 45,
+   "desc": "exercise name label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Name"
+  },
+  {
+   "hashToText": {
+    "heA4AG1AkoZ24CGtPIbM0Q==": "Description"
+   },
+   "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
+   "line_beg": 15,
+   "col_beg": 11,
+   "line_end": 15,
+   "col_end": 50,
+   "desc": "description label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Description"
+  },
+  {
+   "hashToText": {
+    "k8ImiYXHKq5NTrpxcNI43Q==": "Video url"
+   },
+   "filepath": "src/trainingjournal/src/exercises/base-exercise-form/base-exercise-form.js",
+   "line_beg": 18,
+   "col_beg": 11,
+   "line_end": 18,
+   "col_end": 46,
+   "desc": "video url label",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Video url"
+  },
+  {
+   "hashToText": {
     "pqUMZUs4HnKBvyh3k+dlzA==": "Exercises"
    },
    "filepath": "src/trainingjournal/src/exercises/exercises.js",
-   "line_beg": 18,
-   "col_beg": 8,
-   "line_end": 18,
-   "col_end": 58,
+   "line_beg": 24,
+   "col_beg": 10,
+   "line_end": 24,
+   "col_end": 60,
    "desc": "base exercises heading",
    "project": "",
    "type": "text",
