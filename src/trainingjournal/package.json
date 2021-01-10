@@ -7,7 +7,7 @@
     "react-router-config": "^5.1.1",
     "history": "^5.0.0",
     "@tbergq/router": "*",
-    "@tbergq/components": "^0.15.0",
+    "@tbergq/components": "^0.20.0",
     "fbt": "^0.16.0",
     "yup": "^0.32.8",
     "@hookform/resolvers": "^1.1.2",
