@@ -1,6 +1,6 @@
 {
   "name": "@tbergq/components",
-  "version": "0.18.0",
+  "version": "0.18.3",
   "sideEffects": false,
   "main": "lib/index.js",
   "module": "esm/index.mjs",
