@@ -1,0 +1,47 @@
+.Select__select {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: var(--border-radius-normal);
+  padding: var(--space-normal);
+  border: 1px solid var(--color-gray-light);
+  width: 100%;
+  outline: none;
+  color: var(--color-text-black);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.Select__select:focus {
+  box-shadow: var(--color-primary-focus) 0px 0px 0px 0.2rem;
+}
+
+.Select__select--error {
+  border: 1px solid var(--color-error);
+}
+
+.Select__select--error:focus {
+  box-shadow: var(--color-error) 0px 0px 0px 0.2rem;
+}
+
+.Select__error-text {
+  color: var(--color-error);
+  font-size: var(--text-size-small);
+  line-height: 1.75;
+}
+
+.Select__label-container {
+  margin-bottom: var(--space-small);
+  color: var(--color-text-black);
+}
+
+.Select__label {
+  position: relative;
+}
+
+.Select__arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(50%) rotate(90deg);
+  font-size: 2rem;
+}
