@@ -20,6 +20,7 @@ declare module 'react-query' {
     refetchOnWindowFocus: boolean,
     suspense: boolean,
     select: Function,
+    keepPreviousData: boolean,
   }>;
   declare type QueryClientConfig = {
     defaultOptions?: {

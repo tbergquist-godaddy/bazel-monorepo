@@ -7,10 +7,12 @@ module.exports = {
     [
       'babel-plugin-module-resolver',
       {
-        // root: ['./src/trainingjournal'],
         extensions: ['.js', '.json'],
         alias: {
           '@tj/services': './src/trainingjournal/src/services',
+          '@tj/program': './src/trainingjournal/src/program',
+          '@tj/register': './src/trainingjournal/src/register',
+          '@tj/test-utils': './src/trainingjournal/test-utils',
         },
       },
     ],
