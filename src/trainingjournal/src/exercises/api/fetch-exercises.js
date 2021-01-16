@@ -7,8 +7,8 @@ import {
   type MutationResponse,
   useQueryClient,
 } from 'react-query';
+import fetch from '@tj/services/fetch';
 
-import fetch from '../../services/fetch';
 import type { BaseExercise } from '../../program/types';
 
 export const FETCH_BASE_EXERCISES = 'FETCH_BASE_EXERCISES';

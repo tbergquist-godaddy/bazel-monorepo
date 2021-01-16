@@ -38,6 +38,10 @@ const finalConfig /* :Object */ = merge(baseConfig, {
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
     }) /*: Object */),
   ].filter(Boolean) /*: any[] */),
+  resolve: {
+    alias: require('./alias'),
+    extensions: ['.mjs', '.js', '.json', '.css'],
+  },
 });
 
 module.exports = finalConfig;
