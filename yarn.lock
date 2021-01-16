@@ -12089,6 +12089,11 @@ react-color@^2.17.0:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-content-loader@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-6.0.0.tgz#65300eaf0e6705dac66ecfee4b87fe00109aca47"
+  integrity sha512-+v3GxZvHALPn5853cCqpQx8FkaSP6lBXdh1XPdqGCzlZTvP0+FcPTGbsfpZOPnaRSiourcGaW0TFTysHDN/elA==
+
 react-dev-utils@^10.0.0:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"

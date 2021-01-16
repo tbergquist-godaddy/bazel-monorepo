@@ -30,4 +30,5 @@ def get_deps():
         "@npm//react-icons",
         "@npm//react-helmet",
         "@npm//use-debounce",
+        "@npm//react-content-loader",
     ]
