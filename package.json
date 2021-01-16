@@ -93,6 +93,7 @@
     "password-hash": "^1.2.2",
     "ramda": "^0.27.1",
     "react": "^0.0.0-experimental-4ead6b530",
+    "react-content-loader": "^6.0.0",
     "react-dom": "^0.0.0-experimental-4ead6b530",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.13.1",
