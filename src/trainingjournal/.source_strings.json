@@ -285,9 +285,9 @@
     "JPYLRafx28X2IJ03eowVhg==": "Home"
    },
    "filepath": "src/trainingjournal/src/home/home.js",
-   "line_beg": 26,
+   "line_beg": 27,
    "col_beg": 8,
-   "line_end": 26,
+   "line_end": 27,
    "col_end": 43,
    "desc": "Home heading",
    "project": "",
@@ -299,9 +299,9 @@
     "wxcv8tGuQKil8j78SnKkqg==": "Programs"
    },
    "filepath": "src/trainingjournal/src/home/home.js",
-   "line_beg": 32,
+   "line_beg": 33,
    "col_beg": 16,
-   "line_end": 32,
+   "line_end": 33,
    "col_end": 48,
    "desc": "Programs link",
    "project": "",
@@ -313,14 +313,28 @@
     "Eon0O1utkmTBqqH5iIWgEQ==": "Exercises"
    },
    "filepath": "src/trainingjournal/src/home/home.js",
-   "line_beg": 38,
+   "line_beg": 39,
    "col_beg": 16,
-   "line_end": 38,
+   "line_end": 39,
    "col_end": 50,
    "desc": "Exercises link",
    "project": "",
    "type": "text",
    "jsfbt": "Exercises"
+  },
+  {
+   "hashToText": {
+    "xd3WRNoCFR2mP3k1vA2rLw==": "Register {programName} - {dayName}"
+   },
+   "filepath": "src/trainingjournal/src/home/next-register/next-register-link.js",
+   "line_beg": 22,
+   "col_beg": 12,
+   "line_end": 25,
+   "col_end": 7,
+   "desc": "Next register link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Register {programName} - {dayName}"
   },
   {
    "hashToText": {
