@@ -1,11 +1,10 @@
 // @flow
 
 import { type Node } from 'react';
-import { useQuery } from 'react-query';
 import { Heading, Box } from '@tbergq/components';
 import { Helmet } from 'react-helmet';
 
-import { FETCH_PROGRAM_KEY, fetchProgram } from './api/fetch-programs';
+import { useProgram } from './api/fetch-programs';
 import WeekList from './week/week-list';
 import AddWeek from './week/add-week';
 import BackButton from '../components/back-button';
@@ -22,7 +21,7 @@ type Props = {
 
 export default function Program({ routeData }: Props): Node {
   const id = routeData.params.id;
-  const { data } = useQuery<ProgramResponse>([FETCH_PROGRAM_KEY, id], () => fetchProgram(id), {
+  const { data } = useProgram<ProgramResponse>(id, {
     suspense: true,
   });
 

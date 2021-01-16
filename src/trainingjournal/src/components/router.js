@@ -80,6 +80,11 @@ const routes: RouteConfig[] = [
       return {};
     },
   },
+  {
+    component: JSResource('Register', () => import('@tj/register/register')),
+    path: '/register/:id',
+    exact: true,
+  },
 ];
 
 export default routes;
