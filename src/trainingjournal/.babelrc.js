@@ -13,6 +13,7 @@ module.exports = {
           '@tj/program': './src/trainingjournal/src/program',
           '@tj/register': './src/trainingjournal/src/register',
           '@tj/test-utils': './src/trainingjournal/test-utils',
+          '@tj/mocks': './src/trainingjournal/mocks',
         },
       },
     ],

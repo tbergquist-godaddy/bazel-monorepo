@@ -113,6 +113,7 @@ jest_test(
         "//src/mock-server:mock_server",
         "@npm//identity-obj-proxy",
         "@npm//babel-plugin-module-resolver",
+        "@npm//@testing-library/react-hooks",
     ],
 )
 

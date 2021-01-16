@@ -34,6 +34,7 @@ describe('ExerciseList', () => {
     userEvent.clear(input);
     userEvent.type(input, 'press');
 
+    await waitFor(() => expect(input).toHaveValue('press'));
     await waitFor(() => expect(screen.getAllByRole('button')).toHaveLength(2));
 
     expect(screen.getByRole('button', { name: /arnold press/i })).toBeInTheDocument();

@@ -1,0 +1,5 @@
+{
+  "id": 1,
+  "name": "mock_program",
+  "weeks": [{ "id": 1, "name": "Week 1", "program": 1, "days": [] }]
+}
