@@ -26,9 +26,9 @@ function NavRight({ isLoggedIn, username }): Node {
   const { mutate } = useMutation(logout, {
     onError: () => {},
     onSuccess: () => {
-      localStorage.removeItem(TOKEN_KEY);
-      cache.invalidateQueries(FETCH_USER_DETAILS_KEY);
       navigate('/');
+      cache.invalidateQueries(FETCH_USER_DETAILS_KEY);
+      localStorage.removeItem(TOKEN_KEY);
     },
   });
   if (!isLoggedIn) {
@@ -51,7 +51,7 @@ function NavRight({ isLoggedIn, username }): Node {
             mutate();
           }}
         >
-          Log ut
+          <fbt desc="logout link">Log out</fbt>
         </a>
       </Box>
     </Box>
