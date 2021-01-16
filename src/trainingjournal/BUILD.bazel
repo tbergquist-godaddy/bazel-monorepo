@@ -41,6 +41,7 @@ webpack_cli(
         "@npm//extract-css-chunks-webpack-plugin",
         "@npm//css-minimizer-webpack-plugin",
         "@npm//file-loader",
+        "@npm//babel-plugin-module-resolver",
     ],
     output_dir = True,
 )
@@ -111,6 +112,7 @@ jest_test(
         "//jest:preset",
         "//src/mock-server:mock_server",
         "@npm//identity-obj-proxy",
+        "@npm//babel-plugin-module-resolver",
     ],
 )
 
