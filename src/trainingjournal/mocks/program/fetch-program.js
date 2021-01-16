@@ -2,19 +2,19 @@
 
 import { Handler } from '@tbergq/mock-server';
 
-const url = `${process.env.BASE_URL ?? ''}/Program/programs/:programId/`;
+import programMock from './responses/program1.json';
 
-const programMock = {
-  id: 1,
-  name: 'mock_program',
-  weeks: [{ id: 1, name: 'Week 1', program: 1, days: [] }],
-};
+const responseMap = new Map();
+responseMap.set('1', programMock);
+
+const url = `${process.env.BASE_URL ?? ''}/Program/programs/:programId/`;
 
 const fetchProgramsHandler: Handler = new Handler({
   url,
   type: 'get',
   handler: (req, res, ctx) => {
-    return res(ctx.json(programMock));
+    const { programId } = req.params;
+    return res(ctx.json(responseMap.get(programId)));
   },
 });
 
