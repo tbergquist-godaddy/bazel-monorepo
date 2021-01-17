@@ -27,7 +27,7 @@ export default function useNextRegister(): NextRegister | null {
 
   const weeks = program.weeks ?? [];
 
-  for (const week of weeks) {
+  outerloop: for (const week of weeks) {
     for (const day of week.days) {
       const reg = register.find((r) => r.day_program.id === day.id);
       if (reg == null || reg.end_time == null) {
@@ -35,7 +35,7 @@ export default function useNextRegister(): NextRegister | null {
           day,
           program,
         };
-        break;
+        break outerloop;
       }
     }
   }

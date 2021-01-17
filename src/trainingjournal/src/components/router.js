@@ -84,6 +84,12 @@ const routes: RouteConfig[] = [
     component: JSResource('Register', () => import('@tj/register/register')),
     path: '/register/:id',
     exact: true,
+    prepare: (data) => {
+      queryClient.prefetchQuery([FETCH_DAY_KEY, data.dayId], () => fetchDay(data.id), {
+        suspense: true,
+      });
+      return {};
+    },
   },
 ];
 
