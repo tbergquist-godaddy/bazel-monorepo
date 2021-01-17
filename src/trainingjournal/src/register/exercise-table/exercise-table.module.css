@@ -1,0 +1,49 @@
+.ExerciseTable {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--border-radius-large);
+}
+.ExerciseTable__table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: var(--space-x-large);
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.ExerciseTable__table tr {
+  color: var(--color-white);
+}
+
+.ExerciseTable__table td,
+.ExerciseTable__table th {
+  padding: var(--space-normal);
+  white-space: nowrap;
+}
+
+.ExerciseTable__table-head > tr {
+  background-color: rgb(41, 37, 37);
+  background-image: none,
+    linear-gradient(
+      rgba(255, 255, 255, 0.117647) 0px,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.14902) 50%,
+      rgba(255, 255, 255, 0.0666667) 100%
+    );
+}
+
+.ExerciseTable__table-body > tr {
+  background-color: var(--ming);
+}
+.ExerciseTable__table-body > tr:nth-child(odd) {
+  background-color: var(--middle-blue-green);
+}
+
+.ExerciseTable tr:last-child td:first-child {
+  border-bottom-left-radius: var(--border-radius-large);
+}
+
+.ExerciseTable tr:last-child td:last-child {
+  border-bottom-right-radius: var(--border-radius-large);
+}

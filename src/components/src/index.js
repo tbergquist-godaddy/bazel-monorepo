@@ -22,3 +22,4 @@ export { useShowToast } from './toast/toast-list-state';
 // styles
 export { default as borderUnderlineStyles } from './utilities/underline.module.css';
 export { default as displayStyles } from './utilities/display.module.css';
+export { default as textAlignStyles } from './utilities/text-align.module.css';
