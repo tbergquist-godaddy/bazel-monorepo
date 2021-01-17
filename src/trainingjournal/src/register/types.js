@@ -11,3 +11,9 @@ export type DayProgram = {
   +id: number,
   +name: string,
 };
+
+export type ExerciseRegister = {
+  +note: string,
+  +reps: number,
+  +weight: string,
+};

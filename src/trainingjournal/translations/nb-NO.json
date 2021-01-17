@@ -91,6 +91,16 @@
                 }
             ]
         },
+        "dOQfmKxrjOlIQ4GQQZmQAg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Logg ut",
+                    "variations": []
+                }
+            ]
+        },
         "8bFieGZT54JvD5FeTg6WKg==": {
             "tokens": [],
             "types": [],
@@ -817,6 +827,46 @@
             "translations": [
                 {
                     "translation": "Slett uke",
+                    "variations": []
+                }
+            ]
+        },
+        "tp6BAVa5ri5zwsaNApvYIA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Registrer {exerciseName}",
+                    "variations": []
+                }
+            ]
+        },
+        "AfEd1Iqel6fg0sfCywmy3g==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Ingen tidligere registrerte data",
+                    "variations": []
+                }
+            ]
+        },
+        "WCgddtczyqQZSggFARFYKQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Siste registrerte",
+                    "variations": []
+                }
+            ]
+        },
+        "F\/LDCGqJzRbzlerYEFm+rQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Registrer {dayName}",
                     "variations": []
                 }
             ]

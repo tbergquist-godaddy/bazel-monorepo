@@ -1,7 +1,7 @@
 // @flow
 
 import { usePaginatedPrograms, useProgram } from '@tj/program/api/fetch-programs';
-import { useDayRegister } from '@tj/register/api/fetch-registered';
+import { useDayRegister } from '@tj/register/api/fetch-day-register';
 import type { ProgramList, Day, Program } from '@tj/program/types';
 import type { DayRegister } from '@tj/register/types';
 

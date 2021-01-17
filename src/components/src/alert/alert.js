@@ -6,7 +6,7 @@ import styles from './alert.module.css';
 
 type Props = {
   +children: Node,
-  +type: 'success' | 'danger',
+  +type?: 'success' | 'danger',
 };
 
 export default function Alert({ children, type = 'success' }: Props): Node {
