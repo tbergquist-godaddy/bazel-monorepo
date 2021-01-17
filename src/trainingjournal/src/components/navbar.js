@@ -2,9 +2,9 @@
 
 import { type Node } from 'react';
 import { Navbar as NavbarComponent, Box } from '@tbergq/components';
-import { Link, useNavigate } from '@tbergq/router';
+import { Link } from '@tbergq/router';
 import { fbt } from 'fbt';
-import { useQuery, useMutation, useQueryClient } from 'react-query';
+import { useQuery, useMutation } from 'react-query';
 
 import fetchUserDetails, { FETCH_USER_DETAILS_KEY } from '../account/api/fetch-user-details';
 import logout from '../account/api/logout';
@@ -21,14 +21,11 @@ function NavLeft({ isLoggedIn }): Node {
   );
 }
 function NavRight({ isLoggedIn, username }): Node {
-  const navigate = useNavigate();
-  const cache = useQueryClient();
   const { mutate } = useMutation(logout, {
     onError: () => {},
     onSuccess: () => {
-      navigate('/');
-      cache.invalidateQueries(FETCH_USER_DETAILS_KEY);
       localStorage.removeItem(TOKEN_KEY);
+      window.location.href = '/';
     },
   });
   if (!isLoggedIn) {
