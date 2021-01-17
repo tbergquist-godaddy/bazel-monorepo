@@ -12,7 +12,7 @@ type Props = {
   +'size'?: 'normal' | 'large' | 'small',
   +'as'?: ComponentType<any> | 'string',
   +'to'?: string,
-  +'variant'?: 'primary' | 'danger',
+  +'variant'?: 'primary' | 'danger' | 'secondary',
 };
 
 export default function IconButton({

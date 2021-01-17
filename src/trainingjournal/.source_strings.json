@@ -103,9 +103,9 @@
     "T22O0HU1PdWV1bUoQSfC1w==": "Login"
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
-   "line_beg": 37,
+   "line_beg": 34,
    "col_beg": 8,
-   "line_end": 37,
+   "line_end": 34,
    "col_end": 49,
    "desc": "Login navbar link",
    "project": "",
@@ -117,14 +117,28 @@
     "83QnOu6ehUkb+Lgc8RdJog==": "Hi {username}"
    },
    "filepath": "src/trainingjournal/src/components/navbar.js",
-   "line_beg": 44,
+   "line_beg": 41,
    "col_beg": 9,
-   "line_end": 44,
+   "line_end": 41,
    "col_end": 70,
    "desc": "user greeting",
    "project": "",
    "type": "text",
    "jsfbt": "Hi {username}"
+  },
+  {
+   "hashToText": {
+    "dOQfmKxrjOlIQ4GQQZmQAg==": "Log out"
+   },
+   "filepath": "src/trainingjournal/src/components/navbar.js",
+   "line_beg": 51,
+   "col_beg": 10,
+   "line_end": 51,
+   "col_end": 47,
+   "desc": "logout link",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Log out"
   },
   {
    "hashToText": {
@@ -285,9 +299,9 @@
     "JPYLRafx28X2IJ03eowVhg==": "Home"
    },
    "filepath": "src/trainingjournal/src/home/home.js",
-   "line_beg": 27,
+   "line_beg": 28,
    "col_beg": 8,
-   "line_end": 27,
+   "line_end": 28,
    "col_end": 43,
    "desc": "Home heading",
    "project": "",
@@ -299,9 +313,9 @@
     "wxcv8tGuQKil8j78SnKkqg==": "Programs"
    },
    "filepath": "src/trainingjournal/src/home/home.js",
-   "line_beg": 33,
+   "line_beg": 34,
    "col_beg": 16,
-   "line_end": 33,
+   "line_end": 34,
    "col_end": 48,
    "desc": "Programs link",
    "project": "",
@@ -313,9 +327,9 @@
     "Eon0O1utkmTBqqH5iIWgEQ==": "Exercises"
    },
    "filepath": "src/trainingjournal/src/home/home.js",
-   "line_beg": 39,
+   "line_beg": 40,
    "col_beg": 16,
-   "line_end": 39,
+   "line_end": 40,
    "col_end": 50,
    "desc": "Exercises link",
    "project": "",
@@ -1161,6 +1175,62 @@
    "project": "",
    "type": "text",
    "jsfbt": "Delete week"
+  },
+  {
+   "hashToText": {
+    "tp6BAVa5ri5zwsaNApvYIA==": "Register {exerciseName}"
+   },
+   "filepath": "src/trainingjournal/src/register/exercise-table/exercise-table.js",
+   "line_beg": 39,
+   "col_beg": 30,
+   "line_end": 42,
+   "col_end": 19,
+   "desc": "Register exercise button text",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Register {exerciseName}"
+  },
+  {
+   "hashToText": {
+    "AfEd1Iqel6fg0sfCywmy3g==": "No previous registered data"
+   },
+   "filepath": "src/trainingjournal/src/register/register-exercise/previous-register/previous-register.js",
+   "line_beg": 22,
+   "col_beg": 10,
+   "line_end": 22,
+   "col_end": 69,
+   "desc": "no registered",
+   "project": "",
+   "type": "text",
+   "jsfbt": "No previous registered data"
+  },
+  {
+   "hashToText": {
+    "WCgddtczyqQZSggFARFYKQ==": "Previous registered data"
+   },
+   "filepath": "src/trainingjournal/src/register/register-exercise/previous-register/previous-register.js",
+   "line_beg": 24,
+   "col_beg": 10,
+   "line_end": 24,
+   "col_end": 77,
+   "desc": "Previous registered data",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Previous registered data"
+  },
+  {
+   "hashToText": {
+    "F/LDCGqJzRbzlerYEFm+rQ==": "Register {dayName}"
+   },
+   "filepath": "src/trainingjournal/src/register/register.js",
+   "line_beg": 55,
+   "col_beg": 9,
+   "line_end": 55,
+   "col_end": 80,
+   "desc": "Register day title",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Register {dayName}"
   }
  ],
  "childParentMappings": {}

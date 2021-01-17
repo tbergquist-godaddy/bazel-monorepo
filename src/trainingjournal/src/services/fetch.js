@@ -46,3 +46,6 @@ export default async function fetch<P>(url: string, options?: $Exact<FetchOption
   }
   return res.json();
 }
+
+// eslint-disable-next-line no-unused-vars
+export const nullFetcher = (...args: any): null => null;

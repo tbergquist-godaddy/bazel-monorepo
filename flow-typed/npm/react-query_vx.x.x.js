@@ -29,7 +29,7 @@ declare module 'react-query' {
     },
   };
 
-  declare type CacheKey = string | [string, string | number];
+  declare type CacheKey = string | Array<?(string | number)>;
 
   declare export class QueryClient {
     constructor(config?: QueryClientConfig): this;
