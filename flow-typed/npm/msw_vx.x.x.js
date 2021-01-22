@@ -22,17 +22,16 @@ declare module 'msw' {
     post: HandlerFunction,
     put: HandlerFunction,
     delete: HandlerFunction,
-  }
+  };
   declare export var rest: Rest;
 }
 
 declare module 'msw/node' {
-  import type { RequestHandler } from 'msw';
+  declare type RequestHandler = $FlowFixMe;
   declare export type Server = {
     listen: () => Promise<void>,
     resetHandlers: () => Promise<void>,
     close: () => Promise<void>,
-
   };
   declare export var setupServer: any;
 }
