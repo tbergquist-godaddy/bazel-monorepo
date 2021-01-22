@@ -1,0 +1,26 @@
+# @generated SignedSource<<bf04e092b94e0463aacbf891cfb5b1bd>>
+
+# <BREAKING-CHANGES-LOG>
+# </BREAKING-CHANGES-LOG>
+
+schema {
+  query: RootQuery
+}
+
+"""Root Query"""
+type RootQuery {
+  """Just for testing purpose"""
+  test(id: String!): Test
+}
+
+"""Just for test purpose, will be removed later"""
+type Test {
+  firstName: String
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  lastName: String
+  nickname: String
+}
