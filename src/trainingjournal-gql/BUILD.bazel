@@ -1,0 +1,81 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin", "nodejs_binary", "nodejs_test")
+load("@npm//@babel/node:index.bzl", "babel_node")
+load("//:babel/babel.bzl", "build_cjs")
+load("//:eslint/eslint.bzl", "eslint")
+load("//jest:jest.bzl", "jest_test")
+load(":dependencies.bzl", "get_deps")
+
+build_cjs(
+    name = "lib",
+    data = glob(["src/**/*"]) + [
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+        "@npm//@adeira/babel-preset-adeira",
+    ],
+    file_path = "./src/trainingjournal-gql/src",
+)
+
+nodejs_binary(
+    name = "server",
+    data = get_deps() + [
+        ":lib",
+        "@npm//@babel/runtime",
+    ],
+    entry_point = ":lib",
+)
+
+# Run with ibazel
+babel_node(
+    name = "dev_server",
+    args = [
+        "./src/trainingjournal-gql/src/application",
+    ],
+    data = glob(["src/**/*"]) + get_deps() + [
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+    ],
+)
+
+jest_test(
+    name = "test",
+    srcs = [
+        "//:babel.config.js",
+    ] + glob([
+        "src/**/*.js",
+        "scripts/**/*.js",
+    ]),
+    jest_config = ":jest.config.js",
+    deps = get_deps() + [
+        "@npm//@babel/runtime",
+        "//src/graphql-test-utils:graphql_test_utils",
+    ],
+)
+
+# Use with bazel run to update local snapshot
+nodejs_test(
+    name = "test_bc",
+    data = get_deps() + [
+        ":src",
+        ":package.json",
+        "//:package.json",
+        "//:babel.config.js",
+        "@npm//@adeira/graphql-bc-checker",
+        "@npm//@babel/register",
+        "@npm//@babel/runtime",
+        ":schema.graphql"
+    ],
+    entry_point = ":scripts/test-bc.js",
+)
+
+eslint(
+    name = "lint",
+    data = [
+        ":package.json",
+        ":src",
+    ],
+    entry = ":src",
+)
+
+
