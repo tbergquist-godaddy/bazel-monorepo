@@ -50,6 +50,7 @@ jest_test(
         "scripts/**/*.js",
     ]),
     jest_config = ":jest.config.js",
+    extra_args = ["-i"],
     deps = get_deps() + [
         "@npm//@babel/runtime",
         "//src/graphql-test-utils:graphql_test_utils",

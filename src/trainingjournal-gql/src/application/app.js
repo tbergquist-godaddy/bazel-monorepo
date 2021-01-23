@@ -22,7 +22,7 @@ app.use(compression());
 app.use(morgan('dev'));
 
 app.use('/', (request: $Request, response: $Response) => {
-  return createGraphqlServer(request)(request, response);
+  return createGraphqlServer()(request, response);
 });
 
 export default app;
