@@ -19,7 +19,7 @@ export class UnauthorizedOrUnknownClass {
 
   getMessage(): string {
     if (this.reason === Reasons.UNAUTHORIZED) {
-      return 'You must be logged in to create an exercise.';
+      return 'You must be logged in to perform this operation.';
     }
     return 'We had an unexpected error, please try again.';
   }
