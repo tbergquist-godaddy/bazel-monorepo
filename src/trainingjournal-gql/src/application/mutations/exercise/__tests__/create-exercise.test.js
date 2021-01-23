@@ -11,6 +11,7 @@ describe('application / mutations / exercise / createExercise', () => {
       name: 'test',
       muscleGroups: ['Quads'],
     };
+    // $FlowExpectedError[prop-missing]
     const act = (user) => resolve(null, { exercise }, { user });
     return {
       act,
