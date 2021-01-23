@@ -11,7 +11,9 @@ build_cjs(
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
+        ":.babelrc.js",
         "@npm//@adeira/babel-preset-adeira",
+        "@npm//babel-plugin-module-resolver"
     ],
     file_path = "./src/trainingjournal-gql/src",
 )
@@ -35,6 +37,7 @@ babel_node(
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
+        ":.babelrc.js",
     ],
 )
 
@@ -50,6 +53,8 @@ jest_test(
     deps = get_deps() + [
         "@npm//@babel/runtime",
         "//src/graphql-test-utils:graphql_test_utils",
+         ":.babelrc.js",
+        "@npm//babel-plugin-module-resolver"
     ],
 )
 
