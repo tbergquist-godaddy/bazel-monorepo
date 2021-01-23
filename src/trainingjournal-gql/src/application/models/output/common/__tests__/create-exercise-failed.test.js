@@ -5,7 +5,7 @@ import { UnauthorizedOrUnknownClass, Reasons } from '../unauthorized-or-unknown-
 describe('application / models / output / common / UnauthorizedOrUnknownClass', () => {
   it('returns the correct error message', () => {
     expect(new UnauthorizedOrUnknownClass(Reasons.UNAUTHORIZED).getMessage()).toBe(
-      'You must be logged in to create an exercise.',
+      'You must be logged in to perform this operation.',
     );
 
     expect(new UnauthorizedOrUnknownClass(Reasons.UNKNOWN).getMessage()).toBe(
