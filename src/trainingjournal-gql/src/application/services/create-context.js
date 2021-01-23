@@ -2,6 +2,8 @@
 
 import { type $Request } from 'express';
 
+import createDataloaders, { type Dataloaders } from './create-dataloaders';
+
 type JwtPayload = {
   +id: string,
   +email: string,
@@ -16,16 +18,24 @@ type User = {
   +id: string,
   +email: string,
 };
-export type GraphqlContext = {
-  +user: ?User,
+
+type Context = {
+  +dataloader: Dataloaders,
 };
 
-export type GraphqlLoggedInContext = {
-  +user: User,
-};
+export type GraphqlContext = $ReadOnly<{
+  user: ?User,
+  ...Context,
+}>;
+
+export type GraphqlLoggedInContext = $ReadOnly<{
+  user: User,
+  ...Context,
+}>;
 
 export default function createContext(request: Request): GraphqlContext {
   return {
     user: request.user,
+    dataloader: createDataloaders(),
   };
 }

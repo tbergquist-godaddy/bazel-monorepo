@@ -11,9 +11,8 @@ import type { GraphqlLoggedInContext } from '@tj-gql/application/services';
 export default async function exerciseConnectionResolver(
   _: mixed,
   args: ConnectionArguments,
-  { user }: GraphqlLoggedInContext,
+  { user, dataloader }: GraphqlLoggedInContext,
 ): Promise<Connection<ExerciseModel>> {
-  // TODO: Use dataloader
-  const exercises = await ExerciseModel.getExercises(user.id);
+  const exercises = await dataloader.exercises.load(user.id);
   return connectionFromArray(exercises, args);
 }

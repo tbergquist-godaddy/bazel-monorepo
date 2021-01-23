@@ -12,7 +12,8 @@
     "express-graphql": "^0.12.0",
     "mongoose": "^5.11.13",
     "express": "^4.17.1",
-    "@adeira/graphql-relay": "^0.3.0"
+    "@adeira/graphql-relay": "^0.3.0",
+    "dataloader": "^2.0.0"
   },
   "devDependencies": {
     "@tbergq/graphql-test-utils": "^0.1.1"
