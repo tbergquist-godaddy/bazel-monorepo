@@ -67,6 +67,8 @@ nodejs_test(
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
+        ":.babelrc.js",
+        "@npm//babel-plugin-module-resolver",
         "@npm//@adeira/graphql-bc-checker",
         "@npm//@babel/register",
         "@npm//@babel/runtime",
