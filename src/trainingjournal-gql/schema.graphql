@@ -1,4 +1,4 @@
-# @generated SignedSource<<3b70ef0c452933fc8ca5a40327959979>>
+# @generated SignedSource<<e86f38c4cb57a12483595769e3291d65>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -26,6 +26,19 @@ input CreateExerciseInput {
 
 """Union type of creating an exercise"""
 union CreateExercisePayload = CreateExercise | UnauthorizedOrUnknown
+
+"""Successful program creation model"""
+type CreateProgram {
+  programEdge: ProgramEdge
+}
+
+"""Model for creating a program"""
+input CreateProgramInput {
+  name: String!
+}
+
+"""Union type of creating a program"""
+union CreateProgramPayload = CreateProgram | UnauthorizedOrUnknown
 
 interface Error {
   message: String
@@ -68,6 +81,7 @@ type Me {
   The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
   """
   id(opaque: Boolean = true): ID!
+  programs: ProgramConnection
 }
 
 """Information about pagination in a connection."""
@@ -85,9 +99,37 @@ type PageInfo {
   startCursor: String
 }
 
+"""Program model"""
+type Program {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  name: String
+}
+
+"""A connection to a list of items."""
+type ProgramConnection {
+  """A list of edges."""
+  edges: [ProgramEdge]
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+}
+
+"""An edge in a connection."""
+type ProgramEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: Program
+}
+
 """Root Mutation."""
 type RootMutation {
   createExercise(exercise: CreateExerciseInput!): CreateExercisePayload
+  createProgram(program: CreateProgramInput!): CreateProgramPayload
 }
 
 """Root Query"""
