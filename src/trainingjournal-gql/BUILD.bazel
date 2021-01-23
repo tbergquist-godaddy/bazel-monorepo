@@ -1,4 +1,4 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin", "nodejs_binary", "nodejs_test")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary", "nodejs_test")
 load("@npm//@babel/node:index.bzl", "babel_node")
 load("//:babel/babel.bzl", "build_cjs")
 load("//:eslint/eslint.bzl", "eslint")
@@ -29,7 +29,7 @@ nodejs_binary(
 babel_node(
     name = "dev_server",
     args = [
-        "./src/trainingjournal-gql/src/application",
+        "./src/trainingjournal-gql/src",
     ],
     data = glob(["src/**/*"]) + get_deps() + [
         ":package.json",
@@ -64,7 +64,7 @@ nodejs_test(
         "@npm//@adeira/graphql-bc-checker",
         "@npm//@babel/register",
         "@npm//@babel/runtime",
-        ":schema.graphql"
+        ":schema.graphql",
     ],
     entry_point = ":scripts/test-bc.js",
 )
@@ -77,5 +77,3 @@ eslint(
     ],
     entry = ":src",
 )
-
-
