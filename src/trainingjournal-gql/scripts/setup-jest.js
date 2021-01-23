@@ -1,6 +1,6 @@
 // @flow
 
-import connection from '../src/infrastructure/connection';
+import connection from '@tj-gql/infrastructure/connection';
 
 const opts = { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true };
 
