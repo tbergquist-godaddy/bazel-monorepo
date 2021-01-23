@@ -29,6 +29,10 @@ class ProgramModel extends Model {
   static createProgram(program: CreateProgramArgs): Promise<this> {
     return this.create(program);
   }
+
+  static getPrograms(user: MongoId): Promise<$ReadOnlyArray<this>> {
+    return this.find({ user });
+  }
 }
 
 ProgramSchema.loadClass(ProgramModel);
