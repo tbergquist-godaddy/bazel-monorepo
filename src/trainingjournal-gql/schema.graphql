@@ -1,8 +1,11 @@
-# @generated SignedSource<<b7f3a1281f03c6f26e686f0ff98a0d4e>>
+# @generated SignedSource<<3b70ef0c452933fc8ca5a40327959979>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
 #  FIELD_REMOVED: RootQuery.test was removed.
+#  TYPE_REMOVED: CreateExerciseError was removed.
+#  TYPE_REMOVED: CreateExerciseErrorReason was removed.
+#  TYPE_REMOVED_FROM_UNION: CreateExerciseError was removed from union type CreateExercisePayload.
 # </BREAKING-CHANGES-LOG>
 
 schema {
@@ -15,17 +18,6 @@ type CreateExercise {
   exerciseEdge: ExerciseEdge
 }
 
-"""Model for create an exercise error"""
-type CreateExerciseError implements Error {
-  message: String
-  reason: CreateExerciseErrorReason
-}
-
-enum CreateExerciseErrorReason {
-  UNAUTHORIZED
-  UNEXPECTED
-}
-
 """Model for creating an exercise"""
 input CreateExerciseInput {
   muscleGroups: [String]
@@ -33,7 +25,7 @@ input CreateExerciseInput {
 }
 
 """Union type of creating an exercise"""
-union CreateExercisePayload = CreateExercise | CreateExerciseError
+union CreateExercisePayload = CreateExercise | UnauthorizedOrUnknown
 
 interface Error {
   message: String
@@ -101,4 +93,15 @@ type RootMutation {
 """Root Query"""
 type RootQuery {
   me: Me
+}
+
+"""Used for error type where error is either unauthorized or unknown"""
+type UnauthorizedOrUnknown implements Error {
+  message: String
+  reason: UnauthorizedOrUnknownReason
+}
+
+enum UnauthorizedOrUnknownReason {
+  UNAUTHORIZED
+  UNKNOWN
 }

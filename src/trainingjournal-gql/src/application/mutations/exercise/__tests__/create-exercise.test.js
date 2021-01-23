@@ -33,7 +33,7 @@ describe('application / mutations / exercise / createExercise', () => {
 
     const response = await act({ id: '1', email: 'lol@lol.no' });
     // $FlowExpectedError[prop-missing]
-    expect(response.reason).toBe('UNEXPECTED');
+    expect(response.reason).toBe('UNKNOWN');
     expect(spy).toHaveBeenCalledWith({ ...exercise, user: '1' });
 
     spy.mockRestore();

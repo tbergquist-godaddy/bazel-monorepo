@@ -2,16 +2,16 @@
 
 import { GraphQLUnionType } from 'graphql';
 
-import CreateExerciseError, { CreateExerciseFailed } from './create-exercise-error';
+import { UnauthorizedOrUnknown, UnauthorizedOrUnknownClass } from '../common';
 import CreateExercise from './create-exercise';
 
 const CreateExercisePayload: GraphQLUnionType = new GraphQLUnionType({
   name: 'CreateExercisePayload',
   description: 'Union type of creating an exercise',
-  types: [CreateExerciseError, CreateExercise],
+  types: [UnauthorizedOrUnknown, CreateExercise],
   resolveType: (value) => {
-    if (value instanceof CreateExerciseFailed) {
-      return CreateExerciseError;
+    if (value instanceof UnauthorizedOrUnknownClass) {
+      return UnauthorizedOrUnknown;
     }
     return CreateExercise;
   },

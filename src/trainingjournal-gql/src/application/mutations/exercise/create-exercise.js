@@ -6,7 +6,7 @@ import {
   CreateExercisePayload,
   CreateExerciseInput,
   type ExerciseInputType,
-  CreateExerciseFailed,
+  UnauthorizedOrUnknownClass,
 } from '@tj-gql/application/models';
 import type { GraphqlContext } from '@tj-gql/application/services';
 
@@ -26,9 +26,9 @@ export default {
     _: mixed,
     { exercise }: Args,
     { user }: GraphqlContext,
-  ): Promise<ExerciseModel | CreateExerciseFailed> => {
+  ): Promise<ExerciseModel | UnauthorizedOrUnknownClass> => {
     if (user == null) {
-      return new CreateExerciseFailed('UNAUTHORIZED');
+      return new UnauthorizedOrUnknownClass('UNAUTHORIZED');
     }
     try {
       const createExercise = await ExerciseModel.createExercise({
@@ -37,7 +37,7 @@ export default {
       });
       return createExercise;
     } catch (e) {
-      return new CreateExerciseFailed('UNEXPECTED');
+      return new UnauthorizedOrUnknownClass('UNKNOWN');
     }
   },
 };
