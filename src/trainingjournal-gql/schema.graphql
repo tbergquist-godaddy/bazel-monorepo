@@ -1,6 +1,8 @@
-# @generated SignedSource<<b92ab32952d0c0a9fc8507b2c4632589>>
+# @generated SignedSource<<b7f3a1281f03c6f26e686f0ff98a0d4e>>
 
 # <BREAKING-CHANGES-LOG>
+#  TYPE_REMOVED: Test was removed.
+#  FIELD_REMOVED: RootQuery.test was removed.
 # </BREAKING-CHANGES-LOG>
 
 schema {
@@ -99,19 +101,4 @@ type RootMutation {
 """Root Query"""
 type RootQuery {
   me: Me
-
-  """Just for testing purpose"""
-  test(id: String!): Test
-}
-
-"""Just for test purpose, will be removed later"""
-type Test {
-  firstName: String
-
-  """
-  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
-  """
-  id(opaque: Boolean = true): ID!
-  lastName: String
-  nickname: String
 }
