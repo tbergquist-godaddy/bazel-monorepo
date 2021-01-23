@@ -1,4 +1,4 @@
-# @generated SignedSource<<7ff0994ab5d912d0d075cdfbbe5c3e72>>
+# @generated SignedSource<<b92ab32952d0c0a9fc8507b2c4632589>>
 
 # <BREAKING-CHANGES-LOG>
 # </BREAKING-CHANGES-LOG>
@@ -43,7 +43,17 @@ type Exercise {
   The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
   """
   id(opaque: Boolean = true): ID!
+  muscleGroups: [String]
   name: String
+}
+
+"""A connection to a list of items."""
+type ExerciseConnection {
+  """A list of edges."""
+  edges: [ExerciseEdge]
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
 }
 
 """An edge in a connection."""
@@ -55,6 +65,32 @@ type ExerciseEdge {
   node: Exercise
 }
 
+"""The logged in user"""
+type Me {
+  email: String
+  exercises: ExerciseConnection
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+}
+
 """Root Mutation."""
 type RootMutation {
   createExercise(exercise: CreateExerciseInput!): CreateExercisePayload
@@ -62,6 +98,8 @@ type RootMutation {
 
 """Root Query"""
 type RootQuery {
+  me: Me
+
   """Just for testing purpose"""
   test(id: String!): Test
 }

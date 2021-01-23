@@ -49,7 +49,7 @@ describe('application / mutations / exercise / createExercise', () => {
     };
     const spy = jest.spyOn(ExerciseModel, 'createExercise').mockResolvedValue(createdExercise);
     const response = await act(user);
-    // $FlowExpectedError[prop-missing]
+
     expect(response).toBe(createdExercise);
     expect(spy).toHaveBeenCalledWith({ ...exercise, user: '1' });
 

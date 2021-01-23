@@ -33,6 +33,10 @@ class ExerciseModel extends Model {
   static createExercise(exercise: AddUserInput): Promise<this> {
     return this.create(exercise);
   }
+
+  static getExercises(user: string): Promise<$ReadOnlyArray<this>> {
+    return this.find({ user });
+  }
 }
 
 ExerciseSchema.loadClass(ExerciseModel);

@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+import { GraphQLObjectType, GraphQLString, GraphQLList } from 'graphql';
 import globalID from '@adeira/graphql-global-id';
 
 const Exercise: GraphQLObjectType = new GraphQLObjectType({
@@ -9,6 +9,7 @@ const Exercise: GraphQLObjectType = new GraphQLObjectType({
   fields: {
     id: globalID(({ _id: id }) => id),
     name: { type: GraphQLString },
+    muscleGroups: { type: GraphQLList(GraphQLString) },
   },
 });
 
