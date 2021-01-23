@@ -1,10 +1,63 @@
-# @generated SignedSource<<bf04e092b94e0463aacbf891cfb5b1bd>>
+# @generated SignedSource<<7ff0994ab5d912d0d075cdfbbe5c3e72>>
 
 # <BREAKING-CHANGES-LOG>
 # </BREAKING-CHANGES-LOG>
 
 schema {
   query: RootQuery
+  mutation: RootMutation
+}
+
+"""Successful exercise creation model"""
+type CreateExercise {
+  exerciseEdge: ExerciseEdge
+}
+
+"""Model for create an exercise error"""
+type CreateExerciseError implements Error {
+  message: String
+  reason: CreateExerciseErrorReason
+}
+
+enum CreateExerciseErrorReason {
+  UNAUTHORIZED
+  UNEXPECTED
+}
+
+"""Model for creating an exercise"""
+input CreateExerciseInput {
+  muscleGroups: [String]
+  name: String!
+}
+
+"""Union type of creating an exercise"""
+union CreateExercisePayload = CreateExercise | CreateExerciseError
+
+interface Error {
+  message: String
+}
+
+"""Model of an exercise"""
+type Exercise {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  name: String
+}
+
+"""An edge in a connection."""
+type ExerciseEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: Exercise
+}
+
+"""Root Mutation."""
+type RootMutation {
+  createExercise(exercise: CreateExerciseInput!): CreateExercisePayload
 }
 
 """Root Query"""
