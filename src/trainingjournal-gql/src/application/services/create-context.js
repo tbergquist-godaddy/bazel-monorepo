@@ -20,6 +20,10 @@ export type GraphqlContext = {
   +user: ?User,
 };
 
+export type GraphqlLoggedInContext = {
+  +user: User,
+};
+
 export default function createContext(request: Request): GraphqlContext {
   return {
     user: request.user,
