@@ -3,6 +3,7 @@
 import { Schema, Model, type MongoId } from 'mongoose';
 
 import connection from '../connection';
+import WeekModel, { WeekSchema } from './week';
 
 const ProgramSchema = new Schema({
   name: {
@@ -14,6 +15,7 @@ const ProgramSchema = new Schema({
     ref: 'users',
     required: true,
   },
+  weeks: [WeekSchema],
 });
 
 type CreateProgramArgs = {
@@ -21,10 +23,17 @@ type CreateProgramArgs = {
   +user: string,
 };
 
+type AddWeekArgs = {
+  +programId: string,
+  +user: string,
+  +weekName: string,
+};
+
 class ProgramModel extends Model {
   _id: MongoId;
   name: string;
   user: MongoId;
+  weeks: $ReadOnlyArray<WeekModel>;
 
   static createProgram(program: CreateProgramArgs): Promise<this> {
     return this.create(program);
@@ -32,6 +41,18 @@ class ProgramModel extends Model {
 
   static getPrograms(user: MongoId): Promise<$ReadOnlyArray<this>> {
     return this.find({ user });
+  }
+
+  static addWeek({ programId, user, weekName }: AddWeekArgs): Promise<?this> {
+    try {
+      return this.findOneAndUpdate(
+        { user, _id: programId },
+        { $push: { weeks: { name: weekName } } },
+        { new: true },
+      );
+    } catch {
+      return Promise.resolve(null);
+    }
   }
 }
 
