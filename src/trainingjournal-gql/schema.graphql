@@ -1,4 +1,4 @@
-# @generated SignedSource<<e86f38c4cb57a12483595769e3291d65>>
+# @generated SignedSource<<d0a5a000023315366d1375ab7036d6d1>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -39,6 +39,14 @@ input CreateProgramInput {
 
 """Union type of creating a program"""
 union CreateProgramPayload = CreateProgram | UnauthorizedOrUnknown
+
+"""Successful week creation model"""
+type CreateWeek {
+  weekEdge: WeekEdge
+}
+
+"""Union type of creating a week"""
+union CreateWeekPayload = CreateWeek | UnauthorizedOrUnknown
 
 interface Error {
   message: String
@@ -106,6 +114,7 @@ type Program {
   """
   id(opaque: Boolean = true): ID!
   name: String
+  weeks: WeekConnection
 }
 
 """A connection to a list of items."""
@@ -130,6 +139,7 @@ type ProgramEdge {
 type RootMutation {
   createExercise(exercise: CreateExerciseInput!): CreateExercisePayload
   createProgram(program: CreateProgramInput!): CreateProgramPayload
+  createWeek(name: String!, programId: ID!): CreateWeekPayload
 }
 
 """Root Query"""
@@ -146,4 +156,31 @@ type UnauthorizedOrUnknown implements Error {
 enum UnauthorizedOrUnknownReason {
   UNAUTHORIZED
   UNKNOWN
+}
+
+"""Week model"""
+type Week {
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  name: String
+}
+
+"""A connection to a list of items."""
+type WeekConnection {
+  """A list of edges."""
+  edges: [WeekEdge]
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+}
+
+"""An edge in a connection."""
+type WeekEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: Week
 }

@@ -13,7 +13,7 @@ build_cjs(
         "//:babel.config.js",
         ":.babelrc.js",
         "@npm//@adeira/babel-preset-adeira",
-        "@npm//babel-plugin-module-resolver"
+        "@npm//babel-plugin-module-resolver",
     ],
     file_path = "./src/trainingjournal-gql/src",
 )
@@ -49,21 +49,23 @@ jest_test(
         "src/**/*.js",
         "scripts/**/*.js",
     ]),
-    jest_config = ":jest.config.js",
     extra_args = ["-i"],
+    jest_config = ":jest.config.js",
     deps = get_deps() + [
         "@npm//@babel/runtime",
         "//src/graphql-test-utils:graphql_test_utils",
-         ":.babelrc.js",
-        "@npm//babel-plugin-module-resolver"
+        ":.babelrc.js",
+        "@npm//babel-plugin-module-resolver",
     ],
 )
 
 # Use with bazel run to update local snapshot
 nodejs_test(
     name = "test_bc",
-    data = get_deps() + [
-        ":src",
+    data = get_deps() + glob([
+        "src/**/*",
+        "*.graphql",
+    ]) + [
         ":package.json",
         "//:package.json",
         "//:babel.config.js",
@@ -72,7 +74,6 @@ nodejs_test(
         "@npm//@adeira/graphql-bc-checker",
         "@npm//@babel/register",
         "@npm//@babel/runtime",
-        ":schema.graphql",
     ],
     entry_point = ":scripts/test-bc.js",
 )
