@@ -25,6 +25,14 @@ class UserModel extends Model {
   static createUser(email: string): Promise<this> {
     return this.create({ email });
   }
+
+  static async getOrCreateUser(email: string): Promise<this> {
+    let user = await this.findOne({ email });
+    if (user == null) {
+      user = await this.createUser(email);
+    }
+    return user;
+  }
 }
 
 UserSchema.loadClass(UserModel);
