@@ -5,6 +5,7 @@ import { Types } from 'mongoose';
 import connection from '../../connection';
 import UserModel from '../user';
 import ProgramModel from '../program';
+import ExerciseModel from '../exercise';
 
 describe('infrastructure / models / program', () => {
   const setup = () => {
@@ -131,6 +132,57 @@ describe('infrastructure / models / program', () => {
     });
 
     expect(updatedProgram).toBeNull();
+
+    await dropCollection('users');
+    await dropCollection('programs');
+  });
+
+  it('adds a set', async () => {
+    const { createUser, dropCollection } = setup();
+    const user = await createUser();
+    const name = 'Getting started';
+
+    const exercise = await ExerciseModel.createExercise({
+      name: 'Squats',
+      user: user._id,
+    });
+
+    const program = await ProgramModel.create({
+      name,
+      user: user._id,
+      weeks: [
+        // $FlowExpectedError[incompatible-call]
+        {
+          name: 'week 1',
+          days: [
+            {
+              name: 'day 1',
+              sets: [],
+            },
+            {
+              name: 'day 2',
+              sets: [],
+            },
+          ],
+        },
+      ],
+    });
+    const day = program.weeks[0].days[0];
+    const updatedProgram = await ProgramModel.addSet({
+      user: user._id,
+      dayId: day._id,
+      set: {
+        exercise: exercise._id,
+        sets: '2-4',
+        reps: '5',
+        group: 'A1',
+      },
+    });
+
+    const { group, reps, sets } = updatedProgram?.weeks[0].days[0].sets[0] ?? {};
+    expect(group).toEqual('A1');
+    expect(reps).toEqual('5');
+    expect(sets).toEqual('2-4');
 
     await dropCollection('users');
     await dropCollection('programs');

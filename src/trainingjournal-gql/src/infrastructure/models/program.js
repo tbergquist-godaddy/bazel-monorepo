@@ -74,6 +74,18 @@ class ProgramModel extends Model {
       return Promise.resolve(null);
     }
   }
+
+  static addSet({ user, dayId, set }: any): Promise<?this> {
+    try {
+      return this.findOneAndUpdate(
+        { user, 'weeks.days._id': dayId },
+        { $push: { 'weeks.$.days.$[day].sets': set } },
+        { new: true, arrayFilters: [{ 'day._id': dayId }] },
+      );
+    } catch {
+      return Promise.resolve(null);
+    }
+  }
 }
 
 ProgramSchema.loadClass(ProgramModel);
