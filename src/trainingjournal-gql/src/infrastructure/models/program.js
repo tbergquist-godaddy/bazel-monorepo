@@ -29,6 +29,13 @@ type AddWeekArgs = {
   +weekName: string,
 };
 
+type AddDayArgs = {
+  +programId: string,
+  +user: string,
+  +weekId: string,
+  +dayName: string,
+};
+
 class ProgramModel extends Model {
   _id: MongoId;
   name: string;
@@ -51,6 +58,19 @@ class ProgramModel extends Model {
         { new: true },
       );
     } catch {
+      return Promise.resolve(null);
+    }
+  }
+
+  static async addDay({ programId, user, weekId, dayName }: AddDayArgs): Promise<?this> {
+    try {
+      const data = await this.findOneAndUpdate(
+        { user, '_id': programId, 'weeks._id': weekId },
+        { $push: { 'weeks.$[].days': { name: dayName } } },
+        { new: true },
+      );
+      return data;
+    } catch (e) {
       return Promise.resolve(null);
     }
   }
