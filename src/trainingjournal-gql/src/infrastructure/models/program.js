@@ -66,7 +66,7 @@ class ProgramModel extends Model {
     try {
       const data = await this.findOneAndUpdate(
         { user, '_id': programId, 'weeks._id': weekId },
-        { $push: { 'weeks.$[].days': { name: dayName } } },
+        { $push: { 'weeks.$.days': { name: dayName } } },
         { new: true },
       );
       return data;
