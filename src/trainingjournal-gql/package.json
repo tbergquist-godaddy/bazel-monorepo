@@ -13,7 +13,8 @@
     "mongoose": "^5.11.13",
     "express": "^4.17.1",
     "@adeira/graphql-relay": "^0.3.0",
-    "dataloader": "^2.0.0"
+    "dataloader": "^2.0.0",
+    "google-auth-library": "^6.1.4"
   },
   "devDependencies": {
     "@tbergq/graphql-test-utils": "^0.1.1"
