@@ -1,4 +1,4 @@
-# @generated SignedSource<<dc8d2521e7fa4fad7e2edc2f09444c8b>>
+# @generated SignedSource<<ba3ed1b70b64c0089dc3f70a1ff07c7a>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -12,6 +12,21 @@ schema {
   query: RootQuery
   mutation: RootMutation
 }
+
+"""Successful day creation model"""
+type CreateDay {
+  dayEdge: DayEdge
+}
+
+"""Model for creating a day"""
+input CreateDayInput {
+  name: String!
+  programId: ID!
+  weekId: ID!
+}
+
+"""Union type of creating a day"""
+union CreateDayPayload = CreateDay | UnauthorizedOrUnknown
 
 """Successful exercise creation model"""
 type CreateExercise {
@@ -110,13 +125,13 @@ type ExerciseEdge {
 """The logged in user"""
 type Me {
   email: String
-  exercises: ExerciseConnection
+  exercises(after: String, before: String, first: Int, last: Int): ExerciseConnection
 
   """
   The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
   """
   id(opaque: Boolean = true): ID!
-  programs: ProgramConnection
+  programs(after: String, before: String, first: Int, last: Int): ProgramConnection
 }
 
 """Information about pagination in a connection."""
@@ -141,7 +156,7 @@ type Program {
   """
   id(opaque: Boolean = true): ID!
   name: String
-  weeks: WeekConnection
+  weeks(after: String, before: String, first: Int, last: Int): WeekConnection
 }
 
 """A connection to a list of items."""
@@ -164,6 +179,7 @@ type ProgramEdge {
 
 """Root Mutation."""
 type RootMutation {
+  createDay(day: CreateDayInput!): CreateDayPayload
   createExercise(exercise: CreateExerciseInput!): CreateExercisePayload
   createProgram(program: CreateProgramInput!): CreateProgramPayload
   createWeek(name: String!, programId: ID!): CreateWeekPayload
@@ -187,7 +203,7 @@ enum UnauthorizedOrUnknownReason {
 
 """Week model"""
 type Week {
-  days: DayConnection
+  days(after: String, before: String, first: Int, last: Int): DayConnection
 
   """
   The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.

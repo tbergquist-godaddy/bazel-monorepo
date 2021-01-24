@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import globalID from '@adeira/graphql-global-id';
-import { connectionFromArray } from '@adeira/graphql-relay';
+import { connectionFromArray, connectionArgs } from '@adeira/graphql-relay';
 
 import { DayConnection } from '../day';
 
@@ -15,6 +15,7 @@ const Week: GraphQLObjectType = new GraphQLObjectType({
     days: {
       type: DayConnection,
       resolve: ({ days }, args) => connectionFromArray(days, args),
+      args: connectionArgs,
     },
   },
 });

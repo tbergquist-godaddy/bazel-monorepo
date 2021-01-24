@@ -6,6 +6,7 @@ import {
   exerciseConnectionResolver,
   programConnectionResolver,
 } from '@tj-gql/application/resolvers';
+import { connectionArgs } from '@adeira/graphql-relay';
 
 import { ExerciseConnection } from './exercise';
 import { ProgramConnection } from './program';
@@ -19,10 +20,12 @@ const me: GraphQLObjectType = new GraphQLObjectType({
     exercises: {
       type: ExerciseConnection,
       resolve: exerciseConnectionResolver,
+      args: connectionArgs,
     },
     programs: {
       type: ProgramConnection,
       resolve: programConnectionResolver,
+      args: connectionArgs,
     },
   },
 });

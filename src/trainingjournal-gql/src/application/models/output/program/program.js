@@ -3,6 +3,7 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import globalID from '@adeira/graphql-global-id';
 import { weekConnectionResolver } from '@tj-gql/application/resolvers';
+import { connectionArgs } from '@adeira/graphql-relay';
 
 import { WeekConnection } from '../week';
 
@@ -15,6 +16,7 @@ const Program: GraphQLObjectType = new GraphQLObjectType({
     weeks: {
       type: WeekConnection,
       resolve: weekConnectionResolver,
+      args: connectionArgs,
     },
   },
 });
