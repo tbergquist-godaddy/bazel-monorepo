@@ -1,4 +1,4 @@
-# @generated SignedSource<<9154dd4b56bcc22c7f433a3241297818>>
+# @generated SignedSource<<228bd64d398582188caaa4e38216f346>>
 
 # <BREAKING-CHANGES-LOG>
 # </BREAKING-CHANGES-LOG>
@@ -136,8 +136,8 @@ type RangeDelete {
 type RootMutation {
   """Add tv show to favorite list"""
   addFavorite(serieId: ID!): AddFavorite
-  createdStoredOperations(storedOperations: [StoredOperationInput!]!): CreateStoredOperation
   createUser(email: String!, password: String!, username: String!): CreateUserMutation
+  createdStoredOperations(storedOperations: [StoredOperationInput!]!): CreateStoredOperation
 
   """Remove tv show from favorite list"""
   deleteFavorite(serieId: ID!): RangeDelete
