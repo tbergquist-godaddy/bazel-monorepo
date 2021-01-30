@@ -1,4 +1,4 @@
-# @generated SignedSource<<ffd2f274697835174cf8f9f8b84ccc5b>>
+# @generated SignedSource<<ab885ff4fc68f445834265f58741ff85>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -35,8 +35,10 @@ type CreateExercise {
 
 """Model for creating an exercise"""
 input CreateExerciseInput {
+  description: String
   muscleGroups: [String]
   name: String!
+  videoUrl: String
 }
 
 """Union type of creating an exercise"""
@@ -114,12 +116,15 @@ interface Error {
 
 """Model of an exercise"""
 type Exercise {
+  description: String
+
   """
   The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
   """
   id(opaque: Boolean = true): ID!
   muscleGroups: [String]
   name: String
+  videoUrl: String
 }
 
 """A connection to a list of items."""

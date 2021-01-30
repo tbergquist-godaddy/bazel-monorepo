@@ -16,12 +16,16 @@ const ExerciseSchema = new Schema({
     required: true,
   },
   muscleGroups: [String],
+  description: String,
+  videoUrl: String,
 });
 
 type AddUserInput = {
   +name: string,
   +user: MongoId,
   +muscleGroups?: $ReadOnlyArray<string>,
+  +description?: string,
+  +videoUrl?: string,
 };
 
 class ExerciseModel extends Model {
@@ -29,6 +33,8 @@ class ExerciseModel extends Model {
   name: string;
   user: UserModel;
   muscleGroups: $ReadOnlyArray<string>;
+  description: ?string;
+  videoUrl: ?string;
 
   static createExercise(exercise: AddUserInput): Promise<this> {
     return this.create(exercise);

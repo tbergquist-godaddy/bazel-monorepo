@@ -10,6 +10,8 @@ const Exercise: GraphQLObjectType = new GraphQLObjectType({
     id: globalID(({ _id: id }) => id),
     name: { type: GraphQLString },
     muscleGroups: { type: GraphQLList(GraphQLString) },
+    description: { type: GraphQLString },
+    videoUrl: { type: GraphQLString },
   },
 });
 
