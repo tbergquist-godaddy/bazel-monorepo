@@ -1,4 +1,4 @@
-# @generated SignedSource<<ba3ed1b70b64c0089dc3f70a1ff07c7a>>
+# @generated SignedSource<<ffd2f274697835174cf8f9f8b84ccc5b>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -55,6 +55,23 @@ input CreateProgramInput {
 """Union type of creating a program"""
 union CreateProgramPayload = CreateProgram | UnauthorizedOrUnknown
 
+"""Successful set creation model"""
+type CreateSet {
+  setEdge: SetEdge
+}
+
+"""Model for creating a set"""
+input CreateSetInput {
+  dayId: ID!
+  exerciseId: ID!
+  group: String
+  reps: String!
+  sets: String!
+}
+
+"""Union type of creating a set"""
+union CreateSetPayload = CreateSet | UnauthorizedOrUnknown
+
 """Successful week creation model"""
 type CreateWeek {
   weekEdge: WeekEdge
@@ -70,6 +87,7 @@ type Day {
   """
   id(opaque: Boolean = true): ID!
   name: String
+  sets: SetConnection
 }
 
 """A connection to a list of items."""
@@ -182,12 +200,44 @@ type RootMutation {
   createDay(day: CreateDayInput!): CreateDayPayload
   createExercise(exercise: CreateExerciseInput!): CreateExercisePayload
   createProgram(program: CreateProgramInput!): CreateProgramPayload
+  createSet(set: CreateSetInput!): CreateSetPayload
   createWeek(name: String!, programId: ID!): CreateWeekPayload
 }
 
 """Root Query"""
 type RootQuery {
   me: Me
+}
+
+"""Set model"""
+type Set {
+  exercise: Exercise
+  group: String
+
+  """
+  The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
+  """
+  id(opaque: Boolean = true): ID!
+  reps: String
+  sets: String
+}
+
+"""A connection to a list of items."""
+type SetConnection {
+  """A list of edges."""
+  edges: [SetEdge]
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+}
+
+"""An edge in a connection."""
+type SetEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: Set
 }
 
 """Used for error type where error is either unauthorized or unknown"""

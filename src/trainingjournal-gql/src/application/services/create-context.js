@@ -34,8 +34,9 @@ export type GraphqlLoggedInContext = $ReadOnly<{
 }>;
 
 export default function createContext(request: Request): GraphqlContext {
+  const user = request.user;
   return {
-    user: request.user,
-    dataloader: createDataloaders(),
+    user,
+    dataloader: createDataloaders(user),
   };
 }

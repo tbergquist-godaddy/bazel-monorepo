@@ -10,3 +10,10 @@ export function getExercises(
   );
   return Promise.all(promises);
 }
+
+export function getExercise(
+  ids: $ReadOnlyArray<string>,
+  userId: ?string,
+): Promise<$ReadOnlyArray<ExerciseModel>> {
+  return ExerciseModel.getExercisesByIds(ids, userId);
+}
