@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "trainingjournal-graphql",
+  "scope": "tbergq",
+  "builds": [
+    { "src": "lib/index.js", "use": "@now/node-server", "config": { "maxLambdaSize": "50mb" } }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "TJ_GQL_DB_URL": "@tj-gql-db-url"
+  },
+  "alias": "trainingjournal-graphql.now.sh",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/lib"
+    }
+  ]
+}

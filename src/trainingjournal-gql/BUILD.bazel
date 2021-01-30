@@ -86,3 +86,18 @@ eslint(
     ],
     entry = ":src",
 )
+
+nodejs_binary(
+    name = "deploy",
+    data = [
+        ":lib",
+        ":vercel.json",
+    ],
+    entry_point = "@npm//:node_modules/vercel/dist/index.js",
+    templated_args = [
+        "./src/trainingjournal-gql",
+        "--confirm",
+        "--token",
+        "$$ZEIT_TOKEN",
+    ],
+)

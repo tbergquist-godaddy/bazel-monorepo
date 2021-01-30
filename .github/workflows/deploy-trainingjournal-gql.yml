@@ -1,0 +1,47 @@
+name: Deploy Trainingjournal-gql
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'src/trainingjournal-gql/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            ~/.cache/bazel-repo
+            ~/.cache/bazel-disk
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
+      - name: Install bazelisk
+        run: |
+          curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64"
+          mkdir -p "${GITHUB_WORKSPACE}/bin/"
+          mv bazelisk-linux-amd64 "${GITHUB_WORKSPACE}/bin/bazel"
+          chmod +x "${GITHUB_WORKSPACE}/bin/bazel"
+
+      - name: Install NPM dependencies
+        run: |
+          yarn install
+
+      - name: Deploy trainingjournal-gql
+        run: |
+          "${GITHUB_WORKSPACE}/bin/bazel" run //src/trainingjournal-gql:deploy -- --prod
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
