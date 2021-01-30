@@ -36,6 +36,17 @@ type AddDayArgs = {
   +dayName: string,
 };
 
+type AddSetArgs = {
+  +user: MongoId,
+  +dayId: MongoId,
+  +set: $ReadOnly<{
+    exercise: MongoId,
+    sets: string,
+    reps: string,
+    group: string,
+  }>,
+};
+
 class ProgramModel extends Model {
   _id: MongoId;
   name: string;
@@ -75,7 +86,7 @@ class ProgramModel extends Model {
     }
   }
 
-  static addSet({ user, dayId, set }: any): Promise<?this> {
+  static addSet({ user, dayId, set }: AddSetArgs): Promise<?this> {
     try {
       return this.findOneAndUpdate(
         { user, 'weeks.days._id': dayId },
