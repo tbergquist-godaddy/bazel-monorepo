@@ -13,7 +13,13 @@ const Set: GraphQLObjectType = new GraphQLObjectType({
     sets: { type: GraphQLString },
     reps: { type: GraphQLString },
     groups: { type: GraphQLString },
-    exercise: { type: Exercise },
+    exercise: {
+      type: Exercise,
+      resolve: (/* exercise: string */) => {
+        // TODO: Fetch exercise
+        return null;
+      },
+    },
   },
 });
 

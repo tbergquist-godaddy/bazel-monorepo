@@ -43,7 +43,7 @@ type AddSetArgs = {
     exercise: MongoId,
     sets: string,
     reps: string,
-    group: string,
+    group?: string,
   }>,
 };
 
