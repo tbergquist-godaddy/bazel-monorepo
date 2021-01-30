@@ -17,12 +17,12 @@ export const useRoutingContext = (): $FlowFixMe => {
 
 export function useNavigate(): $FlowFixMe {
   const router = useContext(RoutingContext);
-
+  const push = router.history.push;
   const navigate = useCallback(
     (to: string) => {
-      router.history.push(to);
+      push(to);
     },
-    [router],
+    [push],
   );
   return navigate;
 }

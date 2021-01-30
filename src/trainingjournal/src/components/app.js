@@ -12,6 +12,7 @@ import Routes, { queryClient } from './router';
 import getLanguage from './get-language';
 import translations from '../../translatedFbts.json';
 import './app.css';
+import { LoginProvider } from './login-context';
 
 const Navbar = lazy(() => import('./navbar'));
 const router = createRouter(Routes, createBrowserHistory());
@@ -39,22 +40,24 @@ export default function App(): Node {
   return (
     <QueryClientProvider client={queryClient}>
       <RoutingContext.Provider value={router.context}>
-        <RecoilRoot>
-          <header className="Trainingjournal__header">
-            <Suspense fallback="">
-              <Navbar />
-            </Suspense>
-          </header>
-          <main className="Trainingjournal__container">
-            <RouterRenderer loader={<Spinner />} />
-            <Toast />
-            {__DEV__ && (
+        <LoginProvider>
+          <RecoilRoot>
+            <header className="Trainingjournal__header">
               <Suspense fallback="">
-                <ReactQueryDevtoolsPanel />
+                <Navbar />
               </Suspense>
-            )}
-          </main>
-        </RecoilRoot>
+            </header>
+            <main className="Trainingjournal__container">
+              <RouterRenderer loader={<Spinner />} />
+              <Toast />
+              {__DEV__ && (
+                <Suspense fallback="">
+                  <ReactQueryDevtoolsPanel />
+                </Suspense>
+              )}
+            </main>
+          </RecoilRoot>
+        </LoginProvider>
       </RoutingContext.Provider>
     </QueryClientProvider>
   );

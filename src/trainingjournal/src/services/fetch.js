@@ -2,8 +2,7 @@
 
 import adeiraFetch from '@adeira/fetch';
 import { invariant } from '@adeira/js';
-
-import { TOKEN_KEY } from '../constants';
+import { TOKEN_KEY } from '@tj/services/constants';
 
 const { BASE_URL } = process.env;
 

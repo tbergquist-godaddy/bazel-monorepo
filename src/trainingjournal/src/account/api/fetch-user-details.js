@@ -1,7 +1,8 @@
 // @flow
 
+import { TOKEN_KEY } from '@tj/services/constants';
+
 import fetch from '../../services/fetch';
-import { TOKEN_KEY } from '../../constants';
 
 export const FETCH_USER_DETAILS_KEY = 'fetch-user-details';
 

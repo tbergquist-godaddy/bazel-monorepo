@@ -2,13 +2,10 @@
 
 import { type Node } from 'react';
 import { Navbar as NavbarComponent, Box } from '@tbergq/components';
-import { Link } from '@tbergq/router';
+import { Link, useNavigate } from '@tbergq/router';
 import { fbt } from 'fbt';
-import { useQuery, useMutation } from 'react-query';
 
-import fetchUserDetails, { FETCH_USER_DETAILS_KEY } from '../account/api/fetch-user-details';
-import logout from '../account/api/logout';
-import { TOKEN_KEY } from '../constants';
+import { useGoogleUser, signOut } from './login-context';
 
 function NavLeft({ isLoggedIn }): Node {
   if (!isLoggedIn) {
@@ -20,14 +17,8 @@ function NavLeft({ isLoggedIn }): Node {
     </Link>
   );
 }
-function NavRight({ isLoggedIn, username }): Node {
-  const { mutate } = useMutation(logout, {
-    onError: () => {},
-    onSuccess: () => {
-      localStorage.removeItem(TOKEN_KEY);
-      window.location.href = '/';
-    },
-  });
+function NavRight({ name, isLoggedIn }): Node {
+  const navigate = useNavigate();
   if (!isLoggedIn) {
     return (
       <Link to="/account/login">
@@ -35,17 +26,19 @@ function NavRight({ isLoggedIn, username }): Node {
       </Link>
     );
   }
+
   return (
     <Box display={{ _: 'block', desktop: 'flex' }}>
       <Box marginRight={{ desktop: 'normal' }} marginBottom={{ _: 'normal', desktop: 'none' }}>
-        {fbt(`Hi ${fbt.param('username', username)}`, 'user greeting')}
+        {fbt(`Hi ${fbt.param('username', name)}`, 'user greeting')}
       </Box>
       <Box>
         <a
           href="/"
-          onClick={(e) => {
+          onClick={async (e) => {
             e.preventDefault();
-            mutate();
+            await signOut();
+            navigate('/');
           }}
         >
           <fbt desc="logout link">Log out</fbt>
@@ -55,14 +48,15 @@ function NavRight({ isLoggedIn, username }): Node {
   );
 }
 export default function Navbar(): Node {
-  const { data } = useQuery(FETCH_USER_DETAILS_KEY, fetchUserDetails, {
-    suspense: false,
-  });
+  const user = useGoogleUser();
+  const basicProfile = user?.basicProfile;
+  const isLoggedIn = user != null;
+  const name = basicProfile?.getGivenName() ?? '';
 
   return (
     <NavbarComponent
-      left={<NavLeft isLoggedIn={data != null} />}
-      right={<NavRight isLoggedIn={data != null} username={data?.username} />}
+      left={<NavLeft isLoggedIn={isLoggedIn} />}
+      right={<NavRight isLoggedIn={isLoggedIn} name={name} />}
       brand={<Link to="/">Trainingjournal</Link>}
     />
   );
