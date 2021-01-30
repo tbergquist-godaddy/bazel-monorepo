@@ -5,7 +5,8 @@ import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 import { TOKEN_KEY } from '../services/constants';
 
-const url = 'https://trainingjournal-graphql.now.sh/';
+// const url = 'https://trainingjournal-graphql.now.sh/';
+const url = 'http://localhost:4200';
 
 function fetchQuery(operation, variables) {
   const token = localStorage.getItem(TOKEN_KEY);
