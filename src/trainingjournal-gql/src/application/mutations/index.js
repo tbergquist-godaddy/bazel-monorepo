@@ -2,10 +2,11 @@
 
 import { GraphQLObjectType } from 'graphql';
 
+import * as dayMutations from './day';
 import * as exerciseMutations from './exercise';
 import * as programMutations from './program';
+import * as setMutations from './set';
 import * as weekMutations from './week';
-import * as dayMutations from './day';
 
 export default (new GraphQLObjectType({
   name: 'RootMutation',
@@ -15,5 +16,6 @@ export default (new GraphQLObjectType({
     ...programMutations,
     ...weekMutations,
     ...dayMutations,
+    ...setMutations,
   },
 }): GraphQLObjectType);
