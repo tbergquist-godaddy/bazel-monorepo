@@ -37,6 +37,16 @@ class ExerciseModel extends Model {
   static getExercises(user: string): Promise<$ReadOnlyArray<this>> {
     return this.find({ user });
   }
+
+  static getExercisesByIds(
+    ids: $ReadOnlyArray<string>,
+    user: ?string,
+  ): Promise<$ReadOnlyArray<this>> {
+    return this.find({
+      _id: { $in: ids },
+      user,
+    });
+  }
 }
 
 ExerciseSchema.loadClass(ExerciseModel);
