@@ -16,7 +16,7 @@
     "dataloader": "^2.0.0",
     "google-auth-library": "^6.1.4"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@tbergq/graphql-test-utils": "^0.1.1"
   }
 }
