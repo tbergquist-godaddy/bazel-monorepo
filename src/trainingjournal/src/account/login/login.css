@@ -2,3 +2,7 @@
   margin: 0 auto;
   max-width: 600px;
 }
+
+.Login__container .g-signin2 {
+  margin-top: var(--space-xx-large);
+}

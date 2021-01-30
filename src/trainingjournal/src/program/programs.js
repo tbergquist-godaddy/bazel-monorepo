@@ -8,14 +8,12 @@ import { Helmet } from 'react-helmet';
 
 import { FETCH_PROGRAMS_KEY, fetchPrograms } from './api/fetch-programs';
 import ProgramsList from './programs-list/programs-list';
-import useIsLoggedIn from '../services/use-is-logged-in';
 import AddButton from './components/add-button';
 import AddProgram from './add-program/add-program';
 import BackButton from '../components/back-button';
 
 export default function Programs(): Node {
   const [showAddProgram, setShowAddProgram] = useState(false);
-  useIsLoggedIn();
   const { data } = useQuery(FETCH_PROGRAMS_KEY, fetchPrograms, {
     suspense: true,
     refetchOnWindowFocus: false,
