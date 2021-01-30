@@ -21,7 +21,9 @@
     "react-helmet": "^6.1.0",
     "use-debounce": "^5.2.0",
     "classnames": "^2.2.6",
-    "react-content-loader": "^6.0.0"
+    "react-content-loader": "^6.0.0",
+    "relay-runtime": "10.1.2",
+    "react-relay": "^10.1.2"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.2",

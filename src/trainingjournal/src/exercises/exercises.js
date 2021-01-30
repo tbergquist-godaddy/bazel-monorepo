@@ -4,16 +4,30 @@ import { type Node } from 'react';
 import { Heading, Box } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { Helmet } from 'react-helmet';
+import { usePreloadedQuery, graphql } from 'react-relay/hooks';
+import { type GraphQLTaggedNode } from 'relay-runtime';
 
-import { useBaseExercises } from './api/fetch-exercises';
-import BaseExerciseList from './list/base-exercise-list';
 import AddButton from './add-base-exercise/add-button';
+import type { exercisesQuery } from './__generated__/exercisesQuery.graphql';
+import BaseExerciseList from './list/base-exercise-list';
 
-export default function Exercises(): Node {
-  const { data: exercises, status } = useBaseExercises();
-  if (status !== 'success') {
-    return <div>Something went a bit wrong</div>;
+export const query: GraphQLTaggedNode = graphql`
+  query exercisesQuery {
+    me {
+      ...baseExerciseList_exercises
+    }
   }
+`;
+
+type Props = {
+  prepared: {
+    query: any,
+  },
+};
+
+export default function Exercises({ prepared }: Props): Node {
+  const data = usePreloadedQuery<exercisesQuery>(query, prepared.query);
+
   return (
     <>
       <Helmet>
@@ -25,7 +39,7 @@ export default function Exercises(): Node {
         </Heading>
         <AddButton />
       </Box>
-      <BaseExerciseList exercises={exercises} />
+      <BaseExerciseList exercisesRef={data.me} />
     </>
   );
 }

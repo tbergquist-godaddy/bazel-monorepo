@@ -101,3 +101,10 @@ nodejs_binary(
         "$$ZEIT_TOKEN",
     ],
 )
+
+exports_files(
+    [
+        "schema.graphql",
+    ],
+    visibility = ["//visibility:public"],
+)

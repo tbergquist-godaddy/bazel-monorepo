@@ -1,5 +1,6 @@
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 load("@npm//http-server:index.bzl", "http_server")
+load("@npm//relay-compiler:index.bzl", "relay_compiler")
 load("@npm//webpack-cli:index.bzl", "webpack_cli")
 load("@npm//webpack-dev-server:index.bzl", "webpack_dev_server")
 load("//:eslint/eslint.bzl", "eslint")
@@ -142,5 +143,19 @@ nodejs_binary(
         "--confirm",
         "--token",
         "$$ZEIT_TOKEN",
+    ],
+)
+
+relay_compiler(
+    name = "relay",
+    args = [
+        "--src",
+        "./src/trainingjournal/src",
+        "--schema",
+        "./src/trainingjournal-gql/schema.graphql",
+    ],
+    data = [
+        ":src",
+        "//src/trainingjournal-gql:schema.graphql",
     ],
 )

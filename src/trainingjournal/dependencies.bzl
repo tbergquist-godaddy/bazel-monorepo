@@ -31,4 +31,7 @@ def get_deps():
         "@npm//react-helmet",
         "@npm//use-debounce",
         "@npm//react-content-loader",
+        "@npm//babel-plugin-relay",
+        "@npm//relay-runtime",
+        "@npm//react-relay",
     ]

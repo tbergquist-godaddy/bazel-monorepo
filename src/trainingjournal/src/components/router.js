@@ -3,6 +3,7 @@
 import { JSResource } from '@tbergq/router';
 import { type RouteConfig } from 'react-router-config';
 import { QueryClient } from 'react-query';
+import { loadQuery } from 'react-relay/hooks';
 
 import {
   FETCH_PROGRAMS_KEY,
@@ -11,7 +12,8 @@ import {
   FETCH_PROGRAM_KEY,
 } from '../program/api/fetch-programs';
 import { FETCH_DAY_KEY, fetchDay } from '../program/api/fetch-days';
-import { FETCH_BASE_EXERCISES, fetchBaseExercises } from '../exercises/api/fetch-exercises';
+import environment from '../relay/environment';
+import { query as ExercisesQuery } from '../exercises/exercises';
 
 export const queryClient: QueryClient = new QueryClient({
   defaultOptions: {
@@ -74,10 +76,16 @@ const routes: RouteConfig[] = [
     path: '/exercises',
     exact: true,
     prepare: () => {
-      queryClient.prefetchQuery(FETCH_BASE_EXERCISES, fetchBaseExercises, {
-        suspense: true,
-      });
-      return {};
+      return {
+        query: loadQuery(
+          environment,
+          ExercisesQuery,
+          {},
+          {
+            fetchPolicy: 'store-and-network',
+          },
+        ),
+      };
     },
   },
   {
