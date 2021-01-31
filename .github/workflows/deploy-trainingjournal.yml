@@ -29,6 +29,11 @@ jobs:
             ~/.cache/bazel-disk
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
+      - name: Write gcp secrets
+        run: echo $REMOTE_CACHE_KEYS >> secret-key.json
+        env:
+          REMOTE_CACHE_KEYS: ${{ secrets.REMOTE_CACHE_KEYS }}
+
       - name: Install bazelisk
         run: |
           curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64"
