@@ -9,3 +9,4 @@ node_modules/
 .flow.saved_state_file_changes
 .env
 *.tgz
+secret-key.json

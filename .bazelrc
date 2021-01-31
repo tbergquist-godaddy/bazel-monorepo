@@ -5,3 +5,7 @@ build --repository_cache=~/.cache/bazel-repo
 fetch --repository_cache=~/.cache/bazel-repo
 query --repository_cache=~/.cache/bazel-repo
 build --disk_cache=~/.cache/bazel-disk
+build --remote_cache=https://storage.googleapis.com/tvhelper.appspot.com
+build --google_credentials=secret-key.json
+test --remote_cache=https://storage.googleapis.com/tvhelper.appspot.com
+test --google_credentials=secret-key.json
