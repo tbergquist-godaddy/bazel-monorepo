@@ -31,7 +31,8 @@
     "@testing-library/react-hooks": "^5.0.0",
     "@tbergq/mock-server": "*",
     "shortid": "^2.2.16",
-    "autoprefixer": "^10.1.0"
+    "autoprefixer": "^10.1.0",
+    "relay-test-utils": "^10.1.2"
   },
   "scripts": {
     "manifest": "fbt-manifest --src src"

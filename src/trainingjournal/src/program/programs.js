@@ -1,23 +1,33 @@
 // @flow
 
 import { type Node, useState } from 'react';
-import { useQuery } from 'react-query';
 import { Heading, Box } from '@tbergq/components';
 import fbt from 'fbt';
 import { Helmet } from 'react-helmet';
+import { graphql, usePreloadedQuery } from 'react-relay/hooks';
+import type { GraphQLTaggedNode } from 'react-relay';
 
-import { FETCH_PROGRAMS_KEY, fetchPrograms } from './api/fetch-programs';
 import ProgramsList from './programs-list/programs-list';
 import AddButton from './components/add-button';
-import AddProgram from './add-program/add-program';
 import BackButton from '../components/back-button';
 
-export default function Programs(): Node {
+export const query: GraphQLTaggedNode = graphql`
+  query programsQuery {
+    me {
+      ...programsList_programs
+    }
+  }
+`;
+
+type Props = {
+  prepared: {
+    query: any,
+  },
+};
+
+export default function Programs({ prepared }: Props): Node {
   const [showAddProgram, setShowAddProgram] = useState(false);
-  const { data } = useQuery(FETCH_PROGRAMS_KEY, fetchPrograms, {
-    suspense: true,
-    refetchOnWindowFocus: false,
-  });
+  const data = usePreloadedQuery(query, prepared.query);
 
   return (
     <>
@@ -30,9 +40,12 @@ export default function Programs(): Node {
         </Heading>
         <AddButton onClick={() => setShowAddProgram(true)} />
       </Box>
-      <ProgramsList programs={data} />
+      <ProgramsList
+        programs={data.me}
+        isVisible={showAddProgram}
+        onClose={() => setShowAddProgram(false)}
+      />
 
-      <AddProgram isVisible={showAddProgram} onClose={() => setShowAddProgram(false)} />
       <Box marginTop="normal">
         <BackButton to="/home" />
       </Box>

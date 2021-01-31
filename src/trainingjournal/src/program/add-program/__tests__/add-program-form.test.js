@@ -1,25 +1,28 @@
 // @flow
 
-import { screen, waitFor } from '@testing-library/react';
+import { screen, waitFor, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
+import render from '@tj/test-utils/render';
 
-import render from '../../../../test-utils/render';
 import AddProgramForm from '../add-program-form';
 
 function setup() {
   const closeModal = jest.fn();
-  render(<AddProgramForm closeModal={closeModal} />);
+  const environment = createMockEnvironment();
+  render(<AddProgramForm connectionId="id" closeModal={closeModal} />, { environment });
 
   return {
     closeModal,
     getInput: () => screen.getByLabelText(/name/i),
     getButton: () => screen.getByRole('button'),
+    environment,
   };
 }
 
 describe('add-program', () => {
   it('creates a new program', async () => {
-    const { closeModal, getInput, getButton } = setup();
+    const { closeModal, getInput, getButton, environment } = setup();
     const input = getInput();
 
     userEvent.type(input, 'success');
@@ -27,6 +30,12 @@ describe('add-program', () => {
     const button = getButton();
     userEvent.click(button);
 
+    await waitFor(() => expect(button).toBeDisabled());
+    act(() => {
+      environment.mock.resolveMostRecentOperation((operation) => {
+        return MockPayloadGenerator.generate(operation);
+      });
+    });
     await waitFor(() =>
       expect(screen.getByText(/program was successfully created/i)).toBeInTheDocument(),
     );
@@ -43,13 +52,26 @@ describe('add-program', () => {
   });
 
   it('shows an error when creating a program fails', async () => {
-    const { closeModal, getInput, getButton } = setup();
+    const { closeModal, getInput, getButton, environment } = setup();
     const input = getInput();
 
     userEvent.type(input, 'failure');
 
     const button = getButton();
     userEvent.click(button);
+
+    await waitFor(() => expect(button).toBeDisabled());
+    act(() => {
+      environment.mock.resolveMostRecentOperation(() => {
+        return {
+          data: {
+            createProgram: {
+              __typename: 'UnauthorizedOrUnknown',
+            },
+          },
+        };
+      });
+    });
 
     await waitFor(() => expect(screen.getByText(/Failed to create program/i)).toBeInTheDocument());
     expect(closeModal).not.toHaveBeenCalledWith();
