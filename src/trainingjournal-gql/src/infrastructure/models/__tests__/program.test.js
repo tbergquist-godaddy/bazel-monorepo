@@ -187,4 +187,58 @@ describe('infrastructure / models / program', () => {
     await dropCollection('users');
     await dropCollection('programs');
   });
+
+  it('deletes a program', async () => {
+    const { createUser, dropCollection } = setup();
+    const user = await createUser();
+    const name = 'Getting started';
+
+    const program = await ProgramModel.createProgram({
+      name,
+      user: user._id,
+    });
+
+    const res = await ProgramModel.deleteProgram(program._id, user._id);
+    expect(res.deletedCount).toBe(1);
+
+    await dropCollection('users');
+  });
+
+  it('deletes a week', async () => {
+    const { createUser, dropCollection } = setup();
+    const user = await createUser();
+    const name = 'Getting started';
+
+    const program = await ProgramModel.create({
+      name,
+      user: user._id,
+      // $FlowExpectedError[incompatible-call]
+      weeks: [{ name: 'week 1' }, { name: 'week 2' }],
+    });
+
+    const res = await ProgramModel.deleteWeek(program.weeks[1]._id, user._id);
+    expect(res.deletedCount).toBe(1);
+
+    await dropCollection('users');
+    await dropCollection('programs');
+  });
+
+  it('deletes a day', async () => {
+    const { createUser, dropCollection } = setup();
+    const user = await createUser();
+    const name = 'Getting started';
+
+    const program = await ProgramModel.create({
+      name,
+      user: user._id,
+      // $FlowExpectedError[incompatible-call]
+      weeks: [{ name: 'week 1' }, { name: 'week 2', days: [{ name: 'day 1' }] }],
+    });
+
+    const res = await ProgramModel.deleteDay(program.weeks[1].days[0]._id, user._id);
+    expect(res.deletedCount).toBe(1);
+
+    await dropCollection('users');
+    await dropCollection('programs');
+  });
 });
