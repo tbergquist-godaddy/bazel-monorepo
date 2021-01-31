@@ -1,4 +1,4 @@
-# @generated SignedSource<<ab885ff4fc68f445834265f58741ff85>>
+# @generated SignedSource<<b380d8d14a42f636474fbdb17a594f98>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -157,6 +157,12 @@ type Me {
   programs(after: String, before: String, first: Int, last: Int): ProgramConnection
 }
 
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
 """Information about pagination in a connection."""
 type PageInfo {
   """When paginating forwards, the cursor to continue."""
@@ -173,7 +179,7 @@ type PageInfo {
 }
 
 """Program model"""
-type Program {
+type Program implements Node {
   """
   The globally unique ID of an object. You can unmask this ID to get original value but please note that this unmasked ID is not globally unique anymore and therefore it cannot be used as a cache key.
   """
@@ -212,6 +218,12 @@ type RootMutation {
 """Root Query"""
 type RootQuery {
   me: Me
+
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
 }
 
 """Set model"""

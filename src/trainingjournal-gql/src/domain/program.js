@@ -9,3 +9,11 @@ export function getPrograms(
 
   return Promise.all(promises);
 }
+
+export async function getProgram(
+  ids: $ReadOnlyArray<string>,
+  userId: ?string,
+): Promise<$ReadOnlyArray<ProgramModel>> {
+  const programs = await ProgramModel.getByIds(ids, userId);
+  return programs.map((program) => program.toJSON());
+}
