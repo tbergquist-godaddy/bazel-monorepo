@@ -14,12 +14,13 @@ declare export opaque type baseExerciseList_exercises$ref: FragmentReference;
 declare export opaque type baseExerciseList_exercises$fragmentType: baseExerciseList_exercises$ref;
 export type baseExerciseList_exercises = {|
   +exercises: ?{|
+    +__id: string,
     +edges: ?$ReadOnlyArray<?{|
       +node: ?{|
         +id: string,
         +$fragmentRefs: baseExerciseItem_exercise$ref,
       |}
-    |}>
+    |}>,
   |},
   +$refType: baseExerciseList_exercises$ref,
 |};
@@ -35,15 +36,26 @@ export type baseExerciseList_exercises$key = {
 const node/*: ReaderFragment*/ = {
   "argumentDefinitions": [],
   "kind": "Fragment",
-  "metadata": null,
+  "metadata": {
+    "connection": [
+      {
+        "count": null,
+        "cursor": null,
+        "direction": "forward",
+        "path": [
+          "exercises"
+        ]
+      }
+    ]
+  },
   "name": "baseExerciseList_exercises",
   "selections": [
     {
-      "alias": null,
+      "alias": "exercises",
       "args": null,
       "concreteType": "ExerciseConnection",
       "kind": "LinkedField",
-      "name": "exercises",
+      "name": "__baseExerciseList_exercises_connection",
       "plural": false,
       "selections": [
         {
@@ -70,15 +82,66 @@ const node/*: ReaderFragment*/ = {
                   "storageKey": null
                 },
                 {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "__typename",
+                  "storageKey": null
+                },
+                {
                   "args": null,
                   "kind": "FragmentSpread",
                   "name": "baseExerciseItem_exercise"
                 }
               ],
               "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "cursor",
+              "storageKey": null
             }
           ],
           "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "concreteType": "PageInfo",
+          "kind": "LinkedField",
+          "name": "pageInfo",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "endCursor",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "hasNextPage",
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        },
+        {
+          "kind": "ClientExtension",
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "__id",
+              "storageKey": null
+            }
+          ]
         }
       ],
       "storageKey": null
@@ -88,6 +151,6 @@ const node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 // prettier-ignore
-(node/*: any*/).hash = '99a6a1a624f0435758f49894490ae743';
+(node/*: any*/).hash = '7d8ab3a4e697d6cdd9a3e6b5c8ce9b17';
 
 module.exports = node;
