@@ -1,4 +1,4 @@
-# @generated SignedSource<<b380d8d14a42f636474fbdb17a594f98>>
+# @generated SignedSource<<b91f56c9432e880b58afc2e9af2f9e8e>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -206,6 +206,12 @@ type ProgramEdge {
   node: Program
 }
 
+"""Return type used for range delete mutations"""
+type RangeDelete {
+  id: ID
+  success: Boolean
+}
+
 """Root Mutation."""
 type RootMutation {
   createDay(day: CreateDayInput!): CreateDayPayload
@@ -213,6 +219,7 @@ type RootMutation {
   createProgram(program: CreateProgramInput!): CreateProgramPayload
   createSet(set: CreateSetInput!): CreateSetPayload
   createWeek(name: String!, programId: ID!): CreateWeekPayload
+  deleteProgram(id: ID!): RangeDelete
 }
 
 """Root Query"""
