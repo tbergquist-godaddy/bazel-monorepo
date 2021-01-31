@@ -6,9 +6,12 @@ load("//jest:jest.bzl", "jest_test")
 
 babel_build(
     name = "compile",
-    data = [
-        ":package.json",
-        ":src",
+    data = glob([
+        "**/*.js",
+        "**/*.json",
+        "**/*.css",
+        "**/*.svg",
+    ]) + [
         "//:babel.config.js",
         "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
