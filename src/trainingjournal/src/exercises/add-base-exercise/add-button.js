@@ -7,7 +7,10 @@ import { fbt } from 'fbt';
 
 const AddBaseExercise = lazy(() => import('./add-base-exercise'));
 
-export default function AddButton(): Node {
+type Props = {
+  +connectionId: ?string,
+};
+export default function AddButton({ connectionId }: Props): Node {
   const [showForm, setShowForm] = useState(false);
   const onClose = () => setShowForm(false);
   return (
@@ -28,7 +31,7 @@ export default function AddButton(): Node {
         onClose={onClose}
       >
         <Suspense fallback={<Spinner />}>
-          {showForm && <AddBaseExercise onClose={onClose} />}
+          {showForm && <AddBaseExercise connectionId={connectionId} onClose={onClose} />}
         </Suspense>
       </Modal>
     </>

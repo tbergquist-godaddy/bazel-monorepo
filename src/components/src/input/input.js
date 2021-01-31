@@ -14,6 +14,7 @@ type Props = {
   +name: string,
   +defaultValue?: string,
   +error?: ?string,
+  +placeholder?: ?string,
 };
 
 function Input({ label, type = 'text', error, ...rest }: Props, ref): Node {

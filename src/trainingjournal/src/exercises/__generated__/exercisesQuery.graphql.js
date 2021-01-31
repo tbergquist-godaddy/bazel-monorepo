@@ -33,22 +33,37 @@ query exercisesQuery {
 fragment baseExerciseItem_exercise on Exercise {
   name
   muscleGroups
+  description
+  videoUrl
 }
 
 fragment baseExerciseList_exercises on Me {
-  exercises {
+  exercises(first: 100) {
     edges {
       node {
         id
         ...baseExerciseItem_exercise
+        __typename
       }
+      cursor
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
     }
   }
 }
 */
 
 const node/*: ConcreteRequest*/ = (function(){
-var v0 = {
+var v0 = [
+  {
+    "kind": "Literal",
+    "name": "first",
+    "value": 100
+  }
+],
+v1 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
@@ -98,7 +113,7 @@ return {
         "selections": [
           {
             "alias": null,
-            "args": null,
+            "args": (v0/*: any*/),
             "concreteType": "ExerciseConnection",
             "kind": "LinkedField",
             "name": "exercises",
@@ -120,7 +135,7 @@ return {
                     "name": "node",
                     "plural": false,
                     "selections": [
-                      (v0/*: any*/),
+                      (v1/*: any*/),
                       {
                         "alias": null,
                         "args": null,
@@ -134,29 +149,103 @@ return {
                         "kind": "ScalarField",
                         "name": "muscleGroups",
                         "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "description",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "videoUrl",
+                        "storageKey": null
+                      },
+                      {
+                        "alias": null,
+                        "args": null,
+                        "kind": "ScalarField",
+                        "name": "__typename",
+                        "storageKey": null
                       }
                     ],
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "cursor",
                     "storageKey": null
                   }
                 ],
                 "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "concreteType": "PageInfo",
+                "kind": "LinkedField",
+                "name": "pageInfo",
+                "plural": false,
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "endCursor",
+                    "storageKey": null
+                  },
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "hasNextPage",
+                    "storageKey": null
+                  }
+                ],
+                "storageKey": null
+              },
+              {
+                "kind": "ClientExtension",
+                "selections": [
+                  {
+                    "alias": null,
+                    "args": null,
+                    "kind": "ScalarField",
+                    "name": "__id",
+                    "storageKey": null
+                  }
+                ]
               }
             ],
-            "storageKey": null
+            "storageKey": "exercises(first:100)"
           },
-          (v0/*: any*/)
+          {
+            "alias": null,
+            "args": (v0/*: any*/),
+            "filters": null,
+            "handle": "connection",
+            "key": "baseExerciseList_exercises",
+            "kind": "LinkedHandle",
+            "name": "exercises"
+          },
+          (v1/*: any*/)
         ],
         "storageKey": null
       }
     ]
   },
   "params": {
-    "cacheID": "b6c6cff791b27c1282bc8408236248a6",
+    "cacheID": "f0aec299773197ffe856267b4132851e",
     "id": null,
     "metadata": {},
     "name": "exercisesQuery",
     "operationKind": "query",
-    "text": "query exercisesQuery {\n  me {\n    ...baseExerciseList_exercises\n    id\n  }\n}\n\nfragment baseExerciseItem_exercise on Exercise {\n  name\n  muscleGroups\n}\n\nfragment baseExerciseList_exercises on Me {\n  exercises {\n    edges {\n      node {\n        id\n        ...baseExerciseItem_exercise\n      }\n    }\n  }\n}\n"
+    "text": "query exercisesQuery {\n  me {\n    ...baseExerciseList_exercises\n    id\n  }\n}\n\nfragment baseExerciseItem_exercise on Exercise {\n  name\n  muscleGroups\n  description\n  videoUrl\n}\n\nfragment baseExerciseList_exercises on Me {\n  exercises(first: 100) {\n    edges {\n      node {\n        id\n        ...baseExerciseItem_exercise\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n"
   }
 };
 })();
