@@ -47,6 +47,11 @@ type AddSetArgs = {
   }>,
 };
 
+type DeletedReturn = {
+  +deletedCount: number,
+  ...
+};
+
 class ProgramModel extends Model {
   _id: MongoId;
   name: string;
@@ -103,6 +108,24 @@ class ProgramModel extends Model {
     } catch {
       return Promise.resolve(null);
     }
+  }
+
+  static deleteProgram(id: string, user: string): Promise<DeletedReturn> {
+    return this.deleteOne({ _id: id, user });
+  }
+
+  static deleteWeek(weekId: string, user: string): Promise<DeletedReturn> {
+    return this.deleteOne({
+      'weeks._id': weekId,
+      user,
+    });
+  }
+
+  static deleteDay(dayId: string, user: string): Promise<DeletedReturn> {
+    return this.deleteOne({
+      'weeks.days._id': dayId,
+      user,
+    });
   }
 }
 
