@@ -6,9 +6,9 @@ import { useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import { fbt } from 'fbt';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useMutation, useQueryClient } from 'react-query';
+import { graphql, useMutation } from 'react-relay/hooks';
 
-import { createProgram, FETCH_PROGRAMS_KEY } from '../api/fetch-programs';
+import type { addProgramFormMutation } from './__generated__/addProgramFormMutation.graphql';
 
 const name = fbt('Name', 'add program form name label');
 
@@ -17,27 +17,47 @@ const schema = object().shape({
 });
 
 type Props = {
-  closeModal: () => void,
+  +closeModal: () => void,
+  +connectionId: ?string,
 };
 
-export default function AddProgramForm({ closeModal }: Props): Node {
+export default function AddProgramForm({ closeModal, connectionId }: Props): Node {
   const showToast = useShowToast();
-  const cache = useQueryClient();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
-  const { mutate, isLoading } = useMutation(createProgram, {
-    onSuccess: () => {
-      cache.invalidateQueries(FETCH_PROGRAMS_KEY);
-      showToast({ text: fbt('Program was successfully created', 'program created toast') });
-      closeModal();
-    },
-    onError: () => {
-      showToast({ text: fbt('Failed to create program', 'program error toast'), type: 'danger' });
-    },
-  });
+
+  const [mutate, isLoading] = useMutation<addProgramFormMutation>(graphql`
+    mutation addProgramFormMutation($program: CreateProgramInput!, $connections: [ID!]!) {
+      createProgram(program: $program) {
+        __typename
+        ... on CreateProgram {
+          programEdge @appendEdge(connections: $connections) {
+            node {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  `);
+
   const onSubmit = ({ name }) => {
-    mutate(name);
+    mutate({
+      variables: { program: { name }, connections: [connectionId ?? ''] },
+      onCompleted: (data, error) => {
+        if (error || data.createProgram?.__typename !== 'CreateProgram') {
+          showToast({
+            text: fbt('Failed to create program', 'program error toast'),
+            type: 'danger',
+          });
+        } else {
+          showToast({ text: fbt('Program was successfully created', 'program created toast') });
+          closeModal();
+        }
+      },
+    });
   };
 
   return (

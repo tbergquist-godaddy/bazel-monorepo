@@ -115,6 +115,7 @@ jest_test(
         "@npm//identity-obj-proxy",
         "@npm//babel-plugin-module-resolver",
         "@npm//@testing-library/react-hooks",
+        "@npm//relay-test-utils",
     ],
 )
 
