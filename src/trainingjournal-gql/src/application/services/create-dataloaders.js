@@ -1,7 +1,7 @@
 // @flow
 
 import { getExercises, getExercise } from '@tj-gql/domain/exercise';
-import { getPrograms } from '@tj-gql/domain/program';
+import { getPrograms, getProgram } from '@tj-gql/domain/program';
 import Dataloader from 'dataloader';
 import { ExerciseModel, ProgramModel } from '@tj-gql/infrastructure/models';
 
@@ -11,6 +11,7 @@ export type Dataloaders = {
   +exercises: Dataloader<string, $ReadOnlyArray<ExerciseModel>>,
   +exercise: Dataloader<string, ExerciseModel>,
   +programs: Dataloader<string, $ReadOnlyArray<ProgramModel>>,
+  +program: Dataloader<string, ProgramModel>,
 };
 
 export default function createDataloaders(user: ?User): Dataloaders {
@@ -18,5 +19,6 @@ export default function createDataloaders(user: ?User): Dataloaders {
     exercises: new Dataloader(getExercises),
     exercise: new Dataloader((ids: $ReadOnlyArray<string>) => getExercise(ids, user?.id)),
     programs: new Dataloader(getPrograms),
+    program: new Dataloader((ids: $ReadOnlyArray<string>) => getProgram(ids, user?.id)),
   };
 }

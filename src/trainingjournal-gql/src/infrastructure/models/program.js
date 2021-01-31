@@ -61,6 +61,13 @@ class ProgramModel extends Model {
     return this.find({ user });
   }
 
+  static getByIds(
+    programIds: $ReadOnlyArray<string>,
+    user: ?string,
+  ): Promise<$ReadOnlyArray<this>> {
+    return this.find({ _id: { $in: programIds }, user });
+  }
+
   static addWeek({ programId, user, weekName }: AddWeekArgs): Promise<?this> {
     try {
       return this.findOneAndUpdate(
