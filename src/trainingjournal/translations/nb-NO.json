@@ -1,52 +1,22 @@
 {
     "fb-locale": "nb_NO",
     "translations": {
-        "a2At0ljNpkm4ytwYDdtS0g==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Brukernavn",
-                    "variations": []
-                }
-            ]
-        },
-        "b1T19vW9\/DoBPue7cIGh3Q==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Passord",
-                    "variations": []
-                }
-            ]
-        },
-        "CBsKATgppv4k6y046G9MRQ==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Feil brukernavn eller passord",
-                    "variations": []
-                }
-            ]
-        },
-        "F3p8DbdliugG4CTKslAYqA==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Logg inn",
-                    "variations": []
-                }
-            ]
-        },
         "EJiqPfRrsYhNdA4eGTqcjQ==": {
             "tokens": [],
             "types": [],
             "translations": [
                 {
                     "translation": "Trainingjournal logg inn",
+                    "variations": []
+                }
+            ]
+        },
+        "fLgj3JLehX2onTdpwkBHjQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Bruk din google konto for å logge inn",
                     "variations": []
                 }
             ]
@@ -151,6 +121,16 @@
                 }
             ]
         },
+        "6r8qi1cySMM62gk2SRSuLg==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Muskelgrupper",
+                    "variations": []
+                }
+            ]
+        },
         "heA4AG1AkoZ24CGtPIbM0Q==": {
             "tokens": [],
             "types": [],
@@ -171,22 +151,12 @@
                 }
             ]
         },
-        "Xh9rKsNtsaDLiz7a7KYLvQ==": {
+        "xsMygmMImBhjqctUDA90eA==": {
             "tokens": [],
             "types": [],
             "translations": [
                 {
-                    "translation": "--Velg--",
-                    "variations": []
-                }
-            ]
-        },
-        "OanIHumToG4\/jHeKNn2kaA==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Muskelgruppe",
+                    "translation": "Video lenke",
                     "variations": []
                 }
             ]
@@ -197,16 +167,6 @@
             "translations": [
                 {
                     "translation": "Øvelser",
-                    "variations": []
-                }
-            ]
-        },
-        "xsMygmMImBhjqctUDA90eA==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Video lenke",
                     "variations": []
                 }
             ]
