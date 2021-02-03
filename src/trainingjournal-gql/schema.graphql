@@ -1,4 +1,4 @@
-# @generated SignedSource<<b91f56c9432e880b58afc2e9af2f9e8e>>
+# @generated SignedSource<<fcbbc99cf99c040ceb3bc52c72a01259>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -219,7 +219,10 @@ type RootMutation {
   createProgram(program: CreateProgramInput!): CreateProgramPayload
   createSet(set: CreateSetInput!): CreateSetPayload
   createWeek(name: String!, programId: ID!): CreateWeekPayload
+  deleteDay(id: ID!): RangeDelete
   deleteProgram(id: ID!): RangeDelete
+  deleteSet(id: ID!): RangeDelete
+  deleteWeek(id: ID!): RangeDelete
 }
 
 """Root Query"""

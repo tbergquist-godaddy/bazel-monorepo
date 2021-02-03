@@ -5,8 +5,8 @@ import { ProgramModel } from '@tj-gql/infrastructure/models';
 
 import createRangeDeleteMutation from '../common/range-delete-mutation';
 
-const deleteProgram: GraphQLFieldConfig<any, any> = createRangeDeleteMutation((programId, userId) =>
-  ProgramModel.deleteProgram(programId, userId),
-);
+const deleteSet: GraphQLFieldConfig<any, any> = createRangeDeleteMutation((setId, userId) => {
+  return ProgramModel.deleteSet(setId, userId);
+});
 
-export default deleteProgram;
+export default deleteSet;

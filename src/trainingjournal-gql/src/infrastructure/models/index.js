@@ -6,3 +6,6 @@ export { default as ProgramModel } from './program';
 export { default as WeekModel } from './week';
 export { default as DayModel } from './day';
 export { default as SetModel } from './set';
+
+// Types
+export type { DeletedReturn } from './program';
