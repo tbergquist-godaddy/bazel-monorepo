@@ -47,7 +47,7 @@ type AddSetArgs = {
   }>,
 };
 
-type DeletedReturn = {
+export type DeletedReturn = {
   +deletedCount: number,
   ...
 };
@@ -124,6 +124,13 @@ class ProgramModel extends Model {
   static deleteDay(dayId: string, user: string): Promise<DeletedReturn> {
     return this.deleteOne({
       'weeks.days._id': dayId,
+      user,
+    });
+  }
+
+  static deleteSet(setId: string, user: string): Promise<DeletedReturn> {
+    return this.deleteOne({
+      'weeks.days.sets._id': setId,
       user,
     });
   }

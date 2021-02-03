@@ -241,4 +241,48 @@ describe('infrastructure / models / program', () => {
     await dropCollection('users');
     await dropCollection('programs');
   });
+
+  it('deletes a set', async () => {
+    const { createUser, dropCollection } = setup();
+    const user = await createUser();
+    const name = 'Getting started';
+
+    const exercise = await ExerciseModel.createExercise({
+      name: 'Squats',
+      user: user._id,
+    });
+
+    const program = await ProgramModel.create({
+      name,
+      user: user._id,
+      weeks: [
+        // $FlowExpectedError[incompatible-call]
+        { name: 'week 1' },
+        // $FlowExpectedError[incompatible-call]
+        {
+          name: 'week 2',
+          days: [
+            {
+              name: 'day 1',
+              sets: [
+                {
+                  exercise: exercise._id,
+                  sets: '4',
+                  reps: '8',
+                  groups: 'A1',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    });
+
+    const res = await ProgramModel.deleteSet(program.weeks[1].days[0].sets[0]._id, user._id);
+    expect(res.deletedCount).toBe(1);
+
+    await dropCollection('users');
+    await dropCollection('programs');
+    await dropCollection('exercises');
+  });
 });
