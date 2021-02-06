@@ -8,7 +8,6 @@ babel_build(
         ":package.json",
         ":src",
         "//:babel.config.js",
-        "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
     ],
     file_path = "./src/mock-server/src",

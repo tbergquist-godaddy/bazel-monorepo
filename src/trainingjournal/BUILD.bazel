@@ -80,6 +80,7 @@ webpack_dev_server(
 eslint(
     name = "lint",
     data = [
+        ":package.json",
         ":src",
     ],
     entry = ":src",

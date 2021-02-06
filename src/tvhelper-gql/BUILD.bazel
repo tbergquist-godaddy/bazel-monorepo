@@ -10,7 +10,6 @@ build_cjs(
     name = "lib",
     data = glob(["src/**/*"]) + [
         ":package.json",
-        "//:package.json",
         "//:babel.config.js",
         "@npm//@adeira/babel-preset-adeira",
     ],
@@ -37,7 +36,6 @@ babel_node(
         "**/.env",
     ]) + get_deps() + [
         ":package.json",
-        "//:package.json",
         "//:babel.config.js",
     ],
 )
@@ -89,7 +87,6 @@ nodejs_test(
     data = get_deps() + [
         ":src",
         ":package.json",
-        "//:package.json",
         "//:babel.config.js",
         "@npm//@adeira/graphql-bc-checker",
         "@npm//@babel/register",

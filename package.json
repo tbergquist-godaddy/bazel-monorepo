@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@adeira/babel-preset-adeira": "^2.0.0",
-    "@adeira/eslint-config": "^4.2.0",
+    "@adeira/eslint-config": "^5.0.0",
     "@adeira/flow-bin": "^0.7.0",
     "@adeira/graphql-bc-checker": "^0.3.0",
     "@adeira/murmur-hash": "^1.0.0",
@@ -81,8 +81,8 @@
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "fbt": "^0.16.0",
-    "graphql": "^15.5.0",
     "google-auth-library": "^6.1.4",
+    "graphql": "^15.5.0",
     "graphql-iso-date": "^3.6.1",
     "history": "^5.0.0",
     "http-server": "^0.12.3",
