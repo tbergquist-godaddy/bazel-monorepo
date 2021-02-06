@@ -251,22 +251,22 @@
                 }
             ]
         },
-        "H0c1z95VDXyDCnqI4JUy6w==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Programmet ble opprettet",
-                    "variations": []
-                }
-            ]
-        },
         "+scs8Zi3pFK1MZqhQc\/SmA==": {
             "tokens": [],
             "types": [],
             "translations": [
                 {
                     "translation": "Mislyktes i å opprette program",
+                    "variations": []
+                }
+            ]
+        },
+        "H0c1z95VDXyDCnqI4JUy6w==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Programmet ble opprettet",
                     "variations": []
                 }
             ]
@@ -407,6 +407,26 @@
             "translations": [
                 {
                     "translation": "Avbryt",
+                    "variations": []
+                }
+            ]
+        },
+        "5zaTZU\/MvuhXJK1FxFoFGQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Mislyktes i å slette programmet, vennligst prøv igjen",
+                    "variations": []
+                }
+            ]
+        },
+        "ktU6PfwXRT0bWs529JVVeA==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Program ble slettet",
                     "variations": []
                 }
             ]
@@ -701,22 +721,22 @@
                 }
             ]
         },
-        "2\/jtZpvAtg\/8tqnzsLeTRQ==": {
-            "tokens": [],
-            "types": [],
-            "translations": [
-                {
-                    "translation": "Uken ble opprettet",
-                    "variations": []
-                }
-            ]
-        },
         "0Y54+qtTf2dIuNvzAmQSsw==": {
             "tokens": [],
             "types": [],
             "translations": [
                 {
                     "translation": "Mislyktes i å opprette ny uke, vennligst prøv igjen",
+                    "variations": []
+                }
+            ]
+        },
+        "2\/jtZpvAtg\/8tqnzsLeTRQ==": {
+            "tokens": [],
+            "types": [],
+            "translations": [
+                {
+                    "translation": "Uken ble opprettet",
                     "variations": []
                 }
             ]

@@ -18,7 +18,6 @@ import environment from '../relay/environment';
 
 const Navbar = lazy(() => import('./navbar'));
 const router = createRouter(Routes, createBrowserHistory());
-const ReactQueryDevtoolsPanel = lazy(() => import('./react-query-devtools'));
 
 export default function App(): Node {
   const locale = getLanguage();
@@ -53,11 +52,6 @@ export default function App(): Node {
               <main className="Trainingjournal__container">
                 <RouterRenderer loader={<Spinner />} />
                 <Toast />
-                {__DEV__ && (
-                  <Suspense fallback="">
-                    <ReactQueryDevtoolsPanel />
-                  </Suspense>
-                )}
               </main>
             </RecoilRoot>
           </RelayEnvironmentProvider>
