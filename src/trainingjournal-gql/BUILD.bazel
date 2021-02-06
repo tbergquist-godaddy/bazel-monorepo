@@ -88,6 +88,7 @@ nodejs_binary(
     name = "deploy",
     data = [
         ":lib",
+        ":package.json",
         ":vercel.json",
     ],
     entry_point = "@npm//:node_modules/vercel/dist/index.js",
