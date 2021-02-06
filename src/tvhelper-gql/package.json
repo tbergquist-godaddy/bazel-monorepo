@@ -42,8 +42,7 @@
     "mockingoose": "^2.13.2",
     "rimraf": "^3.0.2",
     "mongodb-memory-server": "^6.9.2",
-    "@babel/register": "^7.12.10",
-    "@adeira/murmur-hash": "^1.0.0"
+    "@babel/register": "^7.12.10"
   },
   "peerDependencies": {
     "@tbergq/graphql-test-utils": "*",
