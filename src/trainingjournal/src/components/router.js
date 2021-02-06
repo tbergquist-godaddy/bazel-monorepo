@@ -5,11 +5,11 @@ import { type RouteConfig } from 'react-router-config';
 import { QueryClient } from 'react-query';
 import { loadQuery } from 'react-relay/hooks';
 
-import { fetchProgram, FETCH_PROGRAM_KEY } from '../program/api/fetch-programs';
 import { FETCH_DAY_KEY, fetchDay } from '../program/api/fetch-days';
 import environment from '../relay/environment';
 import { query as ExercisesQuery } from '../exercises/exercises';
 import { query as ProgramsQuery } from '../program/programs';
+import { query as ProgramQuery } from '../program/program';
 
 export const queryClient: QueryClient = new QueryClient({
   defaultOptions: {
@@ -58,10 +58,19 @@ const routes: RouteConfig[] = [
     path: '/programs/:id',
     exact: true,
     prepare: (data) => {
-      queryClient.prefetchQuery([FETCH_PROGRAM_KEY, data.id], () => fetchProgram(data.id), {
-        suspense: true,
-      });
-      return {};
+      const programId = data.id;
+      return {
+        query: loadQuery(
+          environment,
+          ProgramQuery,
+          {
+            id: programId,
+          },
+          {
+            fetchPolicy: 'store-and-network',
+          },
+        ),
+      };
     },
   },
   {

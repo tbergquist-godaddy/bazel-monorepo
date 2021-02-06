@@ -352,27 +352,13 @@
   },
   {
    "hashToText": {
-    "H0c1z95VDXyDCnqI4JUy6w==": "Program was successfully created"
-   },
-   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
-   "line_beg": 32,
-   "col_beg": 24,
-   "line_end": 32,
-   "col_end": 88,
-   "desc": "program created toast",
-   "project": "",
-   "type": "text",
-   "jsfbt": "Program was successfully created"
-  },
-  {
-   "hashToText": {
     "+scs8Zi3pFK1MZqhQc/SmA==": "Failed to create program"
    },
    "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
-   "line_beg": 36,
-   "col_beg": 24,
-   "line_end": 36,
-   "col_end": 78,
+   "line_beg": 52,
+   "col_beg": 18,
+   "line_end": 52,
+   "col_end": 72,
    "desc": "program error toast",
    "project": "",
    "type": "text",
@@ -380,12 +366,26 @@
   },
   {
    "hashToText": {
+    "H0c1z95VDXyDCnqI4JUy6w==": "Program was successfully created"
+   },
+   "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
+   "line_beg": 56,
+   "col_beg": 28,
+   "line_end": 56,
+   "col_end": 92,
+   "desc": "program created toast",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Program was successfully created"
+  },
+  {
+   "hashToText": {
     "IB6QrXcNHRBgJLTtvDm09w==": "Create program"
    },
    "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
-   "line_beg": 47,
+   "line_beg": 67,
    "col_beg": 10,
-   "line_end": 47,
+   "line_end": 67,
    "col_end": 65,
    "desc": "create program heading",
    "project": "",
@@ -397,9 +397,9 @@
     "JdA/dvhUFZtC7TjleQBP9g==": "Create program"
    },
    "filepath": "src/trainingjournal/src/program/add-program/add-program-form.js",
-   "line_beg": 56,
+   "line_beg": 76,
    "col_beg": 12,
-   "line_end": 56,
+   "line_end": 76,
    "col_end": 66,
    "desc": "create program button",
    "project": "",
@@ -590,12 +590,40 @@
   },
   {
    "hashToText": {
+    "5zaTZU/MvuhXJK1FxFoFGQ==": "Failed to delete program, please try again"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 45,
+   "col_beg": 18,
+   "line_end": 45,
+   "col_end": 91,
+   "desc": "Delete program error",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Failed to delete program, please try again"
+  },
+  {
+   "hashToText": {
+    "ktU6PfwXRT0bWs529JVVeA==": "Program successfully deleted"
+   },
+   "filepath": "src/trainingjournal/src/program/delete-program.js",
+   "line_beg": 49,
+   "col_beg": 28,
+   "line_end": 49,
+   "col_end": 90,
+   "desc": "Program deleted success",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Program successfully deleted"
+  },
+  {
+   "hashToText": {
     "J70A7Kb2C9ScajHalgXPOw==": "Delete program"
    },
    "filepath": "src/trainingjournal/src/program/delete-program.js",
-   "line_beg": 36,
+   "line_beg": 64,
    "col_beg": 8,
-   "line_end": 36,
+   "line_end": 64,
    "col_end": 62,
    "desc": "delete program button",
    "project": "",
@@ -607,9 +635,9 @@
     "lA8j1Qz3N3K4Y1vDq0vT0A==": "Confirm delete program"
    },
    "filepath": "src/trainingjournal/src/program/delete-program.js",
-   "line_beg": 39,
+   "line_beg": 67,
    "col_beg": 15,
-   "line_end": 39,
+   "line_end": 67,
    "col_end": 76,
    "desc": "Confirm delete program title",
    "project": "",
@@ -621,9 +649,9 @@
     "pVmE1D8tDk+E6dVFkFhSww==": "Cancel"
    },
    "filepath": "src/trainingjournal/src/program/delete-program.js",
-   "line_beg": 41,
+   "line_beg": 69,
    "col_beg": 26,
-   "line_end": 41,
+   "line_end": 69,
    "col_end": 63,
    "desc": "Cancel action button",
    "project": "",
@@ -635,9 +663,9 @@
     "fNdg05MAa7dU2NSJo1JANw==": "Delete program"
    },
    "filepath": "src/trainingjournal/src/program/delete-program.js",
-   "line_beg": 42,
+   "line_beg": 70,
    "col_beg": 27,
-   "line_end": 42,
+   "line_end": 70,
    "col_end": 72,
    "desc": "Delete action button",
    "project": "",
@@ -649,9 +677,9 @@
     "8nW6ELmn4VqPc4PGDUvp+Q==": "Are you sure you want to delete {programName}?"
    },
    "filepath": "src/trainingjournal/src/program/delete-program.js",
-   "line_beg": 43,
+   "line_beg": 71,
    "col_beg": 21,
-   "line_end": 46,
+   "line_end": 74,
    "col_end": 9,
    "desc": "Confirm delete program text",
    "project": "",
@@ -957,9 +985,9 @@
     "+UKbni7VmCF89HHKuxmAzQ==": "Programs"
    },
    "filepath": "src/trainingjournal/src/program/programs.js",
-   "line_beg": 29,
+   "line_beg": 39,
    "col_beg": 10,
-   "line_end": 29,
+   "line_end": 39,
    "col_end": 53,
    "desc": "programs heading",
    "project": "",
@@ -996,27 +1024,13 @@
   },
   {
    "hashToText": {
-    "2/jtZpvAtg/8tqnzsLeTRQ==": "Week was successfully created"
-   },
-   "filepath": "src/trainingjournal/src/program/week/add-week.js",
-   "line_beg": 23,
-   "col_beg": 14,
-   "line_end": 23,
-   "col_end": 87,
-   "desc": "Create week success toast message",
-   "project": "",
-   "type": "text",
-   "jsfbt": "Week was successfully created"
-  },
-  {
-   "hashToText": {
     "0Y54+qtTf2dIuNvzAmQSsw==": "Failed to create a new week, please try again"
    },
    "filepath": "src/trainingjournal/src/program/week/add-week.js",
-   "line_beg": 29,
-   "col_beg": 14,
-   "line_end": 32,
-   "col_end": 9,
+   "line_beg": 54,
+   "col_beg": 18,
+   "line_end": 57,
+   "col_end": 13,
    "desc": "Failed to create week error message",
    "project": "",
    "type": "text",
@@ -1024,12 +1038,26 @@
   },
   {
    "hashToText": {
+    "2/jtZpvAtg/8tqnzsLeTRQ==": "Week was successfully created"
+   },
+   "filepath": "src/trainingjournal/src/program/week/add-week.js",
+   "line_beg": 61,
+   "col_beg": 18,
+   "line_end": 61,
+   "col_end": 91,
+   "desc": "Create week success toast message",
+   "project": "",
+   "type": "text",
+   "jsfbt": "Week was successfully created"
+  },
+  {
+   "hashToText": {
     "I9UfPDxGNmxmQirpSBYjNg==": "Add week"
    },
    "filepath": "src/trainingjournal/src/program/week/add-week.js",
-   "line_beg": 38,
+   "line_beg": 69,
    "col_beg": 6,
-   "line_end": 38,
+   "line_end": 69,
    "col_end": 48,
    "desc": "Add week button",
    "project": "",

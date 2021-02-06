@@ -1,29 +1,57 @@
 // @flow
 
 import { type Node, useState } from 'react';
-import { Button, Confirm } from '@tbergq/components';
+import { Button, Confirm, useShowToast } from '@tbergq/components';
 import { fbt } from 'fbt';
 import { useNavigate } from '@tbergq/router';
-import { useMutation, useQueryClient } from 'react-query';
+import { graphql, useFragment, useMutation } from 'react-relay/hooks';
 
-import { deleteProgram, FETCH_PROGRAMS_KEY } from './api/fetch-programs';
+import type { deleteProgram_program$key as Program } from './__generated__/deleteProgram_program.graphql';
+import type { deleteProgramMutation } from './__generated__/deleteProgramMutation.graphql';
 
 type Props = {
-  +programId: string,
-  +programName: string,
+  +program: ?Program,
+  +connectionId: ?string,
 };
 
-export default function DeleteProgram({ programId, programName }: Props): Node {
-  const cache = useQueryClient();
+export default function DeleteProgram({ program, connectionId }: Props): Node {
+  const showToast = useShowToast();
+  const data = useFragment(
+    graphql`
+      fragment deleteProgram_program on Program {
+        id
+        name
+      }
+    `,
+    program,
+  );
+  const [mutate, isLoading] = useMutation<deleteProgramMutation>(graphql`
+    mutation deleteProgramMutation($id: ID!, $connections: [ID!]!) {
+      deleteProgram(id: $id) {
+        id @deleteEdge(connections: $connections)
+        success
+      }
+    }
+  `);
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
-  const { mutate, isLoading } = useMutation(deleteProgram, {
-    onSuccess: () => {
-      cache.invalidateQueries(FETCH_PROGRAMS_KEY);
-      navigate('/programs');
-    },
-  });
+  const onDelete = () => {
+    mutate({
+      variables: { id: data?.id ?? '', connections: [connectionId ?? ''] },
+      onCompleted: (data, error) => {
+        if (data.deleteProgram?.success !== true || error) {
+          showToast({
+            text: fbt('Failed to delete program, please try again', 'Delete program error'),
+            type: 'danger',
+          });
+        } else {
+          showToast({ text: fbt('Program successfully deleted', 'Program deleted success') });
+          navigate('/programs');
+        }
+      },
+    });
+  };
 
   return (
     <>
@@ -41,11 +69,11 @@ export default function DeleteProgram({ programId, programName }: Props): Node {
         cancelActionText={fbt('Cancel', 'Cancel action button')}
         confirmActionText={fbt('Delete program', 'Delete action button')}
         confirmText={fbt(
-          `Are you sure you want to delete ${fbt.param('programName', programName)}?`,
+          `Are you sure you want to delete ${fbt.param('programName', data?.name)}?`,
           'Confirm delete program text',
         )}
         onClose={() => setIsVisible(false)}
-        onConfirm={() => mutate(programId)}
+        onConfirm={onDelete}
       />
     </>
   );

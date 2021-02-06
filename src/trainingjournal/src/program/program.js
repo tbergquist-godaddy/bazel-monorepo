@@ -1,17 +1,27 @@
 // @flow
 
 import { type Node } from 'react';
-import { Heading, Box } from '@tbergq/components';
+import { Heading } from '@tbergq/components';
 import { Helmet } from 'react-helmet';
+import { graphql, usePreloadedQuery } from 'react-relay/hooks';
+import type { GraphQLTaggedNode } from 'react-relay';
 
-import { useProgram } from './api/fetch-programs';
 import WeekList from './week/week-list';
-import AddWeek from './week/add-week';
-import BackButton from '../components/back-button';
-import type { Program as ProgramResponse } from './types';
-import DeleteProgram from './delete-program';
 
+export const query: GraphQLTaggedNode = graphql`
+  query programQuery($id: ID!) {
+    node(id: $id) {
+      ... on Program {
+        name
+      }
+      ...weekList_weeks
+    }
+  }
+`;
 type Props = {
+  +prepared: {
+    +query: any,
+  },
   +routeData: {
     +params: {
       +id: string,
@@ -19,34 +29,16 @@ type Props = {
   },
 };
 
-export default function Program({ routeData }: Props): Node {
-  const id = routeData.params.id;
-  const { data } = useProgram<ProgramResponse>(id, {
-    suspense: true,
-  });
+export default function Program({ prepared }: Props): Node {
+  const data = usePreloadedQuery(query, prepared.query);
 
   return (
     <>
       <Helmet>
-        <title>Trainingjournal | {data.name}</title>
+        <title>Trainingjournal | {data?.node?.name ?? ''}</title>
       </Helmet>
-      <Heading level="h1">{data.name}</Heading>
-      <WeekList weeks={data.weeks} />
-      <Box display={{ _: 'block', mediumMobile: 'flex' }} marginTop="normal">
-        <Box
-          marginRight={{ _: 'none', mediumMobile: 'normal' }}
-          marginBottom={{ _: 'normal', mediumMobile: 'none' }}
-        >
-          <BackButton fullWidth="mediumMobile" to="/programs" />
-        </Box>
-        <Box
-          marginRight={{ _: 'none', mediumMobile: 'normal' }}
-          marginBottom={{ _: 'normal', mediumMobile: 'none' }}
-        >
-          <AddWeek programId={id} weekCount={data.weeks.length} />
-        </Box>
-        <DeleteProgram programName={data.name} programId={id} />
-      </Box>
+      <Heading level="h1">{data?.node?.name}</Heading>
+      <WeekList weeks={data?.node} />
     </>
   );
 }
