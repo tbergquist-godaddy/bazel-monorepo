@@ -10,7 +10,6 @@ babel_build(
     ]) + [
         ":package.json",
         "//:babel.config.js",
-        "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
     ],
     file_path = "./src/router/src",
@@ -31,6 +30,9 @@ js_library(
 
 eslint(
     name = "lint",
-    data = [":src"],
+    data = [
+        ":package.json",
+        ":src",
+    ],
     entry = ":src",
 )

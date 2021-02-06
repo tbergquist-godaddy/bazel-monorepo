@@ -10,7 +10,6 @@ babel_build(
         ":package.json",
         ":src",
         "//:babel.config.js",
-        "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
         "@npm//react-transition-group",
     ],
@@ -59,7 +58,10 @@ jest_test(
 
 eslint(
     name = "lint",
-    data = [":src"],
+    data = [
+        ":package.json",
+        ":src",
+    ],
     entry = ":src",
 )
 
@@ -79,7 +81,6 @@ start_storybook(
         ":.storybook",
         ":package.json",
         "//:babel.config.js",
-        "//:package.json",
         "@npm//@adeira/babel-preset-adeira",
     ],
 )

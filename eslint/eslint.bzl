@@ -11,7 +11,6 @@ def eslint(name, data, entry, **kwargs):
         "//:.eslintrc.js",
         "//:.prettierignore",
         "//:babel.config.js",
-        "//:package.json",
         "@npm//@adeira/eslint-config",
         "@npm//babel-eslint",
         "@npm//eslint",
