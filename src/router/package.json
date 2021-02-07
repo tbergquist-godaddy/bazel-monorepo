@@ -1,6 +1,6 @@
 {
   "name": "@tbergq/router",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "main": "lib/index.js",
   "module": "esm/index.mjs",
   "sideEffects": [

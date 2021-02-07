@@ -75,6 +75,20 @@ fragment weekList_weeks on Program {
 fragment week_week on Week {
   id
   name
+  days(first: 7) {
+    edges {
+      __typename
+      cursor
+      node {
+        __typename
+        id
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
   ...deleteWeek_week
 }
 */
@@ -121,7 +135,58 @@ v5 = [
     "name": "first",
     "value": 50
   }
-];
+],
+v6 = [
+  {
+    "kind": "Literal",
+    "name": "first",
+    "value": 7
+  }
+],
+v7 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "cursor",
+  "storageKey": null
+},
+v8 = {
+  "alias": null,
+  "args": null,
+  "concreteType": "PageInfo",
+  "kind": "LinkedField",
+  "name": "pageInfo",
+  "plural": false,
+  "selections": [
+    {
+      "alias": null,
+      "args": null,
+      "kind": "ScalarField",
+      "name": "endCursor",
+      "storageKey": null
+    },
+    {
+      "alias": null,
+      "args": null,
+      "kind": "ScalarField",
+      "name": "hasNextPage",
+      "storageKey": null
+    }
+  ],
+  "storageKey": null
+},
+v9 = {
+  "kind": "ClientExtension",
+  "selections": [
+    {
+      "alias": null,
+      "args": null,
+      "kind": "ScalarField",
+      "name": "__id",
+      "storageKey": null
+    }
+  ]
+};
 return {
   "fragment": {
     "argumentDefinitions": (v0/*: any*/),
@@ -203,57 +268,64 @@ return {
                         "selections": [
                           (v4/*: any*/),
                           (v2/*: any*/),
+                          {
+                            "alias": null,
+                            "args": (v6/*: any*/),
+                            "concreteType": "DayConnection",
+                            "kind": "LinkedField",
+                            "name": "days",
+                            "plural": false,
+                            "selections": [
+                              {
+                                "alias": null,
+                                "args": null,
+                                "concreteType": "DayEdge",
+                                "kind": "LinkedField",
+                                "name": "edges",
+                                "plural": true,
+                                "selections": [
+                                  (v3/*: any*/),
+                                  (v7/*: any*/),
+                                  {
+                                    "alias": null,
+                                    "args": null,
+                                    "concreteType": "Day",
+                                    "kind": "LinkedField",
+                                    "name": "node",
+                                    "plural": false,
+                                    "selections": [
+                                      (v3/*: any*/),
+                                      (v4/*: any*/)
+                                    ],
+                                    "storageKey": null
+                                  }
+                                ],
+                                "storageKey": null
+                              },
+                              (v8/*: any*/),
+                              (v9/*: any*/)
+                            ],
+                            "storageKey": "days(first:7)"
+                          },
+                          {
+                            "alias": null,
+                            "args": (v6/*: any*/),
+                            "filters": null,
+                            "handle": "connection",
+                            "key": "week_days",
+                            "kind": "LinkedHandle",
+                            "name": "days"
+                          },
                           (v3/*: any*/)
                         ],
                         "storageKey": null
                       },
-                      {
-                        "alias": null,
-                        "args": null,
-                        "kind": "ScalarField",
-                        "name": "cursor",
-                        "storageKey": null
-                      }
+                      (v7/*: any*/)
                     ],
                     "storageKey": null
                   },
-                  {
-                    "alias": null,
-                    "args": null,
-                    "concreteType": "PageInfo",
-                    "kind": "LinkedField",
-                    "name": "pageInfo",
-                    "plural": false,
-                    "selections": [
-                      {
-                        "alias": null,
-                        "args": null,
-                        "kind": "ScalarField",
-                        "name": "endCursor",
-                        "storageKey": null
-                      },
-                      {
-                        "alias": null,
-                        "args": null,
-                        "kind": "ScalarField",
-                        "name": "hasNextPage",
-                        "storageKey": null
-                      }
-                    ],
-                    "storageKey": null
-                  },
-                  {
-                    "kind": "ClientExtension",
-                    "selections": [
-                      {
-                        "alias": null,
-                        "args": null,
-                        "kind": "ScalarField",
-                        "name": "__id",
-                        "storageKey": null
-                      }
-                    ]
-                  }
+                  (v8/*: any*/),
+                  (v9/*: any*/)
                 ],
                 "storageKey": "weeks(first:50)"
               },
@@ -276,12 +348,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "e08905b562d5844bc9868824da451d78",
+    "cacheID": "c1a9d0af7c9f031f4c59b9000cc8c904",
     "id": null,
     "metadata": {},
     "name": "programQuery",
     "operationKind": "query",
-    "text": "query programQuery(\n  $id: ID!\n) {\n  node(id: $id) {\n    __typename\n    ... on Program {\n      name\n    }\n    ...weekList_weeks\n    id\n  }\n}\n\nfragment addWeek_program on Program {\n  id\n}\n\nfragment deleteProgram_program on Program {\n  id\n  name\n}\n\nfragment deleteWeek_week on Week {\n  id\n  name\n}\n\nfragment weekList_weeks on Program {\n  ...addWeek_program\n  ...deleteProgram_program\n  weeks(first: 50) {\n    edges {\n      node {\n        id\n        ...week_week\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n\nfragment week_week on Week {\n  id\n  name\n  ...deleteWeek_week\n}\n"
+    "text": "query programQuery(\n  $id: ID!\n) {\n  node(id: $id) {\n    __typename\n    ... on Program {\n      name\n    }\n    ...weekList_weeks\n    id\n  }\n}\n\nfragment addWeek_program on Program {\n  id\n}\n\nfragment deleteProgram_program on Program {\n  id\n  name\n}\n\nfragment deleteWeek_week on Week {\n  id\n  name\n}\n\nfragment weekList_weeks on Program {\n  ...addWeek_program\n  ...deleteProgram_program\n  weeks(first: 50) {\n    edges {\n      node {\n        id\n        ...week_week\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n\nfragment week_week on Week {\n  id\n  name\n  days(first: 7) {\n    edges {\n      __typename\n      cursor\n      node {\n        __typename\n        id\n      }\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n  ...deleteWeek_week\n}\n"
   }
 };
 })();

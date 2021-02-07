@@ -15,6 +15,12 @@ declare export opaque type week_week$fragmentType: week_week$ref;
 export type week_week = {|
   +id: string,
   +name: ?string,
+  +days: ?{|
+    +__id: string,
+    +edges: ?$ReadOnlyArray<?{|
+      +__typename: string
+    |}>,
+  |},
   +$fragmentRefs: deleteWeek_week$ref,
   +$refType: week_week$ref,
 |};
@@ -27,10 +33,29 @@ export type week_week$key = {
 */
 
 
-const node/*: ReaderFragment*/ = {
+const node/*: ReaderFragment*/ = (function(){
+var v0 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "__typename",
+  "storageKey": null
+};
+return {
   "argumentDefinitions": [],
   "kind": "Fragment",
-  "metadata": null,
+  "metadata": {
+    "connection": [
+      {
+        "count": null,
+        "cursor": null,
+        "direction": "forward",
+        "path": [
+          "days"
+        ]
+      }
+    ]
+  },
   "name": "week_week",
   "selections": [
     {
@@ -48,6 +73,85 @@ const node/*: ReaderFragment*/ = {
       "storageKey": null
     },
     {
+      "alias": "days",
+      "args": null,
+      "concreteType": "DayConnection",
+      "kind": "LinkedField",
+      "name": "__week_days_connection",
+      "plural": false,
+      "selections": [
+        {
+          "alias": null,
+          "args": null,
+          "concreteType": "DayEdge",
+          "kind": "LinkedField",
+          "name": "edges",
+          "plural": true,
+          "selections": [
+            (v0/*: any*/),
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "cursor",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "Day",
+              "kind": "LinkedField",
+              "name": "node",
+              "plural": false,
+              "selections": [
+                (v0/*: any*/)
+              ],
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "concreteType": "PageInfo",
+          "kind": "LinkedField",
+          "name": "pageInfo",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "endCursor",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "hasNextPage",
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        },
+        {
+          "kind": "ClientExtension",
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "__id",
+              "storageKey": null
+            }
+          ]
+        }
+      ],
+      "storageKey": null
+    },
+    {
       "args": null,
       "kind": "FragmentSpread",
       "name": "deleteWeek_week"
@@ -56,7 +160,8 @@ const node/*: ReaderFragment*/ = {
   "type": "Week",
   "abstractKey": null
 };
+})();
 // prettier-ignore
-(node/*: any*/).hash = 'd43f58da11a848122e2bd7caa7911223';
+(node/*: any*/).hash = '15cf246e584c2957474fff2c213e9e16';
 
 module.exports = node;

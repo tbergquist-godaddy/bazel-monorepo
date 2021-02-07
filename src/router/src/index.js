@@ -1,6 +1,11 @@
 // @flow
 
-export { default as RoutingContext, useRoutingContext, useNavigate } from './RoutingContext';
+export {
+  default as RoutingContext,
+  useRoutingContext,
+  useNavigate,
+  useRouteData,
+} from './RoutingContext';
 export { default as createRouter } from './createRouter';
 export { getMockHistory } from './getMockHistory';
 export { default as RouterRenderer } from './RouterRenderer';
