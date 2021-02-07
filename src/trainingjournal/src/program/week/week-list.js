@@ -41,7 +41,7 @@ export default function WeekList({ weeks }: Props): Node {
       <TransitionGroup className="Program__week-list">
         {edges.map((week) => (
           <CSSTransition key={week?.node?.id} timeout={500} classNames="Program__week-list--item">
-            <Week week={week?.node} />
+            <Week connectionId={data?.weeks?.__id} week={week?.node} />
           </CSSTransition>
         ))}
       </TransitionGroup>
