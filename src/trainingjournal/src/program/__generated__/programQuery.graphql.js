@@ -43,6 +43,18 @@ fragment addWeek_program on Program {
   id
 }
 
+fragment dayList_days on DayEdge {
+  node {
+    id
+    ...day_day
+  }
+}
+
+fragment day_day on Day {
+  name
+  id
+}
+
 fragment deleteProgram_program on Program {
   id
   name
@@ -78,6 +90,7 @@ fragment week_week on Week {
   days(first: 7) {
     edges {
       __typename
+      ...dayList_days
       cursor
       node {
         __typename
@@ -285,7 +298,6 @@ return {
                                 "plural": true,
                                 "selections": [
                                   (v3/*: any*/),
-                                  (v7/*: any*/),
                                   {
                                     "alias": null,
                                     "args": null,
@@ -294,11 +306,13 @@ return {
                                     "name": "node",
                                     "plural": false,
                                     "selections": [
-                                      (v3/*: any*/),
-                                      (v4/*: any*/)
+                                      (v4/*: any*/),
+                                      (v2/*: any*/),
+                                      (v3/*: any*/)
                                     ],
                                     "storageKey": null
-                                  }
+                                  },
+                                  (v7/*: any*/)
                                 ],
                                 "storageKey": null
                               },
@@ -348,12 +362,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "c1a9d0af7c9f031f4c59b9000cc8c904",
+    "cacheID": "271054f4ed12b13d37a9e775ce17d93a",
     "id": null,
     "metadata": {},
     "name": "programQuery",
     "operationKind": "query",
-    "text": "query programQuery(\n  $id: ID!\n) {\n  node(id: $id) {\n    __typename\n    ... on Program {\n      name\n    }\n    ...weekList_weeks\n    id\n  }\n}\n\nfragment addWeek_program on Program {\n  id\n}\n\nfragment deleteProgram_program on Program {\n  id\n  name\n}\n\nfragment deleteWeek_week on Week {\n  id\n  name\n}\n\nfragment weekList_weeks on Program {\n  ...addWeek_program\n  ...deleteProgram_program\n  weeks(first: 50) {\n    edges {\n      node {\n        id\n        ...week_week\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n\nfragment week_week on Week {\n  id\n  name\n  days(first: 7) {\n    edges {\n      __typename\n      cursor\n      node {\n        __typename\n        id\n      }\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n  ...deleteWeek_week\n}\n"
+    "text": "query programQuery(\n  $id: ID!\n) {\n  node(id: $id) {\n    __typename\n    ... on Program {\n      name\n    }\n    ...weekList_weeks\n    id\n  }\n}\n\nfragment addWeek_program on Program {\n  id\n}\n\nfragment dayList_days on DayEdge {\n  node {\n    id\n    ...day_day\n  }\n}\n\nfragment day_day on Day {\n  name\n  id\n}\n\nfragment deleteProgram_program on Program {\n  id\n  name\n}\n\nfragment deleteWeek_week on Week {\n  id\n  name\n}\n\nfragment weekList_weeks on Program {\n  ...addWeek_program\n  ...deleteProgram_program\n  weeks(first: 50) {\n    edges {\n      node {\n        id\n        ...week_week\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n\nfragment week_week on Week {\n  id\n  name\n  days(first: 7) {\n    edges {\n      __typename\n      ...dayList_days\n      cursor\n      node {\n        __typename\n        id\n      }\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n  ...deleteWeek_week\n}\n"
   }
 };
 })();

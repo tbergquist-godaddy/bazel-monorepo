@@ -1,7 +1,7 @@
 // @flow
 
 import { type Node } from 'react';
-import { Heading, Box, borderUnderlineStyles } from '@tbergq/components';
+import { Heading, Box, borderUnderlineStyles, displayStyles } from '@tbergq/components';
 import { graphql, useFragment } from 'react-relay/hooks';
 
 import './week-list.css';
@@ -9,6 +9,7 @@ import './week.css';
 import type { week_week$key as WeekType } from './__generated__/week_week.graphql';
 import DeleteWeek from './delete-week/delete-week';
 import AddDay from './add-day';
+import DayList from '../day/day-list';
 
 type Props = {
   +week: ?WeekType,
@@ -25,6 +26,7 @@ export default function Week({ week, connectionId }: Props): Node {
           __id
           edges {
             __typename
+            ...dayList_days
           }
         }
         ...deleteWeek_week
@@ -56,9 +58,10 @@ export default function Week({ week, connectionId }: Props): Node {
           </Box>
         </Box>
       </Box>
-      {/*  <div className={`${displayStyles['u-display-grid']} Week__day-list-container`}>
-        <DayList programId={week.program.toString()} days={week.days} />
-      </div> */}
+      <div className={`${displayStyles['u-display-grid']} Week__day-list-container`}>
+        {/* $FlowExpectedError[incompatible-type] */}
+        <DayList days={data?.days?.edges} />
+      </div>
     </div>
   );
 }

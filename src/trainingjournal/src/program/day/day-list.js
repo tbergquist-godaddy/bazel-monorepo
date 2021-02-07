@@ -1,15 +1,29 @@
 // @flow
 
 import { type Node } from 'react';
+import { graphql, useFragment } from 'react-relay/hooks';
 
 import DayItem from './day';
-import type { Day } from '../types';
+import type { dayList_days$key as Days } from './__generated__/dayList_days.graphql';
 
 type Props = {
-  +days: $ReadOnlyArray<Day>,
-  +programId: string,
+  +days: ?Days,
 };
 
-export default function DayList({ days, programId }: Props): Node {
-  return days.map((day) => <DayItem programId={programId} key={day.id} day={day} />);
+export default function DayList({ days }: Props): Node {
+  const data = useFragment(
+    graphql`
+      fragment dayList_days on DayEdge @relay(plural: true) {
+        node {
+          id
+          ...day_day
+        }
+      }
+    `,
+    days,
+  );
+  if (data == null) {
+    return null;
+  }
+  return data.map((day) => <DayItem key={day.node?.id} day={day.node} />);
 }
