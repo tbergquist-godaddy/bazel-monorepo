@@ -48,6 +48,11 @@ fragment deleteProgram_program on Program {
   name
 }
 
+fragment deleteWeek_week on Week {
+  id
+  name
+}
+
 fragment weekList_weeks on Program {
   ...addWeek_program
   ...deleteProgram_program
@@ -70,6 +75,7 @@ fragment weekList_weeks on Program {
 fragment week_week on Week {
   id
   name
+  ...deleteWeek_week
 }
 */
 
@@ -270,12 +276,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "67aa57823804f2fccf81180dd105d7e0",
+    "cacheID": "e08905b562d5844bc9868824da451d78",
     "id": null,
     "metadata": {},
     "name": "programQuery",
     "operationKind": "query",
-    "text": "query programQuery(\n  $id: ID!\n) {\n  node(id: $id) {\n    __typename\n    ... on Program {\n      name\n    }\n    ...weekList_weeks\n    id\n  }\n}\n\nfragment addWeek_program on Program {\n  id\n}\n\nfragment deleteProgram_program on Program {\n  id\n  name\n}\n\nfragment weekList_weeks on Program {\n  ...addWeek_program\n  ...deleteProgram_program\n  weeks(first: 50) {\n    edges {\n      node {\n        id\n        ...week_week\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n\nfragment week_week on Week {\n  id\n  name\n}\n"
+    "text": "query programQuery(\n  $id: ID!\n) {\n  node(id: $id) {\n    __typename\n    ... on Program {\n      name\n    }\n    ...weekList_weeks\n    id\n  }\n}\n\nfragment addWeek_program on Program {\n  id\n}\n\nfragment deleteProgram_program on Program {\n  id\n  name\n}\n\nfragment deleteWeek_week on Week {\n  id\n  name\n}\n\nfragment weekList_weeks on Program {\n  ...addWeek_program\n  ...deleteProgram_program\n  weeks(first: 50) {\n    edges {\n      node {\n        id\n        ...week_week\n        __typename\n      }\n      cursor\n    }\n    pageInfo {\n      endCursor\n      hasNextPage\n    }\n  }\n}\n\nfragment week_week on Week {\n  id\n  name\n  ...deleteWeek_week\n}\n"
   }
 };
 })();

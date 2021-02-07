@@ -3,38 +3,58 @@
 import { type Node, useState, lazy, Suspense } from 'react';
 import { Button, useShowToast, Spinner } from '@tbergq/components';
 import { fbt } from 'fbt';
-import { useMutation, useQueryClient } from 'react-query';
+import { useMutation, graphql, useFragment } from 'react-relay/hooks';
 
-import { deleteWeek as dw } from '../../api/fetch-weeks';
-import { FETCH_PROGRAM_KEY } from '../../api/fetch-programs';
+import type { deleteWeek_week$key as Week } from './__generated__/deleteWeek_week.graphql';
+import type { deleteWeekMutation } from './__generated__/deleteWeekMutation.graphql';
 
 const ConfirmDeleteWeek = lazy(() => import('./confirm-delete-week'));
 
 type Props = {
-  +programId: string,
-  +weekId: number,
-  +weekName: string,
+  +week: ?Week,
+  +connectionId: ?string,
 };
 
-export default function DeleteWeek({ programId, weekId, weekName }: Props): Node {
+export default function DeleteWeek({ week, connectionId }: Props): Node {
+  const data = useFragment(
+    graphql`
+      fragment deleteWeek_week on Week {
+        id
+        name
+      }
+    `,
+    week,
+  );
+  const [mutate, isLoading] = useMutation<deleteWeekMutation>(graphql`
+    mutation deleteWeekMutation($id: ID!, $connections: [ID!]!) {
+      deleteWeek(id: $id) {
+        id @deleteEdge(connections: $connections)
+        success
+      }
+    }
+  `);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const cache = useQueryClient();
   const showToast = useShowToast();
 
-  const { mutate, isLoading } = useMutation(dw, {
-    onError: () => {
-      showToast({
-        text: fbt('Failed to delete week', 'Delete week failed error message'),
-        type: 'danger',
-      });
-    },
-    onSuccess: () => {
-      cache.invalidateQueries([FETCH_PROGRAM_KEY, programId]);
-    },
-  });
-
   const deleteWeek = () => {
-    mutate(weekId);
+    mutate({
+      variables: {
+        id: data?.id ?? '',
+        connections: [connectionId ?? ''],
+      },
+      onCompleted: (res, error) => {
+        if (res.deleteWeek?.success !== true || error) {
+          showToast({
+            text: fbt('Failed to delete week', 'Delete week failed error message'),
+            type: 'danger',
+          });
+        } else {
+          showToast({
+            text: fbt('Week was successfully deleted', 'Delete week success message'),
+          });
+        }
+      },
+    });
   };
 
   return (
@@ -50,7 +70,7 @@ export default function DeleteWeek({ programId, weekId, weekName }: Props): Node
       {showConfirmModal && (
         <Suspense fallback={<Spinner />}>
           <ConfirmDeleteWeek
-            weekName={weekName}
+            weekName={data?.name ?? ''}
             onClose={() => setShowConfirmModal(false)}
             onConfirm={deleteWeek}
           />
