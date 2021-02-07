@@ -8,6 +8,7 @@
 
 /*::
 import type { ReaderFragment } from 'relay-runtime';
+type dayList_days$ref = any;
 type deleteWeek_week$ref = any;
 import type { FragmentReference } from "relay-runtime";
 declare export opaque type week_week$ref: FragmentReference;
@@ -18,7 +19,8 @@ export type week_week = {|
   +days: ?{|
     +__id: string,
     +edges: ?$ReadOnlyArray<?{|
-      +__typename: string
+      +__typename: string,
+      +$fragmentRefs: dayList_days$ref,
     |}>,
   |},
   +$fragmentRefs: deleteWeek_week$ref,
@@ -107,6 +109,11 @@ return {
                 (v0/*: any*/)
               ],
               "storageKey": null
+            },
+            {
+              "args": null,
+              "kind": "FragmentSpread",
+              "name": "dayList_days"
             }
           ],
           "storageKey": null
@@ -162,6 +169,6 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '15cf246e584c2957474fff2c213e9e16';
+(node/*: any*/).hash = 'b4ebb975fd029ae3c17a3f519b8d24d8';
 
 module.exports = node;
