@@ -8,6 +8,7 @@ import './week-list.css';
 import './week.css';
 import type { week_week$key as WeekType } from './__generated__/week_week.graphql';
 import DeleteWeek from './delete-week/delete-week';
+import AddDay from './add-day';
 
 type Props = {
   +week: ?WeekType,
@@ -20,6 +21,12 @@ export default function Week({ week, connectionId }: Props): Node {
       fragment week_week on Week {
         id
         name
+        days(first: 7) @connection(key: "week_days") {
+          __id
+          edges {
+            __typename
+          }
+        }
         ...deleteWeek_week
       }
     `,
@@ -38,13 +45,15 @@ export default function Week({ week, connectionId }: Props): Node {
           <Box marginRight="small">
             <DeleteWeek connectionId={connectionId} week={data} />
           </Box>
-          {/* <Box>
-            <AddDay
-              programId={week.program.toString()}
-              weekId={week.id}
-              dayLength={week.days.length}
-            />
-          </Box> */}
+          <Box>
+            {data != null && (
+              <AddDay
+                connectionId={data.days?.__id ?? ''}
+                weekId={data.id}
+                dayLength={data.days?.edges?.length ?? 0}
+              />
+            )}
+          </Box>
         </Box>
       </Box>
       {/*  <div className={`${displayStyles['u-display-grid']} Week__day-list-container`}>

@@ -35,6 +35,9 @@ class ErrorBoundary extends Component<Props, State> {
           <div>Error: {this.state.error.message}</div>
           <div>
             <pre>{JSON.stringify(this.state.error.source, null, 2)}</pre>
+            <button onClick={() => window.location.reload()} type="button">
+              Reload
+            </button>
           </div>
         </div>
       );

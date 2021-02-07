@@ -26,3 +26,12 @@ export function useNavigate(): $FlowFixMe {
   );
   return navigate;
 }
+
+export function useRouteData(): $FlowFixMe {
+  const router = useContext(RoutingContext);
+  if (router == null) {
+    return null;
+  }
+  const { entries } = router.get();
+  return entries[0]?.routeData;
+}
