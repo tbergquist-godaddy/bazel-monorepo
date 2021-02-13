@@ -52,13 +52,12 @@ jobs:
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
 
-      # This is probably not necessary to run
-      # - name: Build
-      #   run: |
-      #     echo BASE_URL=$BASE_URL >> src/trainingjournal/.env
-      #     "${GITHUB_WORKSPACE}/bin/bazel" build '...'
-      #   env:
-      #     BASE_URL: ${{ secrets.BASE_URL }}
+      - name: Build
+        run: |
+          echo BASE_URL=$BASE_URL >> src/trainingjournal/.env
+          "${GITHUB_WORKSPACE}/bin/bazel" build '...'
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
 
       - name: Test
         run: |

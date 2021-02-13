@@ -9,6 +9,7 @@ def get_deps():
         "@npm//babel-loader",
         "@npm//@adeira/babel-preset-adeira",
         "@npm//@adeira/fetch",
+        "@npm//@adeira/js",
         "@npm//react",
         "@npm//react-dom",
         "@npm//style-loader",
