@@ -19,10 +19,12 @@ type Type = {
 };
 type Types = {|
   Program: ?Type,
+  Day: ?Type,
 |};
 
 const types: Types = {
   Program: null,
+  Day: null,
 };
 
 export function register(
