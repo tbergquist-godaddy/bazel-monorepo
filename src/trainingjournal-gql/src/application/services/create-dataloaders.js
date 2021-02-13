@@ -2,8 +2,9 @@
 
 import { getExercises, getExercise } from '@tj-gql/domain/exercise';
 import { getPrograms, getProgram } from '@tj-gql/domain/program';
+import { getDays } from '@tj-gql/domain/day';
 import Dataloader from 'dataloader';
-import { ExerciseModel, ProgramModel } from '@tj-gql/infrastructure/models';
+import { ExerciseModel, ProgramModel, DayModel } from '@tj-gql/infrastructure/models';
 
 import type { User } from './create-context';
 
@@ -12,6 +13,7 @@ export type Dataloaders = {
   +exercise: Dataloader<string, ExerciseModel>,
   +programs: Dataloader<string, $ReadOnlyArray<ProgramModel>>,
   +program: Dataloader<string, ProgramModel>,
+  +day: Dataloader<string, DayModel>,
 };
 
 export default function createDataloaders(user: ?User): Dataloaders {
@@ -20,5 +22,6 @@ export default function createDataloaders(user: ?User): Dataloaders {
     exercise: new Dataloader((ids: $ReadOnlyArray<string>) => getExercise(ids, user?.id)),
     programs: new Dataloader(getPrograms),
     program: new Dataloader((ids: $ReadOnlyArray<string>) => getProgram(ids, user?.id)),
+    day: new Dataloader((ids: $ReadOnlyArray<string>) => getDays(ids, user?.id)),
   };
 }
