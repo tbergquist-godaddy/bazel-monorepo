@@ -29,6 +29,7 @@ describe('application / mutations / set / DeleteSet', () => {
                   sets: '2',
                   reps: '4',
                   group: 'A1',
+                  breakTime: '2',
                 },
               ],
             },
