@@ -24,6 +24,11 @@ async function loadType(relayId, context) {
     return null;
   }
   const entity = await type.loader(id, context);
+
+  if (entity == null) {
+    return null;
+  }
+
   return {
     ...entity,
     __type: type.type,
