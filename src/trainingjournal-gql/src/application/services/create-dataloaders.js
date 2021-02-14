@@ -13,7 +13,7 @@ export type Dataloaders = {
   +exercise: Dataloader<string, ExerciseModel>,
   +programs: Dataloader<string, $ReadOnlyArray<ProgramModel>>,
   +program: Dataloader<string, ProgramModel>,
-  +day: Dataloader<string, DayModel>,
+  +day: Dataloader<string, DayModel | null>,
 };
 
 export default function createDataloaders(user: ?User): Dataloaders {

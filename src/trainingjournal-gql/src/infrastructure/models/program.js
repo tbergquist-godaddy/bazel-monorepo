@@ -4,7 +4,6 @@ import { Schema, Model, type MongoId } from 'mongoose';
 
 import connection from '../connection';
 import WeekModel, { WeekSchema } from './week';
-import DayModel from './day';
 
 const ProgramSchema = new Schema({
   name: {
@@ -100,11 +99,7 @@ class ProgramModel extends Model {
     }
   }
 
-  static getDayByIds(
-    dayIds: $ReadOnlyArray<string>,
-    user: ?string,
-  ): Promise<$ReadOnlyArray<DayModel>> {
-    // $FlowExpectedError[incompatible-return] this does return DayModel
+  static getDayByIds(dayIds: $ReadOnlyArray<string>, user: ?string): Promise<$ReadOnlyArray<this>> {
     return this.find({ 'weeks.days._id': { $in: dayIds }, user });
   }
 

@@ -11,7 +11,7 @@ import type { GraphqlContext } from '@tj-gql/application/services';
 type LoaderFunction = (
   id: string,
   context: GraphqlContext,
-) => Promise<{ +[key: string]: mixed, ... }>;
+) => Promise<{ +[key: string]: mixed, ... } | null>;
 
 type Type = {
   +type: GraphQLObjectType,
