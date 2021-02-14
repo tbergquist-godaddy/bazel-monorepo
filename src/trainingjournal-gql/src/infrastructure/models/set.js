@@ -22,6 +22,10 @@ export const SetSchema: MongooseSchema<SetModel> = new Schema({
   group: {
     type: String,
   },
+  breakTime: {
+    type: String,
+    required: true,
+  },
 });
 
 class SetModel extends Model {
@@ -29,6 +33,7 @@ class SetModel extends Model {
   exercise: ExerciseModel;
   sets: string;
   reps: string;
+  breakTime: string;
   group: ?string;
 }
 

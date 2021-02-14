@@ -9,6 +9,7 @@ export type CreateSetInputType = {
   +sets: string,
   +reps: string,
   +group?: string,
+  +breakTime: string,
 };
 
 const CreateSetInput: GraphQLInputObjectType = new GraphQLInputObjectType({
@@ -25,6 +26,9 @@ const CreateSetInput: GraphQLInputObjectType = new GraphQLInputObjectType({
       type: GraphQLNonNull(GraphQLString),
     },
     reps: {
+      type: GraphQLNonNull(GraphQLString),
+    },
+    breakTime: {
       type: GraphQLNonNull(GraphQLString),
     },
     group: {

@@ -176,13 +176,15 @@ describe('infrastructure / models / program', () => {
         sets: '2-4',
         reps: '5',
         group: 'A1',
+        breakTime: '2',
       },
     });
 
-    const { group, reps, sets } = updatedProgram?.weeks[0].days[0].sets[0] ?? {};
+    const { group, reps, sets, breakTime } = updatedProgram?.weeks[0].days[0].sets[0] ?? {};
     expect(group).toEqual('A1');
     expect(reps).toEqual('5');
     expect(sets).toEqual('2-4');
+    expect(breakTime).toBe('2');
 
     await dropCollection('users');
     await dropCollection('programs');
@@ -270,6 +272,7 @@ describe('infrastructure / models / program', () => {
                   sets: '4',
                   reps: '8',
                   groups: 'A1',
+                  breakTime: '2',
                 },
               ],
             },

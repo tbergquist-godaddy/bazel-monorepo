@@ -14,6 +14,7 @@ const Set: GraphQLObjectType = new GraphQLObjectType({
     sets: { type: GraphQLString },
     reps: { type: GraphQLString },
     group: { type: GraphQLString },
+    breakTime: { type: GraphQLString },
     exercise: {
       type: Exercise,
       resolve: ({ exercise }: { +exercise: string }, _: mixed, { dataloader }: GraphqlContext) => {

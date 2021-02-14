@@ -1,4 +1,4 @@
-# @generated SignedSource<<f94a3a88243388dff4a8d39082a1cb90>>
+# @generated SignedSource<<ebdb3c448e9bf90697f03a7da8dfa321>>
 
 # <BREAKING-CHANGES-LOG>
 #  TYPE_REMOVED: Test was removed.
@@ -6,6 +6,7 @@
 #  TYPE_REMOVED: CreateExerciseError was removed.
 #  TYPE_REMOVED: CreateExerciseErrorReason was removed.
 #  TYPE_REMOVED_FROM_UNION: CreateExerciseError was removed from union type CreateExercisePayload.
+#  REQUIRED_INPUT_FIELD_ADDED: A required field breakTime on input type CreateSetInput was added.
 # </BREAKING-CHANGES-LOG>
 
 schema {
@@ -64,6 +65,7 @@ type CreateSet {
 
 """Model for creating a set"""
 input CreateSetInput {
+  breakTime: String!
   dayId: ID!
   exerciseId: ID!
   group: String
@@ -238,6 +240,7 @@ type RootQuery {
 
 """Set model"""
 type Set {
+  breakTime: String
   exercise: Exercise
   group: String
 
