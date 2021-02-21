@@ -24,7 +24,7 @@ type Props = {
   +closeModal: () => void,
   +onSubmit: (FormValues) => void,
   +isLoading: boolean,
-  +initialExercise?: Exercise,
+  +initialExercise?: ?Exercise,
   +submitText: string,
   +extraAction?: Node,
 };
