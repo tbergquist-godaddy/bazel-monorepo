@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import { SetEdge } from './set-connection';
+import { SetEdge } from './set';
 
 const CreateSet: GraphQLObjectType = new GraphQLObjectType({
   name: 'CreateSet',

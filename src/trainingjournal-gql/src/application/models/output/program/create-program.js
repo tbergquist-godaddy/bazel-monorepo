@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import { ProgramEdge } from './program-connection';
+import { ProgramEdge } from './program';
 
 const CreateProgram: GraphQLObjectType = new GraphQLObjectType({
   name: 'CreateProgram',

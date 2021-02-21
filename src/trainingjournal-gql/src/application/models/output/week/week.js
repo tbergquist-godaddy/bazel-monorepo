@@ -3,10 +3,11 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import globalID from '@adeira/graphql-global-id';
 import { connectionFromArray, connectionArgs } from '@adeira/graphql-relay';
+import { GraphqlBaseObject, type GraphQLConnectionDefinitions } from '@tj-gql/application/services';
 
 import { DayConnection } from '../day';
 
-const Week: GraphQLObjectType = new GraphQLObjectType({
+const week: GraphqlBaseObject = new GraphqlBaseObject({
   name: 'Week',
   description: 'Week model',
   fields: {
@@ -20,4 +21,10 @@ const Week: GraphQLObjectType = new GraphQLObjectType({
   },
 });
 
-export default Week;
+const Week: GraphQLObjectType = week.getGraphqlObject();
+const {
+  connectionType: WeekConnection,
+  edgeType: WeekEdge,
+}: GraphQLConnectionDefinitions = week.getConnectionDefinitions();
+
+export { Week, WeekConnection, WeekEdge };
