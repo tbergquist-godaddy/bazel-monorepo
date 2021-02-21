@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import { ExerciseEdge } from './exercise-connection';
+import { ExerciseEdge } from './exercise';
 
 const CreateExercise: GraphQLObjectType = new GraphQLObjectType({
   name: 'CreateExercise',

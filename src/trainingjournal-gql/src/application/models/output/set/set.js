@@ -2,11 +2,15 @@
 
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import globalID from '@adeira/graphql-global-id';
-import type { GraphqlContext } from '@tj-gql/application/services';
+import {
+  GraphqlBaseObject,
+  type GraphQLConnectionDefinitions,
+  type GraphqlContext,
+} from '@tj-gql/application/services';
 
 import { Exercise } from '../exercise';
 
-const Set: GraphQLObjectType = new GraphQLObjectType({
+const set: GraphqlBaseObject = new GraphqlBaseObject({
   name: 'Set',
   description: 'Set model',
   fields: {
@@ -24,4 +28,10 @@ const Set: GraphQLObjectType = new GraphQLObjectType({
   },
 });
 
-export default Set;
+const Set: GraphQLObjectType = set.getGraphqlObject();
+const {
+  connectionType: SetConnection,
+  edgeType: SetEdge,
+}: GraphQLConnectionDefinitions = set.getConnectionDefinitions();
+
+export { Set, SetConnection, SetEdge };

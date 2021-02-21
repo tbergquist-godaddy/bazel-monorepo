@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import { DayEdge } from './day-connection';
+import { DayEdge } from './day';
 
 const CreateDay: GraphQLObjectType = new GraphQLObjectType({
   name: 'CreateDay',

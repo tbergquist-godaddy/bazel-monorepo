@@ -8,7 +8,7 @@ import type { GraphqlContext } from '@tj-gql/application/services';
  * See https://github.com/graphql/graphql-relay-js/issues/113
  */
 
-type LoaderFunction = (
+export type LoaderFunction = (
   id: string,
   context: GraphqlContext,
 ) => Promise<{ +[key: string]: mixed, ... } | null>;

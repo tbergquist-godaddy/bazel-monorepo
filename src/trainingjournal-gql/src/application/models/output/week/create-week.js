@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import { WeekEdge } from './week-connection';
+import { WeekEdge } from './week';
 
 const CreateWeek: GraphQLObjectType = new GraphQLObjectType({
   name: 'CreateWeek',
